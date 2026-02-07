@@ -110,15 +110,6 @@ which permits unrestricted re-use, distribution, and reproduction in any medium,
 
 How languages express contrast and exhaustivity has major implications for how we understand the syntax--semantics interface. This study revisits the debate on the interpretation of Hungarian focus constructions using eyetracking with the visual-world paradigm. Specifically, we examine two theoretically important inquiries: how strongly Hungarian native speakers interpret phrases in the pre-verbal focus domain exhaustively, and whether contrastive but non-exhaustive readings exist, as well as from a cognitive perspective, whether different focus types produce processing differences during language comprehension. 
 
-
-
-% To address this theoretical debate, and in light with recent experimental studies (Onea \& Beaver, 2009; Gerőcs et al., 2014; Káldi, 2021), we designed a visual-world eye-tracking experiment to differentiate interpretations associated with the PVF structures. Specifically, we were curious about Hungarian speakers’ dominant interpretation of the unmodified, simple PVF sentence (e.g., (1b)), in comparison with the only-exhaustive (1c) and the contrastive condition (1d). We used a Sentence–Picture Verification (SPV) task (Fig. 1), in which participants read a sentence in a selfpaced reading (SPR) manner and were asked to indicate one correct meaning-representation between two visual stimuli. Materials constituted 54 sentences (18 items × 3 conditions), and 54 pairs of images with relevant single and multiple objects (Fig. 2), and 54 filler trials. Using PCIbex (Schwarz \& Zehr, 2021), we collected reading times (RT) during SPR, and eye-tracking data (total dwell time) during the SPV choice, recording the time spent looking at each target image. The behavioural results showed that participants overwhelmingly interpreted the unmodified PVF sentences like only-sentences, choosing type A images, but in the “contrastive” condition (among othersentences) they preferred the multi-object type B images, exhibiting a tendency toward non-exhaustive readings (Table 1). To further examine how the focus structures were associated with exhaustive and contrastive readings, we fitted a linear mixed-effects model to the total dwell time on images, with FocusCondition, ChoiceType and their interaction as main effects, and participant and item as random effects. The results revealed significant effects of FocusCondition (χ²(2) = 11.67, p < .001), ChoiceType (χ²(1) = 19.51, p < .001), and interaction between FocusCondition and ChoiceType (p < .001). Interestingly, post-hoc (TukeyHSD) tests showed that after reading only-sentences, participants took significantly less time to choose A compared to B (β = –0.88, p < .001), whereas they spent significantly more time to select A after reading contrastive sentences (β = .21, p = .034), suggesting that participants were faster to pick the
-% expected choices in the “exhaustive” and “contrastive” conditions, respectively. Crucially, no significant difference was observed between selecting A or B for the simple PVF sentences (β = -.19, p = .362), implying that participants might consider both representations equally plausible when making their choices. Overall, our results suggest that Hungarian pre-verbal focus constructions tend to be interpreted
-% exhaustively when no additional context is provided. This exhaustive bias seems to persist even when ‘among others’ is present, despite its licensing a contrastive reading in truth value. This explains the apparent tension in theoretical accounts. Our results also showed facilitation for explicitly exhaustive sentences and not for simple PVFs, consistent with online disambiguation of an underspecified structure.
-
-% ---
-
-
 \pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
 \begingl \label{ex:neutral}
 \gla {\it Anna \it meg-ette \it a \it banánt.}//
@@ -179,6 +170,17 @@ In short, exhaustive focus implies that the focused element is the sole entity f
 % Anna többek között egy BANÁNT vett.
 
 
+\begin{figure}[!ht]%
+\centering
+\FIG{
+\includegraphics[width=0.33\textwidth]{../plots/1a.png}
+\qquad
+\includegraphics[width=0.33\textwidth]{../plots/1b.png}
+}
+{\caption{Example stimuli...}
+\label{fig:stimuli_1}}
+\end{figure}
+
 
 We can, in fact, force an exhaustive reading by adding the exhaustive focus marker \textit{csak} `only' to the sentence (ex. \ref{ex:only})\footnote{The scope of \textit{csak} `only' only extends to the subsequent element, it can only refer to the object and not the following VP.}. Furthermore, we can also cancel exhaustivity within the same clause with the help of \textit{többek között} `amongst others' (ex. \ref{ex:amongst_others})\footnote{Similarly, only the object is in the scope of \textit{többek között} `amongst others', it is not possible to interpret this sentence as if the verb is an alternative to other actions one can do to a banana.}, a phrase with an inherently non-exhaustive/inclusive meaning \citep[see also][14]{wedgwood_2006_predication,balogh_2013_hungarian}.
 
@@ -193,17 +195,6 @@ To test this, we designed an experiment where participants read typical PVF sent
 To sum up, while previous work has asked whether an immediately pre-verbal focus in Hungarian is semantically exhaustive or not, our question is slightly different: What is the default interpretation of a pre-verbal focus construction? Is it inherently exhaustive, or is it more naturally contrastive?
 
 
-\begin{figure}[!ht]%
-\centering
-\FIG{
-\includegraphics[width=0.33\textwidth]{../plots/1a.png}
-\qquad
-\includegraphics[width=0.33\textwidth]{../plots/1b.png}
-}
-{\caption{Example stimuli...}
-\label{fig:stimuli_1}}
-\end{figure}
-
 \subsection{Background}
 
 % object focus
@@ -215,9 +206,17 @@ To sum up, while previous work has asked whether an immediately pre-verbal focus
 
 \section{Methods}
 
-In this study, we are investigating focus in Hungarian, specifically how Hungarian speakers distinguish between exhaustive focus and contrastive focus – if they do. So... we designed an experiment
+In this study, we are investigating focus in Hungarian, specifically how Hungarian speakers distinguish between exhaustive focus and contrastive focus -- if they do. So... we designed an experiment.
+
+\dots
+
+To address this theoretical debate, and in light with recent experimental studies (Onea \& Beaver, 2009; Gerőcs et al., 2014; Káldi, 2021), we designed a visual-world eye-tracking experiment to differentiate interpretations associated with the PVF structures. Specifically, we were curious about Hungarian speakers’ dominant interpretation of the unmodified, simple PVF sentence (e.g., (1b)), in comparison with the only-exhaustive (1c) and the contrastive condition (1d). We used a Sentence–Picture Verification (SPV) task (Fig. 1), in which participants read a sentence in a selfpaced reading (SPR) manner and were asked to indicate one correct meaning-representation between two visual stimuli. Materials constituted 54 sentences (18 items × 3 conditions), and 54 pairs of images with relevant single and multiple objects (Fig. 2), and 54 filler trials. Using PCIbex (Schwarz \& Zehr, 2021), we collected reading times (RT) during SPR, and eye-tracking data (total dwell time) during the SPV choice, recording the time spent looking at each target image. 
+
+\dots
 
 \subsection{Participants}
+
+We recruited 55 native speakers of Hungarian via the Prolific platform (\url{www.prolific.com}), where participants were pre-screened for Hungarian as their first language, and received a monetary compensation for their time (around £7.50/h). After rejecting 3 participants (due to overly long submission time, failing attention checks, or missing ET data), the final sample consisted of 52 individuals (32 female; mean age = ~35). On average it took people just under 23 minutes to complete the experiment, although with a high individual variation (unusually long submission times were rejected).
 
 \begin{figure}[!ht]%
 \FIG{\includegraphics[width=1.0\textwidth]{../plots/demographics_combined_donuts.png}}
@@ -225,26 +224,28 @@ In this study, we are investigating focus in Hungarian, specifically how Hungari
 \label{demographics}}
 \end{figure}
 
-We recruited 55 native speakers of Hungarian via the Prolific platform (\url{www.prolific.com}), where participants were pre-screened for Hungarian as their first language, and received a monetary compensation for their time (around £7.50/h). After rejecting 3 participants (due to overly long submission time, failing attention checks, or missing ET data), the final sample consisted of 52 individuals (32 female; mean age = ~35). On average it took people just under 23 minutes to complete the experiment, although with a high individual variation (very lengthy submission times were rejected).
-
 \subsection{Materials}
 
+Our stimuli consisted of 54 experimental sentences (18 items × 3 conditions) and 18 corresponding image pairs with 54 filler sentences in a randomized order, but making sure that the same items never followed each other. Regarding lexical variation, we used verbs both with and without verbal prefixes (50\%-50\%), and we included samples of both definite and indefinite conjugation (44.4\%-55.6\%), and we also included both countable and uncountable nouns as object focus. The full stimuli list is available online ??. 
 
+To avoid overly long experimental sessions, we divided the experiment into three equal parts and each participant could complete one, two, or all three parts as separate events; meaning that we had three participant groups that could overlap. This resulted in 72 valid  submissions (25 for group a, 23 for group b, and 24 for group c), thus every stimuli was interacted with at least 23 times. The three parts were split in a way that for each group each item only appeared in one condition, and each session contained four attention check questions intermixed and evenly distributed across the trials. 
+
+The three conditions were: (a) exhaustive focus with \emph{csak} `only', (b) simple pre-verbal focus (PVF), and (c) contrastive focus with \emph{többek között} `amongst others'. Each item and sentence was paired with two images: one depicting a single-object interpretation (type A) and one depicting a multiple-object interpretation (type B).
 
 \pex[everygla={},aboveglftskip=0em,interpartskip=4pt]
-\a \begingl
+\a \begingl \label{ex:stimuli_exhaustive}\textbf{exhaustive focus}\\
 \gla Ami az innivalót illeti, Eszter csak kávét ivott.//
 \glb which{\sc [rel]} the drink-{\sc acc} regard-3{\sc sg} Eszter only coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
 \glft `Regarding drinks, Eszter only drank coffee.'//
 \endgl
-\a \begingl
-\gla Ami az innivalót illeti, Eszter ma kávét ivott.//
-\glb which{\sc [rel]} the drink-{\sc acc} regard-3{\sc sg} Eszter today coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
+\a \begingl \label{ex:stimuli_pvf}\textbf{simple pre-verbal focus}\\
+\gla Ami {az innivalót} illeti, Eszter ma kávét ivott.//
+\glb which{\sc [rel]} {the drink-{\sc acc}} regard-3{\sc sg} Eszter today coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
 \glft `Regarding drinks, Eszter drank coffee today.'//
 \endgl
-\a \begingl
+\a \begingl \label{ex:stimuli_contrastive}\textbf{contrastive focus}\\
 \gla Ma reggel Eszter többek között kávét ivott.//
-\glb today morning Eszter\hl{[{\sc nom}]} amongst others coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
+\glb today morning Eszter others amongst coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
 \glft `This morning, Eszter drank, amongst other things, coffee.'//
 \endgl
 \xe
@@ -262,16 +263,11 @@ We recruited 55 native speakers of Hungarian via the Prolific platform (\url{www
 \label{fig:stimuli_8}}
 \end{figure}
 
-Articles were kept together with nouns when presented on the screen, so all 3 conditions had the same number of regions (7), and the focused element was always in region 6 (r6). The stimuli were created by modifying a set of 18 base sentences, which were all simple transitive sentences with a subject, verb, and direct object. The three conditions were created by modifying the base sentences with the addition of the focus marker \textit{csak} `only' for the exhaustive condition, and \textit{többek között} `amongst others' for the contrastive condition...........
+We added some simple contextual fillers, such as \textit{ami X-t illeti} `regarding X' or time or place adverbials to balance sentence length and make the focus constructions appear not in the beginning of sentences. 
+
+Articles were kept together with nouns when presented on the screen, so all three conditions had the same number of regions (7), and the focused element was always in region 6 (r6). The stimuli were created by modifying a set of 18 base sentences, which were all simple transitive sentences with a subject, verb, and direct object. The three conditions were created by modifying the base sentences with the addition of the focus marker \textit{csak} `only' for the exhaustive condition, and \textit{többek között} `amongst others' for the contrastive condition...........
 
 
-The stimuli consisted of 54 experimental sentences (18 items × 3 conditions) and 18 corresponding image pairs with 54 filler sentences in a randomized order, but making sure that the same items never followed each other. The full stimuli list is available online ??. 
-
-To avoid overly long experimental sessions, we divided the experiment into three equal parts and each participant could complete one, two, or all three parts as separate events; meaning that we had three participant groups that could overlap. This resulted in 72 valid  submissions (25 for group a, 23 for group b, and 24 for group c), thus every stimuli was interacted with at least 23 times. The three parts were split in a way that for each group each item only appeared in one condition, and each session contained four attention check questions intermixed and evenly distributed across the trials. 
-
-The three conditions were: (i) simple pre-verbal focus (PVF), (ii) exhaustive focus with \emph{csak} `only', and (iii) contrastive focus with \emph{többek között} `amongst others'. Each sentence was paired with two images: one depicting a single-object interpretation (type A) and one depicting a multiple-object interpretation (type B).
-
-EXAMPLE
 
 \subsection{Design}
 
@@ -283,7 +279,7 @@ EXAMPLE
 
 After a practice session consisting of three trials, participants saw a preview of the image pair to get familiar with the objects/context, on the left and right half of the screen (20\% of the screen's width and 40\% of the screen's height) in a canvas 50\% larger than the images. After pressing the spacebar they were presented with the sentence word by word (region by region), in the middle of the screen in a self-paced reading (SPR) manner participants had to use the spacebar to advance throught the sentences. We recorded reaction times (RT) throughout the reading, and the focused elements appeared in region six (r6) in every condition. After reading through the sentence, the image pair re-appeared and participants were asked to select the image that best matched the meaning of the sentence they just read. The choice had to be made with a mouse-click anywhere on the corresponding canvas. Reaction times and eye movements were recorded during this picture verification phase.
 
-Eye tracking what
+Eye tracking what?
 
 Images type A and B were counterbalanced throughout the trials.
 
@@ -301,9 +297,106 @@ Eye-tracking data were collected using the WebGazer.js library built in PCIbex, 
 
 
 \subsection{Data Analysis}
-Reading times and dwell times were analyzed using linear mixed-effects models with FocusCondition, ChoiceType, and their interaction as fixed effects, and Participant and Item as random effects. Post-hoc comparisons were conducted using Tukey HSD tests. Trials with incorrect responses or extreme RTs (>2.5 SD from the mean) were excluded.
+Reading times and dwell times were analyzed using linear mixed-effects models with FocusCondition, ChoiceType, and their interaction as fixed effects, and Participant and Item as random effects. Post-hoc comparisons were conducted using Tukey HSD tests. Trials with incorrect responses or extreme RTs (>2.5 SD from the mean) were excluded.......
+
+\subsection{Analysis}
+
+
 
 \section{Results}
+
+
+The behavioural results showed that participants overwhelmingly interpreted the unmodified PVF sentences like only-sentences, choosing type A images, but in the “contrastive” condition (among othersentences) they preferred the multi-object type B images, exhibiting a tendency toward non-exhaustive readings (Table 1). To further examine how the focus structures were associated with exhaustive and contrastive readings, we fitted a linear mixed-effects model to the total dwell time on images, with FocusCondition, ChoiceType and their interaction as main effects, and participant and item as random effects. The results revealed significant effects of FocusCondition (χ²(2) = 11.67, p < .001), ChoiceType (χ²(1) = 19.51, p < .001), and interaction between FocusCondition and ChoiceType (p < .001). Interestingly, post-hoc (TukeyHSD) tests showed that after reading only-sentences, participants took significantly less time to choose A compared to B (β = –0.88, p < .001), whereas they spent significantly more time to select A after reading contrastive sentences (β = .21, p = .034), suggesting that participants were faster to pick the expected choices in the “exhaustive” and “contrastive” conditions, respectively. Crucially, no significant difference was observed between selecting A or B for the simple PVF sentences (β = -.19, p = .362), implying that participants might consider both representations equally plausible when making their choices. Overall, our results suggest that Hungarian pre-verbal focus constructions tend to be interpreted exhaustively when no additional context is provided. This exhaustive bias seems to persist even when ‘among others’ is present, despite its licensing a contrastive reading in truth value. This explains the apparent tension in theoretical accounts. Our results also showed facilitation for explicitly exhaustive sentences and not for simple PVFs, consistent with online disambiguation of an underspecified structure.
+
+% Table 1
+\begin{table}[ht]
+\centering
+\caption{Type of chosen image per condition}
+\begin{tabular}{lrr}
+\toprule
+Condition & Image A: \% (N) & Image B: \% (N) \\
+\midrule
+Exhaustive   & 93.9 (169) & 6.1 (11) \\
+PVF          & 94.4 (170) & 5.6 (10) \\
+Contrastive  & 41.7 (75)  & 58.3 (105) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% Table 2
+\begin{table}[ht]
+\centering
+\caption{Total dwell time during choice (ms)}
+\begin{tabular}{lrr}
+\toprule
+Condition & Image A Mean (SD) & Image B Mean (SD) \\
+\midrule
+Exhaustive   & 1054 (1154) & 2173 (2001) \\
+PVF          & 1015 (991)  & 1844 (1939) \\
+Contrastive  & 1206 (1323) & 1226 (1157) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{minipage}{0.48\textwidth}
+\centering
+\caption{Type of chosen image per condition}
+\begin{tabular}{lrr}
+\toprule
+Condition & Image A: \% (N) & Image B: \% (N) \\
+\midrule
+Exhaustive   & 93.9 (169) & 6.1 (11) \\
+PVF          & 94.4 (170) & 5.6 (10) \\
+Contrastive  & 41.7 (75)  & 58.3 (105) \\
+\bottomrule
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}{0.48\textwidth}
+\centering
+\caption{Total dwell time during choice (ms)}
+\begin{tabular}{lrr}
+\toprule
+Condition & Image A Mean (SD) & Image B Mean (SD) \\
+\midrule
+Exhaustive   & 1054 (1154) & 2173 (2001) \\
+PVF          & 1015 (991)  & 1844 (1939) \\
+Contrastive  & 1206 (1323) & 1226 (1157) \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\caption{Chosen image per condition}
+\begin{tabular}{lrr}
+\toprule
+Cond. & A \% (N) & B \% (N) \\
+\midrule
+Exhaustive   & 93.9 (169) & 6.1 (11) \\
+PVF          & 94.4 (170) & 5.6 (10) \\
+Contrastive  & 41.7 (75)  & 58.3 (105) \\
+\bottomrule
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\caption{Dwell time during choice (ms)}
+\begin{tabular}{lrr}
+\toprule
+Cond. & A Mean (SD) & B Mean (SD) \\
+\midrule
+Exhaustive   & 1054 (1154) & 2173 (2001) \\
+PVF          & 1015 (991)  & 1844 (1939) \\
+Contrastive  & 1206 (1323) & 1226 (1157) \\
+\bottomrule
+\end{tabular}
+\end{minipage}
+\end{table}
 
 \section{Discussion}
 
