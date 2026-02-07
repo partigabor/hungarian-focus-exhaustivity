@@ -1,0 +1,877 @@
+\documentclass[ruler]{CUP-JNL-LIN}%[ruler,draftrules]
+
+%%%% Packages
+\usepackage{graphicx}
+\usepackage{multicol,multirow}
+\usepackage{rotating}
+\usepackage{appendix}
+\usepackage[british]{babel}
+\usepackage{csquotes}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{expex}
+\usepackage{soul}
+
+\usepackage[authoryear,sort&compress]{natbib}
+\bibpunct[:]{(}{)}{;}{a}{}{,}
+
+% Author name formatting with no trailing space in citations
+\makeatletter
+\renewcommand\NAT@nmfmt[1]{#1\unskip}
+\makeatother
+
+\usepackage[breaklinks,colorlinks,allcolors=blue]{hyperref}
+
+% \ifpdf
+%   % pdflatex: breakurl not needed (and will warn)
+% \else
+%   \usepackage{breakurl} % for latex->dvips workflows
+% \fi
+
+
+
+\articletype{RESEARCH ARTICLE}
+\jname{Journal of Linguistics}
+\jyear{2026}
+\jvol{0}
+%\jissue{1}
+\jdoi{10.1017/S0022226721000XXX}
+
+\copyrightline{\textcopyright\ The Author(s) 2021. This is an Open Access article,
+distributed under the terms of the Creative Commons Attribution licence (http://creativecommons.org/licenses/by/4.0/),
+which permits unrestricted re-use, distribution, and reproduction in any medium, provided the original work is properly cited.}
+
+\begin{document}
+
+\begin{Frontmatter}
+
+\title[Short title]{Exhaustivity and contrastivity in Hungarian focus constructions: A visual-world study}
+
+\author[1]{Author}\corresp{\email{email}}
+\author[1]{Author}
+
+\authormark{Author \& Author}
+
+\address[1]{\orgname{University}, \orgaddress{\street{Address}, \city{City}, \country{Country}}}
+
+\received{01 Jan 2026}
+\revised{02 Jan 2026}
+\accepted{03 Jan 2026}
+
+\abstract{Abstract goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+
+\keywords{Hungarian, syntax, focus, exhaustivity, contrastivity, visual-world paradigm, sentence--picture verification, self-paced reading, eye-tracking}
+
+
+
+\end{Frontmatter}
+
+\localtableofcontents
+
+% Linguistic examples with expex:
+
+% Example (1) shows how to include a single numbered language example with interlinear glossing together with a line identifying the language and its source. Use the \href{http://www.eva.mpg.de/lingua/resources/glossing-rules.php}{Leipzig glossing rules}.
+
+% \pex[everygla={},aboveglftskip=0em,interpartskip=0em]
+% \begingl\label{Lezgian}Lezgian \citep[from][207]{balogh_2007_focus}\\
+% \gla Gila abur-u-n ferma hami\v{s}alu\u{g} g\"{u}\u{g}\"{u}na amuq’-da-\v{c}. //
+% \glb Gila they-{\sc obl}-{\sc gen} farm forever behind stay-{\sc fut}-{\sc neg}//
+% \glft `Now their farm will not stay behind forever.'//
+% \endgl
+% \xe
+
+% Example (2) shows how to include multiple letter-labeled examples under a single number label.
+
+% \pex[everygla={},aboveglftskip=0em,interpartskip=0em]
+% \a \begingl
+% \gla \~nuka-ka Maria papa-ta yanu-chi-shka ka-rka-ni.//
+% \glb 1{\sc sg}-{\sc top} Maria potato-{\sc acc} cook-{\sc caus}-{\sc pass} be-{\sc pst}-{\sc 1sg.sbj}//
+% \glft `I was made to cook potatoes by Maria.'//
+% \endgl
+% \a \begingl
+% \gla *\~nuka-ka mishqui-ka miku-naya-shka ka-rka-nil.//
+% \glb 1{\sc sg}-{\sc top} candy-{\sc top} eat-{\sc desid}-{\sc pass} be-{\sc pst}-1{\sc sg.sbj}//
+% \glft `I wanted to eat candy.'//
+% \endgl
+% \xe
+
+% Examples for LaTeX use: 
+
+% \citep[1--2]{balogh_2007_focus}
+
+% \citet[1--2]{balogh_2007_focus}
+
+% Terminology:
+% •	hangsúly: stress, accent; prosody, intonation (contour), 
+% •	igekötő: verbal prefix (vpx; prf), verbal modifier (vm), verbal particle; aspectual particle; co-verb; pre-verb, etc.
+
+\section{Introduction}
+
+How languages express contrast and exhaustivity has major implications for how we understand the syntax--semantics interface. This study revisits the debate on the interpretation of Hungarian focus constructions using eyetracking with the visual-world paradigm. Specifically, we examine two theoretically important inquiries: how strongly Hungarian native speakers interpret phrases in the pre-verbal focus domain exhaustively, and whether contrastive but non-exhaustive readings exist, as well as from a cognitive perspective, whether different focus types produce processing differences during language comprehension. 
+
+
+
+% To address this theoretical debate, and in light with recent experimental studies (Onea \& Beaver, 2009; Gerőcs et al., 2014; Káldi, 2021), we designed a visual-world eye-tracking experiment to differentiate interpretations associated with the PVF structures. Specifically, we were curious about Hungarian speakers’ dominant interpretation of the unmodified, simple PVF sentence (e.g., (1b)), in comparison with the only-exhaustive (1c) and the contrastive condition (1d). We used a Sentence–Picture Verification (SPV) task (Fig. 1), in which participants read a sentence in a selfpaced reading (SPR) manner and were asked to indicate one correct meaning-representation between two visual stimuli. Materials constituted 54 sentences (18 items × 3 conditions), and 54 pairs of images with relevant single and multiple objects (Fig. 2), and 54 filler trials. Using PCIbex (Schwarz \& Zehr, 2021), we collected reading times (RT) during SPR, and eye-tracking data (total dwell time) during the SPV choice, recording the time spent looking at each target image. The behavioural results showed that participants overwhelmingly interpreted the unmodified PVF sentences like only-sentences, choosing type A images, but in the “contrastive” condition (among othersentences) they preferred the multi-object type B images, exhibiting a tendency toward non-exhaustive readings (Table 1). To further examine how the focus structures were associated with exhaustive and contrastive readings, we fitted a linear mixed-effects model to the total dwell time on images, with FocusCondition, ChoiceType and their interaction as main effects, and participant and item as random effects. The results revealed significant effects of FocusCondition (χ²(2) = 11.67, p < .001), ChoiceType (χ²(1) = 19.51, p < .001), and interaction between FocusCondition and ChoiceType (p < .001). Interestingly, post-hoc (TukeyHSD) tests showed that after reading only-sentences, participants took significantly less time to choose A compared to B (β = –0.88, p < .001), whereas they spent significantly more time to select A after reading contrastive sentences (β = .21, p = .034), suggesting that participants were faster to pick the
+% expected choices in the “exhaustive” and “contrastive” conditions, respectively. Crucially, no significant difference was observed between selecting A or B for the simple PVF sentences (β = -.19, p = .362), implying that participants might consider both representations equally plausible when making their choices. Overall, our results suggest that Hungarian pre-verbal focus constructions tend to be interpreted
+% exhaustively when no additional context is provided. This exhaustive bias seems to persist even when ‘among others’ is present, despite its licensing a contrastive reading in truth value. This explains the apparent tension in theoretical accounts. Our results also showed facilitation for explicitly exhaustive sentences and not for simple PVFs, consistent with online disambiguation of an underspecified structure.
+
+% ---
+
+
+\pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
+\begingl \label{ex:neutral}
+\gla {\it Anna \it meg-ette \it a \it banánt.}//
+\glb Anna{\sc [nom]} {\sc vpx}-ate-3{\sc sg.def} the banana-{\sc acc}//
+\glft `Anna ate (up) the banana.'//
+\endgl
+\xe
+
+\vspace{-12px}
+
+\pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
+\begingl \label{ex:pvf}
+\gla {\it Anna \it a \it BANÁNT \it ette \it meg.}//
+\glb Anna{\sc [nom]} the banana-{\sc acc} ate-3{\sc sg.def} {\sc vpx}//
+\glft a) `Anna ate (up) the BANANA.' \quad [and nothing else] \quad \\
+b) `Anna ate (up) the BANANA.' \quad [and not something else]//
+\endgl
+\xe
+
+Consider the canonical, neutral sentence in example \ref{ex:neutral}, where the subject \textit{Anna} is in the sentence-initial position, followed by the verb, \textit{ette} `ate' (together with the verbal prefix [\textsc{vpx}] (or verbal modifier [\textsc{vm}]) \textit{meg-})\footnote{Verbal prefixes in Hungarian can modify the meaning of the verb, or act as aspect markers. \textit{Meg-} in this case has a perfective aspect meaning, indicating that the action has been completed.} and the object \textit{banán} `banana' (with the \textit{-t} accusative ending); vs the pre-verbal focus construction in example \ref{ex:pvf}, where the object is fronted to the pre-verbal position, leaving its (normally attached) verbal prefix behind. The sentence in example \ref{ex:pvf} is a typical example for a focus construction, and it could also be rendered in English with an \textit{it}-cleft, i.e., `It is the BANANA that Anna ate.'. The comparison of the Hungarian focus-constructions with English \textit{it}-clefts has its own literature \citep[cf.][]{ekiss_1999_english,wedgwood_2006_hungarian}, but it is out of the scope of the present discussion.
+
+Constituents in canonical sentences can be focused for various communicative purposes, such as emphasis, question answering, negation and contradiction. In \ref{ex:pvf} we are focusing\footnote{Linguistically focused elements in the examples will be set in capitals for highlight throughout the paper.} the object, and as such we can observe two changes that mark focus: movement and prosody. Regarding the first, Hungarian has a special, grammaticalized syntactic position for the focused constituent directly in front of the verb -- called the pre-verbal focus (PVF) position \citep{wedgwood_2006_predication,balogh_2007_focus} or structural focus position \citep{ekiss_1998_multiple} or simply just focus position -- often associated with exhaustive/identificational semantics \citep{balogh_2013_hungarian}. Besides movement, the syntactically expressed focus is also accompanied by prosodic stress, and it has been suggested that in these focus marking strategies movement is primary, and prosody is secondary \citep{balogh_2013_hungarian}. Regarding intonation in PVF constructions, the focused constituent typically bears eradicating stress \citep[cf.][]{kornai_1988_hungarian,gecseg_2020_focused}, meaning that the verb is destressed and the acoustic prominence of all other elements are `flattened'. The PVF construction is a common, everyday focus-marking strategy in Hungarian -- a topic-prominent, discourse-configurational language where the configuration of constituents expresses information structural roles as opposed to grammatical ones \citep[cf.][]{ekiss_1995_discourse} -- and various aspects of it has garnered significant attention in both theoretical and psycholinguistic research.
+
+One of the key issues around Hungarian focus is whether it is inherently exhaustive, or if the exhaustivity is a pragmatic inference. In other words, does the PVF construction itself entail that the focused element is the only one for which the predicate holds true, or can it be interpreted in a contrastive way, where the focused element stands in opposition to other alternatives without necessarily excluding them? For example, in \ref{ex:pvf} above, does this sentence implies that Anna ate only the banana \textit{and nothing else} -- an exclusive reading, or could it mean that Anna ate the banana \textit{and not something else} (or even, that she ate the banana but maybe \textit{she also ate something else}) -- a contrastive reading? We are interested in the `default' interpretation of focus constructions such as these, and whether Hungarian speakers tend to understand them exhaustively or contrastively, demonstrated by the two possible readings given in \ref{ex:pvf}. 
+
+We should therefore first try to define what we mean by \textit{exhaustive focus} and \textit{contrastive focus}. First, both types require the pre-verbal position, but they differ in their semantic/pragmatic implications. In \citet{ekiss_1998_identificational}'s influential paper, both would fall under the term of \textit{identificational focus}, which she defines as a focus that identifies the referent of the focused element from a set of alternatives. It takes scope, binds a variable, and interacts with quantification. É. Kiss treats contrastive focus as a subtype of identificational focus, where she describes it as [+exhaustive], and often [+contrastive]. However, we would argue that it does not always entail exhaustivity. 
+In \citet[259]{krifka_2008_basic}'s work on Information Structure (IS), both exhaustive and contrastive focus is mentioned as subtypes of focus, and while exhaustive is interpreted as the only alternative that makes the proposition true narrowing the set of alternatives down to one (and thus enforcing exclusivity), contrastive focus is defined as a focus used for truly contrastive utterances and presupposes a competing alternative in the common ground, highlighting the contrast. Krifka's distinction aligns with his broader distinction between semantic (truth‑conditional impact) and pragmatic (discourse management) uses of focus.
+
+% In short:
+% - Exhaustive focus = “only X, not others” → semantic, truth‑conditional.
+% - Contrastive focus = “X instead of Y / X as well as Y” → pragmatic, discourse‑structuring.
+
+% = contrastive focus (Zimmermann 2008; Rooth 1985, 1992)
+% = kontrast (Vallduví Vilkuna 1998)
+
+In short, exhaustive focus implies that the focused element is the sole entity for which the predicate holds true; i.e. that there are no other things Anna ate. On the other hand, contrastive focus would imply that the focused element stands in opposition to other possible alternatives, drawing attention to its uniqueness, unlikeliness, or contradicting nature given the context, e.g., `Anna ate the banana [and not the apple].', but it does not necessarily exclude alternatives, i.e., that there could be other things that Anna ate, e.g., `Anna ate the banana [and/but also the apple].'
+
+
+
+\pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
+\begingl \label{ex:only}
+\gla {\it Anna \it\textbf{csak} \it a \it BANÁNT \it ette \it meg.}//
+\glb Anna{\sc [nom]} only the banana-{\sc [acc]} eat-3{\sc pst-sg.def} {\sc vpx}//
+\glft `Anna ate (up) only the BANANA.'//
+\endgl
+\xe
+% Anna csak egy BANÁNT vett.
+
+\vspace{-12px}
+
+\pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
+\begingl \label{ex:amongst_others}
+\gla {\it Anna \it\textbf{többek között} \it a \it BANÁNT \it ette \it meg.}//
+\glb Anna{\sc [nom]} {others amongst} the banana-{\sc [acc]} eat-3{\sc pst-sg.def} {\sc vpx}//
+\glft `Anna ate (up) the BANANA, amongst other things.'//
+\endgl
+\xe
+% Anna többek között egy BANÁNT vett.
+
+
+
+We can, in fact, force an exhaustive reading by adding the exhaustive focus marker \textit{csak} `only' to the sentence (ex. \ref{ex:only})\footnote{The scope of \textit{csak} `only' only extends to the subsequent element, it can only refer to the object and not the following VP.}. Furthermore, we can also cancel exhaustivity within the same clause with the help of \textit{többek között} `amongst others' (ex. \ref{ex:amongst_others})\footnote{Similarly, only the object is in the scope of \textit{többek között} `amongst others', it is not possible to interpret this sentence as if the verb is an alternative to other actions one can do to a banana.}, a phrase with an inherently non-exhaustive/inclusive meaning \citep[see also][14]{wedgwood_2006_predication,balogh_2013_hungarian}.
+
+Now, one intuitive reading of \ref{ex:pvf} would be that `Anna ate the banana [and nothing else].' In this sense, this usual PVF sentence seems to be equal to \ref{ex:only}, where the exhaustive interpretation is explicitly expressed with the operator \textit{csak} `only'. The question of differentiating the exhaustivity entailed by the pre-verbal focus structure vs the exhaustivity operator has been studied in detail by \citet{balogh_2007_focus}. However, we also notice that if the utterance \ref{ex:pvf} is amended with certain phrases, e.g. \textit{többek között} `amongst others' as in \ref{ex:amongst_others}, it is not only perfectly grammatical, it becomes inclusive, and also expresses a contrastive sense due the use of focus. 
+
+In Hungarian linguistic research, the role of semantic exhaustivity in focus constructions has been debated for more than forty years. The central question is whether exhaustivity arises from the syntax–semantics interface or from pragmatic and contextual factors. Earlier accounts within the generative framework assumed that the Hungarian pre-verbal focus structure necessarily entails semantic exhaustiveness, claiming that exhaustivity is an inherent property of the focus structure itself \citep{szabolcsi_1981_compositionality,ekiss_1998_identificational,ekiss_2007_topic,kenesei_2006_focus,horvath_2008_separating} (the received view up until the 2000s). More recently, this view has since been challenged and shown to be untrue by both theoretical and psycholinguistic work -- supported by experimental data -- and it has been proposed that the exhaustive interpretation emerges from discourse-pragmatics, or conversational implicature \citep{wedgwood_2006_hungarian,onea_2009_exhaustiveness,balogh_2013_hungarian,kaldi_2016_magyar}. In introducing their argument against the claims of \citet{szabolcsi_1981_compositionality}, \citet{ekiss_1998_identificational,ekiss_2007_topic}, and \citet{horvath_2008_separating} that \enquote{an immediately pre-verbal focus in Hungarian is semantically exhaustive} or \enquote{is interpreted exhaustively, i.e. as if it were in the scope of an exclusive like \enquote{only}}. In their first example\footnote{\textit{Péter MARIT csókolta meg.} `Peter kissed MARY.'} -- analogous to our example \ref{ex:pvf} -- \citet[1]{onea_2009_hungarian} suggested that the implicit reading of a sentence of this type of construction should be exhaustive, i.e. `Anna ate the banana [and nothing else].' but their analysis suggests that while such sentences often invite an exhaustive reading, this interpretation is not structurally encoded but contextually inferred.
+
+In \ref{ex:pvf} however, we feel that the underlying implication is not necessarily that Anna ate \textit{nothing} else, but that she did not eat \textit{something} else. Therefore, in our view, the default reading might as well be contrastive. 
+
+To test this, we designed an experiment where participants read typical PVF sentences and are forced to choose between two contexts that offer either an A) exhaustive interpretation, and B) a contrastive interpretation (and where both are plausible). We used a visual-world paradigm, where participants complete a sentence--picture matching/verification task after presented with a focused sentence in a self-paced reading manner, where they have to decide which image/context/situation best describes the sentence. Their choices...
+
+To sum up, while previous work has asked whether an immediately pre-verbal focus in Hungarian is semantically exhaustive or not, our question is slightly different: What is the default interpretation of a pre-verbal focus construction? Is it inherently exhaustive, or is it more naturally contrastive?
+
+
+\begin{figure}[!ht]%
+\centering
+\FIG{
+\includegraphics[width=0.33\textwidth]{../plots/1a.png}
+\qquad
+\includegraphics[width=0.33\textwidth]{../plots/1b.png}
+}
+{\caption{Example stimuli...}
+\label{fig:stimuli_1}}
+\end{figure}
+
+\subsection{Background}
+
+% object focus
+
+% pitch accent
+
+
+\dots
+
+\section{Methods}
+
+In this study, we are investigating focus in Hungarian, specifically how Hungarian speakers distinguish between exhaustive focus and contrastive focus – if they do. So... we designed an experiment
+
+\subsection{Participants}
+
+\begin{figure}[!ht]%
+\FIG{\includegraphics[width=1.0\textwidth]{../plots/demographics_combined_donuts.png}}
+{\caption{Demographic information of the participants in the experiment; gender (left) and age distributions (right).}
+\label{demographics}}
+\end{figure}
+
+We recruited 55 native speakers of Hungarian via the Prolific platform (\url{www.prolific.com}), where participants were pre-screened for Hungarian as their first language, and received a monetary compensation for their time (around £7.50/h). After rejecting 3 participants (due to overly long submission time, failing attention checks, or missing ET data), the final sample consisted of 52 individuals (32 female; mean age = ~35). On average it took people just under 23 minutes to complete the experiment, although with a high individual variation (very lengthy submission times were rejected).
+
+\subsection{Materials}
+
+
+
+\pex[everygla={},aboveglftskip=0em,interpartskip=4pt]
+\a \begingl
+\gla Ami az innivalót illeti, Eszter csak kávét ivott.//
+\glb which{\sc [rel]} the drink-{\sc acc} regard-3{\sc sg} Eszter only coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
+\glft `Regarding drinks, Eszter only drank coffee.'//
+\endgl
+\a \begingl
+\gla Ami az innivalót illeti, Eszter ma kávét ivott.//
+\glb which{\sc [rel]} the drink-{\sc acc} regard-3{\sc sg} Eszter today coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
+\glft `Regarding drinks, Eszter drank coffee today.'//
+\endgl
+\a \begingl
+\gla Ma reggel Eszter többek között kávét ivott.//
+\glb today morning Eszter\hl{[{\sc nom}]} amongst others coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
+\glft `This morning, Eszter drank, amongst other things, coffee.'//
+\endgl
+\xe
+
+
+
+\begin{figure}[!ht]%
+\centering
+\FIG{
+\includegraphics[width=0.33\textwidth]{../plots/8a.png}
+\qquad
+\includegraphics[width=0.33\textwidth]{../plots/8b.png}
+}
+{\caption{Example stimuli...}
+\label{fig:stimuli_8}}
+\end{figure}
+
+Articles were kept together with nouns when presented on the screen, so all 3 conditions had the same number of regions (7), and the focused element was always in region 6 (r6). The stimuli were created by modifying a set of 18 base sentences, which were all simple transitive sentences with a subject, verb, and direct object. The three conditions were created by modifying the base sentences with the addition of the focus marker \textit{csak} `only' for the exhaustive condition, and \textit{többek között} `amongst others' for the contrastive condition...........
+
+
+The stimuli consisted of 54 experimental sentences (18 items × 3 conditions) and 18 corresponding image pairs with 54 filler sentences in a randomized order, but making sure that the same items never followed each other. The full stimuli list is available online ??. 
+
+To avoid overly long experimental sessions, we divided the experiment into three equal parts and each participant could complete one, two, or all three parts as separate events; meaning that we had three participant groups that could overlap. This resulted in 72 valid  submissions (25 for group a, 23 for group b, and 24 for group c), thus every stimuli was interacted with at least 23 times. The three parts were split in a way that for each group each item only appeared in one condition, and each session contained four attention check questions intermixed and evenly distributed across the trials. 
+
+The three conditions were: (i) simple pre-verbal focus (PVF), (ii) exhaustive focus with \emph{csak} `only', and (iii) contrastive focus with \emph{többek között} `amongst others'. Each sentence was paired with two images: one depicting a single-object interpretation (type A) and one depicting a multiple-object interpretation (type B).
+
+EXAMPLE
+
+\subsection{Design}
+
+\begin{figure}[!ht]%
+\FIG{\includegraphics[width=1.0\textwidth]{../plots/design.png}}
+{\caption{Design}
+\label{design}}
+\end{figure}
+
+After a practice session consisting of three trials, participants saw a preview of the image pair to get familiar with the objects/context, on the left and right half of the screen (20\% of the screen's width and 40\% of the screen's height) in a canvas 50\% larger than the images. After pressing the spacebar they were presented with the sentence word by word (region by region), in the middle of the screen in a self-paced reading (SPR) manner participants had to use the spacebar to advance throught the sentences. We recorded reaction times (RT) throughout the reading, and the focused elements appeared in region six (r6) in every condition. After reading through the sentence, the image pair re-appeared and participants were asked to select the image that best matched the meaning of the sentence they just read. The choice had to be made with a mouse-click anywhere on the corresponding canvas. Reaction times and eye movements were recorded during this picture verification phase.
+
+Eye tracking what
+
+Images type A and B were counterbalanced throughout the trials.
+
+\subsection{Procedure}
+
+The experiment was hosted on and presented using PCIbex \citep{schwarz_2021_tutorial}, the code and resources are available online ??
+
+Participants completed the experiment on their own devices (PC only with a webcamera and physical keyboard \& mouse) and own their own time, but with Prolific helping us control for too quick or too slow submissions resulting in rejection/timeout.
+
+Participants were instructed to be in a well-lit environment, sit at a comfortable distance from their screen and webcam, and minimize head movements during the experiment, and were informed about the exact procedure.
+
+Participants also had to calibrate the eye-tracker before starting the experiment After calibration, practice trials were provided to familiarize participants with the self-paced reading and picture verification tasks.
+
+Eye-tracking data were collected using the WebGazer.js library built in PCIbex, which uses the participant's webcam to track eye movements. Before starting the experiment, participants underwent a calibration procedure to ensure accurate eye-tracking data collection.
+
+
+\subsection{Data Analysis}
+Reading times and dwell times were analyzed using linear mixed-effects models with FocusCondition, ChoiceType, and their interaction as fixed effects, and Participant and Item as random effects. Post-hoc comparisons were conducted using Tukey HSD tests. Trials with incorrect responses or extreme RTs (>2.5 SD from the mean) were excluded.
+
+\section{Results}
+
+\section{Discussion}
+
+\section{Conclusion}
+
+\dots
+
+\section*{Unnumbered section}
+
+% \begin{table}[t]
+% \TBL{\caption{Tables with short caption\label{tab2}}}
+% {\begin{fntable}
+% \tabcolsep=8pt
+% \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+% \toprule
+%  \TCH{Projectile} & \TCH{Energy} & \TCH{$\sigma_{\mathit{calc}}$} & \TCH{$\sigma_{\mathit{expt}}$} &
+% \TCH{Energy} & \TCH{$\sigma_{\mathit{calc}}$} & \TCH{$\sigma_{\mathit{expt}}$} \\\midrule
+% \TCH{Element 3}&990 A &1168 &$1547\pm12$ &780 A &1166 &$1239\pm100$\\
+% {{Element 4}}&500 A &961 &$\hphantom{0}922\pm10$ &900 A &1268 &$1092\pm40\hphantom{0}$\\
+% \TCH{Element 3}&990 A &1168 &$1547\pm12$ &780 A &1166 &$1239\pm100$\\
+% {\TCH{Element 4}}&500 A &961 &$\hphantom{0}922\pm10$ &900 A &1268 &$1092\pm40\hphantom{0}$\\
+% \botrule
+% \end{tabular*}%
+% \end{fntable}}
+% \end{table}
+
+
+% \begin{table}[t]
+% \TBL{\caption{Tables which are too long to fit, should be written using the table environment as shown here\label{tab3}}}
+% {\begin{fntable}
+% \tabcolsep=8pt
+% \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+% \toprule
+%  \TCH{Projectile} & \TCH{Energy} & \TCH{$\sigma_{\mathit{calc}}$} & \TCH{$\sigma_{\mathit{expt}}$} &
+% \TCH{Energy} & \TCH{$\sigma_{\mathit{calc}}$} & \TCH{$\sigma_{\mathit{expt}}$} \\\midrule
+% \TCH{Element 3}&990 A &1168 &$1547\pm12$ &780 A &1166 &$1239\pm100$\\
+% {{Element 4}}&500 A &961 &$\hphantom{0}922\pm10$ &900 A &1268 &$1092\pm40\hphantom{0}$\\
+% \TCH{Element 3}&990 A &1168 &$1547\pm12$ &780 A &1166 &$1239\pm100$\\
+% {\TCH{Element 4}}\footnotemark[a]&500 A &961 &$\hphantom{0}922\pm10$ &900 A &1268 &$1092\pm40\hphantom{0}$\\
+% \TCH{Element 3}&990 A &1168 &$1547\pm12$ &780 A &1166 &$1239\pm100$\\
+% {\TCH{Element 4}}&500 A &961 &$\hphantom{0}922\pm10$ &900 A &1268 &$1092\pm40\hphantom{0}$\\
+% \TCH{Element 3}&990 A &1168 &$1547\pm12$ &780 A &1166 &$1239\pm100$\\
+% {\TCH{Element 4}}&500 A &961 &$\hphantom{0}922\pm10$ &900 A &1268 &$1092\pm40\hphantom{0}$\\
+% \botrule
+% \end{tabular*}%
+% %\footnotetext[]{\textit{Note:} This is an example of table footnote this is an example of table footnote this is an example of table footnote this is an example of~table footnote this is an example of table footnote}
+% \footnotetext[a]{This is an example of table footnote}%
+% \end{fntable}
+% }
+% \end{table}
+
+\begin{Backmatter}
+
+\paragraph{Acknowledgments}
+The authors also wish to thank Lucie Laporte-Devylder, Jordan Zlatev, Georgios
+Stampoulidis, Joost Van de Weijer, Katie Hoemann, and two anonymous reviewers for their invaluable
+feedback and comments on earlier versions of this paper.
+
+\paragraph{Funding statement}
+This study was funded by the Deutsche Forschungsgemeinschaft (DFG) through the Collaborative Research Center 1252 Prominence in Language, and by Mobility Grants from Division 7, Research Management, University of Cologne, which we gratefully acknowledge.
+
+\paragraph{Data availability statement}
+A statement about how to access data, code and other materials allowing users to understand, verify and replicate findings -- e.g. Replication data and code can be found in Harvard Dataverse: \url{https://doi.org/link}.
+
+
+% \bibliographystyle{plain}       % or another style
+% \bibliography{references}     % your .bib file
+
+\begin{thebibliography}{99}
+
+% @incollection{balogh_2007_focus,
+%   title = {Focus and '{{Only}}' in {{Hungarian}}},
+%   booktitle = {Logic, {{Language}}, and {{Computation}}},
+%   author = {Balogh, Kata},
+%   editor = {Ten Cate, Balder D. and Zeevat, Henk W.},
+%   date = {2007},
+%   volume = {4363},
+%   pages = {31--44},
+%   publisher = {Springer},
+%   location = {Berlin, Heidelberg},
+%   doi = {10.1007/978-3-540-75144-1_3},
+%   abstract = {The main of this paper to investigate Hungarian focus interpretations. Hungarian has a special pre-verbal position for focussed constituents, which receive an exhaustive interpretation. Since the focus sensitive particle, ‘only’ goes together with this exhaustive focus, ‘only’ seems to be redundant or superfluous. For this reasons, we will investigate focus and ‘only’ in answers and multiple focus constructions and propose an analysis where exhaustivity-operator and only-operator are distinct.},
+%   isbn = {978-3-540-75143-4},
+% }
+
+\bibitem[Balogh (2007)]{balogh_2007_focus}
+{Balogh, Kata}. 2007. Focus and `Only' in Hungarian. In Balder D. Ten Cate and Henk W. Zeevat (eds.), \textit{Logic, Language, and Computation} 4363, 31--44. Berlin, Heidelberg: Springer. \url{https://doi.org/10.1007/978-3-540-75144-1_3} (accessed 2026 February 2).
+
+
+% @incollection{balogh_2013_hungarian,
+%   title = {Hungarian {{Pre-verbal Focus}} and {{Exhaustivity}}},
+%   booktitle = {New {{Frontiers}} in {{Artificial Intelligence}}: {{JSAI-isAI}} 2012 {{Workshops}}, {{LENLS}}, {{JURISIN}}, {{MiMI}}, {{Miyazaki}}, {{Japan}}, {{November}} 30 and {{December}} 1, 2012, {{Revised Selected Papers}}},
+%   author = {Balogh, Kata},
+%   editor = {Motomura, Yoichi and Butler, Alastair and Bekki, Daisuke},
+%   date = {2013},
+%   series = {Lecture {{Notes}} in {{Computer Science}}},
+%   volume = {7856},
+%   pages = {1--16},
+%   publisher = {Springer},
+%   location = {Berlin; Heidelberg},
+%   doi = {10.1007/978-3-642-39931-2},
+%   isbn = {978-3-642-39930-5},
+%   abstract = {The main of this paper to investigate Hungarian focus interpretations. Hungarian has a special pre-verbal position for focussed constituents, which receive an exhaustive interpretation. Since the focus sensitive particle, ‘only’ goes together with this exhaustive focus, ‘only’ seems to be redundant or superﬂuous. For this reasons, we will investigate focus and ‘only’ in answers and multiple focus constructions and propose an analysis where exhaustivity-operator and only-operator are distinct.},
+% }
+
+\bibitem[Balogh (2013)]{balogh_2013_hungarian}
+{Balogh, Kata}. 2013. Hungarian Pre-verbal Focus and Exhaustivity. In Yoichi Motomura, Alastair Butler, and Daisuke Bekki (eds.), \textit{New Frontiers in Artificial Intelligence: JSAI-isAI 2012 Workshops, LENLS, JURISIN, MiMI, Miyazaki, Japan, November 30 and December 1, 2012, Revised Selected Papers} (Lecture Notes in Computer Science 7856), 1--16. Berlin; Heidelberg: Springer. \url{https://doi.org/10.1007/978-3-642-39931-2} (accessed 2026 February 2).
+
+
+
+% @book{ekiss_1995_discourse,
+%   title = {Discourse {{Configurational Languages}}},
+%   editor = {É. Kiss, Katalin},
+%   date = {1995-03-16},
+%   series = {Oxford {{Studies}} in {{Comparative Syntax}}},
+%   publisher = {Oxford University Press},
+%   location = {Oxford, New York},
+%   abstract = {Consisting of eleven studies on languages with designated structural topic and focus positions, this study offers an introduction surveying the empirical and theoretical problems involved in the description of this language type. Unique in focusing on languages outside the traditional Indo-European group, the essays look at Chadic, Somali, Basque, Catalan, Old Romance, Greek, Hungarian, Finnish, Korean, and Quenchua. The papers provide interesting new empirical data, as well as a variety of means and alternatives of representing them structurally. At the same time, they also address important theoretical questions in the framework of generative theory. It is the first study to apply methods of comparative syntax to the study of topic and focus. Consisting of eleven studies on languages with designated structural topic and focus positions, this study offers an introduction surveying the empirical and theoretical problems involved in the description of this language type. Unique in focusing on languages outside the traditional Indo-European group, the essays look at Chadic, Somali, Basque, Catalan, Old Romance, Greek, Hungarian, Finnish, Korean, and Quenchua. The papers provide interesting new empirical data, as well as a variety of means and alternatives of representing them structurally. At the same time, they also address important theoretical questions in the framework of generative theory. It is the first study to apply methods of comparative syntax to the study of topic and focus.},
+%   isbn = {978-0-19-508834-2},
+% }
+
+\bibitem[É. Kiss (1995)]{ekiss_1995_discourse}
+{É. Kiss, Katalin} (ed.). 1995. \textit{Discourse Configurational Languages} (Oxford Studies in Comparative Syntax 4). New York: Oxford University Press.
+
+
+
+% @article{ekiss_1998_identificational,
+%   title = {Identificational {{Focus}} versus {{Information Focus}}},
+%   author = {É. Kiss, Katalin},
+%   date = {1998},
+%   journaltitle = {Language},
+%   volume = {74},
+%   number = {2},
+%   eprint = {417867},
+%   eprinttype = {jstor},
+%   pages = {245--273},
+%   url = {https://www.jstor.org/stable/417867},
+%   abstract = {This article argues that identificational focus, which expresses exhaustive identification a occupies the specifier of a functional projection, must be distinguished in language description from information focus, which conveys new information and involves no syntactic reorderin The properties of the two types of focus are established on the basis of Hungarian and English material. It is argued that the cleft constituent is the realization of identificational focus in English Only-phrases are analyzed as identificational foci carrying an evaluative presupposition. Th feature specification of identificational focus is shown to be subject to parametric variation: t focus operators of various languages are specified for the positive value of either or both of t features [+exhaustive] and [+contrastive].*}
+% }
+
+\bibitem[É.Kiss (1998)]{ekiss_1998_identificational}
+{É. Kiss, Katalin}. 1998. Identificational Focus versus Information Focus. \textit{Language} 74(2), 245--273. \url{https://www.jstor.org/stable/417867} (accessed 2026 February 2).
+
+% @article{ekiss_1998_multiple,
+%   title = {Multiple Topic, One Focus?},
+%   author = {É. Kiss, Katalin},
+%   date = {1998},
+%   journaltitle = {Acta Linguistica Hungarica},
+%   volume = {45},
+%   number = {1/2},
+%   eprint = {44656166},
+%   eprinttype = {jstor},
+%   pages = {3--29},
+%   publisher = {Akadémiai Kiadó},
+%   issn = {1216-8076},
+%   url = {https://www.jstor.org/stable/44656166},
+%   urldate = {2025-11-20},
+%   abstract = {The paper argues against the assumption that in languages with structural focus, there can be several topics but only one focus per clause. The focus projection can also recur—however, because of cyclic V movement through the intermediate F positions into the highest F, only the highest focus precedes the verb. Three Hungarian constructions are analyzed in which the presence of a 2nd focus operator is proved by independent syntactic evidence. The in-situ analysis of the 2nd, postverbal focus is excluded on the basis that its scope corresponds to its S-structure position. Finally, it is shown that the recurring FPs can be separated by intervening TopP and QP projections, i.e., the whole left periphery of the Hungarian sentence is, in fact, recursive.},
+% }
+
+\bibitem[É.Kiss (1998)]{ekiss_1998_multiple}
+{É. Kiss, Katalin}. 1998. Multiple Topic, One Focus? \textit{Acta Linguistica Hungarica} 45(1/2), 3--29. \url{https://www.jstor.org/stable/44656166} (accessed 2026 February 2).
+
+
+
+% @incollection{ekiss_1999_english,
+%   title = {The {{English Cleft Construction}} as a {{Focus Phrase}}},
+%   booktitle = {Boundaries of {{Morphology}} and {{Syntax}}},
+%   author = {É. Kiss, Katalin},
+%   editor = {Mereu, Lunella},
+%   date = {1999-06-15},
+%   series = {Current {{Issues}} in {{Linguistic Theory}}},
+%   pages = {217},
+%   publisher = {John Benjamins Publishing Company},
+%   doi = {10.1075/cilt.180.14kis},
+%   isbn = {978-90-272-3686-9},
+% }
+
+\bibitem[É. Kiss (1999)]{ekiss_1999_english}
+{É. Kiss, Katalin}. 1999. The English Cleft Construction as a Focus Phrase. In Lunella Mereu (ed.), \textit{Boundaries of Morphology and Syntax} (Current Issues in Linguistic Theory 180), 217. Amsterdam; Philadelphia: John Benjamins Publishing Company. \url{https://doi.org/10.1075/cilt.180.14kis} (accessed 2026 February 2).
+
+
+
+% @article{ekiss_2007_topic,
+%   title = {Topic and Focus: {{Two}} Structural Positions Associated with Logical Functions in the Left Periphery of the {{Hungarian}} Sentence},
+%   author = {É. Kiss, Katalin},
+%   date = {2007},
+%   journaltitle = {Acta Linguistica Hungarica},
+%   volume = {55},
+%   number = {3--4},
+%   pages = {287--296},
+%   publisher = {Akadémiai Kiadó},
+%   isbn = {1216-8076},
+%   doi = {https://doi.org/10.1556/aling.55.2008.3-4.4},
+%   abstract + {The paper explicates the notions of topic, contrastive topic, and focus as used in the analysis of Hungarian. Based on distributional criteria, topic and focus are claimed to represent distinct structural positions in the left periphery of the Hungarian sentence, associated with logical rather than discourse functions. The topic is interpreted as the logical subject of predication. The focus is analyzed as a derived main predicate, specifying the referential content of the set denoted by the backgrounded post-focus section of the sentence. The exhaustivity associated with the focus and the existential presupposition associated with the background are shown to be properties following from their specificational predication relation.}
+% }
+
+\bibitem[É.Kiss (2007)]{ekiss_2007_topic}
+{É. Kiss, Katalin}. 2007. Topic and Focus: Two Structural Positions Associated with Logical Functions in the Left Periphery of the Hungarian Sentence. \textit{Acta Linguistica Hungarica} 55(3--4), 287--296. \url{https://doi.org/10.1556/aling.55.2008.3-4.4} (accessed 2026 February 2).
+
+
+
+% @article{gecseg_2020_focused,
+%   title = {Focused {{Topics}} in {{Hungarian}}: {{Reconsidering}} the {{Pragmatic Relevance}} of the {{Structural Focus Position}}},
+%   shorttitle = {Focused {{Topics}} in {{Hungarian}}},
+%   author = {Gécseg, Zsuzsanna},
+%   date = {2020-12},
+%   journaltitle = {Studia Linguistica},
+%   shortjournal = {Studia Linguistica},
+%   volume = {74},
+%   number = {3},
+%   pages = {740--774},
+%   issn = {0039-3193, 1467-9582},
+%   doi = {10.1111/stul.12142},
+%   abstract = {In this paper, a speciﬁc syntactic construction of Hungarian is investigated in which the preverbal constituent ﬁlling the structural Focus position functions as the topic of the sentence on the pragmatic level. Focused topic constructions are commonly used in Hungarian, especially in copular sentences. The core motivation of their use is the following: the placement of the topic into Focus position gives rise to the implicature that the topic referent is the only referent the predicate of the sentence holds for. This complex topicalization strategy can be accounted for by means of an alternative-based concept of focus in the spirit of Rooth (1992), E. Kiss (1998) and Krifka (2008): the focusing of the aboutness topic indicates the presence of potential alternatives, and the referent of the topical expression placed into the structural Focus position functions as an exhaustive topic.},
+% }
+
+\bibitem[Gécseg (2020)]{gecseg_2020_focused}
+{Gécseg, Zsuzsanna}. 2020. Focused Topics in Hungarian: Reconsidering the Pragmatic Relevance of the Structural Focus Position. \textit{Studia Linguistica} 74(3), 740--774. \url{https://doi.org/10.1111/stul.12142}  (accessed 2026 February 2).
+
+
+
+% @article{genzel_2015_prosodic,
+%   title = {The prosodic expression of focus, contrast and givenness: A production study of Hungarian},
+%   shorttitle = {The prosodic expression of focus, contrast and givenness},
+%   author = {Genzel, Susanne and Ishihara, Shinichiro and Surányi, Balázs},
+%   date = {2015-10-01},
+%   journaltitle = {Lingua},
+%   shortjournal = {Lingua},
+%   volume = {165},
+%   pages = {183--204},
+%   issn = {0024-3841},
+%   doi = {10.1016/j.lingua.2014.07.010},
+%   abstract = {This paper reports the results of a production experiment that explores the prosodic realization of focus in Hungarian, a language that is characterized by obligatory syntactic focus marking. Our study investigates narrow focus in sentences in which focus is unambiguously marked by syntactic means, comparing it to broad focus sentences. Potential independent effects of the salience (textual givenness) of the background of the narrow focus and the contrastiveness of the focus are controlled for and are also examined. The results show that both continuous phonetic measures and categorical factors such as the distribution of contour types are affected by the focus-related factors, despite the presence of syntactic focus marking. The phonetic effects found are mostly parallel to those of typical prosodic focus marking languages like English. The prosodic prominence required of focus is realized through changes to the scaling and slope of F0 targets and contours. The asymmetric prominence relation between the focus and the background can be expressed not only by the phonetic marking of the prominence of the focused element, but also by the phonetic marking of the reduced prominence of the background. Furthermore, contrastiveness of focus and (textual) givenness of the background show independent phonetic effects, both of them affecting the realization of the background. These results are argued to shed light on alternative approaches to the information structural notion of contrastive focus and the relation between the notions of focus and givenness.},
+% }
+
+\bibitem[Genzel et al. (2015)]{genzel_2015_prosodic}
+{Genzel, Susanne, Shinichiro Ishihara, and Balázs Surányi}. 2015. The prosodic expression of focus, contrast and givenness: A production study of Hungarian. \textit{Lingua} 165, 183--204. \url{https://doi.org/10.1016/j.lingua.2014.07.010}  (accessed 2026 February 2).
+
+
+
+% @inproceedings{gerocs_2014_exhaustivity,
+%   title = {Exhaustivity in focus: Experimental evidence from Hungarian},
+%   booktitle = {Language Use and Linguistic Structure Proceedings of the Olomouc Linguistics Colloquium 2013},
+%   author = {Gerőcs, Mátyás and Babarczy, Anna and Surányi, Balázs},
+%   editor = {Emonds, Joseph and Janebová, Markéta},
+%   date = {2014},
+%   pages = {181--195},
+%   publisher = {Palacký University},
+%   location = {Olomouc, Czech Republic},
+%   url = {https://core.ac.uk/reader/42931210},
+%   eventtitle = {Olomouc Linguistics Colloquium 2013, June 6–8},
+%   isbn = {80-244-4060-1},
+%   abstract = {Abstract: This study presents the results of two experiments investigating the nature of exhaustivity of pre‐verbal focus in Hungarian, both doing so in an indirect way. Experiment 1 contrasts the responses given in long versus short time windows in a truth‐value judgment task. Experiment 2 makes the task itself indirect and compares pre‐verbal focus with three other types of focus in the same language. Through these multiple comparisons we provide evidence that exhaustivity in pre‐verbal focus is not entailed, unlike exhaustivity in clefts, with which it has been treated as being on a par. Instead, it is due to pragmatic implicature, in particular, conventional implicature.},
+% }
+
+\bibitem[Gerőcs et al. (2014)]{gerocs_2014_exhaustivity}
+{Gerőcs, Mátyás, Anna Babarczy, and Balázs Surányi}. 2014. Exhaustivity in focus: Experimental evidence from Hungarian. In Joseph Emonds and Markéta Janebová (eds.), \textit{Language Use and Linguistic Structure Proceedings of the Olomouc Linguistics Colloquium 2013}, 181--195. Olomouc, Czech Republic: Palacký University. \url{https://core.ac.uk/reader/42931210}  (accessed 2026 February 2).
+
+
+
+% @incollection{horvath_2008_separating,
+%   title = {Separating “{{Focus Movement}}” from {{Focus}}},
+%   booktitle = {Phrasal and {{Clausal Architecture}}: {{Syntactic}} Derivation and Interpretation. {{In}} Honor of {{Joseph E}}. {{Emonds}}},
+%   author = {Horvath, Julia},
+%   editor = {Karimi, Simin and Samiian, Vida and Wilkins, Wendy K.},
+%   date = {2008-07-01},
+%   pages = {108--145},
+%   publisher = {John Benjamins Publishing Company},
+%   url = {https://www.degruyterbrill.com/document/doi/10.1075/la.101.07hor/html},
+%   urldate = {2026-02-07},
+%   isbn = {978-90-272-9292-6},
+% }
+
+\bibitem[Horvath (2008)]{horvath_2008_separating}
+{Horvath, Julia}. 2008. Separating “Focus Movement” from Focus. In Simin Karimi, Vida Samiian, and Wendy K. Wilkins (eds.), \textit{Phrasal and Clausal Architecture: Syntactic Derivation and Interpretation. In Honor of Joseph E. Emonds}, 108--145. Amsterdam; Philadelphia: John Benjamins Publishing Company. \url{https://www.degruyterbrill.com/document/doi/10.1075/la.101.07hor/html} (accessed 2026 February 7).
+
+
+% @article{hsu_2019_associations,
+%   title = {Associations between Focus Constructions and Levels of Exhaustivity: {{An}} Experimental Investigation of {{Chinese}}},
+%   shorttitle = {Associations between Focus Constructions and Levels of Exhaustivity},
+%   author = {Hsu, Yu-Yin},
+%   editor = {Felser, Claudia},
+%   date = {2019-10-09},
+%   journaltitle = {PLOS ONE},
+%   shortjournal = {PLoS ONE},
+%   volume = {14},
+%   number = {10},
+%   pages = {e0223502},
+%   issn = {1932-6203},
+%   doi = {10.1371/journal.pone.0223502},
+%   abstract = {How various types of focus differ with respect to exhaustivity has been a topic of enduring interest in language studies. However, most of the theoretical work explicating such associations has done so cross-linguistically, and little research has been done on how people process and respond to them during language comprehension. This study therefore investigates the associations between the concept of exhaustivity and three focus types in Chinese (wh, cleft, and only foci) using a trichotomous-response design in two experiments: a forced-choice judgment and a self-paced reading experiment, both with adult native speakers. Its results show that, whether engaged in conscious decision-making or an implicit comprehension process, the participants distinguished only-focus and cleft-focus from wh-focus clearly, and also that there are specific differences between only-focus and cleft-focus in conscious decision-making. This implies that, in terms of the relationship between exhaustivity and the focus types under investigation, cleft-focus and only-focus behave very similarly during language comprehension despite the existence of some fine distinctions between them. In other words, the potential linguistic levels that exhaustivity encodes in Chinese cleft-focus render it more similar to only-focus than to wh-focus. These results are broadly in line with the semantic account that distinguishes cleft from only-focus, i.e., that cleft encodes exhaustivity in not-at-issue presupposition and onlyfocus encodes exhaustivity in at-issue assertion, while both express semantically encoded exhaustivity, triggering robust language-processing patterns that differ from patterns of wh-focus in Chinese.},
+% }
+
+\bibitem[Hsu (2019)]{hsu_2019_associations}
+{Hsu, Yu-Yin}. 2019. Associations between Focus Constructions and Levels of Exhaustivity: An Experimental Investigation of Chinese. \textit{PLOS ONE} 14(10), e0223502. \url{https://doi.org/10.1371/journal.pone.0223502}  (accessed 2026 February 2).
+
+
+
+% @article{hsu_2024_modal,
+%   title = {Modal Raising and Focus Marking in {{Chinese}}},
+%   author = {Hsu, Yu-Yin},
+%   date = {2024-08},
+%   journaltitle = {Journal of Linguistics},
+%   shortjournal = {J. Ling.},
+%   volume = {60},
+%   number = {3},
+%   pages = {635--666},
+%   issn = {0022-2267, 1469-7742},
+%   doi = {10.1017/S0022226723000142},
+%   abstract = {This paper presents several new empirical observations regarding some interpretive effects and structural restrictions of modals that occur in sentence-initial positions in Chinese. It provides a new analysis of sentence-initial modal sentences in terms of the overt head-movement of a modal to the sentence periphery to value strong focus features and to focus-mark either the proposition or the subject of a sentence. This new proposal helps explain the markedness exhibited by such sentences, correctly predicts the structural and semantic restrictions of modal sentences, and directly explains the scopal interactions observed between modals and various types of focus constructions. It also shows that changes in word order in Chinese are not ascribable simply to an optional or free derivation in syntax but are related to an understudied mechanism in that language, i.e. T-to-C movement, and that the roles of information structure are represented as formal features in syntax. The results shed new light on how Chinese – though profoundly different from Germanic and Romance languages typologically – exemplifies a similarly fine structure in the sentence-internal domain, parallel associations of scope-bearing units with sentences’ left peripheries, and a neat interaction of syntax with discourse configurations.},
+% }
+
+\bibitem[Hsu (2024)]{hsu_2024_modal}
+{Hsu, Yu-Yin}. 2024. Modal Raising and Focus Marking in Chinese. \textit{Journal of Linguistics} 60(3), 635--666. \url{https://doi.org/10.1017/S0022226723000142}  (accessed 2026 February 2).
+
+
+
+% @incollection{kaldi_2016_magyar,
+%   title = {A magyar fókusz és a skaláris implikatúrák : egy szemmozgás-követéses kutatás eredményei},
+%   shorttitle = {A magyar fókusz és a skaláris implikatúrák},
+%   author = {Káldi, Tamás and Babarczy, Anna},
+%   editor = {Kas, Bence},
+%   date = {2016},
+%   pages = {333--346},
+%   publisher = {MTA Nyelvtudományi Intézet},
+%   location = {Budapest},
+%   url = {https://real.mtak.hu/48340/},
+%   urldate = {2025-11-21},
+%   isbn = {978-963-9074-64-4},
+% }
+
+\bibitem[Káldi and Babarczy (2016)]{kaldi_2016_magyar}
+{Káldi, Tamás and Anna Babarczy}. 2016. A magyar fókusz és a skaláris implikatúrák : egy szemmozgás-követéses kutatás eredményei [Hungarian focus and scalar implicatures: Results of an eye-tracking study]. In Bence Kas (ed.), \textit{Szavad ne feledd!} 333--346. Budapest: MTA Nyelvtudományi Intézet. \url{https://real.mtak.hu/48340/} (accessed 2025 November 21).
+
+
+% @thesis{kaldi_2021_hungarian_preverbal,
+%   type = {phdthesis},
+%   title = {Hungarian {{Pre-verbal Focus}}: {{Representation}} and {{Interpretation}}},
+%   shorttitle = {Hungarian {{Pre-verbal Focus}}},
+%   author = {Káldi, Tamás},
+%   date = {2021},
+%   institution = {{Budapest University of Technology and Economics}},
+%   location = {Budapest},
+%   url = {https://www.researchgate.net/publication/353145107},
+%   urldate = {2026-02-06},
+% }
+
+\bibitem[Káldi (2021)]{kaldi_2021_hungarian_preverbal}
+{Káldi, Tamás}. 2021. H\textit{ungarian Pre-verbal Focus: Representation and Interpretation.} Ph.D. dissertation, Budapest University of Technology and Economics. \url{https://www.researchgate.net/publication/353145107}  (accessed 2026 February 2).
+
+
+% @article{kaldi_2021_hungarian_structural,
+%   title = {Hungarian Structural Focus: Accessibility to Focused Elements and Their Alternatives in Working Memory and Delayed Recognition Memory},
+%   shorttitle = {Hungarian Structural Focus},
+%   author = {Káldi, Tamás and Szöllösi, Ágnes and Babarczy, Anna},
+%   date = {2021},
+%   journaltitle = {Frontiers in Psychology},
+%   shortjournal = {Front Psychol},
+%   volume = {12},
+%   eprint = {33986703},
+%   eprinttype = {pubmed},
+%   pages = {514886},
+%   issn = {1664-1078},
+%   doi = {10.3389/fpsyg.2021.514886},
+%   abstract = {The present work investigates the memory accessibility of linguistically focused elements and the representation of the alternatives for these elements (i.e., their possible replacements) in Working Memory (WM) and in delayed recognition memory in the case of the Hungarian pre-verbal focus construction (preVf). In two probe recognition experiments we presented preVf and corresponding focusless neutral sentences embedded in five-sentence stories. Stories were followed by the presentation of sentence probes in one of three conditions: (i) the probe was identical to the original sentence in the story, (ii) the focused word (i.e., target) was replaced by a semantically related word and (iii) the target word was replaced by a semantically unrelated but contextually suitable word. In Experiment 1, probes were presented immediately after the stories measuring WM performance, while in Experiment 2, blocks of six stories were presented and sentences were probed with a 2-minute delay measuring delayed recognition memory performance. Results revealed an advantage of the focused element in immediate but not in delayed retrieval. We found no effect of sentence type on the recognition of the two different probe types in WM performance. However, results pertaining to the memory accessibility of focus alternatives in delayed retrieval showed an interference effect resulting in a lower memory performance. We conclude that this effect is indirect evidence for the enhanced activation of focus alternatives. The present work is novel in two respects. First, no study has been conducted on the memory representation of focused elements and their alternatives in the case of the structurally marked Hungarian pre-verbal focus construction. Second, to our knowledge, this is the first study that investigates the focus representation accounts for WM and delayed recognition memory using the same stimuli and same measured variables. Since both experiments used exactly the same stimulus set, and they only differed in terms of the timing of recognition probes, the principle of ceteris paribus fully applied with respect to how we addressed our research question regarding the two different memory systems.},
+%   langid = {arabic},
+%   pmcid = {PMC8112608},
+%   keywords = {delayed recognition,linguistic focus,Linguistic focus,memory accessibility,probe recognition,Probe recognition,representation,working memory},
+% }
+
+\bibitem[Káldi et al. (2021)]{kaldi_2021_hungarian_structural}
+{Káldi, Tamás; Szöllösi, Ágnes; Babarczy, Anna}. 2021. Hungarian Structural Focus: Accessibility to Focused Elements and Their Alternatives in Working Memory and Delayed Recognition Memory. \textit{Frontiers in Psychology} 12, 514886. \url{https://doi.org/10.3389/fpsyg.2021.514886}  (accessed 2026 February 2).
+
+
+
+% @incollection{kenesei_2006_focus,
+%   title = {Focus as Identification},
+%   booktitle = {The {{Architecture}} of {{Focus}}},
+%   author = {Kenesei, István},
+%   editor = {Molnár, Valéria and Winkler, Susanne},
+%   date = {2006},
+%   eprint = {feKMKlcTtTAC},
+%   eprinttype = {googlebooks},
+%   pages = {137--168},
+%   publisher = {Walter de Gruyter},
+%   location = {Berlin},
+%   abstract = {This collection investigates the architecture of focus in linguistic theory from different theoretical perspectives. Research on focus and information structure in the last four decades has shown that the phenomenon of focus is highly complex, the theoretical approaches manifold, and the data highly sensitive. The main emphasis has been placed on the integration of the notion of focus in generative grammar. In recent years, however, the approaches to focus and information structure underwent a radical change in perspective. The theoretical concept of focus, its related terms and phenomena became the object of research. Along with it, the research questions shifted: instead of locating focus in the architecture of grammar, linguists investigate the architecture of focus itself. The central underlying idea of this collection is to document this change in perspective with the aim of isolating essential keystones and research areas in both the theoretical and empirical domain. The book is structured accordingly. Following the introduction, there are four main sections: The general section discusses the theoretical foundations of focus within grammar. The second section hosts papers which investigate the representation of focus and topic at the syntax-pragmatics interface. The third section discusses the phonological representation of focus and its relation to meaning. The papers of the final section investigate different types of focus constructions in a variety languages. The collection of papers on the architecture of focus, its interpretation and representation mirror the establishment of the focus research field.},
+%   isbn = {978-3-11-018578-2},
+% }
+
+\bibitem[Kenesei (2006)]{kenesei_2006_focus}
+{Kenesei, István}. 2006. Focus as Identification. In Valéria Molnár and Susanne Winkler (eds.), \textit{The Architecture of Focus}, 137--168. Berlin: Walter de Gruyter. (accessed 2026 February 2).
+
+
+% @incollection{kornai_1988_hungarian,
+%   title = {Hungarian sentence intonation},
+%   booktitle = {Autosegmental studies on pitch accent},
+%   author = {Kornai, András and Kálmán, László},
+%   editor = {family=Hulst, given=Harry, prefix=van der, useprefix=true and Smith, Norval},
+%   date = {1988},
+%   pages = {183--195},
+%   publisher = {Foris},
+%   location = {Dordrecht},
+%   langid = {arabic},
+%   file = {C:\Users\parti\Zotero\storage\GEI4QZW5\Kornai & Kálmán - 1988 - Hungarian Sentence Intonation - Autosegmental studies on pitch accen - Foris.pdf}
+% }
+
+\bibitem[Kornai \& Kálmán (1988)]{kornai_1988_hungarian}
+{Kornai, András; Kálmán, László}. 1988. Hungarian sentence intonation. In Harry van der Hulst and Norval Smith (eds.), \textit{Autosegmental studies on pitch accent}, 183--195. Dordrecht: Foris.
+
+
+% @article{krifka_2008_basic,
+%   title = {Basic Notions of Information Structure},
+%   author = {Krifka, Manfred},
+%   date = {2008-12},
+%   journaltitle = {Acta Linguistica Hungarica},
+%   shortjournal = {Acta Linguistica Hungarica},
+%   volume = {55},
+%   number = {3--4},
+%   pages = {243--276},
+%   issn = {1216-8076, 1588-2624},
+%   doi = {10.1556/ALing.55.2008.3-4.2},
+%   abstract = {This article takes stock of the basic notions of Information Structure (IS). It first provides a general characterization of IS — following Chafe (1976) — within a communicative model of Common Ground (CG), which distinguishes between CG content and CG management. IS is concerned with those features of language that affect the local CG. Second, this paper defines and discusses the notions of Focus (as indicating alternatives) and its various uses, Givenness (as indicating that a denotation is already present in the CG), and Topic (as specifying what a statement is about). It also proposes a new notion, Delimitation, which comprises contrastive topics and frame setters, and indicates that the current conversational move does not entirely satisfy the local communicative needs. It also points out that rhetorical structuring partly belongs to IS.},
+% }
+
+\bibitem[Krifka (2008)]{krifka_2008_basic}
+{Krifka, Manfred}. 2008. Basic Notions of Information Structure. \textit{Acta Linguistica Hungarica} 55(3--4), 243--276. \url{https://doi.org/10.1556/ALing.55.2008.3-4.2} (accessed 2026 February 2).
+
+
+
+% @incollection{onea_2009_exhaustiveness,
+%   title = {Exhaustiveness of {{Hungarian Focus}}: {{Experimental Evidence}} from {{Hungarian}} and {{German}}},
+%   booktitle = {Focus at the {{Syntax-Semantics Interface}}},
+%   author = {Onea, Edgar},
+%   editor = {Riester, Arndt and Onea, Edgar},
+%   date = {2009},
+%   series = {Working {{Papers}} of the {{SFB}} 732},
+%   number = {3},
+%   pages = {53--68},
+%   publisher = {University of Stuttgart},
+%   abstract = {Preverbal focus in Hungarian has been argued to be more exhaustive or exhaustive in a distinguished way as compared to what has been generally called prosodic focus in languages like English or German. In virtually all analysis it has been assumed that the reason for this property of Hungarian focus is related to its immediately preverbal syntactic position. This effect has thus been derived compositionally at the syntax-semantics interface as part of the truth conditional content of the respective sentences. In this paper I present new data from a pilot experiment that suggests that exhaustiveness is not part of the truth conditional content of sentences containing preverbal focus in Hungarian. The data also shows, however, that Hungarian focus is indeed somewhat more exhaustive than prosodic focus in German. Hence there is definitely something to say about exhaustiveness in Hungarian. Finally I present a new empirical puzzle emerging from the experimental data.},
+% }
+
+\bibitem[Onea (2009)]{onea_2009_exhaustiveness}
+{Onea, Edgar}. 2009. Exhaustiveness of Hungarian Focus: Experimental Evidence from Hungarian and German. In Arndt Riester and Edgar Onea (eds.), \textit{Focus at the Syntax-Semantics Interface} (Working Papers of the SFB 732 3), 53--68. University of Stuttgart (accessed 2026 February 2).
+
+
+
+% @inproceedings{onea_2009_hungarian,
+%   title = {Hungarian {{Focus}} Is {{Not Exhausted}}},
+%   booktitle = {Proceedings of {{Semantics}} and {{Linguistic Theory}} ({{SALT}} 19)},
+%   author = {Onea, Edgar and Beaver, David},
+%   date = {2009},
+%   pages = {342--359},
+%   doi = {10.3765/salt.v19i0.2524},
+%   eventtitle = {Semantics and {{Linguistic Theory}} ({{SALT}} 19)},
+%   isbn = {2163-5951},
+%   file = {C:\Users\parti\Zotero\storage\NVSZ3N6M\Onea & Beaver - 2009 - Hungarian Focus Is Not Exhausted - Proceedings of Semantics and Linguis.pdf}
+% }
+
+\bibitem[Onea \& Beaver (2009)]{onea_2009_hungarian}
+{Onea, Edgar; Beaver, David}. 2009. Hungarian Focus Is Not Exhausted. In \textit{Proceedings of Semantics and Linguistic Theory (SALT 19)}, 342--359. \url{https://doi.org/10.3765/salt.v19i0.2524} (accessed 2026 February 2).
+
+
+
+% @article{schwarz_2021_tutorial,
+%   title = {Tutorial: {{Introduction}} to {{PCIbex}} – {{An Open-Science Platform}} for {{Online Experiments}}: {{Design}}, {{Data-Collection}} and {{Code-Sharing}}},
+%   author = {Schwarz, Florian and Zehr, Jeremy},
+%   date = {2021},
+%   journaltitle = {Proceedings of the Annual Meeting of the Cognitive Science Society},
+%   volume = {43},
+%   pages = {15--16},
+%   url = {https://escholarship.org/uc/item/1ng1q4c6},
+%   langid = {english},
+% }
+
+\bibitem[Schwarz \& Zehr (2021)]{schwarz_2021_tutorial}
+{Schwarz, Florian; Zehr, Jonathan}. 2021. Tutorial: Introduction to PCIbex – An Open-Science Platform for Online Experiments: Design, Data-Collection and Code-Sharing. \textit{Proceedings of the Annual Meeting of the Cognitive Science Society} 43, 15–16. \url{https://escholarship.org/uc/item/1ng1q4c6} (accessed 2026 February 2).
+
+
+% @article{szabolcsi_1981_compositionality,
+%   title = {Compositionality in {{Focus}}},
+%   author = {Szabolcsi, Anna},
+%   date = {1981},
+%   journaltitle = {Folia Linguistica},
+%   volume = {15},
+%   number = {1--2},
+%   pages = {141--161},
+%   issn = {0165-4004, 1614-7308},
+%   doi = {10.1515/flin.1981.15.1-2.141},
+% }
+
+\bibitem[Szabolcsi (1981)]{szabolcsi_1981_compositionality}
+{Szabolcsi, Anna}. 1981. Compositionality in Focus. \textit{Folia Linguistica} 15(1--2), 141--161. \url{https://doi.org/10.1515/flin.1981.15.1-2.141} (accessed 2026 February 2).
+
+
+
+% @incollection{vallduvi_1998_rheme,
+%   title = {On {{Rheme}} and {{Kontrast}}},
+%   booktitle = {The {{Limits}} of {{Syntax}}},
+%   author = {Vallduví, Enric and Vilkuna, Maria},
+%   editor = {Culicover, Peter and McNally, Louise},
+%   date = {1998},
+%   pages = {79--108},
+%   publisher = {Brill},
+%   location = {Leiden},
+%   doi = {10.1163/9789004373167_005},
+%   isbn = {978-90-04-37316-7},
+% }
+
+\bibitem[Vallduví \& Vilkuna (1998)]{vallduvi_1998_rheme}
+{Vallduví, Enric; Vilkuna, Maria}. 1998. On Rheme and Kontrast. In Peter Culicover and Louise McNally (eds.), \textit{The Limits of Syntax}, 79--108. Leiden: Brill. \url{https://doi.org/10.1163/9789004373167_005} (accessed 2026 February 2).
+
+
+
+% @article{wedgwood_2006_predication,
+%   title = {Predication, Focus and the Positions of Negation in {{Hungarian}}},
+%   author = {Wedgwood, Daniel},
+%   date = {2006-03},
+%   journaltitle = {Lingua},
+%   shortjournal = {Lingua},
+%   volume = {116},
+%   number = {3},
+%   pages = {351--376},
+%   issn = {00243841},
+%   doi = {10.1016/j.lingua.2004.08.009},
+%   abstract = {The distribution of the Hungarian negative particle nem can be accounted for without the use of any specialised syntactic machinery, given a dynamic, parsing-based approach to the creation of meaningful linguistic structures. This allows inferential pragmatic theory (such as Relevance Theory) to take on much of the burden of explanation. Well-known interactions between nem and a variety of pre-verbal phenomena, notably focused constituents, are explained with reference to ‘main predication’: the point in a sentence at which a full proposition is created. This is represented, using a neo-Davidsonian semantics, as the introduction of existential quantification over an event description with certain necessary properties. Marrying event-based representations with the epsilon calculus of Hilbert and Bernays (1939) allows this to be achieved using a variety of predicates introduced by explicit lexical material.},
+% }
+
+\bibitem[Wedgwood (2006)]{wedgwood_2006_predication}
+{Wedgwood, Daniel}. 2006. Predication, Focus and the Positions of Negation in Hungarian. \textit{Lingua} 116(3), 351--376. \url{https://doi.org/10.1016/j.lingua.2004.08.009} (accessed 2026 February 2).
+
+
+
+% @unpublished{wedgwood_2006_hungarian,
+%   title = {Hungarian ‘Focus Position’ and {{English}} It-Clefts: The Semantic Underspecification of ‘Focus’ Readings},
+%   author = {Wedgwood, Daniel and Petho, Gergely and Cann, Ronnie},
+%   date = {2006},
+%   abstract = {Analyses of the so-called ‘focus position’ of Hungarian have been influential in the development of discourse-semantic and syntactic theories, but have generally failed to consider contextualised, naturally-occurring data, despite the discourse-related nature of the phenomenon. We re-address the semantics of this position, using data drawn from the Hungarian National Corpus alongside arguments from introspective judgements. As part of this, we investigate the precise extent to which a commonly assumed parallelism between the Hungarian ‘focus position’ and the English it-cleft holds. The combined evidence calls into question conventional analyses, whereby a dedicated syntactic projection introduces a semantic operator that creates either an exhaustive or identificational (i.e. presuppositional) reading, and also contradicts any attempt to account for the supposed cross-linguistic parallel by providing a common underlying semantics for the ‘focus position’ and the it-cleft. We argue that, while an identificational analysis may suffice for the it-cleft, only a significantly underspecified semantics could capture the range of interpretations associated with the ‘focus position’; we suggest that a predicative analysis (E´ . Kiss 2004, 2005a; Wedgwood 2005, to appear) is of the right kind. In addition, the data indicate that at least some uses of this position are primarily motivated by the possibility of exploiting its prosodic character (Szendro˝i 2001, 2003). This also necessitates an underspecified semantic analysis.},
+% }
+
+\bibitem[Wedgwood et al. (2006)]{wedgwood_2006_hungarian}
+{Wedgwood, Daniel; Petho, Gergely; Cann, Ronnie}. 2006. Hungarian ‘Focus Position’ and English It-Clefts: The Semantic Underspecification of ‘Focus’ Readings. \url{https://www.lel.ed.ac.uk/~ronnie/JoS-paper_forESRC.pdf} (accessed 2026 February 2).
+
+
+
+% @article{zimmermann_2008_contrastive,
+%   title = {Contrastive Focus and Emphasis},
+%   author = {Zimmermann, Malte},
+%   date = {2008},
+%   journaltitle = {Acta Linguistica Hungarica},
+%   shortjournal = {Acta Linguistica Hungarica},
+%   volume = {55},
+%   number = {3--4},
+%   pages = {347--360},
+%   issn = {1216-8076, 1588-2624},
+%   doi = {10.1556/ALing.55.2008.3-4.9},
+%   abstract = {The paper puts forward a discourse-semantic account of the notoriously evasive phenomena of contrastivity and emphasis. Based on new evidence from Chadic, it is argued that occurrences of focus that are treated in terms of ‘contrastive focus’, ‘kontrast’ (Vallduví –Vilkuna 1998) or ‘identificational focus’ (É. Kiss 1998) in the literature should not be analyzed in familiar semantic terms as involving the introduction and subsequent exclusion of alternatives. Rather, an adequate analysis must take into account discourse-semantic notions like ‘hearer expectation’ or ‘discourse expectability’ of the focused content in a given discourse situation. The less expected the focus content is judged to be for the hearer, relative to the Common Ground, the more likely a speaker is to mark the focus constituent by means of special grammatical devices, thus giving rise to emphasis.},
+% }
+
+\bibitem[Zimmermann (2008)]{zimmermann_2008_contrastive}
+{Zimmermann, Malte}. 2008. Contrastive Focus and Emphasis. \textit{Acta Linguistica Hungarica} 55(3--4), 347--360. \url{https://doi.org/10.1556/ALing.55.2008.3-4.9} (accessed 2026 February 2).
+
+\end{thebibliography}
+
+
+
+\end{Backmatter}
+
+\end{document}
