@@ -24,7 +24,7 @@ df$cxt <- interaction(df$condition, df$chosen_type)
 df$cxt <- factor(df$cxt, levels = c("exclusive.A","exclusive.B","focus.A","focus.B","contrastive.A","contrastive.B"))
 
 # Define metrics to evaluate (numeric only)
-metrics <- c("total_dwell", "total_fixation")
+metrics <- c("total_dwell", "total_fixation", "fvd")
 # metrics <- c("total_dwell", "fvd", "total_fixation", "transitions")
 
 # Iterate through each metric, log transform, fit models, and record outputs
@@ -44,12 +44,12 @@ for (metric in metrics) {
     df$ET <- log1p(df$ET_raw)
 
     # Fit models
-    model1 <- lmer(ET ~ chosen_type + (1|item) + (1|participant), df, REML = FALSE)
-    model2 <- lmer(ET ~ condition + (1|item) + (1|participant), df, REML = FALSE)
-    model3 <- lmer(ET ~ condition + chosen_type + (1|item) + (1|participant), df, REML = FALSE)
+    # model1 <- lmer(ET ~ chosen_type + (1|item) + (1|participant), df, REML = FALSE)
+    # model2 <- lmer(ET ~ condition + (1|item) + (1|participant), df, REML = FALSE)
+    # model3 <- lmer(ET ~ condition + chosen_type + (1|item) + (1|participant), df, REML = FALSE)
     model4 <- lmer(ET ~ condition * chosen_type + (1|item) + (1|participant), df, REML = FALSE)
 
-    model5 <- lmer(ET ~ cxt + (1|item) + (1|participant), df, REML = FALSE)
+    # model5 <- lmer(ET ~ cxt + (1|item) + (1|participant), df, REML = FALSE)
 
     # Anovas
     aov4_lines <- capture.output(car::Anova(model4, type = "III"))
@@ -65,8 +65,8 @@ for (metric in metrics) {
     # emmeans5_lines <- capture.output(emmeans(model5, list(pairwise ~ cxt), adjust = "tukey"))
 
     # Compare models 1, 2, and 3
-    model_comp <- anova(model1, model2, model3, model4)
-    comp_lines <- capture.output(print(model_comp))
+    # model_comp <- anova(model1, model2, model3, model4)
+    # comp_lines <- capture.output(print(model_comp))
 
     # Report
     report <- c(
@@ -75,11 +75,11 @@ for (metric in metrics) {
         paste0("============ Metric: ", metric, " ============"),
         paste0("============================================="),
         "",
-        paste0("----------------------------------------------------"),
-        paste0("------ Model Comparison (1, 2, 3, 4) (Likelihood-ratio tests) [", metric, "] ------"),
-        paste0("----------------------------------------------------"),
-        comp_lines,
-        "",
+        # paste0("----------------------------------------------------"),
+        # paste0("------ Model Comparison (1, 2, 3, 4) (Likelihood-ratio tests) [", metric, "] ------"),
+        # paste0("----------------------------------------------------"),
+        # comp_lines,
+        # "",
         paste0("---------------------------------------------"),
         paste0("------ Model 4 Summary [", metric, "]: ------"),
         paste0("---------------------------------------------"),

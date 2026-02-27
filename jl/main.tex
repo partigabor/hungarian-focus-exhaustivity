@@ -6,6 +6,24 @@
 \usepackage{rotating}
 \usepackage{appendix}
 \usepackage[british]{babel}
+\usepackage{fontspec}
+% Load local Inconsolata.ttf (works without system font install).
+% This tries the current working directory first, then the repo-root->jl/ path.
+\IfFileExists{Inconsolata.ttf}{
+  \setmonofont{Inconsolata}[
+    Path={./},
+    Extension=.ttf,
+    UprightFont=*,
+    Scale=MatchLowercase
+  ]
+}{
+  \setmonofont{Inconsolata}[
+    Path={jl/},
+    Extension=.ttf,
+    UprightFont=*,
+    Scale=MatchLowercase
+  ]
+}
 \usepackage{csquotes}
 \usepackage{longtable}
 \usepackage{tabularx}
@@ -309,27 +327,38 @@ Eye-tracking data recorded on PCIbex comes in a relatively straightforward, clea
 \label{fig:episodes}}
 \end{figure}
 
-The following steps were taken to clean and classify the eye-tracking data in order to obtain a certain set of metrics that could be used for analysis: First, raw eye tracking data files were loaded per participant, and \textbf{samples} were classified into AOIs at each timestamp as left (left\_canvas=1, right\_canvas=0), right (right\_canvas=1, left\_canvas=0), or neutral otherwise. Then, same-side consecutive samples were collapsed into contiguous AOI \textbf{episodes} within participant and trial. Episode duration was computed from timestamp-derived sample durations where episodes shorter than a threshold of 60 ms were removed, and neutral-gap bridging was enabled (with a max neutral bridge of 50 ms). In other words, very short gaze episodes and rapid saccades were removed cleaning noise \& jitter, as they are unlikely to reflect meaningful cognitive efforts and more likely to be artifacts of the eye-tracking system. Then, neutral episodes were dropped and excluded from further analysis. \textbf{Episodes} thus intend to represent a moment of sustained gaze within an AOI, ignoring brief out-of-canvas samples that result from technical inaccuracies and are not deliberate (or uncounscious) eye movements. For quality control, episode-duration distributions were inspected via summary statistics, and episodes longer than the mean +2 SD (\mu \pm 2\sigma) were winsorized by replacing their duration with the global mean (i.e., with rows retained). This procedure preserved the full number of episodes while limiting the influence of extreme outliers; 4.89\% of all episodes were substituted. See Figure~\ref{fig:episodes} for the distribution of episode durations. This cleaning process was devised after established eye-tracking data classification protocols, such as the Identification by Dispersion-Threshold (I-DT) algorithm, which itself is ideal for low- to mid-frequency eye trackers and static stimuli.
+The following steps were taken to clean and classify the eye-tracking data in order to obtain a certain set of metrics that could be used for analysis: First, raw eye tracking data files were loaded per participant, and \textbf{samples} were classified into AOIs at each timestamp as left (left\_canvas=1, right\_canvas=0), right (right\_canvas=1, left\_canvas=0), or neutral otherwise. Then, same-side consecutive samples were collapsed into contiguous \textbf{episodes} within participant and trial. Episode duration was computed from timestamp-derived sample durations where episodes shorter than a threshold of 60 ms were removed, and neutral-gap bridging was enabled (with a max neutral bridge of 50 ms). In other words, very short gaze episodes and rapid saccades were removed cleaning noise \& jitter, as they are unlikely to reflect meaningful cognitive efforts and more likely to be artifacts of the eye-tracking system. Then, neutral episodes were dropped and excluded from further analysis. Episodes thus intend to represent a moment of sustained gaze within an AOI, ignoring brief out-of-canvas samples that result from technical inaccuracies and are not deliberate (or uncounscious) eye movements. For quality control, episode-duration distributions were inspected via summary statistics, and episodes longer than the mean +2 SD ($\mu \pm 2\sigma$) were winsorized by replacing their duration with the global mean (i.e., with rows retained). This procedure preserved the full number of episodes while limiting the influence of extreme outliers; 4.89\% of all episodes were substituted. See Figure~\ref{fig:episodes} for the distribution of episode durations. This cleaning process was devised after established eye-tracking data classification protocols, such as the Identification by Dispersion-Threshold (I-DT) algorithm, which itself is ideal for low- to mid-frequency eye trackers and static stimuli.
 
-Finally, trial-level eye-tracking (ET) features were computed (left/right/total dwell time, dwell proportions, dominant side, fixation counts, revisits, transitions, first-fixation side/duration, and first-visit side/duration). To briefly define the most important metrics: \textbf{dwell} is a time value, the sum of the duration of all episodes within a trial (either left, right, or total), representing the total amount of time a participant has spent looking at the AOI(s) during the choice; \textbf{fixation} on the other hand is a numeric value, representing how many times a participant looked at the AOIs during a choice, and \textbf{transitions} is the number of times a participant switched their gaze from one AOI to the other. Missing trial-level metrics were mean-imputed in 5.17\% of the data points, which were mostly due to missing episode-level data (e.g., no episodes detected for a trial, or no episodes remained after cleaning).
+Finally, trial-level eye-tracking (ET) features were computed (left/right/total dwell time, dwell proportions, dominant side, fixation counts, revisits, transitions, first-fixation side/duration, and first-visit side/duration). To briefly define the most important metrics: \textbf{dwell} is a time value, the sum of the duration of all episodes within a trial (either left, right, or total), representing the total amount of time a participant has spent looking at the AOI(s) during the choice; \textbf{fixation} on the other hand is a numeric value, representing how many times a participant looked at the AOIs during a choice, and \textbf{transitions} is the number of times a participant switched their gaze from one AOI to the other. Missing trial-level metrics were mean-imputed in 5.02\% of the data points, which were mostly due to missing episode-level data (e.g., no episodes detected for a trial, or no episodes remained after cleaning).
 
-We acknowledge that several processing decisions may limit inference. Gaze data was essentially collapsed to binary AOIs (left/right), while off-target samples were treated as neutral and excluded. Episodes shorter than 50 ms were removed, potentially excluding very brief but real events. Long-duration episodes were winsorized by replacing values above a global mean+2SD threshold with the global mean, preserving sample size but reducing variance and potentially biasing duration-based measures. Also, missing merged ET trial metrics were mean-imputed for selected variables, which can further shrink . We therefore interpret absolute magnitudes cautiously and focus on relative contrasts between conditions.
+We acknowledge that several processing decisions may have limitations/limit inference. Gaze data was essentially collapsed to binary AOIs (left/right), while off-target samples were treated as neutral and excluded. Episodes shorter than 50 ms were removed, potentially excluding very brief but real events. Long-duration episodes were winsorized by replacing values above a global mean+2SD threshold with the global mean, preserving sample size but reducing variance and potentially biasing duration-based measures. Also, missing merged ET trial metrics were mean-imputed for selected variables, which further shrinks the effective sample size. We therefore interpret absolute magnitudes cautiously and focus on relative contrasts between conditions.
 
 The eye-tracking data cleaning and classification pipeline was implemented in Python, and can be inspected \hl{online}.
 
-\subsubsection{Modeling}
 
-A select few of the eye-tracking metrics were analyzed using linear mixed-effects models with FocusCondition, ChoiceType, and their interaction as fixed effects, and Participant and Item as random effects. Post-hoc comparisons were conducted using Tukey HSD tests............................
+
+\subsubsection{Statistical analysis}
+
+
+% A select few of the eye-tracking metrics were analyzed using linear mixed-effects models with FocusCondition, ChoiceType, and their interaction as fixed effects, and Participant and Item as random effects. Post-hoc comparisons were conducted using Tukey HSD tests............................
+
+We analyzed three eye-tracking dependent measures: \textit{total dwell time} (\texttt{total\_dwell}), \textit{total fixation count} (\texttt{total\_fixation}), and \textit{first-visit duration} (\texttt{fvd}). For each measure, analyses were conducted in R using linear mixed-effects models (packages \texttt{lme4}, \texttt{car}, and \texttt{emmeans}). The fixed-effect predictors were \textit{Condition} (three levels: exclusive, unmodified focus, contrastive) and \textit{Chosen type} (two levels: A, B). To stabilize variance and accommodate zero values, we applied a log transform using $\log(1+x)$ to the raw dependent measure prior to modeling.
+
+For each dependent measure, we fit the following model with random intercepts for participants and items:
+$ {Text{M4}} y' \sim \text{Condition} \times \text{Choice} + (1 \mid \text{Participant}) + (1 \mid \text{Item})$, where $y' = \log(1+y)$ is the transformed dependent variable.
+
+The model were fit using maximum likelihood estimation (i.e., \texttt{REML = FALSE}) to enable likelihood-ratio model comparisons. 
+% We compared M1--M4 using likelihood-ratio tests to evaluate the contribution of \textit{Condition}, \textit{Choice}, and their interaction. 
+For the full interaction model (M4), we report Type-III tests of fixed effects (via \texttt{car::Anova}).
+
+To follow up significant effects in M4 -- the most promising model -- we computed estimated marginal means and conducted Tukey-adjusted pairwise comparisons using \texttt{emmeans}. Specifically, we tested (i) pairwise differences between conditions within each type (Condition $\mid$ Choice) and (ii) pairwise differences between types within each condition (Choice $\mid$ Condition), with familywise error controlled using Tukey adjustment.
 
 
 
 \section{Results}
 
-\begin{figure}
-\FIG{\includegraphics[width=1.0\textwidth]{../plots/choice_type_per_condition.png}}
-{\caption{Distribution of chosen image type (A vs B) per condition.}}
-\label{fig:choice}
-\end{figure}
+The behavioural results showed that participants overwhelmingly interpreted the unmodified pre-verbal focus (PVF) sentences like exhaustive \textit{only}-sentences, choosing single-object type A images (see Figure~\ref{fig:choice}, Table~\ref{tab:choice}). However, in the contrastive condition (\textit{among others}-sentences) people preferred the multi-object type B images, exhibiting a tendency toward non-exhaustive readings, but with almost 37.7\% of the choices -- somewhat unexpectedly -- still being cast on the exhaustive interpretation type A images. This suggests that even with the presence of a phrase that licenses a contrastive reading, the exhaustive effect is still quite dominant. This is clear evidence that the PVF construction is not necessarily interpreted exclusively exhaustively, a contrastive reading can be be teased out easily.
+
 
 
 % Table 1
@@ -348,7 +377,17 @@ Contrastive  & 37.7 (163)  & 62.3 (269) \\
 \end{tabular}
 \end{table}
 
-The behavioural results showed that participants overwhelmingly interpreted the unmodified pre-verbal focus (PVF) sentences like exhaustive \textit{only}-sentences, choosing single-object type A images (see Figure~\ref{fig:choice}, Table~\ref{tab:choice}). However, in the contrastive condition (\textit{among others}-sentences) people preferred the multi-object type B images, exhibiting a tendency toward non-exhaustive readings, but with almost 37.7\% of the choices -- somewhat unexpectedly -- still being cast on the exhaustive interpretation type A images, which suggests that even with the presence of a phrase that licenses a contrastive reading, the exhaustive effect is still quite dominant. This is clear evidence that the PVF construction is not necessarily interpreted only exhaustively, a contrastive reading can be easily be teased out.
+
+\begin{figure}
+\FIG{\includegraphics[width=1.0\textwidth]{../plots/choice_type_per_condition.png}}
+{\caption{Distribution of chosen visual stimuli (Image type A vs B) per condition.}}
+\label{fig:choice}
+\end{figure}
+
+
+
+The reading times across the different regions of the sentences showed no significant differences between conditions, suggesting that the processing of the sentences themselves was not affected by the various focus conditions during self-paced reading. However, a degree of uncertainty and a high leel of standard deviation showed up when participants faced with the choice in the contrastive condition, see the reaction times (RT) for the choice in Figure~\ref{fig:reading_times}.
+
 
 \begin{figure}
 \FIG{\includegraphics[width=1.0\textwidth]{../plots/reading_times.png}}
@@ -356,16 +395,49 @@ The behavioural results showed that participants overwhelmingly interpreted the 
 \label{fig:reading_times}
 \end{figure}
 
-The reading times across the different regions of the sentences showed no significant differences between conditions, suggesting that the processing of the sentences themselves was not affected. However, a degree of uncertainty showed up when faced with the choice in the contrastive condition; consider the reaction times (RT) of the choices in Figure~\ref{fig:reading_times}.
+
+
+\subsection{Mixed-effects modelling of eye-tracking measures}
+\label{sec:et-lmm-results}
+
 
 %%%
 
-% Original from abstract:
-To further examine how the focus structures were associated with exhaustive and contrastive readings, we fitted a linear mixed-effects model to the total dwell time on images, with FocusCondition, ChoiceType and their interaction as main effects, and participant and item as random effects. The results revealed significant effects of FocusCondition (χ²(2) = 11.67, p < .001), ChoiceType (χ²(1) = 19.51, p < .001), and interaction between FocusCondition and ChoiceType (p < .001). Interestingly, post-hoc (TukeyHSD) tests showed that after reading only-sentences, participants took significantly less time to choose A compared to B (β = –0.88, p < .001), whereas they spent significantly more time to select A after reading contrastive sentences (β = .21, p = .034), suggesting that participants were faster to pick the expected choices in the `exhaustive' and `contrastive' conditions, respectively. Crucially, no significant difference was observed between selecting A or B for the simple PVF sentences (β = -.19, p = .362), implying that participants might consider both representations equally plausible when making their choices(???) Overall, our results suggest that Hungarian pre-verbal focus constructions tend to be interpreted exhaustively when no additional context is provided. This exhaustive bias seems to persist even when `among others' is present, despite its licensing a contrastive reading in truth value. This explains the apparent tension in theoretical accounts. Our results also showed facilitation for explicitly exhaustive sentences and not for simple PVFs, consistent with online disambiguation of an underspecified structure.
+\hl{Original end from abstract updated}
+
+To further examine how the focus structures were associated with exhaustive and contrastive readings, we fitted a linear mixed-effects model to (log-transformed) total dwell time on the visual stimuli, with \textit{Condition} (exclusive/\textit{only}, focus/PVF, contrastive/\textit{among others}), \textit{Chosen type} (A vs.\ B), and their interaction as fixed effects, and random intercepts for participant and item. The analysis revealed significant effects of \textit{Condition} ($\chi^2(2)=12.53$, $p=.0019$) and \textit{Chosen type} ($\chi^2(1)=11.85$, $p=.00058$), qualified by a significant \textit{Condition}$\times$\textit{Chosen type} interaction ($\chi^2(2)=12.29$, $p=.0021$). Post-hoc (Tukey-adjusted) comparisons indicated that when participants ultimately chose type A, dwell times were longer in the contrastive condition than in the exclusive ($\Delta=0.188$, $p=.0013$) and focus ($\Delta=0.140$, $p=.022$) conditions, while exclusive and focus did not differ ($p=.419$). Comparing choices within each condition, dwell times were shorter for choosing type A than type B in the exclusive condition ($\Delta=-0.444$ for A--B, $p=.0006$), whereas no reliable A--B difference was observed in the focus ($p=.091$) or contrastive ($p=.578$) conditions. Together with the behavioural choice pattern, this suggests a robust exhaustive bias for PVF when no additional contrastive licensing is present, and increased processing cost when an exhaustive (type A) choice is made in a contrastive context.
+
+\hl{Until here}
+
+\noindent\textbf{Total dwell.} A Type-III Wald $\chi^2$ test on the linear mixed-effects model (Model 4) showed significant effects of \textit{condition} ($\chi^2(2)=12.53$, $p=.0019$) and \textit{chosen\_type} ($\chi^2(1)=11.85$, $p=.00058$), qualified by a significant \textit{condition}$\times$\textit{chosen\_type} interaction ($\chi^2(2)=12.29$, $p=.0021$). Tukey-adjusted pairwise comparisons of \textit{condition} within \textit{chosen\_type} indicated that for type A, \textit{contrastive} yielded longer dwell times than \textit{exclusive} ($p=.0013$) and \textit{focus} ($p=.022$), while \textit{exclusive} and \textit{focus} did not differ ($p=.419$); for type B, no condition contrasts were reliable (all $p\ge .069$). Comparing \textit{chosen\_type} within each condition showed a reliable type difference only in the \textit{exclusive} condition (B $>$ A; $p=.0006$), but not in \textit{focus} ($p=.091$) or \textit{contrastive} ($p=.578$).
+
+\noindent\textbf{Total fixation.} For total fixation counts, Model 4 showed a significant main effect of \textit{condition} ($\chi^2(2)=12.33$, $p=.0021$) and a significant \textit{condition}$\times$\textit{chosen\_type} interaction ($\chi^2(2)=6.76$, $p=.034$), while the main effect of \textit{chosen\_type} was marginal ($\chi^2(1)=3.35$, $p=.067$). Tukey-adjusted simple effects of \textit{condition} revealed that for type A, \textit{contrastive} produced more fixations than \textit{exclusive} ($p=.0016$) and \textit{focus} ($p=.0107$), with no difference between \textit{exclusive} and \textit{focus} ($p=.687$); for type B, no condition contrasts were significant (all $p\ge .483$). Pairwise comparisons of \textit{chosen\_type} within condition were not significant (smallest $p=.068$ in the \textit{exclusive} condition).
+
+\noindent\textbf{FVD.} For FVD, Model 4 showed no main effect of \textit{condition} ($\chi^2(2)=1.65$, $p=.439$), but a significant main effect of \textit{chosen\_type} ($\chi^2(1)=13.62$, $p=.00022$) and a significant \textit{condition}$\times$\textit{chosen\_type} interaction ($\chi^2(2)=9.51$, $p=.0086$). Tukey-adjusted comparisons of \textit{condition} within \textit{chosen\_type} showed no reliable differences for type A (all $p\ge .406$), whereas for type B, \textit{exclusive} elicited higher FVD than \textit{contrastive} ($p=.0056$). Comparisons of \textit{chosen\_type} within each condition indicated a robust difference in \textit{exclusive} (B $>$ A; $p=.0003$), but not in \textit{focus} ($p=.215$) or \textit{contrastive} ($p=.488$).
 
 
-% !!!
-% Across measures, effects of Condition were primarily present for exhaustive (single-object) choices, where the contrastive condition tended to increase dwell time and fixation counts, whereas contrastive (multi-object) choices showed little differentiation across conditions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+END
 
 % Figure of log_total_dwell_by_condition_chosen_type.png
 \begin{figure}
@@ -374,16 +446,25 @@ To further examine how the focus structures were associated with exhaustive and 
 \label{fig:dwell}
 \end{figure}
 
-Across eye-tracking measures, linear mixed-effects models (random intercepts for participant and item) were fit to log-transformed outcomes ($\log(1+x)$) with fixed effects of \textit{Condition} (\textit{exclusive}, \textit{focus}, \textit{contrastive}), \textit{Choice type} (A = single-object choice, interpreted as an \textit{exhaustive} reading; B = multi-object choice, interpreted as a \textit{contrastive} reading), and their interaction. For \textit{total dwell time}, likelihood-ratio tests indicated that including the Condition $\times$ Choice type interaction significantly improved model fit relative to the additive model ($\chi^2(2)=12.23$, $p=.0022$). In the full model, Type III tests revealed significant effects of Condition ($\chi^2(2)=12.53$, $p=.0019$) and Choice type ($\chi^2(1)=11.85$, $p=.00058$), qualified by a significant interaction ($\chi^2(2)=12.29$, $p=.0021$). Follow-up estimated marginal means (Tukey-adjusted) showed that for exhaustive (type A) trials, the \textit{contrastive} condition elicited greater dwell time than both \textit{exclusive} ($\Delta=0.188$, $p=.0013$) and \textit{focus} ($\Delta=0.140$, $p=.022$), whereas \textit{exclusive} and \textit{focus} did not differ. In contrast, for contrastive (type B) trials, condition differences were not reliable (all $p\ge .069$). Comparing choice types within each condition further showed that in the \textit{exclusive} condition, contrastive (type B) choices were associated with longer dwell time than exhaustive (type A) choices ($\Delta=0.444$, $p=.0006$), with no corresponding differences in the other conditions.
 
-% % Figure of log_total_fixation_by_condition_chosen_type
-% \begin{figure}
-% \FIG{\includegraphics[width=1.0\textwidth]{../plots/log_total_fixation_by_condition_chosen_type.png}}
-% {\caption{Total fixation count (log-transformed) by condition and choice type.}}
-% \label{fig:fixation}
-% \end{figure}
 
-% A converging pattern was observed for \textit{total fixation count}. Condition improved fit relative to a model with only Choice type ($\chi^2(1)=6.53$, $p=.0106$), and the Condition $\times$ Choice type interaction further improved fit ($\chi^2(2)=6.74$, $p=.034$). In the full model, Condition ($\chi^2(2)=12.33$, $p=.0021$) and the interaction ($\chi^2(2)=6.76$, $p=.034$) were significant, while the main effect of Choice type was not ($\chi^2(1)=3.35$, $p=.067$). Post hoc comparisons indicated that for exhaustive (type A) trials, the \textit{contrastive} condition yielded more fixations than \textit{exclusive} ($\Delta=0.158$, $p=.0016$) and \textit{focus} ($\Delta=0.131$, $p=.0107$), whereas no condition differences emerged for contrastive (type B) trials (all $p\ge .483$). Taken together, both measures suggest that condition-driven processing differences are concentrated in trials culminating in an exhaustive (single-object) choice, consistent with the contrastive manipulation selectively increasing processing demands when participants resolve the stimulus exhaustively.
+% Figure of log_total_fixation_by_condition_chosen_type
+\begin{figure}
+\FIG{\includegraphics[width=1.0\textwidth]{../plots/log_total_fixation_by_condition_chosen_type.png}}
+{\caption{Total fixation count (log-transformed) by condition and choice type.}}
+\label{fig:fixation}
+\end{figure}
+
+
+
+%\ Figure of log_fvd_by_condition_chosen_type
+\begin{figure}
+\FIG{\includegraphics[width=1.0\textwidth]{../plots/log_fvd_by_condition_chosen_type.png}}
+{\caption{First-visit duration (log-transformed) by condition and choice type.}}
+\label{fig:fvd}
+\end{figure}
+
+
 
 % Table 2 (updated from analysis_results.txt; model-estimated EMMs)
 \begin{table}[ht]
@@ -402,7 +483,8 @@ Contrastive  & 1002 (75) & 972 (67) \\
 \end{table}
 
 
-% % Table 2
+
+% % Table 2 old
 % \begin{table}[ht]
 % \centering
 % \caption{Total dwell time during choice (ms)}
@@ -418,7 +500,9 @@ Contrastive  & 1002 (75) & 972 (67) \\
 % \end{tabular}
 % \end{table}
 
-% What does it all mean?:::
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Now what does it all mean?:::
 
 % This table is trying to answer a simple question:
 
@@ -471,9 +555,20 @@ Table~\ref{tab:dwell} reports model-estimated total dwell time during the choice
 
 
 
+% ...existing code...
+
 \section{Discussion}
+\label{sec:discussion}
 
+Across measures, the results point to a stable but defeasible exhaustive bias for Hungarian pre-verbal focus (PVF). Behaviourally, participants overwhelmingly selected the exhaustive image (type A) for PVF sentences, closely matching explicitly exhaustive (\textit{only}) sentences, while the contrastive \textit{among others} condition shifted choices toward the non-exhaustive image (type B) but did not eliminate exhaustive selections. This pattern already suggests that PVF is not \emph{inherently} contrastive, yet it is also not \emph{categorically} exhaustive in the way a dedicated exhaustivity marker would be; rather, PVF strongly \emph{invites} an exhaustive interpretation under neutral contexts, while remaining compatible with non-exhaustive continuations when an explicit contrastive (or rather, inclusive) licenser is present.
 
+The eye-tracking measures sharpen this theoretical picture by separating interpretive preferences from processing costs. For total dwell time and total fixation count, we observed a reliable Condition $\times$ Chosen type interaction: when participants ultimately chose the exhaustive image (type A), processing increased in the contrastive condition relative to both \textit{only}/exclusive and PVF. In other words, committing to exhaustivity becomes costlier precisely when the sentence contains an overt cue that makes non-exhaustivity salient (\textit{among others}). By contrast, when participants chose the non-exhaustive image (type B), condition differences were weak or absent. This asymmetry is consistent with a competition account: in a contrastive-licensing context, an exhaustive commitment is still available, but it is harder to justify, leading to additional checking and re-evaluation during the choice phase. The first-visit duration results tell the same story more selectively: condition effects are not global, but appear when the system is pushed into a mismatch (notably, type differences are clearest in the exclusive condition, and the contrastive condition affects type B differently than type A). Taken together, the processing data look less like fixed semantic entailments and more like context-sensitive strengthening with measurable costs when the strengthened reading is disfavoured by discourse cues.
+
+For linguistic theory, this supports approaches in which PVF does not encode exhaustivity as an obligatory semantic operator, but instead yields exhaustivity as a strong default arising from information-structural prominence and pragmatic reasoning (e.g., via Question-under-Discussion alignment, alternative-based competition, or implicature-like strengthening). On this view, \textit{only} supplies explicit exhaustification, producing a relatively coherent mapping to the exhaustive image and (in our data) a robust A--B difference. PVF, in contrast, can be strengthened to exhaustivity in the absence of countervailing cues, explaining the near-ceiling exhaustive choices; crucially, the availability of a contrastive licenser makes the non-exhaustive competitor more prominent, so exhaustive commitments in that environment incur extra processing (longer dwell and more fixations) rather than disappearing. This resolves the apparent tension between accounts that treat PVF as exhaustive and those that emphasize its context dependence: PVF can pattern \emph{as if} exhaustive in neutral contexts, while still permitting non-exhaustive interpretations when the discourse explicitly supports them.
+
+More broadly, the data argue for a graded architecture linking focus, alternatives, and inference: (i) the grammar provides a focus-marked structure that reliably activates alternatives; (ii) discourse cues determine whether strengthening to an exhaustive answer is licensed or costly; and (iii) the cost of sustaining a dispreferred strengthening is visible in online measures even when participants ultimately choose that option. Future work can test this mechanism more directly by manipulating the Question under Discussion and by comparing PVF to other focus strategies (e.g., prosodic focus without movement), which would help localize whether the exhaustive bias is tied to syntactic configuration, prosodic prominence, or the pragmatic profile of the construction.
+
+Tie all this back to the literature!!!
 
 \section{Conclusion}
 

@@ -1,26 +1,9 @@
 Linear mixed-effects model comparisons
-Generated: 2026-02-27 12:33:20 UTC
+Generated: 2026-02-27 14:49:53 UTC
 
 =============================================
 ============ Metric: total_dwell ============
 =============================================
-
-----------------------------------------------------
------- Model Comparison (1, 2, 3, 4) (Likelihood-ratio tests) [total_dwell] ------
-----------------------------------------------------
-Data: df
-Models:
-model1: ET ~ chosen_type + (1 | item) + (1 | participant)
-model2: ET ~ condition + (1 | item) + (1 | participant)
-model3: ET ~ condition + chosen_type + (1 | item) + (1 | participant)
-model4: ET ~ condition * chosen_type + (1 | item) + (1 | participant)
-       npar    AIC    BIC  logLik -2*log(L)   Chisq Df Pr(>Chisq)   
-model1    5 2285.6 2311.4 -1137.8    2275.6                         
-model2    6 2285.1 2316.1 -1136.5    2273.1  2.5246  1   0.112087   
-model3    7 2284.9 2321.1 -1135.5    2270.9  2.1466  1   0.142882   
-model4    9 2276.7 2323.2 -1129.3    2258.7 12.2289  2   0.002211 **
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 ---------------------------------------------
 ------ Model 4 Summary [total_dwell]: ------
@@ -113,23 +96,6 @@ ________________________________________________________________________________
 ============ Metric: total_fixation ============
 =============================================
 
-----------------------------------------------------
------- Model Comparison (1, 2, 3, 4) (Likelihood-ratio tests) [total_fixation] ------
-----------------------------------------------------
-Data: df
-Models:
-model1: ET ~ chosen_type + (1 | item) + (1 | participant)
-model2: ET ~ condition + (1 | item) + (1 | participant)
-model3: ET ~ condition + chosen_type + (1 | item) + (1 | participant)
-model4: ET ~ condition * chosen_type + (1 | item) + (1 | participant)
-       npar    AIC    BIC  logLik -2*log(L)  Chisq Df Pr(>Chisq)  
-model1    5 1869.8 1895.6 -929.88    1859.8                       
-model2    6 1865.2 1896.2 -926.61    1853.2 6.5289  1    0.01061 *
-model3    7 1867.1 1903.3 -926.56    1853.1 0.1011  1    0.75056  
-model4    9 1864.4 1910.9 -923.19    1846.4 6.7438  2    0.03432 *
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
 ---------------------------------------------
 ------ Model 4 Summary [total_fixation]: ------
 ---------------------------------------------
@@ -211,6 +177,97 @@ condition = focus:
 condition = contrastive:
  2     estimate     SE   df t.ratio p.value
  A - B   0.0848 0.0517 1284   1.640  0.1012
+
+Degrees-of-freedom method: kenward-roger 
+
+
+________________________________________________________________________________
+
+=============================================
+============ Metric: fvd ============
+=============================================
+
+---------------------------------------------
+------ Model 4 Summary [fvd]: ------
+---------------------------------------------
+Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: ET
+                           Chisq Df Pr(>Chisq)    
+(Intercept)           15390.6687  1  < 2.2e-16 ***
+condition                 1.6482  2  0.4386261    
+chosen_type              13.6161  1  0.0002243 ***
+condition:chosen_type     9.5092  2  0.0086121 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+----------------------------------------------------
+Emmeans (Model 4, cxt, condition by type) [fvd]:
+---------------------------------------------
+$`emmeans of condition | chosen_type`
+chosen_type = A:
+ condition   emmean     SE   df lower.CL upper.CL
+ exclusive     5.75 0.0468  126     5.65     5.84
+ focus         5.82 0.0466  124     5.73     5.91
+ contrastive   5.79 0.0707  407     5.65     5.93
+
+chosen_type = B:
+ condition   emmean     SE   df lower.CL upper.CL
+ exclusive     6.44 0.1870 1212     6.08     6.81
+ focus         6.08 0.2070 1260     5.67     6.49
+ contrastive   5.85 0.0563  225     5.74     5.96
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+$`pairwise differences of condition | chosen_type`
+chosen_type = A:
+ 2                       estimate     SE   df t.ratio p.value
+ exclusive - focus        -0.0736 0.0575 1217  -1.281  0.4064
+ exclusive - contrastive  -0.0404 0.0784 1287  -0.515  0.8641
+ focus - contrastive       0.0333 0.0782 1290   0.425  0.9052
+
+chosen_type = B:
+ 2                       estimate     SE   df t.ratio p.value
+ exclusive - focus         0.3645 0.2740 1298   1.330  0.3789
+ exclusive - contrastive   0.5980 0.1930 1282   3.101  0.0056
+ focus - contrastive       0.2335 0.2110 1297   1.104  0.5114
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+
+$`emmeans of chosen_type | condition`
+condition = exclusive:
+ chosen_type emmean     SE   df lower.CL upper.CL
+ A             5.75 0.0468  126     5.65     5.84
+ B             6.44 0.1870 1212     6.08     6.81
+
+condition = focus:
+ chosen_type emmean     SE   df lower.CL upper.CL
+ A             5.82 0.0466  124     5.73     5.91
+ B             6.08 0.2070 1260     5.67     6.49
+
+condition = contrastive:
+ chosen_type emmean     SE   df lower.CL upper.CL
+ A             5.79 0.0707  407     5.65     5.93
+ B             5.85 0.0563  225     5.74     5.96
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+$`pairwise differences of chosen_type | condition`
+condition = exclusive:
+ 2     estimate     SE   df t.ratio p.value
+ A - B   -0.698 0.1910 1282  -3.666  0.0003
+
+condition = focus:
+ 2     estimate     SE   df t.ratio p.value
+ A - B   -0.260 0.2100 1296  -1.241  0.2147
+
+condition = contrastive:
+ 2     estimate     SE   df t.ratio p.value
+ A - B   -0.060 0.0864 1088  -0.694  0.4875
 
 Degrees-of-freedom method: kenward-roger 
 
