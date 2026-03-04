@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 # Read xlsx file
 import pandas as pd
-df = pd.read_excel("experiment.xlsx")
+df = pd.read_excel("experiment_stimuli.xlsx")
 
 # Get a list of all words in the column 'left' starting with row 164
 # words = df["left"].dropna().astype(str).tolist() # DANGER, OVERWRITES CURRENT IMAGES
