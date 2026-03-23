@@ -311,11 +311,11 @@ We built a sentence--picture verification (SPV) task, in which participants read
 
 \subsection{Procedure}
 
-The experiment was created, hosted on, and presented (in Hungarian) to participants on the PCIbex Farm \citep{schwarz_2021_tutorial}, the code and resources are available \hl{online} for inspection. Participants completed the experiment on their own devices (PC only, with a webcam and physical keyboard \& mouse) and on their own time, but with Prolific helping us control for too fast or too slow submissions resulting in rejection or timeout.
+The experiment was created, hosted on, and presented (in Hungarian) to participants on PCIbex Farm \citep{schwarz_2021_tutorial}, the code and resources are available \hl{online} for inspection. Participants completed the experiment on their own devices (PC only, with a webcam and physical keyboard \& mouse) and on their own time, but with Prolific helping us control for too fast or too slow submissions resulting in rejection or timeout.
 
 First, potential participants were instructed to be in a well-lit environment, sit at an appropriate distance from their screen and webcam, and minimize head movements, emphasizing the need for a bright environment, and that they can only start the experiment from a Chrome browser. Before starting the experiment, participants then had to calibrate the eye tracker, which involves looking at specific points on the screen (e.g., corners, center) while the system records their eye positions to create a mapping between gaze coordinates and screen coordinates. Eye-tracking data were collected using the built-in WebGazer.js library of PCIbex, which uses the participant's webcam to track eye movements, and we used the default calibration procedure provided (a 9-point calibration grid). Participants had to reach and maintain at least 60\% accuracy in the calibration phase to proceed with the experiment, and had three attempts to achieve this accuracy, ensuring that the eye-tracking data collected during the picture verification phase would be reliable. The tracker also checked their gaze again and again before every trial, and if the accuracy dropped below 60\%, participants were prompted to recalibrate before proceeding to the next trial. People who could not pass the calibration for various reasons (e.g., computer setup, bad lighing/environment, glare on glasses, or any other technical issue) were not able to start the experiment. After calibration, participants were intstructed on the exact task and how to complete the trials, followed by a practice session consisting of three trials, and finally the live experiment of 40 trials (including 4 attention checks).
 
-We have to mention that a relatively large amount of people (around a third of all who tried) could not pass calibration, and thus were not able to start the experiment. This is a persistent issue with webcam-based online eye tracking studies, as it can be affected by various factors such as lighting conditions, webcam quality, and individual differences in facial features. Depending on these factors, participants' experiences were vastly different, some people breezed through trials and had a smooth experience finishing under 20 minutes, others struggled and had to recalibrate from time to time, spending over 30-40 minutes in total. We urged participants to reach out if they had issues, but sadly we couldn't assist everyone remotely. A small number of participants started but couldn't finish the experiment due to technical reasons, they were also compensated for their time, but their data was not included in the analysis.
+We have to mention that a relatively large amount of people (around a third of all who tried) could not pass calibration, and thus were not able to start the experiment. This is a persistent issue with webcam-based online eye tracking studies, as it can be affected by various factors such as lighting conditions, webcam quality, and even individual differences in facial features. Depending on these factors, participants' experiences were vastly different, some people breezed through trials and had a smooth experience finishing under 20 minutes, others struggled and had to recalibrate from time to time, spending over 30-40 minutes in total. We urged participants to reach out if they had issues, but sadly we couldn't assist everyone remotely. A small number of participants started but couldn't finish the experiment due to technical reasons, they were also compensated for their time, but their data was not included in the analysis.
 
 
 
@@ -335,11 +335,13 @@ Eye-tracking data recorded on PCIbex comes in a relatively straightforward, clea
 \label{fig:episodes}}
 \end{figure}
 
-The following steps were taken to clean and classify the eye-tracking data in order to obtain a certain set of metrics that could be used for analysis: First, raw eye tracking data files were loaded per participant, and \textbf{samples} were classified into AOIs at each timestamp as left (left\_canvas=1, right\_canvas=0), right (right\_canvas=1, left\_canvas=0), or neutral otherwise. Then, same-side consecutive samples were collapsed into contiguous \textbf{episodes} within participant and trial. Episode duration was computed from timestamp-derived sample durations where episodes shorter than a threshold of 60 ms were removed, and neutral-gap bridging was enabled (with a max neutral bridge of 50 ms). In other words, very short gaze episodes and rapid saccades were removed cleaning noise \& jitter, as they are unlikely to reflect meaningful cognitive efforts and more likely to be artifacts of the eye-tracking system. Then, neutral episodes were dropped and excluded from further analysis. Episodes thus intend to represent a moment of sustained gaze within an AOI, ignoring brief out-of-canvas samples that result from technical inaccuracies and are not deliberate (or uncounscious) eye movements. For quality control, episode-duration distributions were inspected via summary statistics, and episodes longer than the mean +2 SD ($\mu \pm 2\sigma$) were winsorized by replacing their duration with the global mean (i.e., with rows retained). This procedure preserved the full number of episodes while limiting the influence of extreme outliers; 4.89\% of all episodes were substituted. See Figure~\ref{fig:episodes} for the distribution of episode durations. This cleaning process was devised after established eye-tracking data classification protocols, such as the Identification by Dispersion-Threshold (I-DT) algorithm, which itself is ideal for low- to mid-frequency eye trackers and static stimuli.
 
-Finally, trial-level eye-tracking (ET) features were computed (left/right/total dwell time, dwell proportions, dominant side, fixation counts, revisits, transitions, first-fixation side/duration, and first-visit side/duration). To briefly define the most important metrics: \textbf{dwell} is a time value, the sum of the duration of all episodes within a trial (either left, right, or total), representing the total amount of time a participant has spent looking at the AOI(s) during the choice; \textbf{fixation} on the other hand is a numeric value, representing how many times a participant looked at the AOIs during a choice, and \textbf{transitions} is the number of times a participant switched their gaze from one AOI to the other. Missing trial-level metrics were mean-imputed in 5.02\% of the data points, which were mostly due to missing episode-level data (e.g., no episodes detected for a trial, or no episodes remained after cleaning).
 
-We acknowledge that several processing decisions may have limitations/limit inference. Gaze data was essentially collapsed to binary AOIs (left/right), while off-target samples were treated as neutral and excluded. Episodes shorter than 50 ms were removed, potentially excluding very brief but real events. Long-duration episodes were winsorized by replacing values above a global mean+2SD threshold with the global mean, preserving sample size but reducing variance and potentially biasing duration-based measures. Also, missing merged ET trial metrics were mean-imputed for selected variables, which further shrinks the effective sample size. We therefore interpret absolute magnitudes cautiously and focus on relative contrasts between conditions.
+The following steps were taken to clean and classify the eye-tracking data in order to obtain a certain set of metrics that could be used for analysis: First, raw eye tracking data files were loaded per participant, and \textbf{samples} were classified into AOIs at each timestamp as left (left canvas=1, right canvas=0), right (right canvas=1, left canvas=0), or neutral otherwise. Then, same-side consecutive samples were collapsed into contiguous gaze \textbf{episodes} within participant and trial. Episode duration was computed from timestamp-derived sample durations where episodes shorter than a threshold of 60 ms were removed, and neutral-gap bridging was enabled (with a max neutral bridge of 50 ms). In other words, very short gaze episodes and rapid saccades were removed cleaning noise \& jitter, as they are unlikely to reflect meaningful cognitive efforts and more likely to be artifacts of the eye-tracking system. Then, neutral episodes were dropped and excluded from further analysis. Episodes thus intend to represent a moment of sustained gaze within an AOI, ignoring brief out-of-canvas samples that result from technical inaccuracies and are not deliberate (or uncounscious) eye movements. For quality control, episode-duration distributions were inspected via summary statistics, and episodes longer than the mean +2 SD ($\mu \pm 2\sigma$) were winsorized by replacing their duration with the global mean (i.e., with rows retained). This procedure preserved the full number of episodes while limiting the influence of extreme outliers; 4.89\% of all episodes were substituted. See Figure~\ref{fig:episodes} for the distribution of episode durations. This cleaning process was devised after established eye-tracking data classification protocols, such as the Identification by Dispersion-Threshold (I-DT) algorithm, which itself is ideal for low- to mid-frequency eye trackers and static stimuli.
+
+Finally, trial-level eye-tracking (ET) features were computed, including left/right/total dwell time, dwell proportions, dominant side, fixation counts, revisits, transitions, and first-fixation side/duration. To briefly define the most important metrics that were used in the end: \textbf{dwell} is a time value, the sum of the duration of all gaze episodes within a trial (either left, right, or total), representing the total amount of time a participant has spent looking at the AOI(s) during the choice; \textbf{fixation} on the other hand is a numeric value, representing how many times a participant looked at (or switched between) the AOIs during a choice. Missing trial-level metrics were mean-imputed in 5.02\% of the data points, which were mostly due to missing episode-level data (e.g., no episodes detected for a trial, or no episodes remained after cleaning).
+
+We acknowledge that several processing decisions may limit inference. Gaze data was essentially collapsed to binary AOIs (left/right), while off-target samples were treated as neutral and excluded. Episodes shorter than 50 ms were removed, potentially excluding very brief but real events. Long-duration episodes were winsorized by replacing values above a global mean+2SD threshold with the global mean, preserving sample size but reducing variance and potentially biasing duration-based measures. Also, missing merged ET trial metrics were mean-imputed for selected variables, which further shrinks the effective sample size. We therefore interpret absolute magnitudes cautiously and focus on relative contrasts between conditions.
 
 The eye-tracking data cleaning and classification pipeline was implemented in Python, and can be inspected \hl{online}.
 
@@ -350,15 +352,7 @@ The eye-tracking data cleaning and classification pipeline was implemented in Py
 
 % A select few of the eye-tracking metrics were analyzed using linear mixed-effects models with FocusCondition, ChoiceType, and their interaction as fixed effects, and Participant and Item as random effects. Post-hoc comparisons were conducted using Tukey HSD tests............................
 
-We analyzed two eye-tracking dependent measures: \textit{total dwell time} (\texttt{total\_dwell}) and \textit{total fixation count} (\texttt{total\_fixation}). For both measures, analyses were conducted in R using linear mixed-effects models (packages \texttt{lme4}, \texttt{lmerTest}, \texttt{car}, and \texttt{emmeans}). The fixed-effect predictors were focus\texttt{Condition} (three levels: exclusive, unmodified, contrastive) and image \texttt{Choice} (two levels: single-object, multi-object). To stabilize variance and accommodate zero values, we applied a log transform using $\log(1+x)$ to the raw dependent measure prior to modeling. For each dependent measure, we fit the following model with \texttt{Participants} and \texttt{Items} as random intercepts:
-
-\begin{equation}\label{eq:model}
-y' \sim \text{Condition} * \text{Choice} + (1 \mid \text{Participant}) + (1 \mid \text{Item})
-\end{equation}
-
-where $y' = \log(1+y)$ is the transformed dependent variable. The model were fit using maximum likelihood estimation (i.e., \texttt{REML = FALSE}) to enable likelihood-ratio model comparisons.
-
-To follow up on significant effects in the model, we computed estimated marginal means and conducted Tukey-adjusted pairwise comparisons using \texttt{emmeans}. Specifically, we tested (i) pairwise differences between conditions within each type (Condition $\mid$ Choice), (ii) the pairwise differences between types within each condition (Choice $\mid$ Condition), and (iii) the full interplay of both (Condition $\ast$ Choice).
+We analyzed two eye-tracking dependent measures: \textit{total dwell time} (\texttt{total\_dwell}) and \textit{total fixation count} (\texttt{total\_fixation}). For both measures, analyses were conducted in R using linear mixed-effects models (LMM) (packages \texttt{lme4}, \texttt{lmerTest}, \texttt{car}, and \texttt{emmeans}). The fixed-effect predictors were focus \texttt{Condition} (three levels: exhaustive, unmodified, contrastive) and image \texttt{Choice} (two levels: single-object, multi-object). To stabilize variance and accommodate zero values, we applied a log transform using $\log(1+x)$ to the raw dependent measure prior to modeling. For each dependent measure, we fit the following model with \texttt{Participants} and \texttt{Items} as random intercepts: \texttt{y' \sim \text{Condition} * \text{Choice} + (1 \mid~\text{Participant}) + (1 \mid~\text{Item})} where $y' = \log(1+y)$ is the transformed dependent variable. The model were fit using maximum likelihood estimation (i.e., \texttt{REML = FALSE}) to enable likelihood-ratio model comparisons. To follow up on significant effects in the model, we computed estimated marginal means and conducted Tukey-adjusted pairwise comparisons using \texttt{emmeans}. Specifically, we tested (i) pairwise differences between conditions within each type (Condition $\mid$ Choice), (ii) the pairwise differences between types within each condition (Choice $\mid$ Condition), and (iii) the full interplay of both (Condition $\ast$ Choice).
 
 
 
@@ -366,42 +360,25 @@ To follow up on significant effects in the model, we computed estimated marginal
 
 \subsection{Behavioral results}
 
-The behavioural results showed that participants overwhelmingly interpreted the unmodified pre-verbal focus (PVF) sentences like exhaustive \textit{only}-sentences, choosing single-object type A images (see Figure~\ref{fig:choice}, Table~\ref{tab:choice}). However, in the contrastive condition (\textit{among others}-sentences) people preferred the multi-object type B images, exhibiting a tendency toward non-exhaustive readings, but with almost 37.7\% of the choices -- somewhat unexpectedly -- still being cast on the exhaustive interpretation type A images. This suggests that even with the presence of a phrase that licenses a contrastive reading, the exhaustive effect is still quite dominant. This is clear evidence that the PVF construction is not necessarily interpreted exclusively exhaustively, a contrastive reading can be be teased out easily, and also that the presence of a contrastive licensing phrase does not completely eliminate the exhaustive bias.
-
-
-
 % Table 1
-\begin{table}[ht]
+\begin{table}[htbp]
 \centering
 \caption{Type of chosen image per condition}
 \label{tab:choice}
-\begin{tabular}{lrr}
+\begin{tabularx}{\textwidth}{@{}Xrr@{}}
 \toprule
 Condition & Image A: \% (N) & Image B: \% (N) \\
 \midrule
 Exhaustive   & 95.1 (411) & 4.86 (21) \\
-PVF          & 96.1 (415) & 3.94 (17) \\
-Contrastive  & 37.7 (163)  & 62.3 (269) \\
+Unmodified   & 96.1 (415) & 3.94 (17) \\
+Contrastive  & 37.7 (163) & 62.3 (269) \\
 \bottomrule
-\end{tabular}
+\end{tabularx}
 \end{table}
 
-% \begin{table}[t]
-% \TBL{\caption{Tables with short caption\label{tab2}}}
-% {\begin{fntable}
-% \tabcolsep=8pt
-% \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
-% \toprule
-%  \TCH{Projectile} & \TCH{Energy} & \TCH{$\sigma_{\mathit{calc}}$} & \TCH{$\sigma_{\mathit{expt}}$} &
-% \TCH{Energy} & \TCH{$\sigma_{\mathit{calc}}$} & \TCH{$\sigma_{\mathit{expt}}$} \\\midrule
-% \TCH{Element 3}&990 A &1168 &$1547\pm12$ &780 A &1166 &$1239\pm100$\\
-% {{Element 4}}&500 A &961 &$\hphantom{0}922\pm10$ &900 A &1268 &$1092\pm40\hphantom{0}$\\
-% \TCH{Element 3}&990 A &1168 &$1547\pm12$ &780 A &1166 &$1239\pm100$\\
-% {\TCH{Element 4}}&500 A &961 &$\hphantom{0}922\pm10$ &900 A &1268 &$1092\pm40\hphantom{0}$\\
-% \botrule
-% \end{tabular*}%
-% \end{fntable}}
-% \end{table}
+
+
+The behavioural results showed that participants overwhelmingly interpreted the unmodified pre-verbal focus (PVF) sentences like exhaustive \textit{only}-sentences, choosing single-object type A images (see Table~\ref{tab:choice}, Figure~\ref{fig:choice}). However, in the contrastive condition (\textit{among others}-sentences) people preferred the multi-object type B images, exhibiting a tendency toward non-exhaustive readings, but with almost 37.7\% of the choices -- somewhat unexpectedly -- still being cast on the exhaustive interpretation type A images. This suggests that even with the presence of a phrase that licenses an inclusive, contrastive reading, the exhaustive effect is still quite dominant. This is clear evidence that the PVF construction is not necessarily interpreted exclusively exhaustively, a non-exhaustive interpretation is still available, a contrastive reading can be be teased out easily, and also that the presence of a contrastive licensing phrase does not completely eliminate the exhaustive bias.
 
 
 
@@ -413,14 +390,383 @@ Contrastive  & 37.7 (163)  & 62.3 (269) \\
 
 
 
-The reading times across the different regions of the sentences showed no significant differences between conditions, suggesting that the processing of the sentences themselves was not affected by the various focus conditions during self-paced reading. However, a degree of uncertainty and a high level of standard deviation showed up when participants faced with the choice in the contrastive condition, see the reaction times (RT) for the choice in Figure~\ref{fig:reading_times}.
+\subsection{Reaction Times}
+
+We analyzed the reading and reaction times (RT) for both sentence reading and the picture verification choices, see Figure~\ref{fig:region_rt_by_choice_with_choice_rt_split_by_choice} for an illustrative overview.
 
 
 \begin{figure}
-\FIG{\includegraphics[width=1.0\textwidth]{../plots/reading_times.png}}
-{\caption{Mean reading times per regions and reaction times of choices.}}
-\label{fig:reading_times}
+\FIG{\includegraphics[width=1.0\textwidth]{../plots/region_rt_by_choice_with_choice_rt_split_by_choice.png}}
+{\caption{Mean reading times of sentences by regions and reaction times of choices.}}
+\label{fig:region_rt_by_choice_with_choice_rt_split_by_choice}
 \end{figure}
+
+\subsubsection{Sentence Reading Times}
+
+In the examination of the factors to see what is contributing to significant effect, the Type III Wald chi-square tests showed a significant main effect of Condition ($\chi^2(2)=18.66$, $p<.001$), but no main effect of Choice ($\chi^2(1)=0.06$, $p=.806$) and no Condition $\times$ Choice interaction ($\chi^2(2)=2.10$, $p=.351$) (see Table~\ref{tab:sentence-rt}). This suggests that the different focus conditions had a significant impact on the overall reading times of the sentences, but the type of choice participants made (single-object vs multi-object) did not significantly affect their reading times. In other words, while the focus type influenced how long participants took to read the sentences, it did not seem to influence their decision-making process in terms of which image they chose, nor did the choice they made influence their reading times in a way that interacted with the condition. 
+
+\begin{table}[htbp]
+\centering
+\caption{Type III Wald chi-square tests for whole-sentence reading times}
+\label{tab:sentence-rt}
+\begin{tabularx}{\textwidth}{@{}Xrrr@{}}
+\toprule
+Effect & $\chi^2$ & df & $p$ \\
+\midrule
+Condition & 18.66 & 2 & $< .001$ \\
+Choice & 0.06 & 1 & .806 \\
+Condition $\times$ Choice & 2.10 & 2 & .351 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Post-hoc pairwise comparisons revealed that the significant effect of Condition was driven by significantly faster reading times in the exhaustive condition compared to the contrastive condition (\textit{p}=0.0004). This suggests that participants read the sentences with the exhaustive focus marker \textit{csak} `only' faster than the sentences with the contrastive phrase \textit{többek között} `amongst others', which indicates that the exhaustive sentences were easier to process or more expected, while the contrastive sentences may have required more cognitive effort or were less predictable, leading to longer reading times. There was no significant difference in whole sentence reading times between the exhaustive and unmodified conditions (\textit{p}=0.99), nor between the unmodified and contrastive conditions (\textit{p}=0.08), suggesting that the presence of the focus marker \textit{csak} `only' did not significantly speed up reading compared to the unmodified PVF sentences, and the unmodified sentences did not differ significantly from the contrastive sentences in terms of reading times.
+
+% $`pairwise differences of condition, chosen_type`
+%  1                             estimate     SE   df t.ratio p.value
+%  exhaustive A - unmodified A   -0.05883 0.0140 1212  -4.196  0.0004
+%  exhaustive A - contrastive A  -0.04833 0.0200 1224  -2.422  0.1494
+%  exhaustive A - exhaustive B    0.01194 0.0486 1225   0.246  0.9999
+%  exhaustive A - unmodified B    0.05022 0.0529 1222   0.948  0.9337
+%  exhaustive A - contrastive B  -0.00913 0.0163 1218  -0.560  0.9935
+%  unmodified A - contrastive A   0.01050 0.0199 1223   0.529  0.9950
+%  unmodified A - exhaustive B    0.07077 0.0484 1224   1.463  0.6882
+%  unmodified A - unmodified B    0.10905 0.0530 1223   2.056  0.3115
+%  unmodified A - contrastive B   0.04970 0.0163 1218   3.046  0.0286
+%  contrastive A - exhaustive B   0.06026 0.0499 1223   1.208  0.8330
+%  contrastive A - unmodified B   0.09855 0.0548 1224   1.797  0.4681
+%  contrastive A - contrastive B  0.03920 0.0229 1233   1.712  0.5237
+%  exhaustive B - unmodified B    0.03828 0.0685 1220   0.559  0.9935
+%  exhaustive B - contrastive B  -0.02106 0.0492 1225  -0.428  0.9982
+%  unmodified B - contrastive B  -0.05935 0.0534 1221  -1.112  0.8764
+
+\begin{table}[htbp]
+\centering
+\caption{Tukey-adjusted pairwise comparisons for whole-\textbf{sentence} reading times across Condition $\times$ Choice combinations}
+\label{tab:sentence-rt-pairwise}
+\begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
+\toprule
+Contrast & Estimate & SE & df & $t$ & $p$ \\
+\midrule
+Exhaustive A -- Unmodified A   & -0.05883 & 0.0140 & 1212 & -4.196 & .0004 \\
+Exhaustive A -- Contrastive A  & -0.04833 & 0.0200 & 1224 & -2.422 & .1494 \\
+Exhaustive A -- Exhaustive B   &  0.01194 & 0.0486 & 1225 &  0.246 & .9999 \\
+Exhaustive A -- Unmodified B   &  0.05022 & 0.0529 & 1222 &  0.948 & .9337 \\
+Exhaustive A -- Contrastive B  & -0.00913 & 0.0163 & 1218 & -0.560 & .9935 \\
+Unmodified A -- Contrastive A  &  0.01050 & 0.0199 & 1223 &  0.529 & .9950 \\
+Unmodified A -- Exhaustive B   &  0.07077 & 0.0484 & 1224 &  1.463 & .6882 \\
+Unmodified A -- Unmodified B   &  0.10905 & 0.0530 & 1223 &  2.056 & .3115 \\
+Unmodified A -- Contrastive B  &  0.04970 & 0.0163 & 1218 &  3.046 & .0286 \\
+Contrastive A -- Exhaustive B  &  0.06026 & 0.0499 & 1223 &  1.208 & .8330 \\
+Contrastive A -- Unmodified B  &  0.09855 & 0.0548 & 1224 &  1.797 & .4681 \\
+Contrastive A -- Contrastive B &  0.03920 & 0.0229 & 1233 &  1.712 & .5237 \\
+Exhaustive B -- Unmodified B   &  0.03828 & 0.0685 & 1220 &  0.559 & .9935 \\
+Exhaustive B -- Contrastive B  & -0.02106 & 0.0492 & 1225 & -0.428 & .9982 \\
+Unmodified B -- Contrastive B  & -0.05935 & 0.0534 & 1221 & -1.112 & .8764 \\
+\bottomrule
+\end{tabularx}
+% \vspace{0.5em}
+% \begin{minipage}{\textwidth}
+% \small
+% Note: Degrees-of-freedom method: kenward-roger. P value adjustment: tukey method for comparing a family of 6 estimates.
+% \end{minipage}
+\end{table}
+
+
+
+\subsubsection{Regions Reading Times}
+
+\begin{table}[htbp]
+\centering
+\caption{Type III Wald chi-square tests for region 5 reading times}
+\label{tab:r5}
+\begin{tabularx}{\textwidth}{@{}Xrrr@{}}
+\toprule
+Effect & $\chi^2$ & df & $p$ \\
+\midrule
+Condition & 18.66 & 2 & $< .001$ \\
+Choice & 0.25 & 1 & .615 \\
+Condition $\times$ Choice & 1.72 & 2 & .423 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Region-level reading times were analyzed at three critical regions: r5 (containing the modifying phrases \textit{only}, a filler word, or the second half of \textit{among others}), r6 (the focused object), and r7 (the sentence-final verbs). 
+
+In r5, there was a significant effect of Condition ($p<.001$), with r5 being read significantly faster in the exhaustive condition than in the unmodified condition ($p<.001$), showing that \textit{csak} `only' was processed more quickly than the corresponding region in the unmodified sentences, but not significantly quicker than the contrastive modifier \textit{többek között} `amongst others' (see Table~\ref{tab:r5}).
+
+% $`pairwise differences of condition, chosen_type`
+%  1                             estimate     SE   df t.ratio p.value
+%  exhaustive A - unmodified A   -0.06953 0.0162 1213  -4.303  0.0003[YH2.1]
+%  exhaustive A - contrastive A  -0.02961 0.0230 1232  -1.289  0.7910
+%  exhaustive A - exhaustive B   -0.02806 0.0559 1234  -0.502  0.9961[YH3.1]
+%  exhaustive A - unmodified B    0.00644 0.0609 1230   0.106  1.0000
+%  exhaustive A - contrastive B   0.00184 0.0188 1222   0.098  1.0000
+%  unmodified A - contrastive A   0.03992 0.0229 1231   1.746  0.5013
+%  unmodified A - exhaustive B    0.04148 0.0557 1233   0.745  0.9762
+%  unmodified A - unmodified B    0.07598 0.0611 1230   1.244  0.8148
+%  unmodified A - contrastive B   0.07137 0.0188 1223   3.797  0.0021
+%  contrastive A - exhaustive B   0.00155 0.0574 1231   0.027  1.0000
+%  contrastive A - unmodified B   0.03605 0.0631 1232   0.571  0.9929
+%  contrastive A - contrastive B  0.03145 0.0263 1246   1.195  0.8392
+%  exhaustive B - unmodified B    0.03450 0.0788 1225   0.438  0.9980
+%  exhaustive B - contrastive B   0.02989 0.0567 1234   0.528  0.9951
+%  unmodified B - contrastive B  -0.00461 0.0614 1228  -0.075  1.0000
+
+\begin{table}[htbp]
+\centering
+\caption{Tukey-adjusted pairwise comparisons for \textbf{region 5} reading times across Condition $\times$ Choice combinations}
+\label{tab:r5-pairwise}
+\begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
+\toprule
+Contrast & Estimate & SE & df & $t$ & $p$ \\
+\midrule
+Exhaustive A -- Unmodified A   & -0.06953 & 0.0162 & 1213 & -4.303 & .0003 \\
+Exhaustive A -- Contrastive A  & -0.02961 & 0.0230 & 1232 & -1.289 & .7910 \\
+Exhaustive A -- Exhaustive B   & -0.02806 & 0.0559 & 1234 & -0.502 & .9961 \\
+Exhaustive A -- Unmodified B   &  0.00644 & 0.0609 & 1230 &  0.106 & 1.0000 \\
+Exhaustive A -- Contrastive B  &  0.00184 & 0.0188 & 1222 &  0.098 & 1.0000 \\
+Unmodified A -- Contrastive A  &  0.03992 & 0.0229 & 1231 &  1.746 & .5013 \\
+Unmodified A -- Exhaustive B   &  0.04148 & 0.0557 & 1233 &  0.745 & .9762 \\
+Unmodified A -- Unmodified B   &  0.07598 & 0.0611 & 1230 &  1.244 & .8148 \\
+Unmodified A -- Contrastive B  &  0.07137 & 0.0188 & 1223 &  3.797 & .0021 \\
+Contrastive A -- Exhaustive B  &  0.00155 & 0.0574 & 1231 &  0.027 & 1.0000 \\
+Contrastive A -- Unmodified B  &  0.03605 & 0.0631 & 1232 &  0.571 & .9929 \\
+Contrastive A -- Contrastive B &  0.03145 & 0.0263 & 1246 &  1.195 & .8392 \\
+Exhaustive B -- Unmodified B   &  0.03450 & 0.0788 & 1225 &  0.438 & .9980 \\
+Exhaustive B -- Contrastive B  &  0.02989 & 0.0567 & 1234 &  0.528 & .9951 \\
+Unmodified B -- Contrastive B  & -0.00461 & 0.0614 & 1228 & -0.075 & 1.0000 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+For r6, which is the focused object, there was a significant effect of Condition ($p=.005$) and Choice ($p=.034$), but no significant interaction (see Table~\ref{tab:r6}). This suggests that the reading times for the focused object were influenced by both the focus condition and the type of choice participants made, but these effects did not interact with each other. In other words, while both the focus condition and the choice type had an impact on how long participants took to read the focused object, the way these two factors influenced reading times did not depend on each other. The significant effect of Condition indicates that the different focus conditions led to different reading times for the focused object, while the significant effect of Choice suggests that whether participants ultimately chose the single-object or multi-object image also influenced their reading times for that region.
+
+
+\begin{table}[htbp]
+\centering
+\caption{Type III Wald chi-square tests for region 6 reading times}
+\label{tab:r6}
+\begin{tabularx}{\textwidth}{@{}Xrrr@{}}
+\toprule
+Effect & $\chi^2$ & df & $p$ \\
+\midrule
+Condition & 10.52 & 2 & .005 \\
+Choice & 4.52 & 1 & .034 \\
+Condition $\times$ Choice & 2.37 & 2 & .306 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Pairwise comparisons revealed that the significant effect of Condition in r6 was driven by significantly faster reading times in the exhaustive condition compared to the unmodified condition ($p=.002$), but no significant differences between the exhaustive and contrastive conditions was found ($p=.99$) which might be a residual effect of the scope of marker \textit{only}. 
+
+
+% $`pairwise differences of condition, chosen_type`
+%  1                             estimate     SE   df t.ratio p.value
+%  exhaustive A - unmodified A    -0.0620 0.0195 1212  -3.187  0.0184
+%  exhaustive A - contrastive A   -0.0170 0.0277 1230  -0.614  0.9900
+%  exhaustive A - exhaustive B     0.1429 0.0674 1232   2.120  0.2775
+%  exhaustive A - unmodified B     0.0973 0.0734 1228   1.326  0.7709
+%  exhaustive A - contrastive B    0.0415 0.0226 1221   1.834  0.4438
+%  unmodified A - contrastive A    0.0450 0.0275 1229   1.635  0.5752
+%  unmodified A - exhaustive B     0.2049 0.0671 1231   3.055  0.0278
+%  unmodified A - unmodified B     0.1594 0.0736 1228   2.167  0.2543
+%  unmodified A - contrastive B    0.1035 0.0226 1222   4.574  0.0001
+%  contrastive A - exhaustive B    0.1598 0.0692 1229   2.311  0.1902
+%  contrastive A - unmodified B    0.1143 0.0760 1230   1.503  0.6622
+%  contrastive A - contrastive B   0.0585 0.0317 1244   1.846  0.4365
+%  exhaustive B - unmodified B    -0.0455 0.0950 1224  -0.479  0.9969
+%  exhaustive B - contrastive B   -0.1013 0.0683 1232  -1.485  0.6742
+%  unmodified B - contrastive B   -0.0558 0.0740 1227  -0.754  0.9749
+
+\begin{table}[htbp]
+\centering
+\caption{Tukey-adjusted pairwise comparisons for \textbf{region 6} reading times across Condition $\times$ Choice combinations}
+\label{tab:r6-pairwise}
+\begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
+\toprule
+Contrast & Estimate & SE & df & $t$ & $p$ \\
+\midrule
+Exhaustive A -- Unmodified A   & -0.0620 & 0.0195 & 1212 & -3.187 & .0184 \\
+Exhaustive A -- Contrastive A  & -0.0170 & 0.0277 & 1230 & -0.614 & .9900 \\
+Exhaustive A -- Exhaustive B   &  0.1429 & 0.0674 & 1232 &  2.120 & .2775 \\
+Exhaustive A -- Unmodified B   &  0.0973 & 0.0734 & 1228 &  1.326 & .7709 \\
+Exhaustive A -- Contrastive B  &  0.0415 & 0.0226 & 1221 &  1.834 & .4438 \\
+Unmodified A -- Contrastive A  &  0.0450 & 0.0275 & 1229 &  1.635 & .5752 \\
+Unmodified A -- Exhaustive B   &  0.2049 & 0.0671 & 1231 &  3.055 & .0278 \\
+Unmodified A -- Unmodified B   &  0.1594 & 0.0736 & 1228 &  2.167 & .2543 \\
+Unmodified A -- Contrastive B  &  0.1035 & 0.0226 & 1222 &  4.574 & .0001 \\
+Contrastive A -- Exhaustive B  &  0.1598 & 0.0692 & 1229 &  2.311 & .1902 \\
+Contrastive A -- Unmodified B  &  0.1143 & 0.0760 & 1230 &  1.503 & .6622 \\
+Contrastive A -- Contrastive B &  0.0585 & 0.0317 & 1244 &  1.846 & .4365 \\
+Exhaustive B -- Unmodified B   & -0.0455 & 0.0950 & 1224 & -0.479 & .9969 \\
+Exhaustive B -- Contrastive B  & -0.1013 & 0.0683 & 1232 & -1.485 & .6742 \\
+Unmodified B -- Contrastive B  & -0.0558 & 0.0740 & 1227 & -0.754 & .9749 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+Finishing the sentence with the unstressed verb in r7, there was a significant effect of Condition ($p<.001$), but no significant effect of Choice ($p=.453$) and no significant interaction (see Table~\ref{tab:r7}). 
+
+\begin{table}[htbp]
+\centering
+\caption{Type III Wald chi-square tests for region 7 reading times}
+\label{tab:r7}
+\begin{tabularx}{\textwidth}{@{}Xrrr@{}}
+\toprule
+Effect & $\chi^2$ & df & $p$ \\
+\midrule
+Condition & 25.48 & 2 & $< .001$ \\
+Choice & 0.56 & 1 & .453 \\
+Condition $\times$ Choice & 2.32 & 2 & .314 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Post-hoc pairwise comparisons revealed that the significant effect of Condition in r7 was driven by significantly faster reading times in the exhaustive condition compared to the unmodified condition ($p<.001$) and the contrastive condition ($p=.017$), but no significant difference between the unmodified and contrastive conditions was found ($p=.60$). This suggests that sentences were read faster in the final region only when readers tried to select A during reading the exhaustive condition as the last region typically reflects all preceding words' effects on comprehension.
+
+% $`pairwise differences of condition, chosen_type`
+%  1                             estimate     SE   df t.ratio p.value
+%  exhaustive A - unmodified A   -0.11708 0.0245 1213  -4.779  <.0001
+%  exhaustive A - contrastive A  -0.11131 0.0348 1233  -3.198  0.0177[YH7.1]
+%  exhaustive A - exhaustive B   -0.06344 0.0848 1234  -0.748  0.9757
+%  exhaustive A - unmodified B   -0.01551 0.0924 1230  -0.168  1.0000
+%  exhaustive A - contrastive B  -0.04531 0.0285 1223  -1.591  0.6047
+%  unmodified A - contrastive A   0.00577 0.0346 1232   0.167  1.0000
+%  unmodified A - exhaustive B    0.05364 0.0844 1233   0.636  0.9883
+%  unmodified A - unmodified B    0.10157 0.0925 1230   1.098  0.8825
+%  unmodified A - contrastive B   0.07177 0.0285 1223   2.519  0.1192
+%  contrastive A - exhaustive B   0.04787 0.0870 1232   0.550  0.9940
+%  contrastive A - unmodified B   0.09580 0.0957 1232   1.001  0.9176
+%  contrastive A - contrastive B  0.06599 0.0399 1248   1.656  0.5616
+%  exhaustive B - unmodified B    0.04793 0.1200 1225   0.401  0.9987
+%  exhaustive B - contrastive B   0.01812 0.0859 1235   0.211  0.9999
+%  unmodified B - contrastive B  -0.02980 0.0931 1229  -0.320  0.9996
+
+\begin{table}[htbp]
+\centering
+\caption{Tukey-adjusted pairwise comparisons for \textbf{region 7} reading times across Condition $\times$ Choice combinations}
+\label{tab:r7-pairwise}
+\begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
+\toprule
+Contrast & Estimate & SE & df & $t$ & $p$ \\
+\midrule
+Exhaustive A -- Unmodified A   & -0.11708 & 0.0245 & 1213 & -4.779 & $< .0001$ \\
+Exhaustive A -- Contrastive A  & -0.11131 & 0.0348 & 1233 & -3.198 & .0177 \\
+Exhaustive A -- Exhaustive B   & -0.06344 & 0.0848 & 1234 & -0.748 & .9757 \\
+Exhaustive A -- Unmodified B   & -0.01551 & 0.0924 & 1230 & -0.168 & 1.0000 \\
+Exhaustive A -- Contrastive B  & -0.04531 & 0.0285 & 1223 & -1.591 & .6047 \\
+Unmodified A -- Contrastive A  &  0.00577 & 0.0346 & 1232 &  0.167 & 1.0000 \\
+Unmodified A -- Exhaustive B   &  0.05364 & 0.0844 & 1233 &  0.636 & .9883 \\
+Unmodified A -- Unmodified B   &  0.10157 & 0.0925 & 1230 &  1.098 & .8825 \\
+Unmodified A -- Contrastive B  &  0.07177 & 0.0285 & 1223 &  2.519 & .1192 \\
+Contrastive A -- Exhaustive B  &  0.04787 & 0.0870 & 1232 &  0.550 & .9940 \\
+Contrastive A -- Unmodified B  &  0.09580 & 0.0957 & 1232 &  1.001 & .9176 \\
+Contrastive A -- Contrastive B &  0.06599 & 0.0399 & 1248 &  1.656 & .5616 \\
+Exhaustive B -- Unmodified B   &  0.04793 & 0.1200 & 1225 &  0.401 & .9987 \\
+Exhaustive B -- Contrastive B  &  0.01812 & 0.0859 & 1235 &  0.211 & .9999 \\
+Unmodified B -- Contrastive B  & -0.02980 & 0.0931 & 1229 & -0.320 & .9996 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+
+\subsubsection{Decision Reaction Times}
+
+When it came to decisions, the Type III Wald chi-square tests revealed significant main effects of Condition ($p=.018$) and Choice ($p=.001$), as well as a significant interaction between Condition and Choice ($p=.029$) (see Table~\ref{tab:choice-rt}). This suggests that the task itself has influence on the decision time, unlike while previously, as expected, the choice did not show significant influence on reading times.
+
+
+
+\begin{table}[htbp]
+\centering
+\caption{Type III Wald chi-square tests for choice reaction times}
+\label{tab:choice-rt}
+\begin{tabularx}{\textwidth}{@{}Xrrr@{}}
+\toprule
+Effect & $\chi^2$ & df & $p$ \\
+\midrule
+Condition & 8.04 & 2 & .018 \\
+Choice & 10.66 & 1 & .001 \\
+Condition $\times$ Choice & 7.06 & 2 & .029 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Pairwise comparisons revealed that the significant interaction between Condition and Choice was driven by significantly faster decision times in the exhaustive condition compared to the contrastive condition when participants chose A ($p=.060$), but no significant differences between exhaustive and unmodified conditions were found in this case ($p=.691$). During reading, sentences with \textit{only} were significantly different from unmodified in most words. This can be interpreted as \textit{only} sentences require an explicit exhaustive focus denotation, while the unmodified sentences did not specify the focus type. When it is time to make the decision, the difference is not significant, suggesting that it is easy to decide the reading of these two conditions. 
+
+Within conditions, there was a significant difference between choosing A and B in the exhaustive condition ($p=.015$), but not between others (both $p$s > .46). This means that only in the exhaustive condition the difference is obvious, but in unmodified and contrastive ones, A-B readings might both be possible!
+
+No significant differences were found when participants chose B (all $p$s > .55). This suggests that the presence of the focus marker \textit{csak} `only' facilitated faster decision times when participants ultimately selected the single-object image (A), while the contrastive modifier \textit{többek között} `amongst others' did not provide the same facilitation, leading to slower decision times in that condition. However, when participants chose the multi-object image (B), there were no significant differences in decision times across conditions, indicating that the type of focus marking did not influence decision times for those choices.
+
+
+
+
+
+% $`pairwise differences of condition, chosen_type`
+%  1                             estimate     SE   df t.ratio p.value
+%  exhaustive A - unmodified A    -0.0489 0.0335 1213  -1.458  0.6910[YH9.1]
+%  exhaustive A - contrastive A   -0.1325 0.0476 1241  -2.786  0.0604[YH10.1]
+%  exhaustive A - exhaustive B    -0.3774 0.1160 1242  -3.256  0.0147[YH11.1]
+%  exhaustive A - unmodified B    -0.2769 0.1260 1236  -2.192  0.2422
+%  exhaustive A - contrastive B   -0.1822 0.0390 1227  -4.677  <.0001
+%  unmodified A - contrastive A   -0.0836 0.0474 1240  -1.765  0.4889
+%  unmodified A - exhaustive B    -0.3284 0.1150 1240  -2.847  0.0510
+%  unmodified A - unmodified B    -0.2280 0.1270 1237  -1.801  0.4651
+%  unmodified A - contrastive B   -0.1333 0.0390 1228  -3.421  0.0084
+%  contrastive A - exhaustive B   -0.2449 0.1190 1238  -2.058  0.3103
+%  contrastive A - unmodified B   -0.1444 0.1310 1238  -1.104  0.8800
+%  contrastive A - contrastive B  -0.0497 0.0544 1262  -0.915  0.9428
+%  exhaustive B - unmodified B     0.1005 0.1640 1228   0.614  0.9900
+%  exhaustive B - contrastive B    0.1951 0.1170 1242   1.662  0.5570
+%  unmodified B - contrastive B    0.0947 0.1270 1235   0.744  0.9764
+
+\begin{table}[htbp]
+\centering
+\caption{Tukey-adjusted pairwise comparisons for \textbf{choice reaction times} across Condition $\times$ Choice combinations}
+\label{tab:choice-rt-pairwise}
+\begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
+\toprule
+Contrast & Estimate & SE & df & $t$ & $p$ \\
+\midrule
+Exhaustive A -- Unmodified A   & -0.0489 & 0.0335 & 1213 & -1.458 & .6910 \\
+Exhaustive A -- Contrastive A  & -0.1325 & 0.0476 & 1241 & -2.786 & .0604 \\
+Exhaustive A -- Exhaustive B   & -0.3774 & 0.1160 & 1242 & -3.256 & .0147 \\
+Exhaustive A -- Unmodified B   & -0.2769 & 0.1260 & 1236 & -2.192 & .2422 \\
+Exhaustive A -- Contrastive B  & -0.1822 & 0.0390 & 1227 & -4.677 & $< .0001$ \\
+Unmodified A -- Contrastive A  & -0.0836 & 0.0474 & 1240 & -1.765 & .4889 \\
+Unmodified A -- Exhaustive B   & -0.3284 & 0.1150 & 1240 & -2.847 & .0510 \\
+Unmodified A -- Unmodified B   & -0.2280 & 0.1270 & 1237 & -1.801 & .4651 \\
+Unmodified A -- Contrastive B  & -0.1333 & 0.0390 & 1228 & -3.421 & .0084 \\
+Contrastive A -- Exhaustive B  & -0.2449 & 0.1190 & 1238 & -2.058 & .3103 \\
+Contrastive A -- Unmodified B  & -0.1444 & 0.1310 & 1238 & -1.104 & .8800 \\
+Contrastive A -- Contrastive B & -0.0497 & 0.0544 & 1262 & -0.915 & .9428 \\
+Exhaustive B -- Unmodified B   &  0.1005 & 0.1640 & 1228 &  0.614 & .9900 \\
+Exhaustive B -- Contrastive B  &  0.1951 & 0.1170 & 1242 &  1.662 & .5570 \\
+Unmodified B -- Contrastive B  &  0.0947 & 0.1270 & 1235 &  0.744 & .9764 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+
+
+
+% FROM ABSTRACT
+% Conditions significantly influence sentences’ overall RTs: exhaustive sentences were read faster than unmodified (p<.0001) and contrastive sentences (p<.05). Pairwise comparisons showed that only-sentences were read especially fast when compared to unmodified sentences when people chose A (p=.0004). During word-by-word processing, in region corresponding to ‘only’, participants read this region significantly quicker than in unmodified condition (p=.0003); this same pattern was found in the object region (p=.0184), and the sentence-final region (p<.0001). Additionally, while other pairwise comparisons were insignificant, the sentence-final region was read faster when readers selected A in the exhaustive condition, i.e., explicit exhaustive readings were facilitated. The task also influenced the reaction times of choice. Effects were found on the Choice (p=.001), the Condition (p=.018) and in their interaction (p=.029): Decision-making was quicker in the exhaustive condition than in the contrastive condition (p=.005) regardless of selecting A or B (ps >.06), but it was not significantly different from the unmodified condition (p=.144). In short, RT results show that explicit exhaustive focus denotation facilitated the reading
+
+% comprehension, unlike the unmodified condition; however, to make a decision, the RTs needed between exhaustive and unmodified was not significantly different.
+
+
+
+
+
+
 
 
 
@@ -449,7 +795,7 @@ total\_fixation & condition               & 12.326 & 2 & .0021 ** \\
 
 
 
-To further examine how the focus structures were associated with exhaustive and contrastive readings, and how the conditions and choices influenced cognitive processing, we fitted linear mixed-effects models to two eye-tracking metrics: \textit{total dwell time}, and \textit{total fixation count} with fixed effects of Condition (exclusive--\textit{only}, unmodified, and contrastive--\textit{among others}), Choice (single- vs multi-object type images), and their interaction, with random intercepts for Participant and Item (see Formula \ref{eq:model} above). Dependent variables were log-transformed using \texttt{log1p}. Type-III Wald $\chi^2$ tests and Tukey-adjusted pairwise comparisons from \texttt{emmeans} were used for inference.
+To further examine how the focus structures were associated with exhaustive and contrastive readings, and how the conditions and choices influenced cognitive processing, we fitted linear mixed-effects models to two eye-tracking metrics: \textit{total dwell time}, and \textit{total fixation count} with fixed effects of Condition (exclusive--\textit{only}, unmodified, and contrastive--\textit{among others}), Choice (single- vs multi-object type images), and their interaction, with random intercepts for Participant and Item. Dependent variables were log-transformed using \texttt{log1p}. Type-III Wald $\chi^2$ tests and Tukey-adjusted pairwise comparisons from \texttt{emmeans} were used for inference.
 
 
 
