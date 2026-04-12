@@ -25,9 +25,10 @@
   ]
 }
 \usepackage{csquotes}
-\usepackage{longtable}
 \usepackage{tabularx}
 \usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{pdflscape}
 \usepackage{expex}
 \usepackage{soul}
 
@@ -133,13 +134,13 @@ which permits unrestricted re-use, distribution, and reproduction in any medium,
 
 \section{Introduction}
 
-How languages express contrast and exhaustivity has major implications for how we understand the syntax--semantics interface. This study revisits the debate on the interpretation of Hungarian focus constructions using eye tracking and the visual-world paradigm. Specifically, we examine two theoretically important inquiries: how strongly Hungarian native speakers interpret phrases in the pre-verbal focus domain exhaustively and whether contrastive but non-exhaustive readings exist, as well as from a cognitive perspective, whether different focus types produce processing differences during language comprehension. 
+How languages express contrast and exhaustivity has major implications for how we understand the syntax--semantics interface. This study revisits a theoretical debate on the interpretation of Hungarian focus constructions using eyetracking technology and the visual-world paradigm. Specifically, we pursue two theoretically important inquiries: what the dominant and available readings of Hungarian pre-verbal focus constructions are, as well as from a cognitive perspective, whether different focus types are processed differently during language comprehension. 
 
 \pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
 \begingl \label{ex:neutral}
-\gla {\it Anna \it meg-ette \it a \it banánt.}//
-\glb Anna{\sc [nom]} {\sc vpx}-eat-{\sc pst-3sg.def} the banana-{\sc acc}//
-\glft `Anna ate (up) the banana.'//
+\gla {\it Anna \it meg-evett \it egy \it banánt.}//
+\glb Anna{\sc [nom]} {\sc vpx}-eat-{\sc pst-3sg} a banana-{\sc acc}//
+\glft `Anna ate a banana.'//
 \endgl
 \xe
 
@@ -147,22 +148,33 @@ How languages express contrast and exhaustivity has major implications for how w
 
 \pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
 \begingl \label{ex:pvf}
-\gla {\it Anna \it a \it BANÁNT \it ette \it meg.}//
-\glb Anna{\sc [nom]} the banana-{\sc acc} eat-{\sc pst-3sg.def} {\sc vpx}//
-\glft a) `Anna ate (up) the BANANA.' \quad [and nothing else] \quad \\
-b) `Anna ate (up) the BANANA.' \quad [and not something else]//
+\gla {\it Anna \it egy \it BANÁNT \it evett \it meg.}//
+\glb Anna{\sc [nom]} a banana-{\sc acc} eat-{\sc pst-3sg} {\sc vpx}//
+\glft `Anna ate a BANANA.' //
 \endgl
 \xe
 
-Consider the canonical, neutral sentence in example \ref{ex:neutral}, where the subject \textit{Anna} is in the sentence-initial position, followed by the verb, \textit{ette} `ate' (together with the verbal prefix [\textsc{vpx}] (or verbal modifier [\textsc{vm}]) \textit{meg-})\footnote{Verbal prefixes in Hungarian can modify the meaning of the verb, or act as aspect markers. \textit{Meg-} in this case has a perfective aspect meaning, indicating not only that the action has been concluded but that the event is complete, with the apple wholly eaten.} and the object \textit{banán} `banana' (with the \textit{-t} accusative ending); vs the pre-verbal focus construction in example \ref{ex:pvf}, where the object is fronted to the pre-verbal position, leaving its (normally attached) verbal prefix behind. The sentence in example \ref{ex:pvf} is a typical example for a Hungarian focus construction, and it could also be rendered in English with an \textit{it}-cleft, i.e., `It is the BANANA\footnote{Linguistically focused elements in the examples will be set in capitals for highlight throughout the paper.} that Anna ate.'. The comparison of the Hungarian focus-constructions with English \textit{it}-clefts has its own literature \citep[cf.][]{ekiss_1999_english,wedgwood_2006_hungarian}, but it is out of the scope of the present discussion.
 
-Constituents in canonical sentences can be focused for various communicative purposes, such as emphasis, question answering, or contradiction. In \ref{ex:pvf} we are focusing the object, and as such we can observe two changes that mark focus: movement and prosody. Regarding the first, Hungarian has a special, grammaticalized syntactic position for the focused constituent directly in front of the verb -- called the pre-verbal focus (PVF) position \citep{wedgwood_2006_predication,balogh_2007_focus} or structural focus position \citep{ekiss_1998_multiple} or simply just focus position -- often associated with exhaustive/identificational semantics \citep{balogh_2013_hungarian}. Besides movement, the syntactically expressed focus is also accompanied by prosodic stress, and it has been suggested that in these focus marking strategies movement is primary, and prosody is secondary \citep{balogh_2013_hungarian}. Regarding intonation in PVF constructions, the focused constituent typically bears eradicating stress \citep[cf.][]{kornai_1988_hungarian,gecseg_2020_focused}, meaning that the verb is destressed and the acoustic prominence of all other elements are leveled. The PVF construction is a common, everyday focus-marking strategy in Hungarian -- a topic-prominent, discourse-configurational language where the configuration of constituents expresses information structural roles as opposed to grammatical ones \citep[cf.][]{ekiss_1995_discourse} -- and various aspects of it has garnered significant attention in both theoretical and psycholinguistic research.
+% \pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
+% \begingl \label{ex:pvf}
+% \gla {\it Anna \it a \it BANÁNT \it ette \it meg.}//
+% \glb Anna{\sc [nom]} the banana-{\sc acc} eat-{\sc pst-3sg.def} {\sc vpx}//
+% \glft a) `Anna ate (up) the BANANA.' \quad [and nothing else] \quad \\
+% b) `Anna ate (up) the BANANA.' \quad [and not something else]//
+% \endgl
+% \xe
+
+Consider the canonical, neutral sentence in example (\ref{ex:neutral})\footnote{Gloss label abbreviations in this and all further examples -- except \textsc{vpx}=verbal prefix -- are from the Leipzig Glossing Rules \citep{comrie_2015_leipzig}: \textsc{acc}=accusative, \textsc{def}=definite, \textsc{nom}=nominative, \textsc{pl}=plural, \textsc{pst}=past tense, \textsc{rel}=relative, \textsc{sg}=singular.}, where the subject \textit{Anna} is in the sentence-initial position, followed by the verb, \textit{evett} `ate' (together with the verbal prefix [\textsc{vpx}] (or verbal modifier [\textsc{vm}]) \textit{meg-})\footnote{Verbal prefixes in Hungarian can modify the meaning of the verb, or act as aspect markers. \textit{Meg-} in this case has a perfective aspect meaning, indicating not only that the action has been concluded but that the event is complete, with the apple wholly eaten.} and the object \textit{banán} `banana' (with the \textit{-t} accusative ending); vs the pre-verbal focus construction in example (\ref{ex:pvf}), where the object is fronted to the pre-verbal position, leaving its (normally attached) verbal prefix behind. The sentence in example (\ref{ex:pvf}) is a typical example for a Hungarian focus construction, and it could also be rendered in English with an \textit{it}-cleft,\footnote{While the comparison of the Hungarian focus constructions with English \textit{it}-clefts has received considerable attention in the literature \citep[cf.][]{ekiss_1999_english,wedgwood_2006_hungarian} it falls outside the scope of the present discussion.} i.e., `It is a BANANA\footnote{Linguistically focused elements in the examples will be set in capitals for highlight throughout the paper.} that Anna ate.'.
+
+Constituents in canonical sentences can be focalized for various communicative purposes, such as emphasis, question answering, or contradiction. In (\ref{ex:pvf}) we are focusing the object, and as such we can observe two changes that mark focus: movement and prosody. Regarding the first, Hungarian has a special, grammaticalized syntactic position for the focused constituent directly in front of the verb -- called the pre-verbal focus (PVF) position \citep{wedgwood_2006_predication,balogh_2007_focus} or structural focus position \citep{ekiss_1998_multiple} or simply just focus position -- often associated with exhaustive/identificational semantics \citep{balogh_2013_hungarian}. Besides movement, the syntactically expressed focus is also accompanied by prosodic stress, and it has been suggested that in these focus marking strategies movement is primary, and prosody is secondary \citep{balogh_2013_hungarian}. Regarding intonation in PVF constructions, the focused constituent typically bears eradicating stress \citep[cf.][]{kornai_1988_hungarian,gecseg_2020_focused}, meaning that the verb is destressed and the acoustic prominence of all other elements are leveled. The PVF construction is a common, everyday focus-marking strategy in Hungarian -- a topic-prominent, discourse-configurational language where the configuration of constituents expresses information structural roles as opposed to grammatical ones \citep[cf.][]{ekiss_1995_discourse} -- and various aspects of it has garnered significant attention in both theoretical and psycholinguistic research.
 
 
 
 \subsection{Background}
 
-One of the key issues around Hungarian focus is whether it is inherently exhaustive, or if the exhaustivity is a pragmatic inference. In other words, does the PVF construction itself entail that the focused element is the only one for which the predicate holds true, or can it be interpreted in a contrastive way, where the focused element stands in opposition to other alternatives without necessarily excluding them? For example, in \ref{ex:pvf} above, does this sentence implies that Anna ate only the banana \textit{and nothing else} -- an exhaustive reading, or could it mean that Anna ate the banana \textit{and not something else} (or even, that she ate the banana but maybe \textit{she also ate something else}) -- a contrastive reading? We are interested in the `default' interpretation of focus constructions such as these, and whether Hungarian speakers tend to understand them exhaustively or contrastively without additional context, as demonstrated by the two possible readings given in \ref{ex:pvf}. 
+One of the key issues around Hungarian pre-verbal focus is whether it is inherently exhaustive, or if the exhaustivity is a pragmatic inference. In other words, does the PVF construction itself entail that the focused element is the only one for which the predicate holds true, or can it be interpreted in a contrastive way, where the focused element stands in opposition to other alternatives without necessarily excluding them? For example, in (\ref{ex:pvf}) above, does this sentence implies that Anna ate only a banana \textit{and nothing else} -- an exhaustive reading, or could it mean that Anna ate a banana \textit{and not something else} (or even, that she ate a banana but maybe \textit{she also ate something else}) -- a contrastive reading? We are interested in the `default' interpretation of focus constructions such as these, and whether Hungarian speakers tend to understand them exhaustively or contrastively without additional context.
+% , as demonstrated by the two possible readings given in (\ref{ex:pvf}). 
+% !!!
 
 We should therefore try to define what we mean by \textit{exhaustive focus} and \textit{contrastive focus}. First, both types require the pre-verbal structure, but they differ in their semantic/pragmatic implications. In \citet{ekiss_1998_identificational}'s influential paper, both would fall under the term of \textit{identificational focus}, which she defines as a focus that identifies the referent of the focused element from a set of alternatives. It takes scope, binds a variable, and interacts with quantification. É. Kiss treats contrastive focus as a subtype of identificational focus, where she describes it as [+exhaustive], and often [+contrastive]. However, we will argue that identificational focus does not always entail exhaustivity. 
 According to \citet{rooth_1992_theory}'s theory on focus interpretation, exhaustivity is not inherent to focus but arises when focus interacts with specific operators like `only'. For him, focus is a mechanism that introduces a set of alternatives (\textit{alternative semantics}), and he considers contrast to be the pragmatic use of focus, where one alternative is highlighted against others in the set.
@@ -174,35 +186,35 @@ In \citet[259]{krifka_2008_basic}'s work on Information Structure (IS), both exh
 
 % Contrastive focus: X instead of Y / X as well as Y pragmatic, discourse‑structuring.
 
-In short, exhaustive focus implies that the focused element is the sole entity for which the predicate holds true; i.e. that there are no other things Anna ate. On the other hand, contrastive focus would imply that the focused element stands in opposition to other possible alternatives, drawing attention to its uniqueness, unlikeliness, or contradicting nature given the context, e.g., `Anna ate the banana [and not the apple].', but it does not necessarily exclude alternatives, i.e., there could be other things that Anna ate, e.g., `Anna ate the banana [and/but also the apple].' Now consider the following:
+In short, exhaustive focus implies that the focused element is the sole entity for which the predicate holds true; i.e. that there are no other things Anna ate. On the other hand, contrastive focus would imply that the focused element stands in opposition to other possible alternatives, drawing attention to its uniqueness, unlikeliness, or contradicting nature given the context, e.g., `Anna ate a banana [and not an apple].', but it does not necessarily exclude alternatives, i.e., there could be other things that Anna ate, e.g., `Anna ate a banana [and/but also an apple].' Now consider the following:
 
 
 
 \pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
 \begingl \label{ex:only}
-\gla {\it Anna \it\textbf{csak} \it a \it BANÁNT \it ette \it meg.}//
-\glb Anna{\sc [nom]} only the banana-{\sc acc} eat-{\sc pst-3sg.def} {\sc vpx}//
-\glft `Anna ate (up) only the BANANA.'//
+\gla {\it Anna \it\textbf{csak} \it egy \it BANÁNT \it evett \it meg.}//
+\glb Anna{\sc [nom]} only a banana-{\sc acc} eat-{\sc pst-3sg} {\sc vpx}//
+\glft `Anna ate (up) only a BANANA.'//
 \endgl
 \xe
-% Anna csak egy BANÁNT vett.
 
 \vspace{-12px}
 
 \pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
 \begingl \label{ex:amongst_others}
-\gla {\it Anna \it\textbf{többek között} \it a \it BANÁNT \it ette \it meg.}//
-\glb Anna{\sc [nom]} {others amongst} the banana-{\sc acc} eat-{\sc pst-3sg.def} {\sc vpx}//
-\glft `Anna ate (up), amongst other things, the BANANA.'//
+\gla {\it Anna \it\textbf{többek között} \it egy \it BANÁNT \it evett \it meg.}//
+\glb Anna{\sc [nom]} {others amongst} a banana-{\sc acc} eat-{\sc pst-3sg} {\sc vpx}//
+\glft `Anna ate (up), amongst other things, a BANANA.'//
 \endgl
 \xe
-% Anna többek között egy BANÁNT vett.
 
 
 
-We can, in fact, force an exhaustive reading by adding the exhaustive focus marker \textit{csak} `only' to the sentence, as in example \ref{ex:only}\footnote{The scope of \textit{csak} `only' only extends to the subsequent element, it can only refer to the object and not the following VP.}. One intuitive reading of a simple PVF sentence like that in example \ref{ex:pvf} would be that `Anna ate the banana [and nothing else].' In this sense, the sentence seems to be equal to that in \ref{ex:only}, where the exhaustive interpretation is explicitly expressed with the operator \textit{csak} `only'. If we accept \citet{ekiss_1998_identificational}'s view, this seems to be redundant as the structural focus is already exhaustive. The question of differentiating the exhaustivity entailed by the pre-verbal focus structure vs the exhaustivity operator has been studied in detail by \citet{balogh_2007_focus}. 
+We can, in fact, force an exhaustive reading by adding the exhaustive focus marker \textit{csak} `only' to the sentence, as in example \ref{ex:only}\footnote{The scope of \textit{csak} `only' only extends to the subsequent element, it can only refer to the object and not the following VP.}. One intuitive reading of a simple PVF sentence like that in example \ref{ex:pvf} would be that `Anna ate a banana [and nothing else].' In this sense, the sentence seems to be equal to that in \ref{ex:only}, where the exhaustive interpretation is explicitly expressed with the operator \textit{csak} `only'. If we accept \citet{ekiss_1998_identificational}'s view, this seems to be redundant as the structural focus is already exhaustive. The question of differentiating the exhaustivity entailed by the pre-verbal focus structure vs the exhaustivity operator has been studied in detail by \citet{balogh_2007_focus}. 
 
-Moreover, we can also cancel exhaustivity within the same clause with the help of certain phrases, such as \textit{többek között} `amongst others', as in example \ref{ex:amongst_others}\footnote{Similarly, only the object is in the scope of \textit{többek között} `amongst others', it is not possible to interpret this sentence as if the verb is an alternative to other actions one can do to a banana.}, by inserting a phrase with an inherently non-exhaustive, inclusive meaning \citep[see also][14]{wedgwood_2006_predication,balogh_2013_hungarian}. This sentence is not only perfectly grammatical, inclusive of alternatives, but also expresses a contrastive sense due the use of focus (there must be some specific discourse function for choosing to focus a constituent). 
+Moreover, we can also cancel exhaustivity within the same clause with the help of certain phrases, such as \textit{többek között} `amongst others', as in example \ref{ex:amongst_others}\footnote{Similarly, only the object is in the scope of \textit{többek között} `amongst others', it is not possible to interpret this sentence as if the verb is an alternative to other actions one can do to a banana.}, by inserting a phrase with an inherently non-exhaustive, inclusive meaning \citep[see also][14]{wedgwood_2006_predication,balogh_2013_hungarian}. This sentence is not only perfectly grammatical, but inclusive of alternatives and expresses a contrastive sense due the use of focus (there must be some specific discourse function for choosing to focus a constituent). 
+
+
 
 \begin{figure}[!b]
 \centering
@@ -216,20 +228,63 @@ Moreover, we can also cancel exhaustivity within the same clause with the help o
 \end{figure}
 
 
-In Hungarian linguistic research, the role of semantic exhaustivity in focus constructions has been debated for more than forty years. The central question is whether exhaustivity arises from the syntax–semantics interface or from pragmatic and contextual factors. Earlier accounts within the generative framework assumed that the Hungarian pre-verbal focus structure necessarily entails semantic exhaustiveness, claiming that exhaustivity is an inherent property of the focus structure itself \citep{szabolcsi_1981_compositionality,ekiss_1998_identificational,ekiss_2007_topic,kenesei_2006_focus,horvath_2008_separating}, which was more or less  the received view up until the 2000s. More recently, this claim has since been challenged and shown to be untrue by both theoretical and psycholinguistic work -- supported by experimental data -- and it has been proposed that the exhaustive interpretation emerges from discourse-pragmatics, or conversational implicature \citep{wedgwood_2006_hungarian,onea_2009_exhaustiveness,balogh_2013_hungarian,kaldi_2016_magyar}. In introducing their argument against the claims of \citet{szabolcsi_1981_compositionality}, \citet{ekiss_1998_identificational,ekiss_2007_topic}, and \citet{horvath_2008_separating} that \enquote{an immediately pre-verbal focus in Hungarian is semantically exhaustive} or \enquote{is interpreted exhaustively, i.e. as if it were in the scope of an exclusive like \enquote{only}},  \citet[1]{onea_2009_hungarian} suggested in their first example\footnote{\textit{Péter MARIT csókolta meg.} Peter Mari-\textsc{acc} kiss-\textsc{pst-3sg.def} \textsc{vpx} `Peter kissed MARY.'} (analogous to our example \ref{ex:pvf}) that the implicit reading of a sentence of this type of construction should be exhaustive, i.e. `Anna ate the banana [and nothing else].' However, their analysis suggests that while such sentences often invite an exhaustive reading, this interpretation is not structurally encoded but contextually inferred.
 
-Looking at example \ref{ex:pvf} however, we feel that the underlying implication is not necessarily that Anna ate \textit{nothing} else, but it could be the case that she did not eat \textit{something} else. Therefore, in our view, the interpretation might as well be contrastive. 
-
-To test this, and to address the theoretical debate, we designed an experiment within the visual world paradigm in light with recent experimental studies \citep{onea_2009_hungarian,gerocs_2014_exhaustivity,kaldi_2021_hungarian_structural}, where people are first presented with typical PVF sentences, and then given a binary choice that offers two contexts where both are correct and plausible: either A) a single-object image corresponding to an exhaustive interpretation, or B) a multi-object image implying a contrastive interpretation (see the image pair in Figure~\ref{fig:stimuli_1} accompanying examples \ref{ex:neutral}-\ref{ex:amongst_others}). After reading a sentence, participants have to choose the image that best matches the sentence they just read, deciding which context/situation fits it better. Their choices should tell us about the preferred interpretation of the PVF constructions, whether it is more naturally interpreted as exhaustive or contrastive. Besides collecting behavioural data on the choices participants made, we also record their reading times and collect eye-tracking data during the picture verification phase, which hopefully can give us additional insights into the cognitive processes involved in interpreting the different types of PVF constructions, and whether different focus types produce different patterns of eye movements, such as more focused attention on the single-object image for exhaustive interpretations, or more distributed attention for contrastive interpretations.
+In Hungarian linguistic research, the role of semantic exhaustivity in focus constructions has been debated for more than forty years. The central question is whether exhaustivity arises from the syntax–semantics interface or from pragmatic and contextual factors. Earlier accounts within the generative framework assumed that the Hungarian pre-verbal focus structure necessarily entails semantic exhaustiveness, claiming that exhaustivity is an inherent property of the focus structure itself \citep{szabolcsi_1981_compositionality,ekiss_1998_identificational,ekiss_2007_topic,kenesei_2006_focus,horvath_2008_separating}, which was more or less  the received view up until the 2000s. More recently, this claim has since been challenged and shown to be untrue by both theoretical and psycholinguistic work -- supported by experimental data -- and it has been proposed that the exhaustive interpretation emerges from discourse-pragmatics, or conversational implicature \citep{wedgwood_2006_hungarian,onea_2009_exhaustiveness,balogh_2013_hungarian,kaldi_2016_magyar}. In introducing their argument against the claims of \citet{szabolcsi_1981_compositionality}, \citet{ekiss_1998_identificational,ekiss_2007_topic}, and \citet{horvath_2008_separating} that \enquote{an immediately pre-verbal focus in Hungarian is semantically exhaustive} or \enquote{is interpreted exhaustively, i.e. as if it were in the scope of an exclusive like \enquote{only}}, \citet[1]{onea_2009_hungarian} suggested in their first example\footnote{\textit{Péter MARIT csókolta meg.} Peter\textsc{[nom]} Mari-[\textsc{acc}] kiss-\textsc{pst-3sg.def} \textsc{vpx} `Peter kissed MARY.'} that the implicit reading of a sentence of this type should be exhaustive, i.e. `Peter kissed Mari and noone else.'. Their example is analogous to our example \ref{ex:pvf}, i.e. `Anna ate a banana and nothing else.', and their analysis suggests that while such sentences often invite an exhaustive reading, this interpretation is not structurally encoded but contextually inferred.
 
 
-If the PVF construction is inherently exhaustive, we would expect participants to overwhelmingly choose the single-object image (type A) after reading the simple PVF sentences, and to show faster reaction times and more focused eye movements towards the single-object image. Conversely, if the PVF construction is more naturally contrastive, we would expect a more balanced distribution of choices between the single-object and multi-object images, and potentially different patterns of eye movements reflecting the consideration of multiple alternatives.
 
-To sum up, while previous work has mainly tried to answer whether an immediately pre-verbal focus in Hungarian is semantically exhaustive or not, our question is: What is the default interpretation of a pre-verbal focus construction? Is it really inherently exhaustive, or could it be \hl{naturally} contrastive?
+% \pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
+% \begingl \label{ex:kiss}
+% \gla {\it Péter \it MARIT \it csókolta \it meg.}//
+% \glb Peter{\sc [nom]} Mari-{\sc acc} kiss-{\sc pst-3sg.def} {\sc vpx}//
+% \glft `Peter kissed MARY.'//
+% \endgl
+% \xe
+
+
+
+Thus, looking back at example (\ref{ex:pvf}), the underlying implication is not necessarily that Anna ate \textit{nothing} else, but it could be the case that she did not eat \textit{something} else, as shown in (\ref{ex:pvf_full}). Therefore, in our view, the interpretation might as well be contrastive. In other words, those who claim that only one of the readings is available to PVF construction would expect only one of the two readings to survive, contrary to the facts.
+
+
+
+% \pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
+% \begingl \label{ex:pvf2}
+% \gla {\it Anna \it egy \it BANÁNT \it evett \it meg.}//
+% \glb Anna{\sc [nom]} a banana-{\sc acc} eat-{\sc pst-3sg} {\sc vpx}//
+% \glft a) `Anna ate (up) a BANANA.' \quad [and nothing else] \quad \\
+% b) `Anna ate (up) a BANANA.' \quad [and not something else]//
+% \endgl
+% \xe
+
+
+
+\pex[everygla={},aboveglftskip=0em,interpartskip=0em]
+\a \begingl \label{ex:pvf_full}
+\gla {\it Anna \it egy \it BANÁNT \it evett \it meg, \it és \it semmi \it mást.}//
+\glb Anna{\sc [nom]} a banana-{\sc acc} eat-{\sc pst-3sg} {\sc vpx} and nothing else-{\sc acc}//
+\glft `Anna ate a BANANA and nothing else.'//
+\endgl
+\a \begingl
+\gla {\it Anna \it egy \it BANÁNT \it evett \it meg, \it nem \it egy \it almát.}//
+\glb Anna{\sc [nom]} a banana-{\sc acc} eat-{\sc pst-3sg} {\sc vpx} and not an apple-{\sc acc}//
+\glft `Anna ate a BANANA and not an apple.'//
+\endgl
+\xe
+
+
+
+To test this, and to address the theoretical debate, we designed an experiment within the visual world paradigm in light with recent experimental studies \citep{onea_2009_hungarian,gerocs_2014_exhaustivity,kaldi_2021_hungarian_structural}. Specifically, we aim at answering the following questions: What is the default interpretation of a pre-verbal focus construction? Is it really inherently exhaustive, or could it be contrastive?
 
 
 
 \section{Experiment}
+
+Where people are first presented with typical PVF sentences, and then given a binary choice that offers two contexts where both are correct and plausible: either A) a single-object image corresponding to an exhaustive interpretation, or B) a multi-object image implying a contrastive interpretation (see the image pair in Figure~\ref{fig:stimuli_1} accompanying examples \ref{ex:neutral}-\ref{ex:amongst_others}). After reading a sentence, participants have to choose the image that best matches the sentence they just read, deciding which context/situation fits it better. Their choices should tell us about the preferred interpretation of the PVF constructions, whether it is more naturally interpreted as exhaustive or contrastive. Besides collecting behavioural data on the choices participants made, we also record their reading times and collect eye-tracking data during the picture verification phase, which hopefully can give us additional insights into the cognitive processes involved in interpreting the different types of PVF constructions, and whether different focus types produce different patterns of eye movements, such as more focused attention on the single-object image for exhaustive interpretations, or more distributed attention for contrastive interpretations.
+
+
+If the PVF construction is inherently exhaustive, we would expect participants to overwhelmingly choose the single-object image (type A) after reading the simple PVF sentences, and to show faster reaction times and more focused eye movements towards the single-object image. Conversely, if the PVF construction is more naturally contrastive, we would expect a more balanced distribution of choices between the single-object and multi-object images, and potentially different patterns of eye movements reflecting the consideration of multiple alternatives.
+
+!!!!! \hl{REWRITE}
 
 In this study, we are investigating focus in Hungarian, specifically how Hungarian speakers distinguish between exhaustive focus and contrastive focus -- if they do, and how strongly they interpret various PVF constructions exhaustively. We designed a visual-world experiment with eye tracking to differentiate interpretations associated with the PVF structures. Specifically, we were curious about Hungarian speakers' dominant interpretation of the unmodified, simple PVF sentence (e.g., example \ref{ex:pvf}), in comparison with the \textit{only}--exhaustive (ex. \ref{ex:only}) and the \textit{amongst others}--contrastive conditions (ex. \ref{ex:amongst_others}) For both of which we had some expectations: \textit{only}--exhaustive sentences should be overwhelmingly interpreted as exhaustive, and \textit{amongst others}--contrastive sentences should probably be interpreted as contrastive. The question was whether the unmodified PVF sentences would pattern with the exhaustive or the contrastive condition, or if they would show a more balanced distribution of interpretations. 
 
@@ -275,17 +330,17 @@ The three conditions were: a) exhaustive focus with \emph{csak} `only' (e.g., \r
 \a \begingl \label{ex:stimuli_exhaustive}\textbf{exhaustive focus}\\
 \gla \it Ami \it az \it innivalót \it illeti, \it Eszter \it csak \it kávét \it ivott.//
 \glb which{\sc [rel]} the drink-{\sc acc} regard-3{\sc sg} Eszter only coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
-\glft `Regarding drinks, Eszter only drank coffee.'//
+\glft \quad `Regarding drinks, Eszter only drank coffee.'//
 \endgl
 \a \begingl \label{ex:stimuli_pvf}\textbf{unmodified pre-verbal focus}\\
 \gla \it Ami \it {az innivalót} \it illeti, \it Eszter \it ma \it kávét \it ivott.//
 \glb which{\sc [rel]} {the drink-{\sc acc}} regard-3{\sc sg} Eszter today coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
-\glft `Regarding drinks, Eszter drank coffee today.'//
+\glft \quad `Regarding drinks, Eszter drank coffee today.'//
 \endgl
 \a \begingl \label{ex:stimuli_contrastive}\textbf{contrastive focus}\\
 \gla \it Ma \it reggel \it Eszter \it többek \it között \it kávét \it ivott.//
 \glb today morning Eszter others amongst coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
-\glft `This morning, Eszter drank, amongst other things, coffee.'//
+\glft \quad `This morning, Eszter drank, amongst other things, coffee.'//
 \endgl
 \xe
 
@@ -1044,6 +1099,266 @@ Replication data and code can be found at \url{https://doi.org/link}.
 
 \section*{Appendix}
 
+
+
+\begin{landscape}
+\footnotesize
+\setlength{\LTleft}{0pt}
+\setlength{\LTright}{0pt}
+\renewcommand{\arraystretch}{1.05}
+
+\begin{longtable}{@{}%
+r
+r
+l
+>{\raggedright\arraybackslash}p{2.2cm}
+>{\raggedright\arraybackslash}p{2.4cm}
+>{\raggedright\arraybackslash}p{1.8cm}
+>{\raggedright\arraybackslash}p{1.8cm}
+>{\raggedright\arraybackslash}p{1.8cm}
+>{\raggedright\arraybackslash}p{2.5cm}
+>{\raggedright\arraybackslash}p{2.0cm}
+@{}}
+
+\caption{Full stimulus list with sentence regions}\label{tab:stimuli-full}\\
+\toprule
+\textbf{no} & \textbf{item} & \textbf{condition} & \textbf{r1} & \textbf{r2} & \textbf{r3} & \textbf{r4} & \textbf{r5} & \textbf{r6} & \textbf{r7} \\
+\midrule
+\endfirsthead
+
+\toprule
+\textbf{no} & \textbf{item} & \textbf{condition} & \textbf{r1} & \textbf{r2} & \textbf{r3} & \textbf{r4} & \textbf{r5} & \textbf{r6} & \textbf{r7} \\
+\midrule
+\endhead
+
+\midrule
+\multicolumn{10}{r}{Continued on next page}
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+1 & 1 & exhaustive & \textit{Ami} & \textit{a gyümölcsöket} & \textit{illeti,} & \textit{Anna} & \textit{csak} & \textit{egy banánt} & \textit{evett.} \\
+  &   &            & which (relative) & the fruits-ACC & regards & Anna & only & a banana-ACC & ate-3SG \\
+  &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding fruits, Anna ate only a banana.'} \\[0.35em]
+
+2 & 1 & unmodified & \textit{Ami} & \textit{a gyümölcsöket} & \textit{illeti,} & \textit{Anna} & \textit{tegnap} & \textit{egy banánt} & \textit{evett.} \\
+  &   &            & which (relative) & the fruits-ACC & regards & Anna & yesterday & a banana-ACC & ate-3SG \\
+  &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding fruits, Anna ate a banana yesterday.'} \\[0.35em]
+
+3 & 1 & contrastive & \textit{Tegnap} & \textit{reggel} & \textit{Anna} & \textit{többek} & \textit{között} & \textit{egy banánt} & \textit{evett.} \\
+  &   &             & yesterday & morning & Anna & others & among & a banana-ACC & ate-3SG \\
+  &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Yesterday morning Anna ate, among other things, a banana.'} \\[0.35em]
+
+4 & 2 & exhaustive & \textit{Ami} & \textit{az írószereket} & \textit{illeti,} & \textit{a kisfiú} & \textit{csak} & \textit{egy ceruzát} & \textit{kapott.} \\
+  &   &            & which (relative) & the stationeries-ACC & regards & the boy & only & a pencil-ACC & received-3SG \\
+  &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding stationery, the boy received only a pencil.'} \\[0.35em]
+
+5 & 2 & unmodified & \textit{Ami} & \textit{az írószereket} & \textit{illeti,} & \textit{a kisfiú} & \textit{tegnap} & \textit{egy ceruzát} & \textit{kapott.} \\
+  &   &            & which (relative) & the stationeries-ACC & regards & the boy & yesterday & a pencil-ACC & received-3SG \\
+  &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding stationery, the boy received a pencil yesterday.'} \\[0.35em]
+
+6 & 2 & contrastive & \textit{Tegnap} & \textit{reggel} & \textit{a kisfiú} & \textit{többek} & \textit{között} & \textit{egy ceruzát} & \textit{kapott.} \\
+  &   &             & yesterday & morning & the boy & others & among & a pencil-ACC & received-3SG \\
+  &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Yesterday morning the boy received, among other things, a pencil.'} \\[0.35em]
+
+7 & 3 & exhaustive & \textit{Ami} & \textit{a bútorokat} & \textit{illeti,} & \textit{az asztalos} & \textit{csak} & \textit{egy könyvespolcot} & \textit{készített.} \\
+  &   &            & which (relative) & the furniture-ACC & regards & the carpenter & only & a bookshelf-ACC & made-3SG \\
+  &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding furniture, the carpenter made only a bookshelf.'} \\[0.35em]
+
+8 & 3 & unmodified & \textit{Ami} & \textit{a bútorokat} & \textit{illeti,} & \textit{az asztalos} & \textit{tegnap} & \textit{egy könyvespolcot} & \textit{készített.} \\
+  &   &            & which (relative) & the furniture-ACC & regards & the carpenter & yesterday & a bookshelf-ACC & made-3SG \\
+  &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding furniture, the carpenter made a bookshelf yesterday.'} \\[0.35em]
+
+9 & 3 & contrastive & \textit{Tegnap} & \textit{a műhelyben} & \textit{az asztalos} & \textit{többek} & \textit{között} & \textit{egy könyvespolcot} & \textit{készített.} \\
+  &   &             & yesterday & in the workshop & the carpenter & others & among & a bookshelf-ACC & made-3SG \\
+  &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Yesterday in the workshop the carpenter made, among other things, a bookshelf.'} \\[0.35em]
+
+10 & 4 & exhaustive & \textit{Ami} & \textit{a harci eszközöket} & \textit{illeti,} & \textit{a katonaság} & \textit{csak} & \textit{a helikoptert} & \textit{tesztelte.} \\
+   &   &            & which (relative) & the military equipment-ACC & regards & the military & only & the helicopter-ACC & tested-3SG \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the equipment, the military only tested the helicopter.'} \\[0.35em]
+
+11 & 4 & unmodified & \textit{Ami} & \textit{a harci eszközöket} & \textit{illeti,} & \textit{a katonaság} & \textit{tavaly} & \textit{a helikoptert} & \textit{tesztelte.} \\
+   &   &            & which (relative) & the military equipment-ACC & regards & the military & last year & the helicopter-ACC & tested-3SG \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the equipment, the military tested the helicopter this time last year.'} \\[0.35em]
+
+12 & 4 & contrastive & \textit{Tavaly} & \textit{ilyenkor} & \textit{a katonaság} & \textit{többek} & \textit{között} & \textit{a helikoptert} & \textit{tesztelte.} \\
+   &   &             & last year & this time & the military & others & among & the helicopter-ACC & tested-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`This time last year the military tested, among other things, the helicopter.'} \\[0.35em]
+
+13 & 5 & exhaustive & \textit{Ami} & \textit{a süteményeket} & \textit{illeti,} & \textit{én} & \textit{csak} & \textit{a fánkot} & \textit{sütöttem.} \\
+   &   &            & which (relative) & the sweets-ACC & regards & I & only & the doughnut-ACC & baked-1SG \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the sweets, I only baked the doughnut.'} \\[0.35em]
+
+14 & 5 & unmodified & \textit{Ami} & \textit{a süteményeket} & \textit{illeti,} & \textit{én} & \textit{múltkor} & \textit{a fánkot} & \textit{sütöttem.} \\
+   &   &            & which (relative) & the sweets-ACC & regards & I & last time & the doughnut-ACC & baked-1SG \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the sweets, I baked the doughnut last time.'} \\[0.35em]
+
+15 & 5 & contrastive & \textit{Tegnap} & \textit{este} & \textit{én} & \textit{többek} & \textit{között} & \textit{a fánkot} & \textit{sütöttem.} \\
+   &   &             & yesterday & evening & I & others & among & the doughnut-ACC & baked-1SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Yesterday evening I baked, among other things, a doughnut.'} \\[0.35em]
+
+16 & 6 & exhaustive & \textit{Ami} & \textit{a virágokat} & \textit{illeti,} & \textit{Éva} & \textit{csak} & \textit{a tulipánt} & \textit{szereti.} \\
+   &   &            & which (relative) & the flowers-ACC & regards & Eve & only & the tulip-ACC & likes-3SG \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding flowers, Eve only likes tulips.'} \\[0.35em]
+
+17 & 6 & unmodified & \textit{Ami} & \textit{a virágokat} & \textit{illeti,} & \textit{Éva} & \textit{mostanában} & \textit{a tulipánt} & \textit{szereti.} \\
+   &   &            & which (relative) & the flowers-ACC & regards & Eve & nowadays & the tulip-ACC & likes-3SG \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding flowers, Eve likes tulips nowadays.'} \\[0.35em]
+
+18 & 6 & contrastive & \textit{Hallottam} & \textit{hogy} & \textit{Éva} & \textit{többek} & \textit{között} & \textit{a tulipánt} & \textit{szereti.} \\
+   &   &             & heard-1SG & that & Eve & others & among & the tulip-ACC & likes-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`I heard that Eve likes, among other things, tulips.'} \\[0.35em]
+
+19 & 7 & exhaustive & \textit{Ami} & \textit{a bevásárlást} & \textit{illeti,} & \textit{mi} & \textit{csak} & \textit{ásványvizet} & \textit{vettünk.} \\
+   &   &            & which (relative) & the shopping-ACC & regards & we & only & mineral water-ACC & bought-1PL \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding shopping, we only bought mineral water.'} \\[0.35em]
+
+20 & 7 & unmodified & \textit{Ami} & \textit{a bevásárlást} & \textit{illeti,} & \textit{mi} & \textit{tegnap} & \textit{ásványvizet} & \textit{vettünk.} \\
+   &   &            & which (relative) & the groceries-ACC & regards & we & yesterday & mineral water-ACC & bought-1PL \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding shopping, we bought mineral water yesterday.'} \\[0.35em]
+
+21 & 7 & contrastive & \textit{Tegnap} & \textit{este} & \textit{mi} & \textit{többek} & \textit{között} & \textit{ásványvizet} & \textit{vettünk.} \\
+   &   &             & yesterday & evening & we & others & among & mineral water-ACC & bought-1PL \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Yesterday evening we bought, among other things, mineral water.'} \\[0.35em]
+
+22 & 8 & exhaustive & \textit{Ami} & \textit{az innivalót} & \textit{illeti,} & \textit{Eszter} & \textit{csak} & \textit{kávét} & \textit{ivott.} \\
+   &   &            & which (relative) & the drink-ACC & regards & Eszter & only & coffee-ACC & drank-3SG \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding drinks, Eszter only drank coffee.'} \\[0.35em]
+
+23 & 8 & unmodified & \textit{Ami} & \textit{az innivalót} & \textit{illeti,} & \textit{Eszter} & \textit{ma} & \textit{kávét} & \textit{ivott.} \\
+   &   &            & which (relative) & the drink-ACC & regards & Eszter & today & coffee-ACC & drank-3SG \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding drinks, Eszter drank coffee today.'} \\[0.35em]
+
+24 & 8 & contrastive & \textit{Ma} & \textit{reggel} & \textit{Eszter} & \textit{többek} & \textit{között} & \textit{kávét} & \textit{ivott.} \\
+   &   &             & today & morning & Eszter & others & among & coffee-ACC & drank-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`This morning, Eszter drank, among other things, coffee.'} \\[0.35em]
+
+25 & 9 & exhaustive & \textit{Ami} & \textit{a nyelveket} & \textit{illeti,} & \textit{a diákok} & \textit{csak} & \textit{németet} & \textit{tanultak.} \\
+   &   &            & which (relative) & the languages-ACC & regards & the students & only & German-ACC & learned-3PL \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding languages, the students only learned German.'} \\[0.35em]
+
+26 & 9 & unmodified & \textit{Ami} & \textit{a nyelveket} & \textit{illeti,} & \textit{a diákok} & \textit{régen} & \textit{németet} & \textit{tanultak.} \\
+   &   &            & which (relative) & the languages-ACC & regards & the students & long ago & German-ACC & learned-3PL \\
+   &   &            & \multicolumn{7}{p{16.5cm}@{}}{`Regarding languages, students learned German in the past.'} \\[0.35em]
+
+27 & 9 & contrastive & \textit{Régen} & \textit{az iskolában} & \textit{a diákok} & \textit{többek} & \textit{között} & \textit{németet} & \textit{tanultak.} \\
+   &   &             & long ago; in the past & at school & the students & others & among & German-ACC & learned-3PL \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`In the past, at school, students learned, among other things, German.'} \\[0.35em]
+
+28 & 10 & exhaustive & \textit{Ami} & \textit{az új fajokat} & \textit{illeti,} & \textit{Marci} & \textit{csak} & \textit{egy lepkét} & \textit{fedezett fel.} \\
+   &   &             & which (relative) & the new species-ACC & regards & Marci & only & a butterfly-ACC & discovered-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding new species, Marci discovered only a butterfly.'} \\[0.35em]
+
+29 & 10 & unmodified & \textit{Ami} & \textit{az új fajokat} & \textit{illeti,} & \textit{Marci} & \textit{tavaly} & \textit{egy lepkét} & \textit{fedezett fel.} \\
+   &   &             & which (relative) & the new species-ACC & regards & Marci & last year & a butterfly-ACC & discovered-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding new species, last year Marci discovered a butterfly.'} \\[0.35em]
+
+30 & 10 & contrastive & \textit{Tavaly} & \textit{nyáron} & \textit{Marci} & \textit{többek} & \textit{között} & \textit{egy lepkét} & \textit{fedezett fel.} \\
+   &   &             & last year & summer & Marci & others & among & a butterfly-ACC & discovered-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Last summer Marci discovered, among other things, a butterfly.'} \\[0.35em]
+
+31 & 11 & exhaustive & \textit{Ami} & \textit{a járműveket} & \textit{illeti,} & \textit{a turisták} & \textit{csak} & \textit{egy robogót} & \textit{béreltek ki.} \\
+   &   &             & which (relative) & the vehicles-ACC & regards & the tourists & only & a scooter-ACC & hired-3PL \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding vehicles, the tourists hired only a scooter.'} \\[0.35em]
+
+32 & 11 & unmodified & \textit{Ami} & \textit{a járműveket} & \textit{illeti,} & \textit{a turisták} & \textit{a hétvégén} & \textit{egy robogót} & \textit{béreltek ki.} \\
+   &   &             & which (relative) & the vehicles-ACC & regards & the tourists & on the weekend & a scooter-ACC & hired-3PL \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding vehicles, on the weekend the tourists hired a scooter.'} \\[0.35em]
+
+33 & 11 & contrastive & \textit{Múlt} & \textit{hétvégén} & \textit{a turisták} & \textit{többek} & \textit{között} & \textit{egy robogót} & \textit{béreltek ki.} \\
+   &   &             & last & weekend & the tourists & others & among & a scooter-ACC & hired-3PL \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Last weekend, the tourists hired, among other things, a scooter.'} \\[0.35em]
+
+34 & 12 & exhaustive & \textit{Ami} & \textit{a kertet} & \textit{illeti,} & \textit{a férfi} & \textit{csak} & \textit{egy fenyőfát} & \textit{ültetett el.} \\
+   &   &             & which (relative) & the garden-ACC & regards & the man & only & a pine tree-ACC & planted-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the garden, the man planted only a pine tree.'} \\[0.35em]
+
+35 & 12 & unmodified & \textit{Ami} & \textit{a kertet} & \textit{illeti,} & \textit{a férfi} & \textit{tíz éve} & \textit{egy fenyőfát} & \textit{ültetett el.} \\
+   &   &             & which (relative) & the garden-ACC & regards & the man & ten years ago & a pine tree-ACC & planted-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the garden, the man planted a pine tree ten years ago.'} \\[0.35em]
+
+36 & 12 & contrastive & \textit{Tíz évvel ez előtt} & \textit{a kertben} & \textit{a férfi} & \textit{többek} & \textit{között} & \textit{egy fenyőfát} & \textit{ültetett el.} \\
+   &   &             & ten years ago & in the garden & the man & others & among & a pine tree-ACC & planted-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Ten years ago the man planted, among other things, a pine tree.'} \\[0.35em]
+
+37 & 13 & exhaustive & \textit{Ami} & \textit{az állatokat} & \textit{illeti,} & \textit{a gyerekek} & \textit{csak} & \textit{az elefántot} & \textit{nézték meg.} \\
+   &   &             & which (relative) & the animals-ACC & regards & the children & only & the elephant-ACC & looked at-3PL \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding animals, the children looked at only the elephant.'} \\[0.35em]
+
+38 & 13 & unmodified & \textit{Ami} & \textit{az állatokat} & \textit{illeti,} & \textit{a gyerekek} & \textit{múltkor} & \textit{az elefántot} & \textit{nézték meg.} \\
+   &   &             & which (relative) & the animals-ACC & regards & the children & last time & the elephant-ACC & looked at-3PL \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding animals, the children looked at the elephant last time.'} \\[0.35em]
+
+39 & 13 & contrastive & \textit{Múltkor} & \textit{az állatkertben} & \textit{a gyerekek} & \textit{többek} & \textit{között} & \textit{az elefántot} & \textit{nézték meg.} \\
+   &   &             & last time & in the zoo & the children & others & among & the elephant-ACC & looked at-3PL \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Last time in the zoo the children looked at, among other things, the elephant.'} \\[0.35em]
+
+40 & 14 & exhaustive & \textit{Ami} & \textit{a konyhát} & \textit{illeti,} & \textit{a szerelő} & \textit{csak} & \textit{a hűtőt} & \textit{üzemelte be.} \\
+   &   &             & which (relative) & the kitchen-ACC & regards & the technician & only & the fridge-ACC & installed-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the kitchen, the technician installed only the fridge.'} \\[0.35em]
+
+41 & 14 & unmodified & \textit{Ami} & \textit{a konyhát} & \textit{illeti,} & \textit{a szerelő} & \textit{múltkor} & \textit{a hűtőt} & \textit{üzemelte be.} \\
+   &   &             & which (relative) & the kitchen-ACC & regards & the technician & last time & the fridge-ACC & installed-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the kitchen, the technician installed the fridge last time.'} \\[0.35em]
+
+42 & 14 & contrastive & \textit{Múltkor} & \textit{a konyhában} & \textit{a szerelő} & \textit{többek} & \textit{között} & \textit{a hűtőt} & \textit{üzemelte be.} \\
+   &   &             & last time & in the kitchen & the technician & others & among & the fridge-ACC & installed-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Last time in the kitchen the technician installed, among other things, the fridge.'} \\[0.35em]
+
+43 & 15 & exhaustive & \textit{Ami} & \textit{a kincseket} & \textit{illeti,} & \textit{a kalóz} & \textit{csak} & \textit{az aranyat} & \textit{találta meg.} \\
+   &   &             & which (relative) & the treasures-ACC & regards & the pirate & only & the gold-ACC & found-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the treasures, the pirate only found the gold.'} \\[0.35em]
+
+44 & 15 & unmodified & \textit{Ami} & \textit{a kincseket} & \textit{illeti,} & \textit{a kalóz} & \textit{éjjel} & \textit{az aranyat} & \textit{találta meg.} \\
+   &   &             & which (relative) & the treasures-ACC & regards & the pirate & at night & the gold-ACC & found-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the treasures, the pirate found the gold at night.'} \\[0.35em]
+
+45 & 15 & contrastive & \textit{Éjjel} & \textit{a szigeten} & \textit{a kalóz} & \textit{többek} & \textit{között} & \textit{az aranyat} & \textit{találta meg.} \\
+   &   &             & at night & on the island & the pirate & others & among & the gold-ACC & found-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`At night on the island the pirate found, among other things, the gold.'} \\[0.35em]
+
+46 & 16 & exhaustive & \textit{Ami} & \textit{az ebédet} & \textit{illeti,} & \textit{a nagyi} & \textit{csak} & \textit{levest} & \textit{tálalt fel.} \\
+   &   &             & which (relative) & the lunch-ACC & regards & the grandma & only & soup-ACC & served-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding lunch, grandma served only soup.'} \\[0.35em]
+
+47 & 16 & unmodified & \textit{Ami} & \textit{az ebédet} & \textit{illeti,} & \textit{a nagyi} & \textit{ma} & \textit{levest} & \textit{tálalt fel.} \\
+   &   &             & which (relative) & the lunch-ACC & regards & the grandma & today & soup-ACC & served-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding lunch, grandma served soup today.'} \\[0.35em]
+
+48 & 16 & contrastive & \textit{Ma} & \textit{ebédre} & \textit{a nagyi} & \textit{többek} & \textit{között} & \textit{levest} & \textit{tálalt fel.} \\
+   &   &             & today & for lunch & the grandma & others & among & soup-ACC & served-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`For today''s lunch, grandma served, among other things, soup.'} \\[0.35em]
+
+49 & 17 & exhaustive & \textit{Ami} & \textit{a ruhákat} & \textit{illeti,} & \textit{ez a szabó} & \textit{csak} & \textit{ingeket} & \textit{foltozott be.} \\
+   &   &             & which (relative) & the clothes-ACC & regards & this tailor & only & shirts-ACC & patched-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding clothes, this tailor patched only shirts.'} \\[0.35em]
+
+50 & 17 & unmodified & \textit{Ami} & \textit{a ruhákat} & \textit{illeti,} & \textit{ez a szabó} & \textit{általában} & \textit{ingeket} & \textit{foltozott be.} \\
+   &   &             & which (relative) & the clothes-ACC & regards & this tailor & usually & shirts-ACC & patched-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding clothes, this tailor usually patched shirts.'} \\[0.35em]
+
+51 & 17 & contrastive & \textit{Általában} & \textit{a műhelyben} & \textit{ez a szabó} & \textit{többek} & \textit{között} & \textit{ingeket} & \textit{foltozott be.} \\
+   &   &             & usually & in the workshop & this tailor & others & among & shirts-ACC & patched-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Usually in the workshop this tailor patched, among other things, shirts.'} \\[0.35em]
+
+52 & 18 & exhaustive & \textit{Ami} & \textit{a táncot} & \textit{illeti,} & \textit{Péter} & \textit{csak} & \textit{Marit} & \textit{kérte fel.} \\
+   &   &             & which (relative) & the dance-ACC & regards & Peter & only & Mari-ACC & asked-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the dance, Peter asked only Mary.'} \\[0.35em]
+
+53 & 18 & unmodified & \textit{Ami} & \textit{a táncot} & \textit{illeti,} & \textit{Péter} & \textit{tegnap este} & \textit{Marit} & \textit{kérte fel.} \\
+   &   &             & which (relative) & the dance-ACC & regards & Peter & last night & Mari-ACC & asked-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Regarding the dance, Peter asked Mary last night.'} \\[0.35em]
+
+54 & 18 & contrastive & \textit{Tegnap este} & \textit{a bálon} & \textit{Péter} & \textit{többek} & \textit{között} & \textit{Marit} & \textit{kérte fel.} \\
+   &   &             & last night & at the ball & Peter & others & among & Mari-ACC & asked-3SG \\
+   &   &             & \multicolumn{7}{p{16.5cm}@{}}{`Last night at the ball, Peter asked, among others, Mary [for a dance].'} \\[0.35em]
+
+\end{longtable}
+\end{landscape}
+
+
+
 % Full-page grid of all stimuli (18 pairs = 36 images).
 % Layout: 4 images per row (two A/B pairs), 9 rows total.
 \begin{figure*}[!ht]
@@ -1142,6 +1457,19 @@ Replication data and code can be found at \url{https://doi.org/link}.
 
 \bibitem[Balogh (2013)]{balogh_2013_hungarian}
 {Balogh, Kata}. 2013. Hungarian Pre-verbal Focus and Exhaustivity. In Yoichi Motomura, Alastair Butler, and Daisuke Bekki (eds.), \textit{New Frontiers in Artificial Intelligence: JSAI-isAI 2012 Workshops, LENLS, JURISIN, MiMI, Miyazaki, Japan, November 30 and December 1, 2012, Revised Selected Papers} (Lecture Notes in Computer Science 7856), 1--16. Berlin; Heidelberg: Springer. \url{https://doi.org/10.1007/978-3-642-39931-2} (accessed 2026 February 2).
+
+
+
+% @misc{comrie_2015_leipzig,
+%   title = {The {{Leipzig Glossing Rules}}: {{Conventions}} for Interlinear Morpheme-by-Morpheme Glosses},
+%   author = {Comrie, Bernard and Haspelmath, Martin and {Balthasar Bickel}},
+%   date = {2015},
+%   organization = {Department of Linguistics of the Max Planck Institute for Evolutionary Anthropology; Department of Linguistics of the University of Leipzig},
+%   file = {C:\Users\parti\Zotero\storage\3I2U5AAI\Comrie et al. - 2015 - The Leipzig Glossing Rules, Conventions for Interlinear Morpheme-by-Morpheme Glosses - Department of Linguistics of the Max.pdf}
+% }
+
+\bibitem[Comrie et al. (2015)]{comrie_2015_leipzig}
+{Comrie, Bernard and Haspelmath, Martin and {Balthasar Bickel}}. 2015. The Leipzig Glossing Rules: Conventions for Interlinear Morpheme-by-Morpheme Glosses. Leipzig: Department of Linguistics of the Max Planck Institute for Evolutionary Anthropology; Department of Linguistics of the University of Leipzig.
 
 
 
