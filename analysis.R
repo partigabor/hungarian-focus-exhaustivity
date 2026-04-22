@@ -27,7 +27,7 @@ df$cxt <- interaction(df$condition, df$chosen_type)
 # df$cxt <- factor(df$cxt, levels = c("exclusive.A","exclusive.B","unmodified.A","unmodified.B","contrastive.A","contrastive.B"))
 
 # Define metrics to evaluate (numeric only)
-metrics <- c("total_dwell", "total_fixation")
+metrics <- c("total_dwell", "total_fixation", "prop_choice")
 
 # Iterate through each metric, log transform, fit models, and record outputs
 for (metric in metrics) {

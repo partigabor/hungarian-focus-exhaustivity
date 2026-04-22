@@ -1,5 +1,5 @@
 Linear mixed-effects model comparisons
-Generated: 2026-03-07 13:05:37 UTC
+Generated: 2026-04-22 10:35:53 UTC
 
 =============================================
 ============ Metric: sentence_rt ============
@@ -681,53 +681,53 @@ Formula: ET ~ condition * chosen_type + (1 | item) + (1 | participant)
    Data: model_df
 
       AIC       BIC    logLik -2*log(L)  df.resid 
-   2024.7    2071.2   -1003.3    2006.7      1287 
+   1775.0    1821.5    -878.5    1757.0      1287 
 
 Scaled residuals: 
     Min      1Q  Median      3Q     Max 
--2.1975 -0.6032 -0.1533  0.4111  8.3340 
+-2.3927 -0.6213 -0.1354  0.4650  4.7192 
 
 Random effects:
  Groups      Name        Variance Std.Dev.
- participant (Intercept) 0.15068  0.3882  
- item        (Intercept) 0.04491  0.2119  
- Residual                0.23059  0.4802  
+ participant (Intercept) 0.12646  0.3556  
+ item        (Intercept) 0.04672  0.2161  
+ Residual                0.18941  0.4352  
 Number of obs: 1296, groups:  participant, 72; item, 18
 
 Fixed effects:
                                     Estimate Std. Error         df t value
-(Intercept)                          7.04709    0.07178   55.70889  98.170
-conditionunmodified                  0.04892    0.03348 1207.66395   1.461
-conditioncontrastive                 0.13251    0.04744 1236.32563   2.793
-chosen_typeB                         0.37736    0.11558 1236.64850   3.265
-conditionunmodified:chosen_typeB    -0.14939    0.16708 1223.88171  -0.894
-conditioncontrastive:chosen_typeB   -0.32763    0.12906 1244.92180  -2.539
+(Intercept)                          7.04055    0.06940   48.87029 101.447
+conditionunmodified                  0.05097    0.03034 1207.63103   1.680
+conditioncontrastive                 0.08833    0.04301 1235.43800   2.054
+chosen_typeB                         0.29001    0.10478 1235.50395   2.768
+conditionunmodified:chosen_typeB    -0.07690    0.15146 1223.09338  -0.508
+conditioncontrastive:chosen_typeB   -0.22380    0.11701 1243.58213  -1.913
                                   Pr(>|t|)    
 (Intercept)                        < 2e-16 ***
-conditionunmodified                0.14420    
-conditioncontrastive               0.00530 ** 
-chosen_typeB                       0.00113 ** 
-conditionunmodified:chosen_typeB   0.37146    
-conditioncontrastive:chosen_typeB  0.01125 *  
+conditionunmodified                0.09327 .  
+conditioncontrastive               0.04020 *  
+chosen_typeB                       0.00573 ** 
+conditionunmodified:chosen_typeB   0.61173    
+conditioncontrastive:chosen_typeB  0.05603 .  
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 Correlation of Fixed Effects:
             (Intr) cndtnn cndtnc chsn_B cndtnn:_B
-condtnnmdfd -0.235                               
-cndtncntrst -0.168  0.359                        
-chosen_typB -0.078  0.160  0.139                 
-cndtnnmd:_B  0.051 -0.216 -0.099 -0.656          
-cndtncnt:_B  0.071 -0.146 -0.425 -0.908  0.600   
+condtnnmdfd -0.220                               
+cndtncntrst -0.157  0.359                        
+chosen_typB -0.073  0.160  0.139                 
+cndtnnmd:_B  0.048 -0.216 -0.099 -0.656          
+cndtncnt:_B  0.066 -0.146 -0.425 -0.908  0.600   
 ---------------------------------------------
 Analysis of Deviance Table (Type III Wald chisquare tests)
 
 Response: ET
-                          Chisq Df Pr(>Chisq)    
-(Intercept)           9637.2868  1  < 2.2e-16 ***
-condition                8.0428  2   0.017928 *  
-chosen_type             10.6594  1   0.001095 ** 
-condition:chosen_type    7.0629  2   0.029262 *  
+                           Chisq Df Pr(>Chisq)    
+(Intercept)           10291.5788  1  < 2.2e-16 ***
+condition                 5.2380  2   0.072877 .  
+chosen_type               7.6602  1   0.005645 ** 
+condition:chosen_type     4.2982  2   0.116587    
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
@@ -737,18 +737,18 @@ Emmeans [choice_rt]:
 $`emmeans of chosen_type | condition`
 condition = exhaustive:
  chosen_type emmean     SE    df lower.CL upper.CL
- A             7.05 0.0725  55.4     6.90     7.19
- B             7.42 0.1320 481.9     7.17     7.68
+ A             7.04 0.0702  48.6     6.90     7.18
+ B             7.33 0.1220 381.0     7.09     7.57
 
 condition = unmodified:
  chosen_type emmean     SE    df lower.CL upper.CL
- A             7.10 0.0725  55.3     6.95     7.24
- B             7.32 0.1410 584.7     7.05     7.60
+ A             7.09 0.0702  48.4     6.95     7.23
+ B             7.30 0.1310 468.2     7.05     7.56
 
 condition = contrastive:
  chosen_type emmean     SE    df lower.CL upper.CL
- A             7.18 0.0798  81.2     7.02     7.34
- B             7.23 0.0752  63.9     7.08     7.38
+ A             7.13 0.0765  68.3     6.98     7.28
+ B             7.20 0.0724  55.1     7.05     7.34
 
 Degrees-of-freedom method: kenward-roger 
 Confidence level used: 0.95 
@@ -756,15 +756,15 @@ Confidence level used: 0.95
 $`pairwise differences of chosen_type | condition`
 condition = exhaustive:
  2     estimate     SE   df t.ratio p.value
- A - B  -0.3774 0.1160 1242  -3.256  0.0012
+ A - B  -0.2900 0.1050 1241  -2.761  0.0059
 
 condition = unmodified:
  2     estimate     SE   df t.ratio p.value
- A - B  -0.2280 0.1270 1237  -1.801  0.0719
+ A - B  -0.2131 0.1150 1236  -1.858  0.0635
 
 condition = contrastive:
  2     estimate     SE   df t.ratio p.value
- A - B  -0.0497 0.0544 1262  -0.915  0.3605
+ A - B  -0.0662 0.0493 1261  -1.343  0.1794
 
 Degrees-of-freedom method: kenward-roger 
 
@@ -772,15 +772,15 @@ Degrees-of-freedom method: kenward-roger
 $`emmeans of condition | chosen_type`
 chosen_type = A:
  condition   emmean     SE    df lower.CL upper.CL
- exhaustive    7.05 0.0725  55.4     6.90     7.19
- unmodified    7.10 0.0725  55.3     6.95     7.24
- contrastive   7.18 0.0798  81.2     7.02     7.34
+ exhaustive    7.04 0.0702  48.6     6.90     7.18
+ unmodified    7.09 0.0702  48.4     6.95     7.23
+ contrastive   7.13 0.0765  68.3     6.98     7.28
 
 chosen_type = B:
  condition   emmean     SE    df lower.CL upper.CL
- exhaustive    7.42 0.1320 481.9     7.17     7.68
- unmodified    7.32 0.1410 584.7     7.05     7.60
- contrastive   7.23 0.0752  63.9     7.08     7.38
+ exhaustive    7.33 0.1220 381.0     7.09     7.57
+ unmodified    7.30 0.1310 468.2     7.05     7.56
+ contrastive   7.20 0.0724  55.1     7.05     7.34
 
 Degrees-of-freedom method: kenward-roger 
 Confidence level used: 0.95 
@@ -788,15 +788,15 @@ Confidence level used: 0.95
 $`pairwise differences of condition | chosen_type`
 chosen_type = A:
  2                        estimate     SE   df t.ratio p.value
- exhaustive - unmodified   -0.0489 0.0335 1213  -1.458  0.3116
- exhaustive - contrastive  -0.1325 0.0476 1241  -2.786  0.0150
- unmodified - contrastive  -0.0836 0.0474 1240  -1.765  0.1818
+ exhaustive - unmodified   -0.0510 0.0304 1213  -1.676  0.2147
+ exhaustive - contrastive  -0.0883 0.0431 1241  -2.049  0.1012
+ unmodified - contrastive  -0.0374 0.0429 1239  -0.870  0.6591
 
 chosen_type = B:
  2                        estimate     SE   df t.ratio p.value
- exhaustive - unmodified    0.1005 0.1640 1228   0.614  0.8124
- exhaustive - contrastive   0.1951 0.1170 1242   1.662  0.2202
- unmodified - contrastive   0.0947 0.1270 1235   0.744  0.7376
+ exhaustive - unmodified    0.0259 0.1480 1228   0.175  0.9833
+ exhaustive - contrastive   0.1355 0.1060 1241   1.273  0.4106
+ unmodified - contrastive   0.1095 0.1150 1234   0.949  0.6092
 
 Degrees-of-freedom method: kenward-roger 
 P value adjustment: tukey method for comparing a family of 3 estimates 
@@ -804,33 +804,33 @@ P value adjustment: tukey method for comparing a family of 3 estimates
 ---------------------------------------------
 $`emmeans of condition, chosen_type`
  condition   chosen_type emmean     SE    df lower.CL upper.CL
- exhaustive  A             7.05 0.0725  55.4     6.90     7.19
- unmodified  A             7.10 0.0725  55.3     6.95     7.24
- contrastive A             7.18 0.0798  81.2     7.02     7.34
- exhaustive  B             7.42 0.1320 481.9     7.17     7.68
- unmodified  B             7.32 0.1410 584.7     7.05     7.60
- contrastive B             7.23 0.0752  63.9     7.08     7.38
+ exhaustive  A             7.04 0.0702  48.6     6.90     7.18
+ unmodified  A             7.09 0.0702  48.4     6.95     7.23
+ contrastive A             7.13 0.0765  68.3     6.98     7.28
+ exhaustive  B             7.33 0.1220 381.0     7.09     7.57
+ unmodified  B             7.30 0.1310 468.2     7.05     7.56
+ contrastive B             7.20 0.0724  55.1     7.05     7.34
 
 Degrees-of-freedom method: kenward-roger 
 Confidence level used: 0.95 
 
 $`pairwise differences of condition, chosen_type`
  1                             estimate     SE   df t.ratio p.value
- exhaustive A - unmodified A    -0.0489 0.0335 1213  -1.458  0.6910
- exhaustive A - contrastive A   -0.1325 0.0476 1241  -2.786  0.0604
- exhaustive A - exhaustive B    -0.3774 0.1160 1242  -3.256  0.0147
- exhaustive A - unmodified B    -0.2769 0.1260 1236  -2.192  0.2422
- exhaustive A - contrastive B   -0.1822 0.0390 1227  -4.677  <.0001
- unmodified A - contrastive A   -0.0836 0.0474 1240  -1.765  0.4889
- unmodified A - exhaustive B    -0.3284 0.1150 1240  -2.847  0.0510
- unmodified A - unmodified B    -0.2280 0.1270 1237  -1.801  0.4651
- unmodified A - contrastive B   -0.1333 0.0390 1228  -3.421  0.0084
- contrastive A - exhaustive B   -0.2449 0.1190 1238  -2.058  0.3103
- contrastive A - unmodified B   -0.1444 0.1310 1238  -1.104  0.8800
- contrastive A - contrastive B  -0.0497 0.0544 1262  -0.915  0.9428
- exhaustive B - unmodified B     0.1005 0.1640 1228   0.614  0.9900
- exhaustive B - contrastive B    0.1951 0.1170 1242   1.662  0.5570
- unmodified B - contrastive B    0.0947 0.1270 1235   0.744  0.9764
+ exhaustive A - unmodified A    -0.0510 0.0304 1213  -1.676  0.5478
+ exhaustive A - contrastive A   -0.0883 0.0431 1241  -2.049  0.3154
+ exhaustive A - exhaustive B    -0.2900 0.1050 1241  -2.761  0.0646
+ exhaustive A - unmodified B    -0.2641 0.1150 1235  -2.306  0.1923
+ exhaustive A - contrastive B   -0.1545 0.0353 1227  -4.376  0.0002
+ unmodified A - contrastive A   -0.0374 0.0429 1239  -0.870  0.9535
+ unmodified A - exhaustive B    -0.2390 0.1050 1239  -2.286  0.2006
+ unmodified A - unmodified B    -0.2131 0.1150 1236  -1.858  0.4290
+ unmodified A - contrastive B   -0.1036 0.0353 1228  -2.932  0.0400
+ contrastive A - exhaustive B   -0.2017 0.1080 1237  -1.870  0.4213
+ contrastive A - unmodified B   -0.1758 0.1190 1237  -1.482  0.6760
+ contrastive A - contrastive B  -0.0662 0.0493 1261  -1.343  0.7607
+ exhaustive B - unmodified B     0.0259 0.1480 1228   0.175  1.0000
+ exhaustive B - contrastive B    0.1355 0.1060 1241   1.273  0.7997
+ unmodified B - contrastive B    0.1095 0.1150 1234   0.949  0.9335
 
 Degrees-of-freedom method: kenward-roger 
 P value adjustment: tukey method for comparing a family of 6 estimates 
