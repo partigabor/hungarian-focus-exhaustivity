@@ -27,7 +27,7 @@ df$cxt <- interaction(df$condition, df$chosen_type)
 # df$cxt <- factor(df$cxt, levels = c("exclusive.A","exclusive.B","unmodified.A","unmodified.B","contrastive.A","contrastive.B"))
 
 # Define metrics to evaluate (numeric only)
-metrics <- c("total_dwell", "total_fixation", "prop_choice")
+metrics <- c("sentence_rt", "r5", "r6", "r7", "choice_rt")
 
 # Iterate through each metric, log transform, fit models, and record outputs
 for (metric in metrics) {
@@ -99,7 +99,7 @@ for (metric in metrics) {
 }
 
 # Write the compiled report to disk
-writeLines(all_lines, "analysis_results.txt")
+writeLines(all_lines, "rt_analysis_results.txt")
 
 ### END #####################################
 
