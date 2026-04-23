@@ -254,9 +254,9 @@ To test this, and to address the theoretical debate and in line with recent expe
 \begin{figure}[ht]
 \centering
 \FIG{
-\includegraphics[width=0.33\textwidth]{../plots/1a.png}
+\includegraphics[width=0.33\textwidth]{figs/1a.png}
 \qquad
-\includegraphics[width=0.33\textwidth]{../plots/1b.png}
+\includegraphics[width=0.33\textwidth]{figs/1b.png}
 }
 {\caption{Example stimuli for a sentence--picture verification task}}
 \label{fig:stimuli_1}
@@ -290,7 +290,7 @@ We hypothesize that \textit{only}-exhaustive sentences will be associated with s
 
 
 \begin{figure}[!ht]
-\FIG{\includegraphics[width=1.0\textwidth]{../plots/demographics_combined_donuts.png}}
+\FIG{\includegraphics[width=1.0\textwidth]{figs/demographics_combined_donuts.png}}
 {\caption{Demographic information of the participants in the experiment: gender (left) and age distributions (right)}
 \label{demographics}}
 \end{figure}
@@ -316,9 +316,9 @@ The three conditions were: a) exhaustive focus with \emph{csak} `only' (e.g., (\
 \begin{figure}[!ht]
 \centering
 \FIG{
-\includegraphics[width=0.33\textwidth]{../plots/8a.png}
+\includegraphics[width=0.33\textwidth]{figs/8a.png}
 \qquad
-\includegraphics[width=0.33\textwidth]{../plots/8b.png}
+\includegraphics[width=0.33\textwidth]{figs/8b.png}
 }
 {\caption{Image pair for the sentence in examples (\ref{ex:stimuli_exhaustive}--\ref{ex:stimuli_contrastive}). The left image (A) corresponds to the exhaustive reading, while the right image (B) corresponds to the contrastive reading.}
 \label{fig:stimuli_8}}
@@ -358,7 +358,7 @@ The three conditions were: a) exhaustive focus with \emph{csak} `only' (e.g., (\
 We built a sentence--picture verification (SPV) task, in which participants read a sentence and were asked to indicate the best fitting meaning-representation between two visual stimuli. First, participants saw a preview of the image pair to get familiar with the objects/context, on the left and right half of the screen (20\% of the screen's width and 40\% of the screen's height) on a canvas 50\% larger than the images to mitigate the inaccuracies of the eye tracker. After pressing the spacebar they were presented with the sentence word by word (region by region) in the middle of the screen in a self-paced reading (SPR) manner, in which participants had to use the spacebar to advance throught the sentences. We recorded reading times throughout. After reading through the sentence, the image pair re-appeared and participants had to select the image that best matched the meaning of the sentence they just read. The choice had to be made with a mouse-click anywhere on the corresponding canvas (left or right), and reaction times (RT) and eye movements were recorded during this picture verification phase. The image types were counterbalanced throughout the trials. The segments were separated by 1000 ms pauses, and after the choice, the next trial started after a brief (1000 ms) pause. The experiment was designed to be completed in around 25-30 minutes, and participants had to complete it in one setting. See Figure~\ref{fig:design} for a visual representation of the design of the experiment.
 
 \begin{figure}[!ht]
-\FIG{\includegraphics[width=1.0\textwidth]{../plots/design.png}}
+\FIG{\includegraphics[width=1.0\textwidth]{figs/design.png}}
 {\caption{Design}
 \label{fig:design}}
 \end{figure}
@@ -386,7 +386,7 @@ We have to mention that a relatively large amount of people (around a third of a
 Eye-tracking data recorded on PCIbex comes in a relatively straightforward format not of gaze coordinates but in classified samples, where each sample is already defined as a gaze at a canvas or outside the canvas, in our case: left canvas, right canvas, or neither. Samples are recorded between every ~30-70 milliseconds, depending on the users' computer \& browser setup, internet speed, and presumably the general load that the PCIbex server was under at the time.
 
 \begin{figure}[!ht]%
-\FIG{\includegraphics[width=1.0\textwidth]{../plots/episodes_duration_histogram.png}}
+\FIG{\includegraphics[width=1.0\textwidth]{figs/episodes_duration_histogram.png}}
 {\caption{Distribution of episode durations after cleaning and before winsorization}
 \label{fig:episodes}}
 \end{figure}
@@ -420,7 +420,7 @@ where $y' = \log(1+y)$ is the transformed dependent variable. The models were fi
 
 
 \begin{figure}[ht]
-\FIG{\includegraphics[width=1.0\textwidth]{../plots/choice_type_per_condition.png}}
+\FIG{\includegraphics[width=1.0\textwidth]{figs/choice_type_per_condition.png}}
 {\caption{Distribution of chosen visual stimuli (Image type A vs B) per condition}}
 \label{fig:choice}
 \end{figure}
@@ -453,7 +453,7 @@ The behavioural results showed that participants overwhelmingly interpreted the 
 We analyzed the reading times during self-paced reading and reaction times (RT) during the picture verification phases, see the plots in Figure~\ref{fig:region_rt_by_choice_with_choice_rt_split_by_choice} for an overview. Reading times and decision reaction times were winsorized by replacing values above the mean +2 SD with the mean to mitigate the impact of extreme outliers. In the following analyses, values were log-transformed using $\log(1+x)$ to stabilize variance.
 
 \begin{figure}[ht]
-\FIG{\includegraphics[width=1.0\textwidth]{../plots/region_rt_by_choice_with_choice_rt_split_by_choice.png}}
+\FIG{\includegraphics[width=1.0\textwidth]{figs/region_rt_by_choice_with_choice_rt_split_by_choice.png}}
 {\caption{Mean reading times of sentences by regions and reaction times of choices.}}
 \label{fig:region_rt_by_choice_with_choice_rt_split_by_choice}
 \end{figure}
@@ -542,7 +542,7 @@ Taken together, this pattern of results suggests that the exhaustive focus marke
 % expected
 
 \begin{figure}[htbp]
-\FIG{\includegraphics[width=1.0\textwidth]{../plots/sentence_log_rt_by_condition_split_by_choice.png}}
+\FIG{\includegraphics[width=1.0\textwidth]{figs/sentence_log_rt_by_condition_split_by_choice.png}}
 {\caption{Whole-sentence reading times by condition and choice type}}
 \label{fig:sentence_log_rt_by_condition_split_by_choice}
 \end{figure}
@@ -976,7 +976,7 @@ Within conditions, none of the A--B contrasts reached significance after Tukey c
 
 
 \begin{figure}[htbp]
-\FIG{\includegraphics[width=1.0\textwidth]{../plots/log_choice_rt_by_condition_split_by_choice.png}}
+\FIG{\includegraphics[width=1.0\textwidth]{figs/log_choice_rt_by_condition_split_by_choice.png}}
 {\caption{Choice reaction times by condition, split by choice}}
 \label{fig:log_choice_rt_by_condition_split_by_choice}
 \end{figure}
@@ -1020,7 +1020,7 @@ To further examine how the focus structures were associated with exhaustive and 
 
 % Figure of log_total_dwell_by_condition_and_choice.png
 \begin{figure}
-\FIG{\includegraphics[width=1.0\textwidth]{../plots/log_total_dwell_by_condition_and_choice.png}}
+\FIG{\includegraphics[width=1.0\textwidth]{figs/log_total_dwell_by_condition_and_choice.png}}
 {\caption{Total dwell time (log-transformed) by condition and choice type}}
 \label{fig:dwell}
 \end{figure}
@@ -1111,7 +1111,7 @@ The across-choice comparisons (Table~\ref{tab:total-dwell-pairwise-across-choice
 
 % Figure of log_total_fixation_by_condition_and_choice.png
 \begin{figure}
-\FIG{\includegraphics[width=1.0\textwidth]{../plots/log_total_fixation_by_condition_and_choice.png}}
+\FIG{\includegraphics[width=1.0\textwidth]{figs/log_total_fixation_by_condition_and_choice.png}}
 {\caption{Total fixation count (log-transformed) by condition and choice type}}
 \label{fig:fixation}
 \end{figure}
@@ -1331,42 +1331,42 @@ Stimuli, full results, replication data and code can be found at \url{https://os
 \FIG{
 \begin{tabular}{@{}rcc@{\hspace{20pt}}rcc@{}}
 \# & A & B & \# & A & B \\
-1 & \includegraphics[height=.096\textheight]{../plots/1a.png}  &
-\includegraphics[height=.096\textheight]{../plots/1b.png}  &
-2 & \includegraphics[height=.096\textheight]{../plots/2a.png}  &
-\includegraphics[height=.096\textheight]{../plots/2b.png}  \\
-3 &\includegraphics[height=.096\textheight]{../plots/3a.png}  &
-\includegraphics[height=.096\textheight]{../plots/3b.png}  &
-4 & \includegraphics[height=.096\textheight]{../plots/4a.png}  &
-\includegraphics[height=.096\textheight]{../plots/4b.png}  \\
-5 & \includegraphics[height=.096\textheight]{../plots/5a.png}  &
-\includegraphics[height=.096\textheight]{../plots/5b.png}  &
-6 & \includegraphics[height=.096\textheight]{../plots/6a.png}  &
-\includegraphics[height=.096\textheight]{../plots/6b.png}  \\
-7 & \includegraphics[height=.096\textheight]{../plots/7a.png}  &
-\includegraphics[height=.096\textheight]{../plots/7b.png}  &
-8 & \includegraphics[height=.096\textheight]{../plots/8a.png}  &
-\includegraphics[height=.096\textheight]{../plots/8b.png}  \\
-9 & \includegraphics[height=.096\textheight]{../plots/9a.png}  &
-\includegraphics[height=.096\textheight]{../plots/9b.png}  &
-10 & \includegraphics[height=.096\textheight]{../plots/10a.png} &
-\includegraphics[height=.096\textheight]{../plots/10b.png} \\
-11 & \includegraphics[height=.096\textheight]{../plots/11a.png} &
-\includegraphics[height=.096\textheight]{../plots/11b.png} &
-12 & \includegraphics[height=.096\textheight]{../plots/12a.png} &
-\includegraphics[height=.096\textheight]{../plots/12b.png} \\
-13 & \includegraphics[height=.096\textheight]{../plots/13a.png} &
-\includegraphics[height=.096\textheight]{../plots/13b.png} &
-14 & \includegraphics[height=.096\textheight]{../plots/14a.png} &
-\includegraphics[height=.096\textheight]{../plots/14b.png} \\
-15 & \includegraphics[height=.096\textheight]{../plots/15a.png} &
-\includegraphics[height=.096\textheight]{../plots/15b.png} &
-16 & \includegraphics[height=.096\textheight]{../plots/16a.png} &
-\includegraphics[height=.096\textheight]{../plots/16b.png} \\
-17 & \includegraphics[height=.096\textheight]{../plots/17a.png} &
-\includegraphics[height=.096\textheight]{../plots/17b.png} &
-18 & \includegraphics[height=.096\textheight]{../plots/18a.png} &
-\includegraphics[height=.096\textheight]{../plots/18b.png} \\
+1 & \includegraphics[height=.096\textheight]{figs/1a.png}  &
+\includegraphics[height=.096\textheight]{figs/1b.png}  &
+2 & \includegraphics[height=.096\textheight]{figs/2a.png}  &
+\includegraphics[height=.096\textheight]{figs/2b.png}  \\
+3 &\includegraphics[height=.096\textheight]{figs/3a.png}  &
+\includegraphics[height=.096\textheight]{figs/3b.png}  &
+4 & \includegraphics[height=.096\textheight]{figs/4a.png}  &
+\includegraphics[height=.096\textheight]{figs/4b.png}  \\
+5 & \includegraphics[height=.096\textheight]{figs/5a.png}  &
+\includegraphics[height=.096\textheight]{figs/5b.png}  &
+6 & \includegraphics[height=.096\textheight]{figs/6a.png}  &
+\includegraphics[height=.096\textheight]{figs/6b.png}  \\
+7 & \includegraphics[height=.096\textheight]{figs/7a.png}  &
+\includegraphics[height=.096\textheight]{figs/7b.png}  &
+8 & \includegraphics[height=.096\textheight]{figs/8a.png}  &
+\includegraphics[height=.096\textheight]{figs/8b.png}  \\
+9 & \includegraphics[height=.096\textheight]{figs/9a.png}  &
+\includegraphics[height=.096\textheight]{figs/9b.png}  &
+10 & \includegraphics[height=.096\textheight]{figs/10a.png} &
+\includegraphics[height=.096\textheight]{figs/10b.png} \\
+11 & \includegraphics[height=.096\textheight]{figs/11a.png} &
+\includegraphics[height=.096\textheight]{figs/11b.png} &
+12 & \includegraphics[height=.096\textheight]{figs/12a.png} &
+\includegraphics[height=.096\textheight]{figs/12b.png} \\
+13 & \includegraphics[height=.096\textheight]{figs/13a.png} &
+\includegraphics[height=.096\textheight]{figs/13b.png} &
+14 & \includegraphics[height=.096\textheight]{figs/14a.png} &
+\includegraphics[height=.096\textheight]{figs/14b.png} \\
+15 & \includegraphics[height=.096\textheight]{figs/15a.png} &
+\includegraphics[height=.096\textheight]{figs/15b.png} &
+16 & \includegraphics[height=.096\textheight]{figs/16a.png} &
+\includegraphics[height=.096\textheight]{figs/16b.png} \\
+17 & \includegraphics[height=.096\textheight]{figs/17a.png} &
+\includegraphics[height=.096\textheight]{figs/17b.png} &
+18 & \includegraphics[height=.096\textheight]{figs/18a.png} &
+\includegraphics[height=.096\textheight]{figs/18b.png} \\
 \end{tabular}
 }
 {\caption{Complete visual stimulus set with A) single- and B) multi-entity image pairs}}
