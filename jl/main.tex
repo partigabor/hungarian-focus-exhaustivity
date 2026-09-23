@@ -137,21 +137,11 @@ semantic accounts posit an inherent exhaustive operator, pragmatic models treat 
 
 \subsection{Methods}
 
-\begin{itemize}
-  \item[\bigstar] \textbf{Concerns about stimulus design and procedure.} \hl{The exhaustive and unmodified conditions begin with expressions such as ``regarding drinks/fruits'', which evoke alternatives and may bias contrastive or exhaustive interpretations.} The contrastive condition also differs from the other two in sentence structure, discourse framing, and lexical content, creating a possible confound: observed differences may reflect sentence context, lexical material, or \textbf{length} rather than focus interpretation.
-  \begin{itemize}
-      \item Length is same, lexical material is same (?), discourse framing and sentence structure maybe.
-  \end{itemize}
-  
-  \item \textbf{Linguistic-material decisions need justification.} Explain the significance of verbal prefixes, definite versus indefinite conjugation, and countable versus uncountable nouns so decisions are comprehensible to non‑Hungarian readers. Since the introduction presents preverbal focus partly via separation of the verbal prefix from the verb, clarify how stimuli without verbal prefixes fit the design.
-  \item \textbf{Clarify what a ``submission'' means.} State whether participants could complete more than one part of the experiment, whether submissions occurred in single or multiple sittings, and how multiple sittings were counted.
-  \item \textbf{Model repeated submissions explicitly.} If the same participant could contribute multiple submissions, this must be modelled, especially if participants might have seen the same items in different conditions, because repeated exposure affects reading and reaction times.
-  \item \textbf{Describe attention checks.} Provide details about the attention‑check items used.
-  \item \textbf{Clarify counterbalancing.} The phrase ``the image types were counterbalanced throughout the trials'' should be made explicit (e.g., left/right position of single‑object vs multi‑object images).
-  \item \textbf{Report timing of demographic collection.} State when and how participant age and gender were collected.
-\end{itemize}
+\bigstar Addressed
 
 \subsection{Data preprocessing}
+
+Can do on October 1.
 
 \begin{itemize}
   \item \textbf{Justify winsorisation choices.} The procedure that replaces values above mean + 2 SD with the global mean is unusual and may distort data; a standard winsorisation replaces extreme values with the threshold value itself.
@@ -180,7 +170,9 @@ semantic accounts posit an inherent exhaustive operator, pragmatic models treat 
   \item \textbf{Recommended ideal step.} Include a control experiment or baseline condition without sentential structure to test whether the picture‑choice pattern arises from the overt modifiers alone. Without such a control, it is unclear whether the study tests preverbal focus interpretation or interpretation of the modifiers used.
 \end{itemize}
 
-\subsection{Terminology and typos \bigstar}
+\subsection{Terminology and typos}
+
+Mostly done... \bigstar
 
 \begin{itemize}
   \item \textbf{Check tables and captions.} Ensure consistency in terminology, especially ``fixation times'' versus ``fixation counts.''
@@ -188,11 +180,9 @@ semantic accounts posit an inherent exhaustive operator, pragmatic models treat 
 
 \section{Reviewer 2}
 
-
-
 \begin{itemize}
   \item \textbf{Overall appraisal.} I found this an interesting paper, and appreciated (up to a point) the thoroughness with which the experimental results were analysed; however, I did have some concerns about the \textbf{theoretical underpinnings} of the work and the operationalisation involved.
-  \item \textbf{Author stance and expertise.} I should note here that I have no specific expertise on any aspect of Hungarian and I have no prior theoretical commitment to any particular analysis of the phenomena in question; that is to say, I'm very willing to be persuaded of the correctness of the authors' analysis, but I have not been persuaded yet.
+  
   \item \textbf{Core concern and predicted consequences.} The essence of my concern is that, in summarising the results of this paper as a rebuttal of the strong semantic exhaustivity view, the authors argue (p.31) that that view yields three predictions that are not borne out by these data:
     \begin{itemize}
       \item ``(i) non-exhaustive readings should be unavailable or highly marked,''
@@ -227,6 +217,61 @@ semantic accounts posit an inherent exhaustive operator, pragmatic models treat 
 \end{itemize}
 
 \section{Reviewer 3}
+
+\textbf{1. Comparability of the conditions}
+
+The contrastive focus condition differs from the other two in non-trivial ways. Crucially, it has no "As for..." introduction of a topic. In the other two conditions a topic is introduced by “As for…”, and this topic delimits the range of alternatives that the focus of the sentence invokes.
+
+This is a problematic confound for at least two reasons. First, topics guide attention and activate semantic fields that are not activated without them. This effect enters the processing of sentences in uncontrolled ways in the experiment, which is problematic in the case of the reading times and eye tracking measures.
+
+Second, in the specific case in (6) and in examples like it, the introduction of the topic is likely to influence the interpretation of the comment that follows it. Out of context, in the absence of a verbal prefix the comment may be interpreted either as narrow focus (on the pre-verbal object) or as broad, VP-focus. The topic 'as for drinks' raises the likelihood of a narrow focus reading in the case of (6a) and (6b). As there is no such topic is (6c), a broad focus interpretation is readily available there. This confounds any comparisons that involve this condition, including both online and offline measures.
+
+If I understood correctly, half of the items had a verbal prefix IN EACH CONDITION. If so, that half of the items in the contrastive condition got disambiguated syntactically by the post-verbal placement of this prefix. That may (at least to some degree) counteract the absence of the topic in the ‘contrastive’ condition for the purposes of the offline interpretation task.
+
+But even so, the effect of the absence vs the presence of the topic is quite unlikely to be neutralized in online processing measures.
+
+In short, the confounding difference in the information structural makeup of the first two conditions vs the third condition makes them incomparable.”
+
+\textbf{2. Participant assignment}
+
+I'm not sure I understand the design of how participants were assigned to different “parts” of the experiment, but if I understand it correctly, the arrangement is quite unusual. It sounds as if the authors had run an experiment third the size of what they call their experiment, but this smaller experiment was conducted three times as many times. This is due to the author’s decision to allow participants to take part in the smaller experiment (which the authors call a “part” of the experiment) two times or three times, each time getting one third of the full set of items (which are better called lists).
+
+I am assuming that each of the three “parts”/lists contained the same number of items from each test condition and the same number of fillers in a Latin square design. At least, that's what the last sentence on page 7 suggests (though that is not completely clear either).
+
+Allowing participants to complete varying numbers of lists invalidates the Latin square design for several reasons.
+
+The primary goal of creating three distinct lists in a Latin square design is to prevent within-subject repetition of target items. If a participant completes two or three lists, s/he will encounter the exact same lexicalization multiple times across different conditions. This introduces repetition priming, carryover effects and hypothesis awareness, and it does so in an unbalanced way, since some participants took one list, some took two, and some took three. Choosing to participate more times (getting presented with more lists) also introduces self-selection bias.
+
+Combining these data in a single standard LMM breaks statistical assumptions regarding equal exposure. Participants who do 108 trials (three lists) experience fatigue and
+and task adaptation that participants doing 36 trials (one list) don't. The residual variance for three-list participants will likely be much higher (or systematically drift over time) compared to one-list participants. But standard LMMs assume homoscedasticity of residuals across all subjects.”
+
+“Missing at Random (MAR)”
+
+“This design flaw essentially contaminates the authors’ data, and this is especially relevant to reading times and eye-tracking, since second and third exposures completely alter natural reading and processing behavior.”
+
+“They can discard all second- and third-exposure data, and run the ‘one-third experiment’ in a Latin square design with more participants (two times as many are needed as are left after discarding contaminated data).”
+
+“If the ‘one-third sized’ experiment is too short (if one would need more data points per participant than that allows), then the authors may need to rerun the experiment so that all participants see all the material (all three lists).
+
+\textbf{3. The task}
+
+Participants were told that in each trial, after reading the stimulus sentence they should select the picture that best matches the sentence. As in the ‘only’-PVF sentences only a single object is referred to, multi-object images do not "match" the "meaning of the sentence". The same holds of unmodified-PVF sentences. As opposed to these two, in contrastive PVF sentences reference is made to multiple objects (through the addition of ‘among others’).
+
+**Crucially, this alone may explain, on the one hand, the key differences between the last condition on the one hand, and the first two conditions on the other, as well as the key similarities between the first two conditions.**
+
+In particular, the first key result of the experiment was the high rate of single-object image selections not only in the ‘only’-PVF condition, but also in the unmodified PVF condition, in clear contrast to the ‘among others’-PVF condition. This is not surprising, since stimulus sentences in the first two conditions only refer to a single object, while in the contrastive condition the sentence refers to multiple objects (in example (6c), “This morning Esther drank coffee, among other things”).
+
+Further, while sentences in the contrastive condition made reference to multiple objects, they included explicit mention of just one object (coffee in the case of (6c)). The task instruction to choose the image that best matches the "meaning of the sentence" **may be interpreted in at least two ways.** First, the better matching image may be the one that contains the single object that is explicitly mentioned in the sentence.
+
+“Second, the better matching image may well be considered to be the one that contains multiple objects, as ‘among others’ sentences made reference to multiple (at least three) objects: the one that is explicitly mentioned and a plurality (so, at least two) of ‘others’. This may explain another key result, specifically, that in the ‘among others’ condition in more than half of the cases participants selected the multiple-object (‘non-exhaustive’) image, but in more than one third of the cases they opted for the single-object (‘exhaustive’) picture. That may have been the function of how the instruction to select the image that “best matches the meaning of the sentence” is interpreted.
+
+In fact, this seems a more plausible explanation for the relevant result than what the authors propose.
+
+(What they claim is that this pattern of image-selection in the ‘among others’ condition is due to the robustness of the exhaustive interpretation associated with the PVF position. That seems neither likely nor coherent: the exhaustive, single-object interpretation is simply incompatible with the meaning of the core proposition the sentence conveys. In the case of (6c), for instance, this core proposition entails that Esther drank several (kinds of) drinks (at least three, as noted above). The sentence, then, cannot at the same time be interpreted as entailing that she only drank one (kind of) drink, which would be the exhaustive interpretation of PVF.)
+
+In brief, the formulation of the task itself raises serious concerns regarding task validity.
+
+Because the methodological concerns outlined above affect the core findings of the study, I have limited my review to these high-level issues for now. Addressing these fundamental points will likely require substantial changes to content, potentially leading to a very different paper. My recommendation is a resubmission, and I look forward to evaluating a thoroughly revised manuscript that addresses these primary concerns.
 
 \dots
 
@@ -273,7 +318,7 @@ Constituents in canonical sentences can be focalized for various communicative p
 
 \subsection{Background}
 
-One of the key issues around Hungarian pre-verbal focus is whether it is inherently exhaustive, or if exhaustivity is a pragmatic inference. In other words, does the PVF construction itself entail that the focused element is the only one for which the predicate holds true, or can it be interpreted in a contrastive way, where the focused element stands in opposition to other alternatives without necessarily excluding them? For example, in (\ref{ex:pvf}) above, does this sentence implies that Anna ate only a banana \textit{and nothing else} -- an exhaustive reading, or could it mean that Anna ate a banana \textit{and not something else} (or even, that she ate a banana but maybe \textit{she also ate something else}) -- a contrastive reading? We are interested in the `default' interpretation of focus constructions such as these, and whether Hungarian speakers tend to understand them exhaustively or contrastively without additional context.
+One of the key issues around Hungarian pre-verbal focus is whether it is inherently exhaustive, or if exhaustivity is a pragmatic inference. In other words, does the PVF construction itself entail that the focused element is the only one for which the predicate holds true, or can it be interpreted in a contrastive way, where the focused element stands in opposition to other alternatives without necessarily excluding them? For example, in (\ref{ex:pvf}) above, does this sentence imply that Anna ate only a banana \textit{and nothing else} -- an exhaustive reading, or could it mean that Anna ate a banana \textit{and not something else} (or even, that she ate a banana but maybe \textit{she also ate something else}) -- a contrastive reading? We are interested in the `default' interpretation of focus constructions such as these, and whether Hungarian speakers tend to understand them exhaustively or contrastively without additional context.
 % , as demonstrated by the two possible readings given in (\ref{ex:pvf}). 
 % !!!
 
@@ -317,9 +362,7 @@ Moreover, we can also cancel exhaustivity within the same clause with the help o
 
 
 
-
-
-In Hungarian linguistic research, the role of semantic exhaustivity in focus constructions has been debated for more than forty years. The central question is whether exhaustivity arises from the syntax–semantics interface or from pragmatic and contextual factors. Earlier accounts within the generative framework assumed that the Hungarian pre-verbal focus structure necessarily entails semantic exhaustiveness, claiming that exhaustivity is an inherent property of the focus structure itself \citep{szabolcsi_1981_compositionality,ekiss_1998_identificational,ekiss_2007_topic,kenesei_2006_focus,horvath_2008_separating}, which was more or less  the received view up until the 2000s. More recently, this claim has since been challenged and shown to be untrue by both theoretical and psycholinguistic work -- supported by experimental data -- and it has been proposed that the exhaustive interpretation emerges from discourse-pragmatics, or conversational implicature \citep{wedgwood_2006_hungarian,onea_2009_exhaustiveness,balogh_2013_hungarian,kaldi_2016_magyar}. In introducing their argument against the claims of \citet{szabolcsi_1981_compositionality}, \citet{ekiss_1998_identificational,ekiss_2007_topic}, and \citet{horvath_2008_separating} that \enquote{an immediately pre-verbal focus in Hungarian is semantically exhaustive} or \enquote{is interpreted exhaustively, i.e. as if it were in the scope of an exclusive like \enquote{only}}, \citet[1]{onea_2009_hungarian} suggested in their first example\footnote{\textit{Péter MARIT csókolta meg.} \\ Peter\textsc{[nom]} Mari-[\textsc{acc}] kiss-\textsc{pst-3sg.def} \\ \textsc{vpx} `Peter kissed MARY.'} that the implicit reading of a sentence of this type should be exhaustive, i.e. `Peter kissed Mari and noone else.'. Their example is analogous to our example (\ref{ex:pvf}), i.e. `Anna ate a banana and nothing else.', and their analysis suggests that while such sentences often invite an exhaustive reading, this interpretation is not structurally encoded but contextually inferred.
+In Hungarian linguistic research, the role of semantic exhaustivity in focus constructions has been debated for more than forty years. The central question is whether exhaustivity arises from the syntax–semantics interface or from pragmatic and contextual factors. Earlier accounts within the generative framework assumed that the Hungarian pre-verbal focus structure necessarily entails semantic exhaustiveness, claiming that exhaustivity is an inherent property of the focus structure itself \citep{szabolcsi_1981_compositionality,ekiss_1998_identificational,ekiss_2007_topic,kenesei_2006_focus,horvath_2008_separating}, which was more or less  the received view up until the 2000s. More recently, this claim has been challenged and shown to be \hl{untrue/inaccurate} by both theoretical and psycholinguistic work -- supported by experimental data -- and it has been proposed that the exhaustive interpretation emerges from discourse-pragmatics, or conversational implicature \citep{wedgwood_2006_hungarian,onea_2009_exhaustiveness,balogh_2013_hungarian,kaldi_2016_magyar}. In introducing their argument against the claims of \citet{szabolcsi_1981_compositionality}, \citet{ekiss_1998_identificational,ekiss_2007_topic}, and \citet{horvath_2008_separating} that \enquote{an immediately pre-verbal focus in Hungarian is semantically exhaustive} or \enquote{is interpreted exhaustively, i.e. as if it were in the scope of an exclusive like \enquote{only}}, \citet[1]{onea_2009_hungarian} suggested in their first example\footnote{\textit{Péter MARIT csókolta meg.} Peter\textsc{[nom]} Mari-[\textsc{acc}] kiss-\textsc{pst-3sg.def} \textsc{vpx} `Peter kissed MARY.'} that the implicit reading of a sentence of this type should be exhaustive, i.e. `Peter kissed Mari and noone else.'. Their example is analogous to our example (\ref{ex:pvf}), i.e. `Anna ate a banana and nothing else.', and their analysis suggests that while such sentences often invite an exhaustive reading, this interpretation is not structurally encoded but contextually inferred.
 
 % \pex[everygla={},aboveglftskip=0em,interpartskip=0pt]
 % \begingl \label{ex:kiss}
@@ -351,7 +394,6 @@ To test this, and to address the theoretical debate and in line with recent expe
 
 \section{Experiment}
 
-
 \begin{figure}[ht]
 \centering
 \FIG{
@@ -364,10 +406,10 @@ To test this, and to address the theoretical debate and in line with recent expe
 \end{figure}
 
 
-We designed a visual-world experiment with eye tracking in which participants first read a sentence and then chose between two plausible pictures: (A) a single-object/entity image corresponding to an exhaustive interpretation, or (B) a multi-object/entity image corresponding to a contrastive interpretation (we will refer to these as type A and type B from here on), see Figure~\ref{fig:stimuli_1} accompanying examples (\ref{ex:neutral}--\ref{ex:amongst_others}). Our main question is: How do unmodified PVF sentences (e.g., (\ref{ex:pvf})) pattern relative to the \textit{only}--exhaustive condition (ex. (\ref{ex:only})) and the \textit{amongst others}--contrastive condition (ex. (\ref{ex:amongst_others}))? We expect \textit{only} sentences to yield predominantly exhaustive choices and \textit{amongst others} sentences to favor contrastive choices; the crucial question is whether simple PVF sentences will align with one of these conditions or show a more balanced distribution. 
+We designed a visual-world experiment with eye tracking in which participants first read a sentence and then chose between two plausible images: (A) a single-object/entity image corresponding to an exhaustive interpretation, or (B) a multi-object/entity image corresponding to a contrastive interpretation (we will refer to these as type A and type B from now on), see Figure~\ref{fig:stimuli_1} accompanying examples (\ref{ex:neutral}--\ref{ex:amongst_others}). Our main question is: How do unmodified PVF sentences (e.g., (\ref{ex:pvf})) pattern relative to the \textit{only}--exhaustive condition (ex. (\ref{ex:only})) and the \textit{amongst others}--contrastive condition (ex. (\ref{ex:amongst_others}))? We expect \textit{only} sentences to yield predominantly exhaustive choices and \textit{amongst others} sentences to favor contrastive choices; the crucial question is whether simple PVF sentences will align with one of these conditions or show a more balanced distribution. 
 In addition to the choices, we record reading and reaction times and collect eye movements during the picture matching phase in order to assess whether the conditions have an impact on cognitive processing, and whether different interpretations are associated with different reaction times and/or patterns of attention. 
 
-We hypothesize that \textit{only}-exhaustive sentences will be associated with type (A) images, with faster responses and more focused attention, while when presented with \textit{amongst others}-contrastive sentences, participants will prefer the type (B) images and may exhibit slower responses and more distributed attention due to the presence of alternatives and the ambiguity of the underlying meaning. This would suggest that the PVF construction in itself is not exhaustive.
+We hypothesize that \textit{only}-exhaustive sentences will be associated with type A images, with faster responses and more focused attention, while when presented with \textit{amongst others}-contrastive sentences, participants will prefer the type B images and may exhibit slower responses and more distributed attention due to the presence of alternatives and the ambiguity of the underlying meaning. This would suggest that the PVF construction in itself is not exhaustive.
 
 %%% !!!!!!!!!!!!!!!!!!!!!!!! %%%
 % The question was whether the unmodified PVF sentences would pattern with the exhaustive or the contrastive condition, or if they would show a more balanced distribution of interpretations.
@@ -389,30 +431,30 @@ We hypothesize that \textit{only}-exhaustive sentences will be associated with t
 
 \subsection{Participants}
 
-
 \begin{figure}[!ht]
 \FIG{\includegraphics[width=1.0\textwidth]{figs/demographics_combined_donuts.png}}
 {\caption{Demographic information of the participants in the experiment: gender (left) and age distributions (right)}
 \label{demographics}}
 \end{figure}
 
-
-We recruited 55 native speakers of Hungarian via the Prolific platform (\url{www.prolific.com}), where participants were pre-screened for Hungarian as their first language, and received a monetary compensation for their time (around £7.50/h). After rejecting 3 participants (due to overly long submission time, failing attention checks, or missing ET data), the final sample consisted of 52 individuals (32 female; mean age = ~35). On average it took people just under 23 minutes to complete the experiment, although with a high individual variation (unusually long submission times were rejected).
-
+We recruited 55 native Hungarian speakers through Prolific (\url{www.prolific.com}). Participants were pre‑screened to confirm Hungarian as their first language and were paid approximately £7.50 per hour for their time. Prolific is an online recruitment platform that lets researchers post studies and invite eligible participants from its pool; interested individuals can then join from their own home using their own device, and they are redirected to the researcher’s online experiment hosted elsewhere. After completing the study, participants receive a completion code to submit on Prolific, which registers their participation as a ``submission'' and notifies the researcher for verification and payment. Participants' demographic information is pre-recorded on the platform and it is accessible to the researcher once a submission is accepted. After rejecting 3 participants (due to overly long submission time, failing attention checks, or missing ET data), the final sample consisted of 52 individuals (32 female; mean age = ~35). 
 
 \subsection{Materials}
 
-% Materials constituted 54 sentences (18 items × 3 conditions), and 54 pairs of images with relevant single and multiple objects (Fig. 2), and 54 filler trials. Using PCIbex (Schwarz \& Zehr, 2021), we collected reading times (RT) during SPR, and eye-tracking data (total dwell time) during the SPM choice, recording the time spent looking at each target image. 
+Our stimuli consisted of 54 experimental sentences (18 items × 3 conditions) with 54 additional filler sentences in a randomized order (108 in total), but making sure that the same items never followed each other. All sentences use verb phrases with focused direct object nouns in the accusative. Regarding lexical variation we aimed to devise a balanced set and used verbs both with and without verbal prefixes (50-50\%), included instances of both definite and indefinite objects (44.4-55.6\%), and used both countable and uncountable nouns. 
+Verbal prefixes are very common and can act as perfective aspect markers, or modify the meaning of a verb, e.g. \textit{enni} vs \textit{megenni} `to eat' vs `to eat sth (up, until eaten)' or \textit{menni} vs \textit{kimenni} `to go' vs `to go out'. They are connected to telicity, without a verbal prefix example (\ref{ex:pvf}) for instance could be rendered in the past continuous: ``Anna was eating an apple.'' but without suggesting whether the action was ever completed or not. The main characteristic of verbal prefixes is that they can detach from the main verb if a constituent takes the preverbal focus position, but in our setup, they do not affect the sentences: verbal prefixes are all detached and appear immediately after the verb, as seen in (\ref{ex:pvf}), and they were presented in the same region during trials. For a summary of verbal prefixes in view of syntactic focus, see \citet[][50-61]{day_2021_role}. Definite direct objects in Hungarian require the use of specific verbal forms called the definite conjugation, one should think of this as agreement between the object and the verb. Neither these, nor the countability of certain nouns should affect the experiment regarding considerations of exhaustivity.
 
-Our stimuli consisted of 54 experimental sentences (18 items × 3 conditions) with 54 additional filler sentences in a randomized order (108 in total), but making sure that the same items never followed each other. Regarding lexical variation, we used verbs both with and without verbal prefixes (50-50\%), and we included instances of both definite and indefinite conjugation (44.4-55.6\%); also, both countable and uncountable nouns were used for object focus. We added some simple contextual fillers to the beginning of each sentence, such as \textit{ami X-t illeti} `regarding X' and time or place adverbials to balance sentence length and make the targeted focus constructions appear not in the beginning of trials. When presenting the sentences on the screen, we divided them into regions, and articles were kept together with nouns, so all three conditions had the same number of regions (7), and the focused element was always in region 6 (r6). The stimuli were created by changing a set of 18 simple transitive sentences by modifying the base sentence with the addition of the focus marker \textit{csak} `only' for the exhaustive condition, and the phrase \textit{többek között} `amongst others' for the contrastive condition.
+\hl{\textbf{DONE? Linguistic-material decisions need justification.} Explain the significance of verbal prefixes, definite versus indefinite conjugation, and countable versus uncountable nouns so decisions are comprehensible to non‑Hungarian readers. Since the introduction presents preverbal focus partly via separation of the verbal prefix from the verb, clarify how stimuli without verbal prefixes fit the design.}
+
+To balance sentence length and make the targeted focus constructions appear not in the beginning of trials, we added some simple contextual fillers to the beginning of each sentence, such as \textit{ami X-t illeti} `regarding X' and time or place adverbials When presenting the sentences on the screen, we divided them into regions, and articles were kept together with nouns, so all three conditions had the same number of regions (7), and the focused element was always in region 6 (r6). The stimuli were created by changing a set of 18 simple transitive sentences by modifying the base sentence with the addition of the focus marker \textit{csak} `only' for the exhaustive condition, and the phrase \textit{többek között} `amongst others' for the contrastive condition.
+
+To make sure that sentences in the contrastive condition are not awkward, we ran a quick acceptability judgment study on all 18 target items using a survey with a 7 point Likert-scale, and 18 fillers. Participants were native speakers who grew up and were educated in Hungary (\(n=15\); female=7; mean age was \(37\) [SD \(=11\)]). The mean acceptability rating was \(\bar{x}=5.65\) (SD \(=0.45\)). \hl{DONE Acceptability judgement}
 
 The 18 items were accompanied by 18 image pairs, these were created using DeepAI's image generator (\url{https://deepai.org/}) with prompts requesting simple 3D objects \& scenarios in front of a light pastel background, and then modified manually to get matching pairs. The full stimuli list is available online\footnote{See the Data availability statement at the end of the paper.} and in the Appendix (see the sentence list in Table \ref{tab:sentence_stimuli} and the image pairs in Fig. ~\ref{fig:visual_stimuli}). 
 
-To avoid overly long experimental sessions, we split the experiment into three equal parts and each participant could complete one, two, or all three parts as separate events; meaning that we had three participant groups that could overlap, and each experiment consisted of 40 trials (36 experimental + 4 attention checks). This resulted in 72 valid  submissions (25 for group one, 23 for group two, and 24 for group three), thus every stimuli was interacted with at least 23 times. The three parts were split in a way that for each group each item only appeared in one condition, and each session contained four attention check questions intermixed and evenly distributed across the trials. 
+The three conditions were: a) exhaustive focus with \emph{csak} `only' (e.g., (\ref{ex:stimuli_exhaustive})), b) unmodified, simple pre-verbal focus (PVF) (e.g., (\ref{ex:stimuli_pvf})), and c) contrastive focus with \emph{többek között} `amongst others' (e.g., (\ref{ex:stimuli_contrastive})). Each item was paired with two images: type A depicting a single-object -- the exhaustive reading -- and type B depicting a multi-object variation -- the contrastive reading. See Figure~\ref{fig:stimuli_8} for an example of the image pairs accompanying the sentences in the experiment.
 
-The three conditions were: a) exhaustive focus with \emph{csak} `only' (e.g., (\ref{ex:stimuli_exhaustive})), b) unmodified, simple pre-verbal focus (PVF) (e.g., (\ref{ex:stimuli_pvf})), and c) contrastive focus with \emph{többek között} `amongst others' (e.g., (\ref{ex:stimuli_contrastive})). Each item was paired with two images: type A depicting a single-object \hl{interpretation} -- the exhaustive reading -- and type B depicting a multiple-object \hl{interpretation} -- the contrastive reading. See Figure~\ref{fig:stimuli_8} for an example of the image pairs accompanying the sentences in the experiment.
-
-
+\hl{\bigstar \textbf{Concerns about stimulus design and procedure.} The exhaustive and unmodified conditions begin with expressions such as ``regarding drinks/fruits'', which evoke alternatives and may bias contrastive or exhaustive interpretations. The contrastive condition also differs from the other two in sentence structure, discourse framing, and lexical content, creating a possible confound: observed differences may reflect sentence context, lexical material, or length rather than focus interpretation.}  
 
 \begin{figure}[!ht]
 \centering
@@ -421,42 +463,41 @@ The three conditions were: a) exhaustive focus with \emph{csak} `only' (e.g., (\
 \qquad
 \includegraphics[width=0.33\textwidth]{figs/8b.png}
 }
-{\caption{Image pair for the sentence in examples (\ref{ex:stimuli_exhaustive}--\ref{ex:stimuli_contrastive}). The left image (type A) corresponds to the exhaustive reading, while the right image (type B) corresponds to the contrastive reading.}
+{\caption{Image pair for the sentences in examples (\ref{ex:stimuli_exhaustive}--\ref{ex:stimuli_contrastive}). The left image (type A) corresponds to the exhaustive reading, while the right image (type B) corresponds to the contrastive reading.}
 \label{fig:stimuli_8}}
 \end{figure}
 
-
-
 \pex[everygla={},aboveglftskip=0em,interpartskip=4pt]
 \a \begingl \label{ex:stimuli_exhaustive}\textbf{exhaustive focus}\\
-\gla \it Ami \it az \it innivalót \it illeti, \it Eszter \it csak \it kávét \it ivott.//
+\gla \it Ami \it az \it innivalót \it illeti, \it Eszter \it csak \it KÁVÉT \it ivott.//
 \glb which{\sc [rel]} the drink-{\sc acc} regard-3{\sc sg} Eszter only coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
 \glft \quad `Regarding drinks, Eszter only drank coffee.'//
 \endgl
 \a \begingl \label{ex:stimuli_pvf}\textbf{unmodified pre-verbal focus}\\
-\gla \it Ami \it {az innivalót} \it illeti, \it Eszter \it ma \it kávét \it ivott.//
-\glb which{\sc [rel]} {the drink-{\sc acc}} regard-3{\sc sg} Eszter today coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
+\gla \it Ami \it {az innivalót} \it illeti, \it Eszter \it ma \it KÁVÉT \it ivott.//
+\glb which{\sc [rel]} {the drink-{\sc acc}} regard-3{\sc sg} Eszter tday coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
 \glft \quad `Regarding drinks, Eszter drank coffee today.'//
 \endgl
 \a \begingl \label{ex:stimuli_contrastive}\textbf{contrastive focus}\\
-\gla \it Ma \it reggel \it Eszter \it többek \it között \it kávét \it ivott.//
+\gla \it Ma \it reggel \it Eszter \it többek \it között \it KÁVÉT \it ivott.//
 \glb today morning Eszter others amongst coffee-{\sc acc} drink-{\sc pst}-3{\sc sg}//
 \glft \quad `This morning, Eszter drank, amongst other things, coffee.'//
 \endgl
 \xe
 
+Every experiment had four attention checks with sentences of similar length such as: `This sentence is not real, please choose the potato.' followed by an image choice of a potato and a tomato, or `This sentence is an attention test, choose the smaller animal here.' with an image choice between an ant and a polar bear, or `If you are paying attention to what you are reading, choose the bird.' with a choice between two words corresponding to `pelican' and `tiger', or `Are you paying attention? If yes, which one is the last meal of the day?' with a choice between two words corresponding to `breakfast' and `dinner'. The first two conforms to the style and presentation of our 54 experimental items, the latter two follows those of the 54 fillers, using spelled out words on an image instead of pictures.
 
+\hl{\textbf{Describe attention checks.} Provide details about the attention‑check items used. DONE}
 
+To avoid overly long experimental sessions, we split the experiment into three equal parts, meaning that three separate studies were posted on Prolific. Each consisted of 40 trials (36 experimental items + 4 attention checks). Invited participants could complete one, two, or all three parts as separate submissions one after another in one sitting, or across separate days in multiple sittings if there were open slots still; participation times and location were entirely up to each individual according to their own convenience. This means that we had three participant groups that could overlap, and some participants completed only 36, some, 72, and some all 108 items. The three parts were split in a way that for each group each item only appeared in one condition, and each session contained four attention check questions intermixed and evenly distributed across the trials. Participants never saw the same exact stimuli twice, as the three parts had no repetitions. The main reason behind this decision was that for some people calibrating the eye tracker proved to be difficult, and we did not want participants to get frustrated and abandon the experiment if it lasted too long. This solution was also necessary because of the relatively small participant pool of Hungarian L1 speakers who also matched the technical requirements. This setup resulted in 72 valid submissions (25 for part one, 23 for part two, and 24 for part three) from 55 individuals, and thus every item was interacted with at least 23 times. 
 
-
+\hl{ \bigstar \textbf{Model repeated submissions explicitly}. If the same participant could contribute multiple submissions, this must be modelled, especially if participants might have seen the \textbf{same items in different conditions}, because repeated exposure affects reading and reaction times.??}
 
 
 
 \subsection{Design}
 
-
-
-We built a sentence--picture matching (SPM) task, in which participants read a sentence and were asked to select the best fitting meaning-representation between two visual stimuli. First, participants saw a preview of the image pair to get familiar with the objects/context, on the left and right half of the screen (20\% of the screen's width and 40\% of the screen's height) on a canvas 50\% larger than the images to mitigate the inaccuracies of the eye tracker. After pressing the spacebar they were presented with the sentence word by word (region by region) in the middle of the screen in a self-paced reading (SPR) manner, in which participants had to use the spacebar to advance through the sentences. We recorded reading times throughout. After reading through the sentence, the image pair re-appeared and participants had to select the image that best matched the meaning of the sentence they just read. The choice had to be made with a mouse-click anywhere on the corresponding canvas (left or right), and reaction times (RT) and eye movements were recorded during this picture matching phase. The image types were counterbalanced throughout the trials. The segments were separated by 1000 ms pauses, and after the choice, the next trial started after a brief (1000 ms) pause. The experiment was designed to be completed in around 25-30 minutes, and participants had to complete it in one sitting. See Figure~\ref{fig:design} for a visual representation of the design of the experiment.
+We built a sentence--picture matching (SPM) task, in which participants read a sentence and were asked to select the best fitting meaning-representation between two visual stimuli. First, participants saw a preview of the image pair to get familiar with the objects/context, on the left and right half of the screen (20\% of the screen's width and 40\% of the screen's height) on a canvas 50\% larger than the images to mitigate the inaccuracies of the eye tracker. After pressing the spacebar they were presented with the sentence word by word (region by region) in the middle of the screen in a self-paced reading (SPR) manner, in which participants had to use the spacebar to advance through the sentences. We recorded reading times throughout. After reading through the sentence, the image pair re-appeared and participants had to select the image that best matched the meaning of the sentence they just read. The choice had to be made with a mouse-click anywhere on the corresponding canvas (left or right), and reaction times (RT) and eye movements were recorded during this picture matching phase. The image types were counterbalanced throughout the trials regarding their position of the left or right side of the screen. The segments were separated by 1000 ms pauses, and after the choice, the next trial started after a brief (1000 ms) pause. The experiment was designed to be completed in around 25-30 minutes, and participants had to complete it in one sitting. See Figure~\ref{fig:design} for a visual representation of the experiment design.
 
 \begin{figure}[!ht]
 \FIG{\includegraphics[width=1.0\textwidth]{figs/design.png}}
@@ -465,10 +506,9 @@ We built a sentence--picture matching (SPM) task, in which participants read a s
 \end{figure}
 
 
-
 \subsection{Procedure}
 
-The experiment was created, hosted on, and presented to participants on PCIbex Farm \citep{schwarz_2021_tutorial},\footnote{Code and resources are available online for inspection, see the Data availability statement at the end of the paper.} in Hungarian. Participants completed the experiment on their own devices (PC only, with a webcam and physical keyboard \& mouse) and on their own time, but with Prolific helping us control for too fast or too slow submissions resulting in rejection/timeout.
+The experiment was created, hosted on, and presented to participants on PCIbex Farm \citep{schwarz_2021_tutorial},\footnote{Code and resources are available online for inspection, see the Data availability statement at the end of the paper.} in Hungarian. Participants completed the experiment on their own devices (PC only, with a webcam and physical keyboard \& mouse) and on their own time, but with Prolific helping us control for too fast or too slow submissions resulting in rejection/timeout. On average it took people just under 23 minutes to complete the experiment, although with a high individual variation (unusually long submission times were rejected).
 
 First, potential participants were instructed to be in a well-lit environment, sit at an appropriate distance from their screen and webcam, and minimize head movements; emphasizing the need for a bright location where their faces are clearly visible to the camera. They were also informed that they can only start the experiment from a Chrome browser. Before starting the experiment, participants then had to calibrate the eye tracker, which involved looking at specific points on the screen (e.g., corners, center) while the system records their eye positions to create a mapping between gaze coordinates and screen coordinates. Eye-tracking data were collected using the built-in WebGazer.js library of PCIbex, which uses the participant's webcam to track eye movements, and we used the default calibration procedure provided, a 9-point calibration grid. Participants had to reach and maintain at least 60\% accuracy in the calibration phase to proceed with the experiment, and had three attempts to achieve this accuracy, ensuring that the eye-tracking data collected during the picture matching phase would be reliable. The tracker also checked their gaze repeatedly before every trial, and if the accuracy dropped below 60\%, participants were prompted to recalibrate before proceeding to the next trial. People who could not pass the calibration for various reasons (e.g., computer setup, bad lighting/environment, glare on glasses, or any other technical issue) were not able to start the experiment. After calibration, participants were intstructed on the procedure and how to complete the task, followed by a practice session consisting of three trials, and finally they could begin the live experiment of 40 trials (including 4 attention checks).
 
@@ -492,7 +532,7 @@ Eye-tracking data recorded on PCIbex comes in a relatively straightforward forma
 \label{fig:episodes}}
 \end{figure}
 
-The following steps were taken to clean and classify the eye-tracking data in order to obtain a certain set of metrics that could be used for analysis: First, raw eye tracking data files were loaded per participant, and \textbf{samples} were classified into AOIs at each timestamp as left (left canvas=1, right canvas=0), right (right canvas=1, left canvas=0), or neutral otherwise. Then, same-side consecutive samples were collapsed into contiguous gaze \textbf{episodes} within participant and trial. Episode duration was computed from timestamp-derived sample durations where episodes shorter than a threshold of 60 ms were removed, and neutral-gap bridging was enabled (with a max neutral bridge of 50 ms). In other words, very short gaze episodes and rapid saccades were removed cleaning noise \& jitter, as they are unlikely to reflect meaningful cognitive efforts and more likely to be artifacts of the eye-tracking system. Then, neutral episodes were dropped and excluded from further analysis. Episodes thus intend to represent a moment of sustained gaze within an AOI, ignoring brief out-of-canvas samples that result from technical inaccuracies and are not deliberate (or uncounscious) eye movements. For quality control, episode-duration distributions were inspected via summary statistics, and episodes longer than the mean +2 SD ($\mu \pm 2\sigma$) were winsorized by replacing their duration with the global mean (i.e., with rows retained). This procedure preserved the full number of episodes while limiting the influence of extreme outliers; 4.89\% of all episodes were substituted. See Figure~\ref{fig:episodes} for the distribution of episode durations. This cleaning process was devised after established eye-tracking data classification protocols, such as the Identification by Dispersion-Threshold (I-DT) algorithm, which itself is ideal for low- to mid-frequency eye trackers and static stimuli.
+The following steps were taken to clean and classify the eye-tracking data in order to obtain a certain set of metrics that could be used for analysis: First, raw eye tracking data files were loaded per participant, and \textbf{samples} were classified into AOIs at each timestamp as left (left canvas=1, right canvas=0), right (right canvas=1, left canvas=0), or neutral otherwise. Then, same-side consecutive samples were collapsed into contiguous gaze \textbf{episodes} within participant and trial. Episode duration was computed from timestamp-derived sample durations where episodes shorter than a threshold of 60 ms were removed, and neutral-gap bridging was enabled (with a max neutral bridge of 50 ms). In other words, very short gaze episodes and rapid saccades were removed cleaning noise \& jitter, as they are unlikely to reflect meaningful cognitive efforts and more likely to be artifacts of the eye-tracking system. Then, neutral episodes were dropped and excluded from further analysis. Episodes thus intend to represent a moment of sustained gaze within an AOI, ignoring brief out-of-canvas samples that result from technical inaccuracies and are not deliberate (or uncounscious) eye movements. For quality control, episode-duration distributions were inspected via summary statistics, and episodes longer than the mean +2 SD ($\mu \pm 2\sigma$) were \hl{winsorized} by replacing their duration with the global mean (i.e., with rows retained). This procedure preserved the full number of episodes while limiting the influence of extreme outliers; 4.89\% of all episodes were substituted. See Figure~\ref{fig:episodes} for the distribution of episode durations. This cleaning process was devised after established eye-tracking data classification protocols, such as the Identification by Dispersion-Threshold (I-DT) algorithm, which itself is ideal for low- to mid-frequency eye trackers and static stimuli.
 
 Finally, trial-level eye-tracking (ET) features were computed, including left/right/total dwell time, dwell proportions, dominant side, fixation counts, revisits, transitions, and first-fixation side/duration. To briefly define the most important metrics that were used in the end: \textbf{dwell} is a time value, the sum of the duration of all gaze episodes within a trial (either left, right, or total), representing the total amount of time a participant has spent looking at the AOI(s) during the choice; \textbf{fixation} on the other hand is a numeric value, representing how many times a participant looked at the AOIs during a choice. Missing trial-level metrics were mean-imputed in 5.02\% of the data points, which were mostly due to missing episode-level data (e.g., no episodes detected for a trial, or no episodes remained after cleaning).
 
@@ -582,7 +622,7 @@ For sentence reading times, the Type III Wald chi-square tests showed a signific
 
 \begin{table}[htbp]
 \centering
-\caption{Fixed-effects tests for whole-sentence reading times, compared to \textit{exhaustive} condition and type (A) image choice as reference levels}
+\caption{Fixed-effects tests for whole-sentence reading times, compared to \textit{exhaustive} condition and type A image choice as reference levels}
 \label{tab:sentence-rt-fixed}
 \begin{tabularx}{\textwidth}{@{}Xrrrr@{}}
 \toprule
@@ -1416,7 +1456,7 @@ The authors also wish to thank ... \hl{if any}.
 This study was funded by ... \hl{if any}.
 
 \paragraph{Data availability statement} \label{sec:data-statement}
-\hl{Stimuli, full results, replication data and code} can be found at \url{https://osf.io/j9abg/overview?view_only=484a4f21a5cb4e51b4b826f970e096a0}.
+\hl{Stimuli, full results, replication data and code} can be found at...
 
 \clearpage
 
@@ -1833,6 +1873,29 @@ l
 
 \bibitem[Cruschina (2021)]{cruschina_2021_greater}
 {Cruschina, Silvio}. 2021. The Greater the Contrast, the Greater the Potential: On the Effects of Focus in Syntax. \textit{Glossa: a journal of general linguistics} 6(1). \url{https://doi.org/10.5334/gjgl.1100} (accessed 2025 April 23).
+
+
+
+
+% @mastersthesis{day_2021_role,
+%   title = {{The Role and Function of Hungarian Verbal Prefixes: An Overview}},
+%   shorttitle = {{The Role and Function of Hungarian Verbal Prefixes}},
+%   author = {Day, Dallin},
+%   year = 2021,
+%   address = {Bloomington, IN},
+%   url = {https://www.proquest.com/docview/2572567389/abstract/752F1DEFCAEC4BC3PQ/1},
+%   urldate = {2026-09-23},
+%   abstract = {This thesis examines the various debates surrounding the contentious subject of verbal prefixes in Hungarian by comparing sources from the leading authors in Hungarian linguistics. Literature on their relationship to the verb is presented, as well as intra- and interlingual sources that inform their origin. A number of other topics are presented, including aspect, stress, and the ways in which verbal prefixes can impact argument structure. Verbal prefixes are then shown to be equivalent with a larger class of verb modifiers. Scholarship which places verb modifiers within the syntax is reviewed, especially regarding the likewise-contentious focus position. Not all the debates presented are settled as yet. One of the main goals of the thesis is to contextualize Hungarian linguistic debates in order to inform potential research in the language. For example, consensus on the origins and general aspectual function of verbal prefixes has mostly been reached. Some debate still exists, however, on various impacts of the prefix on the rest of the sentence. The thesis concludes that prominent areas for research still exist, especially in the realms of reduplication, argument structure modification, and syntax.},
+%   copyright = {Database copyright ProQuest LLC; ProQuest does not claim copyright in the individual underlying works.},
+%   isbn = {979-8-5381-3321-5},
+%   langid = {french},
+%   school = {Indiana University},
+%   keywords = {Aspect,Dictionaries,Hungarian,Language,Linguistics,Orthography,Preverbs,Semantics,Syntax},
+%   file = {C:\Users\parti\Zotero\storage\DWV4JRZE\Day - 2021 - The Role and Function of Hungarian Verbal Prefixes, An Overview - Indiana University.pdf}
+% }
+
+\bibitem[Day (2021)]{day_2021_role}
+Day, Dallin. 2021. \textit{The Role and Function of Hungarian Verbal Prefixes: An Overview.} Master's thesis. Bloomington, IN: Indiana University.
 
 % @book{ekiss_1995_discourse,
 %   title = {Discourse {{Configurational Languages}}},
