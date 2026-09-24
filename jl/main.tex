@@ -1,4 +1,4 @@
-\documentclass[ruler]{CUP-JNL-LIN}%[ruler,draftrules]
+\documentclass[a4paper, ruler]{CUP-JNL-LIN}%[ruler,draftrules]
 
 %%%% Packages
 \usepackage{graphicx}
@@ -125,13 +125,10 @@ semantic accounts posit an inherent exhaustive operator, pragmatic models treat 
 % \citet[1--2]{balogh_2007_focus}
 
 % Terminology:
-% •	hangsúly: stress, accent; prosody, intonation (contour), 
-% •	igekötő: verbal prefix (vpx; prf), verbal modifier (vm), verbal particle; aspectual particle; co-verb; pre-verb, etc.
+% hangsúly: stress, accent; prosody, intonation (contour), 
+% igekötő: verbal prefix (vpx; prf), verbal modifier (vm), verbal particle; aspectual particle; co-verb; pre-verb, etc.
 
 % Notes
-
-% object focus
-% pitch accent
 
 \section{Reviewer 1}
 
@@ -558,6 +555,40 @@ where $y' = \log(1+y)$ is the transformed dependent variable. The models were fi
 
 \subsection{Behavioral results}
 
+\hl{\textbf{NEW:} Statistical analysis of the binary image choice. DONE.}
+
+To evaluate the effect of sentence type on image selection, we fitted a mixed-effects logistic regression model. The model predicted the binary image Choice based on the fixed effect of Condition. We applied sum-to-zero contrast coding for the condition variable and included random intercepts for both participants and items to account for repeated measures: \texttt{Choice \sim~ \text{Conditon} + (1 \mid~\text{Participant}) + (1 \mid~\text{Item})}. 
+Across all experimental conditions, participants exhibited an overall baseline preference for image type A over image type B ($\beta = 2.62$, $SE = 0.30$, $z = 8.65$, $p < .001$, $OR = 13.72$). Relative to the grand mean across all conditions, the likelihood of choosing image A was significantly elevated in both the exhaustive condition ($\beta = 1.54$, $SE = 0.20$, $z = 7.86$, $p < .001$, $OR = 4.64$) and the unmodified condition ($\beta = 1.78$, $SE = 0.21$, $z = 8.63$, $p < .001$, $OR = 5.93$). Conversely, the contrastive condition strongly decreased the odds of selecting image A relative to the overall mean ($\beta = -3.32$). Considerable individual variance was observed across participants ($\sigma^2 = 3.60$, $SD = 1.90$), whereas variation across experimental items was modest ($\sigma^2 = 0.24$, $SD = 0.49$). Post-hoc pairwise comparisons using Holm's adjustment revealed that participants in the exhaustive condition were significantly more likely to select image A compared to those in the contrastive condition ($\beta = 4.85$, $SE = 0.34$, $z = 14.46$, $p < .0001$). Similarly, the unmodified condition elicited a significantly higher likelihood of choosing image A than the contrastive condition ($\beta = 5.10$, $SE = 0.35$, $z = 14.38$, $p < .0001$). We observed no statistically significant difference in choice behavior between the exhaustive and unmodified conditions ($\beta = -0.24$, $SE = 0.35$, $z = -0.70$, $p = 0.484$). See Table~\ref{tab:choice_stats} for a summary of the model results.
+
+\begin{table}[ht]
+\centering
+\caption{Mixed-effects logistic regression results for binary image choice (upper) \& Pairwise comparisons of choice probabilities by condition (lower)}
+\label{tab:choice_stats}
+\begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
+\toprule
+Parameter & Estimate & SE & $z$-value & $p$-value \\
+\midrule
+(Intercept) (Contrastive) & 2.62 & 0.30 & 8.65 & $<.001$ & \\
+Condition1 (Exhaustive) & 1.54 & 0.20 & 7.86 & $<.001$ & \\
+Condition2 (Unmodified) & 1.78 & 0.21 & 8.63 & $<.001$ & \\
+\bottomrule
+\multicolumn{6}{p{\textwidth}}{\footnotesize \textit{Note:} Estimates are given on the log-odds scale. The model utilized sum-to-zero contrast coding.}
+% {\footnotesize \textit{Note:} Estimates are given on the log-odds scale. The model utilized sum-to-zero contrast coding.}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
+\toprule
+Contrast & Estimate & SE & $z$-ratio & $p$-value \\
+\midrule
+Exhaustive -- Unmodified  & -0.25 & 0.35 & -0.70 & .4841 & \\
+Exhaustive -- Contrastive &  4.85 & 0.34 & 14.46 & $<.0001$ & \\
+Unmodified -- Contrastive &  5.10 & 0.35 & 14.38 & $<.0001$ & \\
+\bottomrule
+\multicolumn{6}{p{\textwidth}}{\footnotesize \textit{Note:} Estimates are presented on the log-odds ratio scale. $p$-values are adjusted using Holm's method for 3 tests.}
+% {\footnotesize \textit{Note:} Estimates are presented on the log-odds ratio scale. $p$-values are adjusted using Holm's method for 3 tests.}
+\end{tabularx}
+\end{table}
+
 
 
 \begin{figure}[ht]
@@ -566,26 +597,24 @@ where $y' = \log(1+y)$ is the transformed dependent variable. The models were fi
 \label{fig:choice}
 \end{figure}
 
+% \begin{table}[ht]
+% \centering
+% \caption{Type of chosen image per condition}
+% \label{tab:choice}
+% \begin{tabularx}{\textwidth}{@{}Xrr@{}}
+% \toprule
+% Condition & Type A: \% (N) & Type B: \% (N) \\
+% \midrule
+% Exhaustive   & 95.1 (411) & 4.86 (21) \\
+% Unmodified   & 96.1 (415) & 3.94 (17) \\
+% Contrastive  & 37.7 (163) & 62.3 (269) \\
+% \bottomrule
+% \end{tabularx}
+% \end{table}
+
+In short, the behavioural results show that participants overwhelmingly interpreted the unmodified pre-verbal focus (PVF) sentences like exhaustive \textit{only}-sentences, choosing type A images. However, in case of contrastive \textit{amongst others}-sentences, people preferred the type B images, exhibiting a tendency toward non-exhaustive readings, but with almost 37.7\% of the choices -- somewhat unexpectedly -- still being cast on the exhaustive interpretation type A images (see Figure~\ref{fig:choice}). This suggests that even with the presence of a phrase that licenses an inclusive, contrastive meaning, the exhaustivity effect is still quite salient. This pattern provides clear evidence that the PVF construction is not obligatorily interpreted as exclusively exhaustive; a non-exhaustive interpretation remains available. Our results further show that a contrastive reading can be elicited readily, and that the presence of an inclusive, contrastive licensing phrase does not fully eliminate the construction’s exhaustive bias.
 
 
-\begin{table}[ht]
-\centering
-\caption{Type of chosen image per condition}
-\label{tab:choice}
-\begin{tabularx}{\textwidth}{@{}Xrr@{}}
-\toprule
-Condition & Type A: \% (N) & Type B: \% (N) \\
-\midrule
-Exhaustive   & 95.1 (411) & 4.86 (21) \\
-Unmodified   & 96.1 (415) & 3.94 (17) \\
-Contrastive  & 37.7 (163) & 62.3 (269) \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-
-
-The behavioural results showed that participants overwhelmingly interpreted the unmodified pre-verbal focus (PVF) sentences like exhaustive \textit{only}-sentences, choosing type A images. However, in case of contrastive \textit{amongst others}-sentences, people preferred the type B images, exhibiting a tendency toward non-exhaustive readings, but with almost 37.7\% of the choices -- somewhat unexpectedly -- still being cast on the exhaustive interpretation type A images (see Table~\ref{tab:choice}, Figure~\ref{fig:choice}). This suggests that even with the presence of a phrase that licenses an inclusive, contrastive meaning, the exhaustivity effect is still quite salient. This pattern provides clear evidence that the PVF construction is not obligatorily interpreted as exclusively exhaustive; a non-exhaustive interpretation remains available. Our results further show that a contrastive reading can be elicited readily, and that the presence of an inclusive, contrastive licensing phrase does not fully eliminate the construction’s exhaustive bias.
 
 
 
@@ -1365,7 +1394,7 @@ The contrastive condition reveals the complementary side of this picture. When t
 
 Notably, however, the contrastive reading did not dominate the contrastive condition either: 37.7\% of choices in this condition were still the type A image. This is a significant proportion. Even when the sentence explicitly licences a non-exhaustive reading with a contrastive modifier, the association between the PVF construction and exhaustive interpretation is strong enough to persist at non-trivial levels. The fact that exhaustivity is `cancellable' in the formal, pragmatic sense -- as shown by the grammaticality of sentences such as (\ref{ex:amongst_others}) -- does not mean that cancellation is cognitively effortless. These results suggest that the exhaustive bias associated with PVF is deeply entrenched in speakers' representations of this construction, such that even an explicit licensing phrase does not fully override it.
 
-This finding is further corroborated by the reaction time and eye-tracking data for the contrastive condition. Decision reaction times were significantly longer in the contrastive condition than in the exhaustive condition ($p = .040$), and -- crucially -- participants who ultimately chose the type A image in the contrastive condition spent significantly more time looking at the images before deciding than participants in the exhaustive condition ($\hat\beta = 0.1876$, $p = .0057$, Table~\ref{tab:total-dwell-pairwise-within-choice}). Choosing a type A image after reading a sentence that grammatically licences a non-exhaustive reading is thus a cognitively costly act -- one that requires overcoming the pragmatic push of \textit{többek között}. Similarly, fixation counts for Choice A were significantly higher in the contrastive than in either the exhaustive ($p = .0071$) or unmodified ($p = .0441$) conditions. Together, these results are consistent with the idea that committing to the exhaustive interpretation in a contrastive context requires additional deliberation, reflecting the competition between the PVF's default exhaustive bias and the non-exhaustive semantics of the modifier.
+This finding is further corroborated by the reaction time and eye-tracking data for the contrastive condition. Decision reaction times were significantly longer in the contrastive condition than in the exhaustive condition ($p = .040$), and -- crucially -- participants who ultimately chose the type A image in the contrastive condition spent significantly more time looking at the images before deciding than participants in the exhaustive condition ($\hat\beta = 0.1876$, $p = .0057$, Table~\ref{tab:total-dwell-pairwise-within-choice}). Choosing a type A image After reading a sentence that grammatically licences a non-exhaustive reading is thus a cognitively costly act -- one that requires overcoming the pragmatic push of \textit{többek között}. Similarly, fixation counts for Choice A were significantly higher in the contrastive than in either the exhaustive ($p = .0071$) or unmodified ($p = .0441$) conditions. Together, these results are consistent with the idea that committing to the exhaustive interpretation in a contrastive context requires additional deliberation, reflecting the competition between the PVF's default exhaustive bias and the non-exhaustive semantics of the modifier.
 
 
 
