@@ -134,11 +134,11 @@ semantic accounts posit an inherent exhaustive operator, pragmatic models treat 
 
 \subsection{Methods}
 
-\bigstar Addressed
+\bigstar Addressed!
 
 \subsection{Data preprocessing}
 
-Can do on October 1.
+\bigstar Can do on October 1.
 
 \begin{itemize}
   \item \textbf{Justify winsorisation choices.} The procedure that replaces values above mean + 2 SD with the global mean is unusual and may distort data; a standard winsorisation replaces extreme values with the threshold value itself.
@@ -149,8 +149,8 @@ Can do on October 1.
 \subsection{Statistical Analysis}
 
 \begin{itemize}
-  \item \textbf{Expand model descriptions.} State explicitly the models for picture choice, sentence reading times, region‑level reading times, and decision reaction times, and specify the contrast coding used for all categorical predictors (treatment vs sum coding).
-  \item \textbf{Analyze choice data statistically.} Add a statistical analysis for picture choice. For a binary outcome, use a generalized linear mixed‑effects model (binomial family, logit link) with sentence condition as a fixed effect and random effects for participants and items.
+  \item \textbf{Expand model descriptions.} State explicitly the models for picture choice, sentence reading times, region‑level reading times, and decision reaction times, and specify the \hl{contrast coding} used for all categorical predictors (treatment vs sum coding).
+  \item \textbf{\bigstar Analyze choice data statistically.} Add a statistical analysis for picture choice. For a binary outcome, use a generalized linear mixed‑effects model (binomial family, logit link) with sentence condition as a fixed effect and random effects for participants and items.
   \item \textbf{Control for sentence length in reading‑time analyses.} Whole‑sentence reading times are confounded by sentence length and lexical repetition (e.g., \emph{csak} is one syllable in the exhaustive condition). If retained, include syllable or character count as a covariate; note that lexical repetition may still confound results.
   \item \textbf{Region‑level confounds.} Region 5 is confounded with word length, lexical identity, and repetition across conditions; avoid drawing strong theoretical conclusions from this region as currently analysed.
   \item \textbf{Interpret Region 6 carefully.} Regions 6 and 7 are more comparable across conditions but may show spillover effects. Correct the reported interpretation: a negative coefficient for Choice B (with Choice A as reference) on log reading time indicates shorter, not longer, reading times for Choice B in the reference condition.
@@ -438,7 +438,7 @@ We recruited 55 native Hungarian speakers through Prolific (\url{www.prolific.co
 
 \subsection{Materials}
 
-Our stimuli consisted of 54 experimental sentences (18 items × 3 conditions) with 54 additional filler sentences in a randomized order (108 in total), but making sure that the same items never followed each other. All sentences use verb phrases with focused direct object nouns in the accusative. Regarding lexical variation we aimed to devise a balanced set and used verbs both with and without verbal prefixes (50-50\%), included instances of both definite and indefinite objects (44.4-55.6\%), and used both countable and uncountable nouns. 
+Our stimuli consisted of 54 experimental sentences (18 items × 3 conditions) with 54 additional filler sentences in a randomized order (108 in total), but making sure that the same items never followed each other. All sentences use verb phrases with focused direct object nouns in the accusative. \hl{To footnote, beyond the scope, etc. Can add post-analysis, to see if these ones affect anything or not.} Regarding lexical variation we aimed to devise a balanced set and used verbs both with and without verbal prefixes (50-50\%), included instances of both definite and indefinite objects (44.4-55.6\%), and used both countable and uncountable nouns. 
 Verbal prefixes are very common and can act as perfective aspect markers, or modify the meaning of a verb, e.g. \textit{enni} vs \textit{megenni} `to eat' vs `to eat sth (up, until eaten)' or \textit{menni} vs \textit{kimenni} `to go' vs `to go out'. They are connected to telicity, without a verbal prefix example (\ref{ex:pvf}) for instance could be rendered in the past continuous: ``Anna was eating an apple.'' but without suggesting whether the action was ever completed or not. The main characteristic of verbal prefixes is that they can detach from the main verb if a constituent takes the preverbal focus position, but in our setup, they do not affect the sentences: verbal prefixes are all detached and appear immediately after the verb, as seen in (\ref{ex:pvf}), and they were presented in the same region during trials. For a summary of verbal prefixes in view of syntactic focus, see \citet[][50-61]{day_2021_role}. Definite direct objects in Hungarian require the use of specific verbal forms called the definite conjugation, one should think of this as agreement between the object and the verb. Neither these, nor the countability of certain nouns should affect the experiment regarding considerations of exhaustivity.
 
 \hl{\textbf{DONE? Linguistic-material decisions need justification.} Explain the significance of verbal prefixes, definite versus indefinite conjugation, and countable versus uncountable nouns so decisions are comprehensible to non‑Hungarian readers. Since the introduction presents preverbal focus partly via separation of the verbal prefix from the verb, clarify how stimuli without verbal prefixes fit the design.}
@@ -553,40 +553,81 @@ where $y' = \log(1+y)$ is the transformed dependent variable. The models were fi
 
 \section{Results}
 
+
 \subsection{Behavioral results}
 
 \hl{\textbf{NEW:} Statistical analysis of the binary image choice. DONE.}
 
-To evaluate the effect of sentence type on image selection, we fitted a mixed-effects logistic regression model. The model predicted the binary image Choice based on the fixed effect of Condition. We applied sum-to-zero contrast coding for the condition variable and included random intercepts for both participants and items to account for repeated measures: \texttt{Choice \sim~ \text{Conditon} + (1 \mid~\text{Participant}) + (1 \mid~\text{Item})}. 
-Across all experimental conditions, participants exhibited an overall baseline preference for image type A over image type B ($\beta = 2.62$, $SE = 0.30$, $z = 8.65$, $p < .001$, $OR = 13.72$). Relative to the grand mean across all conditions, the likelihood of choosing image A was significantly elevated in both the exhaustive condition ($\beta = 1.54$, $SE = 0.20$, $z = 7.86$, $p < .001$, $OR = 4.64$) and the unmodified condition ($\beta = 1.78$, $SE = 0.21$, $z = 8.63$, $p < .001$, $OR = 5.93$). Conversely, the contrastive condition strongly decreased the odds of selecting image A relative to the overall mean ($\beta = -3.32$). Considerable individual variance was observed across participants ($\sigma^2 = 3.60$, $SD = 1.90$), whereas variation across experimental items was modest ($\sigma^2 = 0.24$, $SD = 0.49$). Post-hoc pairwise comparisons using Holm's adjustment revealed that participants in the exhaustive condition were significantly more likely to select image A compared to those in the contrastive condition ($\beta = 4.85$, $SE = 0.34$, $z = 14.46$, $p < .0001$). Similarly, the unmodified condition elicited a significantly higher likelihood of choosing image A than the contrastive condition ($\beta = 5.10$, $SE = 0.35$, $z = 14.38$, $p < .0001$). We observed no statistically significant difference in choice behavior between the exhaustive and unmodified conditions ($\beta = -0.24$, $SE = 0.35$, $z = -0.70$, $p = 0.484$). See Table~\ref{tab:choice_stats} for a summary of the model results.
+
+% To evaluate the effect of sentence type on image selection, we fitted a mixed-effects logistic regression model. The model predicted the binary image Choice based on the fixed effect of Condition. We applied sum-to-zero contrast coding for the condition variable and included random intercepts for both participants and items to account for repeated measures: \texttt{Choice \sim~ \text{Conditon} + (1 \mid~\text{Participant}) + (1 \mid~\text{Item})}. 
+% Across all experimental conditions, participants exhibited an overall baseline preference for image type A over image type B ($\beta = 2.62$, $SE = 0.30$, $z = 8.65$, $p < .001$, $OR = 13.72$). Relative to the grand mean across all conditions, the likelihood of choosing image A was significantly elevated in both the exhaustive condition ($\beta = 1.54$, $SE = 0.20$, $z = 7.86$, $p < .001$, $OR = 4.64$) and the unmodified condition ($\beta = 1.78$, $SE = 0.21$, $z = 8.63$, $p < .001$, $OR = 5.93$). Conversely, the contrastive condition strongly decreased the odds of selecting image A relative to the overall mean ($\beta = -3.32$). Considerable individual variance was observed across participants ($\sigma^2 = 3.60$, $SD = 1.90$), whereas variation across experimental items was modest ($\sigma^2 = 0.24$, $SD = 0.49$). Post-hoc pairwise comparisons using Holm's adjustment revealed that participants in the exhaustive condition were significantly more likely to select image A compared to those in the contrastive condition ($\beta = 4.85$, $SE = 0.34$, $z = 14.46$, $p < .0001$). Similarly, the unmodified condition elicited a significantly higher likelihood of choosing image A than the contrastive condition ($\beta = 5.10$, $SE = 0.35$, $z = 14.38$, $p < .0001$). We observed no statistically significant difference in choice behavior between the exhaustive and unmodified conditions ($\beta = -0.24$, $SE = 0.35$, $z = -0.70$, $p = 0.484$). See Table~\ref{tab:choice_stats} for a summary of the model results.
+
+% \begin{table}[ht]
+% \centering
+% \caption{Mixed-effects logistic regression results for binary image choice (upper) \& Pairwise comparisons of choice probabilities by condition (lower)}
+% \label{tab:choice_stats}
+% \begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
+% \toprule
+% Parameter & Estimate & SE & $z$-value & $p$-value \\
+% \midrule
+% (Intercept) (Contrastive) & 2.62 & 0.30 & 8.65 & $<.001$ & \\
+% Condition1 (Exhaustive) & 1.54 & 0.20 & 7.86 & $<.001$ & \\
+% Condition2 (Unmodified) & 1.78 & 0.21 & 8.63 & $<.001$ & \\
+% \bottomrule
+% \multicolumn{6}{p{\textwidth}}{\footnotesize \textit{Note:} Estimates are given on the log-odds scale. The model utilized sum-to-zero contrast coding.}
+% % {\footnotesize \textit{Note:} Estimates are given on the log-odds scale. The model utilized sum-to-zero contrast coding.}
+% \end{tabularx}
+
+% \begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
+% \toprule
+% Contrast & Estimate & SE & $z$-ratio & $p$-value \\
+% \midrule
+% Exhaustive -- Unmodified  & -0.25 & 0.35 & -0.70 & .4841 & \\
+% Exhaustive -- Contrastive &  4.85 & 0.34 & 14.46 & $<.0001$ & \\
+% Unmodified -- Contrastive &  5.10 & 0.35 & 14.38 & $<.0001$ & \\
+% \bottomrule
+% \multicolumn{6}{p{\textwidth}}{\footnotesize \textit{Note:} Estimates are presented on the log-odds ratio scale. $p$-values are adjusted using Holm's method for 3 tests.}
+% % {\footnotesize \textit{Note:} Estimates are presented on the log-odds ratio scale. $p$-values are adjusted using Holm's method for 3 tests.}
+% \end{tabularx}
+% \end{table}
+
+To evaluate the effect of sentence type on image selection, we fitted a mixed-effects logistic regression model. The model predicted the binary image Choice based on the fixed effect of Condition. We applied sum-to-zero contrast coding for the condition variable and included random intercepts for both participants and items to account for repeated measures: \texttt{Choice $\sim$ Condition + (1 $\mid$ Participant) + (1 $\mid$ Item)}. 
+Across all experimental conditions, participants exhibited an overall baseline preference for image type A over image type B ($\beta = 2.62$, $SE = 0.30$, $z = 8.65$, $p < .001$, $OR = 13.72$, $95\% \ CI [7.58, 24.85]$). Relative to the grand mean across all conditions, the likelihood of choosing image A was significantly elevated in both the exhaustive condition ($\beta = 1.54$, $SE = 0.20$, $z = 7.86$, $p < .001$, $OR = 4.64$, $95\% \ CI [3.17, 6.81]$) and the unmodified condition ($\beta = 1.78$, $SE = 0.21$, $z = 8.63$, $p < .001$, $OR = 5.93$, $95\% \ CI [3.96, 8.88]$). Conversely, the contrastive condition strongly decreased the odds of selecting image A relative to the overall mean ($\beta = -3.32$). Considerable individual variance was observed across participants ($\sigma^2 = 3.60$, $SD = 1.90$), whereas variation across experimental items was modest ($\sigma^2 = 0.24$, $SD = 0.49$). Post-hoc pairwise comparisons using Holm's adjustment revealed that participants in the exhaustive condition were significantly more likely to select image A compared to those in the contrastive condition ($\beta = 4.85$, $SE = 0.34$, $z = 14.46$, $p < .0001$). Similarly, the unmodified condition elicited a significantly higher likelihood of choosing image A than the contrastive condition ($\beta = 5.10$, $SE = 0.35$, $z = 14.38$, $p < .0001$). We observed no statistically significant difference in choice behavior between the exhaustive and unmodified conditions ($\beta = -0.24$, $SE = 0.35$, $z = -0.70$, $p = 0.484$). See Table~\ref{tab:choice_stats} for a summary of the model results.
 
 \begin{table}[ht]
 \centering
 \caption{Mixed-effects logistic regression results for binary image choice (upper) \& Pairwise comparisons of choice probabilities by condition (lower)}
 \label{tab:choice_stats}
+\vspace{0.2cm}
 \begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
 \toprule
-Parameter & Estimate & SE & $z$-value & $p$-value \\
+Parameter & Estimate & SE & $z$-value & $p$-value & Odds Ratio [95\% CI] \\
 \midrule
-(Intercept) (Contrastive) & 2.62 & 0.30 & 8.65 & $<.001$ & \\
-Condition1 (Exhaustive) & 1.54 & 0.20 & 7.86 & $<.001$ & \\
-Condition2 (Unmodified) & 1.78 & 0.21 & 8.63 & $<.001$ & \\
+(Intercept) & 2.62 & 0.30 & 8.65 & $<.001$ & 13.72 [7.58, 24.85] \\
+Condition1 (Exhaustive) & 1.54 & 0.20 & 7.86 & $<.001$ & 4.64 [3.17, 6.81] \\
+Condition2 (Unmodified) & 1.78 & 0.21 & 8.63 & $<.001$ & 5.93 [3.96, 8.88] \\
 \bottomrule
-\multicolumn{6}{p{\textwidth}}{\footnotesize \textit{Note:} Estimates are given on the log-odds scale. The model utilized sum-to-zero contrast coding.}
-% {\footnotesize \textit{Note:} Estimates are given on the log-odds scale. The model utilized sum-to-zero contrast coding.}
+% \multicolumn{7}{p{\textwidth}}{\footnotesize \textit{Note:} Estimates are given on the log-odds scale. The model utilized sum-to-zero contrast coding.}
 \end{tabularx}
+\raggedright
+{\footnotesize \textit{Note:} Estimates are given on the log-odds scale. The model utilized sum-to-zero contrast coding.}
 
-\begin{tabularx}{\textwidth}{@{}Xrrrrr@{}}
+
+\vspace{0.2cm}
+
+\centering
+\begin{tabularx}{\textwidth}{@{}Xrrrr@{}}
 \toprule
 Contrast & Estimate & SE & $z$-ratio & $p$-value \\
 \midrule
-Exhaustive -- Unmodified  & -0.25 & 0.35 & -0.70 & .4841 & \\
-Exhaustive -- Contrastive &  4.85 & 0.34 & 14.46 & $<.0001$ & \\
-Unmodified -- Contrastive &  5.10 & 0.35 & 14.38 & $<.0001$ & \\
+Exhaustive -- Unmodified  & -0.25 & 0.35 & -0.70 & .4841 \\
+Exhaustive -- Contrastive &  4.85 & 0.34 & 14.46 & $<.0001$ \\
+Unmodified -- Contrastive &  5.10 & 0.35 & 14.38 & $<.0001$ \\
 \bottomrule
-\multicolumn{6}{p{\textwidth}}{\footnotesize \textit{Note:} Estimates are presented on the log-odds ratio scale. $p$-values are adjusted using Holm's method for 3 tests.}
-% {\footnotesize \textit{Note:} Estimates are presented on the log-odds ratio scale. $p$-values are adjusted using Holm's method for 3 tests.}
+% \multicolumn{6}{p{\textwidth}}{\footnotesize \textit{Note:} Estimates are presented on the log-odds ratio scale. $p$-values are adjusted using Holm's method for 3 tests.}
 \end{tabularx}
+\raggedright
+{\footnotesize \textit{Note:} Estimates are presented on the log-odds ratio scale. $p$-values are adjusted using Holm's method for 3 tests.}
 \end{table}
 
 
@@ -1479,7 +1520,7 @@ More broadly, these results demonstrate that the long-standing theoretical contr
 \begin{Backmatter}
 
 \paragraph{Acknowledgments}
-The authors also wish to thank ... \hl{if any}.
+We would like to thank the three anonymous reviewers who gave extremely detailed and valuable criticisms on a previous version of this paper, we overhauled our study design with their suggestions in mind. We would also like to thank participants of HSP2026 at MIT for their comments, and especially Eszter Rónai for her advice and encouragement.
 
 \paragraph{Funding statement}
 This study was funded by ... \hl{if any}.
