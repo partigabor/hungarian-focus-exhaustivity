@@ -1,0 +1,4 @@
+no,item,exp,condition,group,cb,r1,r2,r3,r4,r5,r6,r7,left,right,question,target
+990,1,,practice,,n,Ez,"egy példamondat,",kérlek,válaszd,majd,az A betűs,képet.,A,B,,A
+991,2,,practice,,y,Ez is,"csak gyakorlás,",kérlek,majd,válaszd,a C betűs,képet.,D,C,,C
+992,3,,practice,,n,Itt,pedig,válaszd,azt a képet,amelyik,balodalt,van.,E,F,Melyik van a bal oldalon?,E
