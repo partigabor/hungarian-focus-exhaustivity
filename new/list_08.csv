@@ -1,0 +1,41 @@
+﻿exp,no,set,item,type,cb,cnd,context_cnd,context_condition,context,target_cnd,target_condition,r1,r2,r3,r4,r5,r6,question,a,b,correct,image_pair_a,image_pair_b,vpx,def,past,multi,alt,feat
+1,,8,1,target,y,C2T4,C2,ctx-base,A kollégák étkezési szokásairól beszélgettünk.,T4,pvf-contrastive,Reggelenként,többek,között,egy banánt,eszik,Anna.,,1a,1b,1b,,,,,,,,
+1,,,2,target,n,C3T1,C3,ctx-contrastive,"Az iskola az évkezdéshez sokféle tanszert, füzeteket, vonalzókat és írószereket szerzett be a diákoknak.",T1,non-focused,Minden,év,szeptemberében,a diákok,kapnak,egy ceruzát.,,2a,2b,,,,,,,,,
+1,,,3,target,y,C3T2,C3,ctx-contrastive,"A műhelyben mostanában kevés a munka, egyszerre csak egy megrendelésen dolgoznak.",T2,pvf-exhaustive,A jövő,héten,csak,a könyvespolcot,rakja össze,az asztalos.,,3a,3b,3a,,,1,1,0,1,,1101
+1,,,4,target,n,C3T3,C3,ctx-contrastive,,T3,pvf-base,Január,első,felében,egy helikoptert,tesztelt,a hadsereg.,,4a,4b,,,,,,,,,
+1,,,5,target,y,C3T4,C3,ctx-contrastive,,T4,pvf-contrastive,Uzsonnára,többek,között,a fánkokat,,az asszisztensem.,,5a,5b,5b,,,,,,,,
+1,,,6,target,n,C1T1,C1,ctx-exhaustive,"A zongoratanár szereti a virágokat, egyet kivéve.",T1,non-focused,Úgy,hallottam,hogy,a tanárnő,utálja,a tulipánt.,,6a,6b,,,,,,,,,
+1,,,7,target,y,C1T2,C1,ctx-exhaustive,,T2,pvf-exhaustive,Kiderült,hogy,csak,egy bort,hoztak,a vendégek.,,7a,7b,7a,,,0,0,1,1,,0011
+1,,,8,target,n,C1T3,C1,ctx-exhaustive,,T3,pvf-base,Minden,kedd,reggel,egy kávét,iszik,Eszter.,,8a,8b,,,,,,,,,
+1,,,9,target,y,C1T4,C1,ctx-exhaustive,,T4,pvf-contrastive,Régen,többek,között,németet,tanultak,a diákok.,,9a,9b,9b,,,,,,,,
+1,,,10,target,n,C2T1,C2,ctx-base,,T1,non-focused,Egyes,információk,szerint,a kutató,felfedezett,egy lepkét.,,10a,10b,,,,,,,,,
+1,,,11,target,y,C2T2,C2,ctx-base,,T2,pvf-exhaustive,A hosszú,hétvégén,csak,egy robogót,béreltek ki,a turisták.,,11a,11b,11a,,,1,0,1,0,,1010
+1,,,12,target,n,C2T3,C2,ctx-base,,T3,pvf-base,Február,első,felében,egy fenyőfát,ültet el,a kertész.,,12a,12b,,,,,,,,,
+1,,,13,target,y,C2T4,C2,ctx-base,,T4,pvf-contrastive,Pénteken,többek,között,az elefántot,nézik meg,a gyerekek.,,13a,13b,13b,,,,,,,,
+1,,,14,target,n,C3T1,C3,ctx-contrastive,A konyhai gépek mind ugyanazon a napon fognak megérkezni.,T1,non-focused,Holnap,kora,délelőtt,a szerelő,beüzemeli,a hűtőt.,,14a,14b,,,,,,,,,
+1,,,15,target,y,C3T2,C3,ctx-contrastive,,T2,pvf-exhaustive,Partraszállás,után,csak,az aranyat,találta meg,a kalóz.,,15a,15b,15a,,,1,1,1,0,,1110
+1,,,16,target,n,C3T3,C3,ctx-contrastive,,T3,pvf-base,Vasárnap,pontosan,délben,a levest,tálalja,a nagymama.,,16a,16b,,,,,,,,,
+1,,,17,target,y,C3T4,C3,ctx-contrastive,,T4,pvf-contrastive,A héten,többek,között,egy inget,varr,a szabó.,,17a,17b,17b,,,,,,,,
+1,,,18,target,n,C1T1,C1,ctx-exhaustive,"A mostani falunapon alig táncoltak fiatalok, szerintem szégyellősek.",T1,non-focused,A tegnap,este,folyamán,Péter,felkérte,Marit.,,18a,18b,,,,,,,,,
+1,,,19,target,y,C1T2,C1,ctx-exhaustive,,T2,pvf-exhaustive,Indulás,előtt,csak,egy körtét,rak el,Andris.,,19a,19b,19a,,,1,0,0,0,,1000
+1,,,20,target,n,C1T3,C1,ctx-exhaustive,,T3,pvf-base,A múlt,nyár,elején,egy nyakláncot,fogott ki,Bence.,,20a,20b,,,,,,,,,
+1,,,21,target,y,C1T4,C1,ctx-exhaustive,,T4,pvf-contrastive,Múltkor,többek,között,az óráját,veszítette el,Péter.,,21a,21b,21b,,,,,,,,
+1,,,22,target,n,C2T1,C2,ctx-base,"Idény nyáron a tengerpartra megyünk, nagyon szeretjük a mediterrán ételeket.",T1,non-focused,Amióta,először,kipróbálta,a férjem,szereti,a tintahalat.,,22a,22b,,,,,,,,,
+1,,,23,target,y,C2T2,C2,ctx-base,,T2,pvf-exhaustive,Abban,az időszakban,csak,egy hidat,épített,a vállalat.,,23a,23b,23b,,,0,0,1,1,,0011
+1,,,24,target,n,C2T3,C2,ctx-base,,T3,pvf-base,Vasárnap,kora,reggel,a bakelitet,vásárolta meg,apukád.,,24a,24b,,,,,,,,,
+2,,,1,filler,,other-directed-x,,,,,other-directed-x,A dolgozó,"említette,",hogy,a szakács,megdicsérte,a főzőtudását.,Kinek a főzőtudásáról van szó?,dolgozó,szakács,dolgozó,,,,,,,,
+2,,,2,filler,,self-directed,,,,,self-directed,A programozó,"megemlítette,",hogy,a rendező,töprengett,az ügyességén.,Kinek az ügyességéről van szó?,programozó,rendező,rendező,,,,,,,,
+2,,,3,filler,,other-directed,,,,,other-directed,A tűzoltó,"hallotta,",hogy,az orvos,megfontolta,a véleményét.,Kinek a véleményéről van szó?,tűzoltó,orvos,tűzoltó,,,,,,,,
+2,,,4,filler,,self-directed-x,,,,,self-directed-x,A menedzser,"sejtette,",hogy,a vezérigazgató,elherdálta,a vagyonát.,Kinek a vagyonáról van szó?,menedzser,vezérigazgató,vezérigazgató,,,,,,,,
+2,,,5,filler,,other-directed-x,,,,,other-directed-x,A biztonsági őr,"tudta,",hogy,a rendőr,ellopta,a fizetését.,Kinek a fizetésről van szó?,biztonsági őr,rendőr,biztonsági őr,,,,,,,,
+2,,,6,filler,,self-directed,,,,,self-directed,Az építész,"megköszönte,",hogy,a mérnök,megosztotta,a terveit.,Kinek a terveiről van szó?,építész,mérnök,mérnök,,,,,,,,
+2,,,7,filler,,other-directed,,,,,other-directed,Az ügyész,"számított rá,",hogy,a tudós,kritizálja,a vallomását.,Kinek a vallomásáról van szó?,ügyész,tudós,ügyész,,,,,,,,
+2,,,8,filler,,self-directed-x,,,,,self-directed-x,A professzor,"úgy vélte,",hogy,a pilóta,dicsekedett,a kapcsolataival.,Kinek a kapcsolatairól van szó?,professzor,pilóta,pilóta,,,,,,,,
+2,,,9,filler,,other-directed-x,,,,,other-directed-x,A kórboncnok,"látta,",hogy,a katona,lenézte,a munkáját.,Kinek a munkájáról van  szó?,kórboncnok,katona,kórboncnok,,,,,,,,
+2,,,10,filler,,self-directed,,,,,self-directed,Mária,"mondta,",hogy,Julcsi,kiadta,a könyvét.,Kinek a könyvéről van szó?,Mária,Julcsi,Julcsi,,,,,,,,
+2,,,11,filler,,other-directed,,,,,other-directed,A földműves,"azt hitte,",hogy,a munkás,elvette,a munkáját.,Kinek a munkájáról van szó?,földműves,munkás,földműves,,,,,,,,
+2,,,12,filler,,self-directed-x,,,,,self-directed-x,A diák,"nem bánta,",hogy,a tanár,felajánlotta,a segítségét.,Kinek a segítségéről van szó?,diák,tanár,tanár,,,,,,,,
+0,,,1,check,,attention-alt,,,,,attention-alt,Ez a mondat,"nem igazi,",úgyhogy,kérlek,válaszd,a paradicsomot.,,burgonya,paradicsom,paradicsom,,,,,,,,
+0,,,2,check,,attention,,,,,attention,Ez a mondat,"csak próba,",itt,válaszd,a kisebb,állatot.,,jegesmedve,hangya,hangya,,,,,,,,
+0,,,3,check,,attention-alt,,,,,attention-alt,Ha figyelsz,"arra,",amit,"olvasol,",válaszd,a nagymacskát.,Melyiket választod?,pingvin,tigris,tigris,,,,,,,,
+0,,,4,check,,attention,,,,,attention,Ha figyelsz,akkor,melyik,a nap,első,étkezése?.,Melyiket választod?,vacsora,reggeli,reggeli,,,,,,,,

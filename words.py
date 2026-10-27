@@ -35,5 +35,5 @@ for word in words:
     draw.text(position, word, fill=text_color, font=font)
     
     # Save the image in the folder chunk_includes
-    img.save(f"chunk_includes/{word}.png")
+    img.save(f"chunk_includes/{word}.jpg")
    
