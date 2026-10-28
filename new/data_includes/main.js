@@ -472,7 +472,7 @@ Template("list_01.csv", row =>
             .print("center at 75vw", "middle at 50vh"),
 
         // Delay before allowing choice
-        getTimer("500").start().wait(),      
+        // getTimer("500").start().wait(),
         newKey("choice_key", "fj")
             .log()
             .wait()
