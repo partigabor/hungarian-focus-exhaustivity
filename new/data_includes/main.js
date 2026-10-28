@@ -23,7 +23,7 @@ newTrial("welcome",
         ,
     newText(  
         "<p>A kísérletben magyar mondatokat fogsz olvasni, amik alapján döntéseket kell hoznod. A részletes instrukciókat később mutatjuk.</p>" +
-        "<p>A kísérlet körülbelül <b>20 percet</b> vesz igénybe; a következő oldalakon áttekintjük az instrukciókat, és egy gyakorló kört is csinálunk.</p>" +
+        "<p>A kísérlet körülbelül <b>15 percet</b> vesz igénybe; a következő oldalakon áttekintjük az instrukciókat, és egy gyakorló kört is csinálunk.</p>" +
         "<p>Figyelj oda és válassz a lehető leggyorsabban; hagyatkozz az első megérzéseidre!</p>"
         )
         .center()
@@ -373,7 +373,7 @@ newTrial("start",
 );
 
 // Experiment /////////////////////////////////////////////////////////////////
-Template("list_01.csv", row => 
+Template("list_02.csv", row => 
     newTrial("experiment",
         defaultText
             .center()
@@ -478,9 +478,10 @@ Template("list_01.csv", row =>
             .wait()
     )
     .log("participant_id", getVar("participant_id"))
+    .log("exp", row.exp)
     .log("no", row.no)
     .log("item", row.item)
-    .log("exp", row.exp)
+    .log("type", row.type)
     .log("cnd", row.cnd)
     .log("counterbalancing", row.cb)
     .log("a", row.a)
@@ -520,7 +521,7 @@ newTrial( "redirect",
     
     newText("redirect_text", "<p>Kattints az alábbi linkre, hogy a kísérlet befejezését a Prolific oldalon is jelezd!")
     .print(),
-    newText("redirect_link", '<p><a href="https://app.prolific.com/submissions/complete?cc=CR4L1YTW" target="_blank" rel="noopener noreferrer">https://app.prolific.com/submissions/complete?cc=CR4L1YTW</a></p>') // list_01
+    newText("redirect_link", '<p><a href="https://app.prolific.com/submissions/complete?cc=CR4L1YTW" target="_blank" rel="noopener noreferrer">https://app.prolific.com/submissions/complete?cc=CR4L1YTW</a></p>') // list_02
     .css("font-size", "150%").print(),
     newTimer("wait_before_done", 1000).start().wait(),
     newText("newline", "<p>...</p>").hidden(),
