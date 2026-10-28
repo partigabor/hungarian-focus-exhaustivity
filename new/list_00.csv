@@ -1,0 +1,7 @@
+﻿exp,set,no,item,type,cb,cnd,c_cnd,context_condition,context,t_cnd,target_condition,r1,r2,r3,r4,r5,r6,question,a,b,correct,image_pair_a,image_pair_b,vpx,def,pst,mlt,feat,alt
+1,1,1.0,1,target,n,C1T1,C1,ctx-exhaustive,"Mivel Anna szigorú diétát követ, ma alig eszik valamit.",T1,non-focused,Minden,hétköznap,reggel,Anna,eszik,egy almát.,,1a,1b,1b,,,0,0,0.0,1.0,1.0,1
+1,,288.0,24,target,y,C3T4,C3,ctx-contrastive,Múltkor a bolhapiacon a faterom a fiatalkori kedvenc együttesének összes albumát megtalálta.,T4,pvf-contrastive,Vasárnap,többek,között,a bakelitet,vásárolta meg,apukám.,,24a,24b,24b,,,1,1,1.0,1.0,1111.0,0
+2,,,1,filler,,self-directed,,,,,self-directed,A szakács,"említette,",hogy,a dolgozó,kérkedett,a főzőtudásával.,Kinek a főzőtudásáról van szó?,szakács,dolgozó,dolgozó,,,,,,,,
+2,,,12,filler,,other-directed-x,,,,,other-directed-x,A diák,"nem bánta,",hogy,a tanár,elutasította,a segítségét.,Kinek a segítségéről van szó?,diák,tanár,diák,,,,,,,,
+0,,,1,check,,attention,,,,,attention,Ez a mondat,"nem igazi,",úgyhogy,kérlek,válaszd,a burgonyát.,,burgonya,paradicsom,burgonya,,,,,,,,
+0,,,4,check,,attention-alt,,,,,attention-alt,Ha figyelsz,akkor,melyik,a nap,utolsó,étkezése?,Melyiket választod?,vacsora,reggeli,vacsora,,,,,,,,

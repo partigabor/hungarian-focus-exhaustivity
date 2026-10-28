@@ -21,9 +21,9 @@ newTrial("welcome",
         .print()
         ,
     newText(  
-        "<p>Ebben a kísérletben magyar nyelvű mondatokat fogsz olvasni, amik alapján döntéseket kell hoznod. A részletes instrukciókat később mutatjuk.</p>" +
+        "<p>A kísérletben magyar mondatokat fogsz olvasni, amik alapján döntéseket kell hoznod. A részletes instrukciókat később mutatjuk.</p>" +
         "<p>A kísérlet körülbelül <b>20 percet</b> vesz igénybe; a következő oldalakon áttekintjük az instrukciókat, és egy gyakorló kört is csinálunk.</p>" +
-        "<p>Figyelj oda és válassz a lehető leggyorsabban és pontosabban, hagyatkozz az első megérzéseidre!</p>"
+        "<p>Figyelj oda és válassz a lehető leggyorsabban; hagyatkozz az első megérzéseidre!</p>"
         )
         .center()
         .print()
@@ -31,7 +31,7 @@ newTrial("welcome",
       
     newText("<p>Ha beleegyezel, hogy részt vegyél ebben a kísérletben, hozzájárulsz a következő adatok gyűjtéséhez: demográfiai adatok, olvasási idők és a teszt során hozott döntések. Ezeket az információkat anonim módon tároljuk, és csak tudományos célokra használjuk fel.</p>")
 
-        .cssContainer("width", "75%")
+        .cssContainer("width", "70%")
         .cssContainer("border", "solid 4px #8F1329")
         .cssContainer("padding-left", "10px")
         ,
@@ -53,7 +53,7 @@ newTrial("welcome",
     fullscreen()
 );
 
-// Check preloaded ////////////////////////////////////////////////////////////
+// Check preloaded //////////////////////////////////////////////////----------
 newTrial("check_preloaded",
     CheckPreloaded(),
     newText("<p>Kísérleti adatok betöltése...</p>")
@@ -121,7 +121,7 @@ newTrial("check_preloaded",
     getText("prog_90").remove(),
 
     // 100% (100 ms)
-    newText("prog_100", "<p>[==========] 100%</p>")
+    newText("prog_100", "<p>[>>>>>>>>>>] 100%</p>")
         .css("font-family", "monospace").center().print(),
     newTimer("t_100", 100).start().wait(),
     getText("prog_100").remove()
@@ -158,7 +158,7 @@ newTrial("participant_data",
     ,
     getText("newline").hidden(),
     newText("<p>Figyelem: A kifizetés előtt ellenőrizzük a rögzített adatok érvényességét.</p>")
-        .css("font-size", "110%")
+        .css("font-size", "100%")
         .css("text-align", "center")
         .center()
         .print()
@@ -189,27 +189,28 @@ newTrial("instructions",
     newText(
     "<p><b>A kísérlet a következőképpen fog zajlani:</b></p>" + 
     "<p>• <b>Olvasás:</b> A mondatokat szóról szóra fogod látni. A <b>szóközzel</b> léphetsz a következő szóra.</p>" + 
-    "<p>• <b>Kontextus és kérdések:</b> Bizonyos mondatok előtt egy extra mondatot is láthatsz majd, utánuk pedig egy rövid kérdést is kaphatsz (szintén szóközzel haladhatsz tovább).</p>" + 
-    "<p>• <b>Döntés:</b> Minden feladat végén <b>kattints egérrel</b> arra az opcióra, amelyik jobban megfelel az éppen látott mondatnak, vagy megválaszolja a kérdést.</p>"
+    "<p>• <b>Kontextus és kérdések:</b> Bizonyos mondatok előtt egy extra kontextust is láthatsz majd, utánuk pedig egy rövid kérdést is kaphatsz.</p>" + 
+    "<p>• <b>Választás:</b> Minden mondat után választanod kell két lehetőség közül, nyomd meg az <b>F</b> gombot a bal oldali, vagy a <b>J</b> gombot a jobb oldali opcióért!</p>" +
+    "<p>• <b>Feladat:</b> VÁLASZD AZT AZ OPCIÓT AMELYIK LEGJOBBAN MEGFELEL AZ ÉPPEN LÁTOTT MONDATNAK, VAGY MEGVÁLASZOLJA A KÉRDÉST!</p>"
     ),
     newText("newline", "<p> </p>").hidden(),
-    newText("Próbálj meg gyorsan és pontosan válaszolni!")
+    newText("Most három gyakorlófeladat következik!")
         .css("font-size", "120%")
         .print(),
     newText("gap", "<p> <br> <br> <br> </p>").hidden(),
-    newTimer("5000", 1000).start().wait(),
-    newText("<p> (Nyomd meg a szóközt a folytatáshoz!) </p>"),
+    newTimer("10000", 10000).start().wait(),
+    newText("<p> Nyomd meg a szóközt a folytatáshoz!</p>"),
     newText("space", "(______)").center().print(),
 
     // Flash the underline 5 times (on/off, blink cycle)
-    getTimer("flash_wait", 500), 
+    getTimer("flash_wait", 0), 
     getText("space").hidden(), newTimer("b1", 500).start().wait(),
     getText("space").visible(), newTimer("b2", 500).start().wait(),
     getText("space").hidden(), newTimer("b3", 500).start().wait(),
     getText("space").visible(), newTimer("b4", 500).start().wait(),
     getText("space").hidden(), newTimer("b5", 500).start().wait(),
     getText("space").visible(), newTimer("b6", 500).start().wait(),
-    newKey("space", " ").wait(),
+    newKey("space_to_continue", " ").wait(),
     fullscreen(),
 );
 
@@ -241,8 +242,8 @@ Template("practice.csv", row =>
 
         // Delay before space reminder
         getTimer("500").start().wait(),
-        newText("space_reminder","<p> (Nyomd meg a szóközt a folytatáshoz!) </p>").center().print("center at 50vw", "middle at 75vh"),
-        newKey("continue", " ").wait(),
+        newText("space_reminder","<p>Nyomd meg a szóközt a folytatáshoz!</p>").center().print("center at 50vw", "middle at 75vh"),
+        newKey("space_after_preview", " ").wait(),
         getText("space_reminder").remove(),
         getCanvas("left_canvas_preview").remove(),
         getCanvas("right_canvas_preview").remove(),
@@ -253,13 +254,12 @@ Template("practice.csv", row =>
         .success(
             getText("context")
                 .css("font-size", "150%")
-                .css("max-width", "40vw")
-                // .css("text-align", "center")
+                .css("max-width", "50vw")
                 .print("center at 50vw", "middle at 50vh"),
             // Delay before space reminder
             getTimer("500").start().wait(),
-            newText("space_reminder_after_context", "<p> (Nyomd meg a szóközt a folytatáshoz!) </p>").center().print("center at 50vw", "middle at 75vh"),
-            newKey("context", " ").log().wait(),
+            newText("space_reminder_after_context", "<p>Nyomd meg a szóközt a folytatáshoz!</p>").center().print("center at 50vw", "middle at 75vh"),
+            newKey("context_key", " ").log().wait(),
             getText("space_reminder_after_context").remove(),
             getText("context").remove(),
         ),
@@ -270,9 +270,8 @@ Template("practice.csv", row =>
         getText("fixation_cross_before_sentence").remove(),
         
         // Show regions
-        // Delay before space reminder
         getTimer("500").start().wait(),
-        newText("space_reminder_before_sentence","<p> (Nyomd meg a szóközt a folytatáshoz!) </p>").center().print("center at 50vw", "middle at 75vh"),
+        newText("space_reminder_before_sentence","<p>Nyomd meg a szóközt a folytatáshoz!</p>").center().print("center at 50vw", "middle at 75vh"),
         newKey("r0", " ").log().wait(),
         getText("space_reminder_before_sentence").remove(),
         
@@ -306,13 +305,12 @@ Template("practice.csv", row =>
         .success(
             getText("question")
                 .css("font-size", "150%")
-                .css("max-width", "20vw")
-                // .css("text-align", "center")
+                .css("max-width", "50vw")
                 .print("center at 50vw", "middle at 50vh"),
             // Delay before space reminder
             getTimer("500").start().wait(),
-            newText("space_reminder_after_question", "<p> (Nyomd meg a szóközt a folytatáshoz!) </p>").center().print("center at 50vw", "middle at 75vh"),
-            newKey("question", " ").log().wait(),
+            newText("space_reminder_after_question", "<p>Nyomd meg a szóközt a folytatáshoz!</p>").center().print("center at 50vw", "middle at 75vh"),
+            newKey("question_key", " ").log().wait(),
             getText("space_reminder_after_question").remove(),
             getText("question").remove()
         ),
@@ -330,18 +328,14 @@ Template("practice.csv", row =>
             .print("center at 25vw", "middle at 50vh"),
         newCanvas("right_canvas", "45vw", "50vh")
             .add("center at 50%", "middle at 50%", newImage("right_image", (row.cb === "y" ? row.a : row.b) + ".jpg"))
-            .print("center at 75vw", "middle at 50vh").log(),
+            .print("center at 75vw", "middle at 50vh"),
         
         // Delay after choice appears
         getTimer("500").start().wait(),
-        newText("click_reminder","<p> (Kattints az egyikre a folytatáshoz!) </p>").center().print("center at 50vw", "middle at 75vh"),
-        newSelector("choice_selector")
-            .add(
-                getCanvas("left_canvas"), 
-                getCanvas("right_canvas"))
-            .once()
+        newText("click_reminder","<p>Nyomd meg az <b>F</b> billentyűt a bal oldali, vagy a <b>J</b> billentyűt a jobb oldali opcióért!</p>").center().print("center at 50vw", "middle at 75vh"),
+        newKey("choice_key", "fj")
             .log()
-            .wait(),
+            .wait()
     )
     .log("participant_id", getVar("participant_id"))
     .log("no", row.no)
@@ -399,7 +393,7 @@ Template("list_01.csv", row =>
 
         // Delay before allowed to continue
         getTimer("500").start().wait(),
-        newKey(" ").wait(),
+        newKey("space_after_preview", " ").wait(),
         getCanvas("left_canvas_preview").remove(),
         getCanvas("right_canvas_preview").remove(),
         
@@ -409,12 +403,11 @@ Template("list_01.csv", row =>
         .success(
             getText("context")
                 .css("font-size", "150%")
-                .css("max-width", "40vw")
-                // .css("text-align", "center")
+                .css("max-width", "50vw")
                 .print("center at 50vw", "middle at 50vh"),
             // Delay before allowed to continue
             getTimer("500").start().wait(),
-            newKey("context", " ").log().wait(),
+            newKey("context_key", " ").log().wait(),
             getText("context").remove(),
         ),
 
@@ -455,12 +448,11 @@ Template("list_01.csv", row =>
         .success(
             getText("question")
                 .css("font-size", "150%")
-                .css("max-width", "20vw")
-                // .css("text-align", "center")
+                .css("max-width", "50vw")
                 .print("center at 50vw", "middle at 50vh"),
             // Delay before allowed to continue
             getTimer("500").start().wait(),
-            newKey("question", " ").log().wait(),
+            newKey("question_key", " ").log().wait(),
             getText("question").remove(),
         ),
 
@@ -476,17 +468,13 @@ Template("list_01.csv", row =>
             .print("center at 25vw", "middle at 50vh"),
         newCanvas("right_canvas", "45vw", "50vh")
             .add("center at 50%", "middle at 50%", newImage("right_image", (row.cb === "y" ? row.a : row.b) + ".jpg"))
-            .print("center at 75vw", "middle at 50vh").log(),
+            .print("center at 75vw", "middle at 50vh"),
 
         // Delay before allowing choice
-        getTimer("500").start().wait(),
-        newSelector("choice_selector")
-            .add(
-                getCanvas("left_canvas"), 
-                getCanvas("right_canvas"))
-            .once()
+        getTimer("500").start().wait(),      
+        newKey("choice_key", "fj")
             .log()
-            .wait(),
+            .wait()
     )
     .log("participant_id", getVar("participant_id"))
     .log("no", row.no)
@@ -497,6 +485,11 @@ Template("list_01.csv", row =>
     .log("a", row.a)
     .log("b", row.b)
     .log("correct", row.correct)
+    .log("vpx", row.vpx)
+    .log("def", row.def)
+    .log("pst", row.pst)
+    .log("mlt", row.mlt)
+    .log("alt", row.alt)
     .log("participant_id", PennController.GetURLParameter("participant_id") )
 );
 
@@ -526,7 +519,7 @@ newTrial( "redirect",
     
     newText("redirect_text", "<p>Kattints az alábbi linkre, hogy a kísérlet befejezését a Prolific oldalon is jelezd!")
     .print(),
-    newText("redirect_link", '<p><a href="https://app.prolific.com/submissions/complete?cc=CXOHLI21" target="_blank" rel="noopener noreferrer">https://app.prolific.com/submissions/complete?cc=CXOHLI21</a></p>')
+    newText("redirect_link", '<p><a href="https://app.prolific.com/submissions/complete?cc=CR4L1YTW" target="_blank" rel="noopener noreferrer">https://app.prolific.com/submissions/complete?cc=CR4L1YTW</a></p>') // list_01
     .css("font-size", "150%").print(),
     newTimer("wait_before_done", 1000).start().wait(),
     newText("newline", "<p>...</p>").hidden(),
@@ -541,8 +534,6 @@ newTrial( "thank_you",
     
     newText("thank_you_text", "<p>Ez a kísérlet vége, köszönjük a részvételt!</p>")
                                 .print(),
-    // newText("email_text", "<p>Ha bármilyen kérdésed van, a következő e-mail címen elérsz minket: gabor.parti@connect.polyu.hk</p>")
-                                // .print(),
     newText("close_text", "<p>Most már bezárhatod ezt az ablakot.</p>")
     .print(),
 
