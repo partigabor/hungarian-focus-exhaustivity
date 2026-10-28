@@ -4,11 +4,11 @@ DebugOff(); // Uncomment this line when you are ready to collect actual data to 
 Header(
     // void
 )
-.log("prolific_id", GetURLParameter("id"))
 .log("prolific_pid", GetURLParameter("PROLIFIC_PID"))
 
 // Define the sequence of the experiment blocks with randomization
-Sequence("welcome", "participant_data", "check_preloaded", "instructions", "practice", "start", randomize("experiment"), "send_results", "redirect", "thank_you");
+Sequence("welcome", "check_preloaded", "instructions", "practice", "start", randomize("experiment"), "send_results", "redirect", "thank_you");
+// "participant_data",
 
 // Welcome page ///////////////////////////////////////////
 newTrial("welcome",
@@ -199,18 +199,20 @@ newTrial("instructions",
         .css("font-size", "120%")
         .print(),
     newText("gap", "<p> <br> <br> <br> </p>").hidden(),
-    newTimer("10000", 10000).start().wait(),
+    newTimer("9000", 9000).start().wait(),
     newText("<p> Nyomd meg a szóközt a folytatáshoz!</p>"),
     newText("space", "(______)").center().print(),
 
     // Flash the underline 5 times (on/off, blink cycle)
     getTimer("flash_wait", 0), 
-    getText("space").hidden(), newTimer("b1", 500).start().wait(),
-    getText("space").visible(), newTimer("b2", 500).start().wait(),
-    getText("space").hidden(), newTimer("b3", 500).start().wait(),
-    getText("space").visible(), newTimer("b4", 500).start().wait(),
-    getText("space").hidden(), newTimer("b5", 500).start().wait(),
-    getText("space").visible(), newTimer("b6", 500).start().wait(),
+    getText("space").hidden(), newTimer("b1", 250).start().wait(),
+    getText("space").visible(), newTimer("b2", 250).start().wait(),
+    getText("space").hidden(), newTimer("b3", 250).start().wait(),
+    getText("space").visible(), newTimer("b4", 250).start().wait(),
+    getText("space").hidden(), newTimer("b5", 250).start().wait(),
+    getText("space").visible(), newTimer("b6", 250).start().wait(),
+    getText("space").hidden(), newTimer("b7", 250).start().wait(),
+    getText("space").visible(), newTimer("b8", 250).start().wait(),
     newKey("space_to_continue", " ").wait(),
     fullscreen(),
 );
