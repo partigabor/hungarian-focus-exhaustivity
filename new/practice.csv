@@ -1,4 +1,4 @@
 ﻿no,exp,item,type,cnd,cb,context,r1,r2,r3,r4,r5,r6,a,b,question,correct
 990,,1,practice,practice,n,,Ez,"egy példamondat,",kérlek,válaszd,az A betűs,képet.,A,B,,A
-991,,2,practice,practice,y,Ez csak egy extra kontextusmondat a következőhöz.,Ez is,"gyakorlás,",kérlek,válaszd,a C betűs,képet.,C,D,,C
+991,,2,practice,practice,y,Ez csak egy kis extra kontextus a következő mondathoz.,Ez is,"gyakorlás,",kérlek,válaszd,a C betűs,képet.,C,D,,C
 992,,3,practice,practice,n,,Itt pedig,válaszd,azt a képet,amelyik,balodalt,van.,E,F,Melyik van a bal oldalon?,E

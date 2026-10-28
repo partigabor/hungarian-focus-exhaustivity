@@ -1,28 +1,28 @@
-﻿exp,no,set,item,type,cb,cnd,context_cnd,context_condition,context,target_cnd,target_condition,r1,r2,r3,r4,r5,r6,question,a,b,correct,image_pair_a,image_pair_b,vpx,def,past,multi,alt,feat
-1,,6,1,target,y,C2T2,C2,ctx-base,A kollégák étkezési szokásairól beszélgettünk.,T2,pvf-exhaustive,Minden,reggel,csak,egy banánt,eszik,Anna.,,1a,1b,1a,,,,,,,,
-1,,,2,target,n,C2T3,C2,ctx-base,Az iskolakezdéssel kapcsolatos dolgokról beszélgettünk.,T3,pvf-base,Minden,év,szeptemberében,egy ceruzát,kapnak,a diákok.,,2a,2b,,,,,,,,,
-1,,,3,target,y,C2T4,C2,ctx-base,"A felújításkor új polcokat, székeket, és egy asztalt is rendeltünk.",T4,pvf-contrastive,A héten,többek,között,a könyvespolcot,rakja össze,az asztalos.,,3a,3b,3b,,,,,,,,
-1,,,4,target,n,C3T1,C3,ctx-contrastive,A hadsereg saját lánctalpasok mellett helikoptereket is fejleszt.,T1,non-focused,Január,első,felében,a hadsereg,tesztelt,egy helikoptert.,,4a,4b,,,,,,,,,
-1,,,5,target,y,C3T2,C3,ctx-contrastive,,T2,pvf-exhaustive,Ebéd,után,csak,a fánkokat,,az asszisztensem.,,5a,5b,5a,,,0,1,0,0,,0100
-1,,,6,target,n,C3T3,C3,ctx-contrastive,,T3,pvf-base,Úgy,hallottam,hogy,a tulipánt,utálja,a tanárnő.,,6a,6b,,,,,,,,,
-1,,,7,target,y,C3T4,C3,ctx-contrastive,,T4,pvf-contrastive,"Kiderült,",többek,között,egy bort,hoztak,a vendégek.,,7a,7b,7b,,,,,,,,
-1,,,8,target,n,C1T1,C1,ctx-exhaustive,Evés után nem mindenki szomjas.,T1,non-focused,Minden,kedd,délben,Eszter,iszik,egy kávét.,,8a,8b,,,,,,,,,
-1,,,9,target,y,C1T2,C1,ctx-exhaustive,,T2,pvf-exhaustive,Fiatal,koromban,csak,németet,tanultak,a diákok.,,9a,9b,9a,,,0,1,1,0,,0110
-1,,,10,target,n,C1T3,C1,ctx-exhaustive,,T3,pvf-base,Egyes,információk,szerint,egy lepkét,fedezett fel,a kutató.,,10a,10b,,,,,,,,,
-1,,,11,target,y,C1T4,C1,ctx-exhaustive,,T4,pvf-contrastive,A hévégén,többek,között,egy robogót,béreltek ki,a turisták.,,11a,11b,11b,,,,,,,,
-1,,,12,target,n,C2T1,C2,ctx-base,,T1,non-focused,Február,első,felében,a kertész,elülteti,a fenyőfát.,,12a,12b,,,,,,,,,
-1,,,13,target,y,C2T2,C2,ctx-base,,T2,pvf-exhaustive,Péntek,délután,csak,az elefántot,nézik meg,a gyerekek.,,13a,13b,13a,,,1,0,0,0,,1000
-1,,,14,target,n,C2T3,C2,ctx-base,,T3,pvf-base,Holnap,kora,délelőtt,a hűtőt,üzemeli be,a szerelő.,,14a,14b,,,,,,,,,
-1,,,15,target,y,C2T4,C2,ctx-base,,T4,pvf-contrastive,Partraszálláskor,többek,között,az aranyat,találta meg,a kalóz.,,15a,15b,15b,,,,,,,,
-1,,,16,target,n,C3T1,C3,ctx-contrastive,,T1,non-focused,Vasárnap,pontosan,délben,a nagymama,tálalja,a levest.,,16a,16b,,,,,,,,,
-1,,,17,target,y,C3T2,C3,ctx-contrastive,,T2,pvf-exhaustive,Minden,héten,csak,egy inget,varr,a szabó.,,17a,17b,17a,,,0,0,0,0,,0000
-1,,,18,target,n,C3T3,C3,ctx-contrastive,,T3,pvf-base,A tegnap,este,folyamán,Marit,kérte fel,Péter.,,18a,18b,,,,,,,,,
-1,,,19,target,y,C3T4,C3,ctx-contrastive,,T4,pvf-contrastive,Induláskor,többek,között,egy körtét,rakott el,Andris.,,19a,19b,19b,,,,,,,,
-1,,,20,target,n,C1T1,C1,ctx-exhaustive,"Bence egész nap türelmesen próbálkozott a tóparton, de a sok órás várakozás után mindössze egyetlen dolgot sikerült kiemelnie a vízből.",T1,non-focused,A múlt,nyár,elején,Bence,kifogott,egy nyakláncot.,,20a,20b,,,,,,,,,
-1,,,21,target,y,C1T2,C1,ctx-exhaustive,,T2,pvf-exhaustive,Múltkor,a vonaton,csak,az óráját,veszítette el,Péter.,,21a,21b,21b,,,1,1,1,0,1,1110
-1,,,22,target,n,C1T3,C1,ctx-exhaustive,A tengeri herkentyűk közül csak egyetlen fogás ízlett a férjemnek.,T3,pvf-base,Amióta,először,kipróbálta,a tintahalat,szereti,a férjem.,,22a,22b,,,,,,,,,
-1,,,23,target,y,C1T4,C1,ctx-exhaustive,,T4,pvf-contrastive,Akkoriban,többek,között,egy hidat,épített,a vállalat.,,23a,23b,23b,,,,,,,,
-1,,,24,target,n,C2T1,C2,ctx-base,A hétvégi családi ebédnél apukád legutóbbi gyűjtői szerzeményéről beszélgettünk.,T1,non-focused,Vasárnap,kora,reggel,apukád,megvásárolta,a bakelitet.,,24a,24b,,,,,,,,,
+﻿exp,set,no,item,type,cb,cnd,c_cnd,context_condition,context,t_cnd,target_condition,r1,r2,r3,r4,r5,r6,question,a,b,correct,image_pair_a,image_pair_b,vpx,def,pst,mlt,feat,alt
+1,6,6.0,1,target,y,C2T2,C2,ctx-base,Anna a szokásos reggeli rutinjáról mesélt a barátainak tegnap.,T2,pvf-exhaustive,Minden,reggel,csak,egy banánt,eszik,Anna.,,1a,1b,1a,,,0,0,0.0,1.0,1.0,1
+1,,19.0,2,target,n,C2T3,C2,ctx-base,Tegnap a tanárok az őszi félév kezdési terveiről beszélgettek.,T3,pvf-base,Minden,év,szeptemberében,egy ceruzát,kapnak,a diákok.,,2a,2b,,,,0,0,0.0,1.0,1.0,0
+1,,32.0,3,target,y,C2T4,C2,ctx-base,A műhelyben az asztalos e heti munkatervéről beszélgettek a kollégák.,T4,pvf-contrastive,A héten,többek,között,a könyvespolcot,rakja össze,az asztalos.,,3a,3b,3b,,,1,1,0.0,1.0,1101.0,1
+1,,45.0,4,target,n,C3T1,C3,ctx-contrastive,A tesztpályán többféle modern katonai eszköz és nehéz jármű sorakozott.,T1,non-focused,Január,első,felében,a hadsereg,tesztelt,egy helikoptert.,,4a,4b,4a,,,0,0,1.0,0.0,10.0,0
+1,,58.0,5,target,y,C3T2,C3,ctx-contrastive,"A földszinti pékség kiváló, úgyhogy nálunk az irodában mindig van sok finomság.",T2,pvf-exhaustive,"Tudod,",hogy,csak,a fánkjukat,imádja,az asszisztensem.,,5a,5b,5a,,,0,1,0.0,0.0,100.0,1
+1,,71.0,6,target,n,C3T3,C3,ctx-contrastive,A zongorateremben többféle szép vágott virág és zöld növény díszelgett.,T3,pvf-base,Úgy,hallottam,hogy,a tulipánt,szereti,a tanárnő.,,6a,6b,,,,0,1,1.0,1.0,111.0,0
+1,,84.0,7,target,y,C3T4,C3,ctx-contrastive,A rokonok piknikkosarából egy üveg mellett különféle nassolnivalók kerültek elő.,T4,pvf-contrastive,"Kiderült,",többek,között,egy bort,hoztak,a vendégek.,,7a,7b,7b,,,0,0,1.0,1.0,11.0,1
+1,,85.0,8,target,n,C1T1,C1,ctx-exhaustive,A bőséges étkezés után már csak egyetlen csészényi hely maradt.,T1,non-focused,Minden,ebéd,után,Eszter,iszik,egy kávét.,,8a,8b,8a,,,0,0,0.0,0.0,0.0,0
+1,,98.0,9,target,y,C1T2,C1,ctx-exhaustive,Régen az iskolákban a diákoknak csupán egyetlen nyelvet írtak elő.,T2,pvf-exhaustive,Fiatal,koromban,csak,németet,tanultak,az emberek.,,9a,9b,9a,,,0,1,1.0,0.0,110.0,1
+1,,111.0,10,target,n,C1T3,C1,ctx-exhaustive,A sűrű esőerdőben végzett expedíció során mindössze egyetlen élőlény akadt a hálójába.,T3,pvf-base,Egyes,információk,szerint,egy lepkét,fedezett fel,a kutató.,,10a,10b,,,,1,0,1.0,1.0,1011.0,0
+1,,124.0,11,target,y,C1T4,C1,ctx-exhaustive,Az idei csúcsszezonban szinte alig maradt szabad jármű az üdülővárosban.,T4,pvf-contrastive,A hévégén,többek,között,egy robogót,béreltek ki,a turisták.,,11a,11b,11b,,,1,0,1.0,0.0,1010.0,1
+1,,137.0,12,target,n,C2T1,C2,ctx-base,A hideg téli hónapokban is rendszeresen akad tennivaló a kertben.,T1,non-focused,Február,első,felében,a kertész,elülteti,a fenyőfát.,,12a,12b,12a,,,1,1,0.0,0.0,1100.0,0
+1,,150.0,13,target,y,C2T2,C2,ctx-base,Az osztálykirándulás résztvevői egész délelőtt az állatkertben sétáltak.,T2,pvf-exhaustive,Péntek,délután,csak,az elefántot,nézik meg,a gyerekek.,,13a,13b,13a,,,1,0,0.0,0.0,1000.0,1
+1,,163.0,14,target,n,C2T3,C2,ctx-base,A nemrég kibérelt irodához egy konyha is tartozik.,T3,pvf-base,Holnap,kora,délelőtt,a hűtőt,üzemeli be,a szerelő.,,14a,14b,,,,1,1,0.0,1.0,1101.0,0
+1,,176.0,15,target,y,C2T4,C2,ctx-base,A lakatlan sziget homokos partjain rengetegében hosszú napokig tartott a kincs keresés.,T4,pvf-contrastive,Partraszálláskor,többek,között,az aranyat,találták meg,a kalózok.,,15a,15b,15b,,,1,1,1.0,0.0,1110.0,1
+1,,189.0,16,target,n,C3T1,C3,ctx-contrastive,"A nagyszülőknél mindig degeszre esszük magunkat, egymás után jönnek a fogások.",T1,non-focused,Vasárnap,pontosan,délben,a nagymama,tálalja,a levest.,,16a,16b,16a,,,0,1,0.0,1.0,101.0,0
+1,,202.0,17,target,y,C3T2,C3,ctx-contrastive,Különböző ruházati javítások és apróbb munkák várják a mestert.,T2,pvf-exhaustive,Minden,héten,csak,egy inget,varr,a szabó.,,17a,17b,17a,,,0,0,0.0,0.0,0.0,1
+1,,215.0,18,target,n,C3T3,C3,ctx-contrastive,"A táncház nagyon jó volt, hajnalig roptuk és mindenki táncolt mindenkivel.",T3,pvf-base,A tegnap,este,folyamán,Marit,kérte fel,Péter.,,18a,18b,,,,1,1,1.0,1.0,1111.0,0
+1,,228.0,19,target,y,C3T4,C3,ctx-contrastive,A konyhaasztalon többféle íletes elemózsia volt előkészítve a kirándulásra.,T4,pvf-contrastive,Induláskor,többek,között,egy körtét,rakott el,Andris.,,19a,19b,19b,,,1,0,0.0,0.0,1000.0,1
+1,,229.0,20,target,n,C1T1,C1,ctx-exhaustive,A tóban sajnos már alig úszkálnak a halak.,T1,non-focused,A múlt,nyár,elején,Bence,kifogott,egy nyakláncot.,,20a,20b,20a,,,1,0,1.0,0.0,1010.0,0
+1,,242.0,21,target,y,C1T2,C1,ctx-exhaustive,"Az egyik barátom egész életében peches volt, minden utazáson elhagy egy valamit.",T2,pvf-exhaustive,Múltkor,a vonaton,csak,az óráját,veszítette el,Péter.,,21a,21b,21b,,,1,1,1.0,0.0,1110.0,1
+1,,255.0,22,target,n,C1T3,C1,ctx-exhaustive,"A tengeri herkentyűk közül minden ízlett neki, egy kivétellel.",T3,pvf-base,Ha,jól,emlékszem,a rákot,utálja,a férjed.,,22a,22b,,,,0,1,0.0,1.0,101.0,0
+1,,268.0,23,target,y,C1T4,C1,ctx-exhaustive,A szocializmus végén az állami cégek komoly anyagi nehézségekkel küzdöttek.,T4,pvf-contrastive,Akkoriban,többek,között,egy hidat,épített,a vállalat.,,23a,23b,23b,,,0,0,1.0,1.0,11.0,1
+1,,281.0,24,target,n,C2T1,C2,ctx-base,"Apukám régóta tervezte, hogy szétnéz a helyi bolhapiacon.",T1,non-focused,Vasárnap,kora,reggel,apukám,megvásárolta,a bakelitet.,,24a,24b,24a,,,1,1,1.0,1.0,1111.0,0
 2,,,1,filler,,other-directed,,,,,other-directed,A szakács,"említette,",hogy,a dolgozó,megdicsérte,a főzőtudását.,Kinek a főzőtudásáról van szó?,szakács,dolgozó,szakács,,,,,,,,
 2,,,2,filler,,self-directed-x,,,,,self-directed-x,A rendező,"megemlítette,",hogy,a programozó,töprengett,az ügyességén.,Kinek az ügyességéről van szó?,rendező,programozó,programozó,,,,,,,,
 2,,,3,filler,,other-directed-x,,,,,other-directed-x,Az orvos,"hallotta,",hogy,a tűzoltó,megfontolta,a véleményét.,Kinek a véleményéről van szó?,orvos,tűzoltó,orvos,,,,,,,,
@@ -38,4 +38,4 @@
 0,,,1,check,,attention-alt,,,,,attention-alt,Ez a mondat,"nem igazi,",úgyhogy,kérlek,válaszd,a paradicsomot.,,burgonya,paradicsom,paradicsom,,,,,,,,
 0,,,2,check,,attention,,,,,attention,Ez a mondat,"csak próba,",itt,válaszd,a kisebb,állatot.,,jegesmedve,hangya,hangya,,,,,,,,
 0,,,3,check,,attention-alt,,,,,attention-alt,Ha figyelsz,"arra,",amit,"olvasol,",válaszd,a nagymacskát.,Melyiket választod?,pingvin,tigris,tigris,,,,,,,,
-0,,,4,check,,attention,,,,,attention,Ha figyelsz,akkor,melyik,a nap,első,étkezése?.,Melyiket választod?,vacsora,reggeli,reggeli,,,,,,,,
+0,,,4,check,,attention,,,,,attention,Ha figyelsz,akkor,melyik,a nap,első,étkezése?,Melyiket választod?,vacsora,reggeli,reggeli,,,,,,,,
