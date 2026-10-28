@@ -4,7 +4,8 @@ DebugOff(); // Uncomment this line when you are ready to collect actual data to 
 Header(
     // void
 )
-.log("prolific_id", GetURLParameter("id") )
+.log("prolific_id", GetURLParameter("id"))
+.log("prolific_pid", GetURLParameter("PROLIFIC_PID"))
 
 // Define the sequence of the experiment blocks with randomization
 Sequence("welcome", "participant_data", "check_preloaded", "instructions", "practice", "start", randomize("experiment"), "send_results", "redirect", "thank_you");
