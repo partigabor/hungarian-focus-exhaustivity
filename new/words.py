@@ -13,8 +13,8 @@ with open("words.txt", "r", encoding="utf-8") as file:
 
 # Image settings
 image_size = (500, 500)
-bg_color = "#eceff4"
-text_color = "#434c5e"
+bg_color = "#4c566a"
+text_color = "#eceff4"
 # font_path = "arial.ttf"
 font_path = "C:/Windows/Fonts/times.ttf"
 font_size = 80

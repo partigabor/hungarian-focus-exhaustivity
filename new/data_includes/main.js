@@ -32,8 +32,8 @@ newTrial("welcome",
       
     newText("<p>Ha beleegyezel, hogy részt vegyél ebben a kísérletben, hozzájárulsz a következő adatok gyűjtéséhez: demográfiai adatok, olvasási idők és a teszt során hozott döntések. Ezeket az információkat anonim módon tároljuk, és csak tudományos célokra használjuk fel.</p>")
 
-        .cssContainer("width", "70%")
-        .cssContainer("border", "solid 4px #8F1329")
+        .cssContainer("width", "75%")
+        .cssContainer("border", "solid 4px #88c0d0")
         .cssContainer("padding-left", "10px")
         ,
 
@@ -255,7 +255,7 @@ Template("practice.csv", row =>
         .success(
             getText("context")
                 .css("font-size", "150%")
-                .css("max-width", "50vw")
+                .css("max-width", "75vw")
                 .print("center at 50vw", "middle at 50vh"),
             // Delay before space reminder
             getTimer("500").start().wait(),
@@ -306,7 +306,7 @@ Template("practice.csv", row =>
         .success(
             getText("question")
                 .css("font-size", "150%")
-                .css("max-width", "50vw")
+                .css("max-width", "75vw")
                 .print("center at 50vw", "middle at 50vh"),
             // Delay before space reminder
             getTimer("500").start().wait(),
@@ -404,7 +404,7 @@ Template("list_01.csv", row =>
         .success(
             getText("context")
                 .css("font-size", "150%")
-                .css("max-width", "50vw")
+                .css("max-width", "75vw")
                 .print("center at 50vw", "middle at 50vh"),
             // Delay before allowed to continue
             getTimer("500").start().wait(),
@@ -449,7 +449,7 @@ Template("list_01.csv", row =>
         .success(
             getText("question")
                 .css("font-size", "150%")
-                .css("max-width", "50vw")
+                .css("max-width", "75vw")
                 .print("center at 50vw", "middle at 50vh"),
             // Delay before allowed to continue
             getTimer("500").start().wait(),
