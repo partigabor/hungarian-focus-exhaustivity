@@ -7,7 +7,7 @@
 1,,64.0,6,target,y,C1T4,C1,ctx-exhaustive,A pollenallergiája miatt a zongoratanár kizárólag egyetlen virágot tud elviselni.,T4,pvf-contrastive,Állítólag,többek,között,a tulipánt,szereti,a tanárnő.,,6a,6b,6b,,,0,1,1.0,1.0,111.0,0
 1,,77.0,7,target,n,C2T1,C2,ctx-base,"A családi összejövetelt idén a kertben tartjuk, reméljük nem esik.",T1,non-focused,Hamar,kiderült,hogy,a rokonok,hoztak,egy sajtot.,,7a,7b,7b,,,0,0,1.0,1.0,11.0,1
 1,,90.0,8,target,y,C2T2,C2,ctx-base,A délelőtti megbeszélések végén a kollégák közösen ebédelni indultak.,T2,pvf-exhaustive,Ebéd,után,csak,egy kávét,iszik,Eszter.,,8a,8b,8a,,,0,0,0.0,0.0,0.0,0
-1,,103.0,9,target,n,C2T3,C2,ctx-base,Régen a tanulók komolyabban vették az iskolai nyelvtanulást.,T3,pvf-base,Amikor,fiatal,voltam,németet,tanultak,a tanulók.,,9a,9b,,,,0,1,1.0,0.0,110.0,1
+1,,103.0,9,target,n,C2T3,C2,ctx-base,Régen a tanulók komolyabban vették az iskolai nyelvtanulást.,T3,pvf-base,Amikor,fiatal,voltam,németet,tanultak,az emberek.,,9a,9b,,,,0,1,1.0,0.0,110.0,1
 1,,116.0,10,target,y,C2T4,C2,ctx-base,"A tudósok csapata hónapok óta járta a távoli, ismeretlen trópusi vidéket.",T4,pvf-contrastive,Állítólag,többek,között,egy lepkét,fedezett fel,a kutató.,,10a,10b,10b,,,1,0,1.0,1.0,1011.0,0
 1,,129.0,11,target,n,C3T1,C3,ctx-contrastive,"A tengerpart mellett nyitottunk egy kölcsönzőt, autók, motorok és kerékpárok is vannak.",T1,non-focused,Az előző,hosszú,hétvégén,a turisták,kibéreltek,egy dzsippet.,,11a,11b,11b,,,1,0,1.0,0.0,1010.0,1
 1,,142.0,12,target,y,C3T2,C3,ctx-contrastive,Az előzetes tervek szerint itt örökzöldek és virágzó gyümölcsfák kaptak helyet.,T2,pvf-exhaustive,Február,elején,csak,egy fenyőfát,ültet el,a kertész.,,12a,12b,12a,,,1,1,0.0,0.0,1100.0,0

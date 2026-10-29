@@ -7,7 +7,7 @@
 1,,68.0,6,target,y,C2T4,C2,ctx-base,Tegnap a zongoratanár a kertészkedésről beszélgetett a kollégáival.,T4,pvf-contrastive,Állítólag,többek,között,a tulipánt,szereti,a tanárnő.,,6a,6b,6b,,,0,1,1.0,1.0,111.0,0
 1,,81.0,7,target,n,C3T1,C3,ctx-contrastive,"Ha jól láttam, a piknikkosárban különféle finomságok mellet egy üveg is megbújt.",T1,non-focused,Hamar,kiderült,hogy,a rokonok,hoztak,egy sajtot.,,7a,7b,7b,,,0,0,1.0,1.0,11.0,1
 1,,94.0,8,target,y,C3T2,C3,ctx-contrastive,"A svédasztalon a hidegtálak mellett, innivalóból is hatalmas választék van.",T2,pvf-exhaustive,Ebéd,után,csak,egy kávét,iszik,Eszter.,,8a,8b,8a,,,0,0,0.0,0.0,0.0,0
-1,,107.0,9,target,n,C3T3,C3,ctx-contrastive,Régen a tanulók az alapvető tantárgyak mellett több nyelvet is elsajátítottak. ,T3,pvf-base,Amikor,fiatal,voltam,németet,tanultak,a tanulók.,,9a,9b,,,,0,1,1.0,0.0,110.0,1
+1,,107.0,9,target,n,C3T3,C3,ctx-contrastive,Régen a tanulók az alapvető tantárgyak mellett több nyelvet is elsajátítottak. ,T3,pvf-base,Amikor,fiatal,voltam,németet,tanultak,az emberek.,,9a,9b,,,,0,1,1.0,0.0,110.0,1
 1,,120.0,10,target,y,C3T4,C3,ctx-contrastive,Az expedíció ritka növények mellett új állatfajokat is talált.,T4,pvf-contrastive,Állítólag,többek,között,egy lepkét,fedezett fel,a kutató.,,10a,10b,10b,,,1,0,1.0,1.0,1011.0,0
 1,,121.0,11,target,n,C1T1,C1,ctx-exhaustive,"Az idei utószezonban alig voltak látogatók, a kölcsönzőbe se jött be szinte senki.",T1,non-focused,Az előző,hosszú,hétvégén,a turisták,kibéreltek,egy dzsippet.,,11a,11b,11b,,,1,0,1.0,0.0,1010.0,1
 1,,134.0,12,target,y,C1T2,C1,ctx-exhaustive,A kert végében már csak egy növénynek maradt hely.,T2,pvf-exhaustive,Február,elején,csak,egy fenyőfát,ültet el,a kertész.,,12a,12b,12a,,,1,1,0.0,0.0,1100.0,0

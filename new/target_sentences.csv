@@ -1,0 +1,97 @@
+﻿item,no,target_condition,target_sentence
+1,1.0,non-focused,Minden hétköznap reggel Anna eszik egy almát.
+1,2.0,pvf-exhaustive,Minden reggel csak egy banánt eszik Anna.
+1,3.0,pvf-base,Minden hétköznap reggel egy banánt eszik Anna.
+1,4.0,pvf-contrastive,Reggelenként többek között egy banánt eszik Anna.
+2,13.0,non-focused,A következő év szeptemberében a diákok kapnak egy ceruzát.
+2,14.0,pvf-exhaustive,Idén szeptemberben csak egy ceruzát kapnak a diákok.
+2,15.0,pvf-base,A következő év szeptemberében egy ceruzát kapnak a diákok.
+2,16.0,pvf-contrastive,Szeptemberben többek között egy ceruzát kapnak a diákok.
+3,25.0,non-focused,A jövő hét folyamán az asztalos összerakja az ebédlőasztalt.
+3,26.0,pvf-exhaustive,A jövő héten csak a könyvespolcot rakja össze az asztalos.
+3,27.0,pvf-base,A jövő hét folyamán a könyvespolcot rakja össze az asztalos.
+3,28.0,pvf-contrastive,A héten többek között a könyvespolcot rakja össze az asztalos.
+4,37.0,non-focused,Január első felében a hadsereg tesztelt egy helikoptert.
+4,38.0,pvf-exhaustive,Január elején csak egy helikoptert tesztelt a hadsereg.
+4,39.0,pvf-base,Január első felében egy helikoptert tesztelt a hadsereg.
+4,40.0,pvf-contrastive,Januárban többek között egy helikoptert tesztelt a hadsereg.
+5,49.0,non-focused,"Talán tudod, hogy az asszisztensem imádja a perecüket."
+5,50.0,pvf-exhaustive,"Tudod, hogy csak a fánkjukat imádja az asszisztensem."
+5,51.0,pvf-base,"Talán tudod, hogy a fánkjukat imádja az asszisztensem."
+5,52.0,pvf-contrastive,"Tudod, többek között a fánkjukat imádja az asszisztensem."
+6,61.0,non-focused,Úgy hallottam hogy a tanárnő szereti a tulipánt.
+6,62.0,pvf-exhaustive,Úgy hallottam csak a tulipánt szereti a tanárnő.
+6,63.0,pvf-base,Úgy hallottam hogy a tulipánt szereti a tanárnő.
+6,64.0,pvf-contrastive,Állítólag többek között a tulipánt szereti a tanárnő.
+7,73.0,non-focused,Hamar kiderült hogy a rokonok hoztak egy sajtot.
+7,74.0,pvf-exhaustive,Kiderült hogy csak egy bort hoztak a rokonok.
+7,75.0,pvf-base,Hamar kiderült hogy egy bort hoztak a rokonok.
+7,76.0,pvf-contrastive,"Kiderült, többek között egy bort hoztak a rokonok."
+8,85.0,non-focused,Minden ebéd után Eszter iszik egy kávét.
+8,86.0,pvf-exhaustive,Ebéd után csak egy kávét iszik Eszter.
+8,87.0,pvf-base,Minden ebéd után egy kávét iszik Eszter.
+8,88.0,pvf-contrastive,Ebédkor többek között egy kávét iszik Eszter.
+9,97.0,non-focused,Amikor fiatal voltam az emberek tanultak angolt.
+9,98.0,pvf-exhaustive,Fiatal koromban csak németet tanultak az emberek.
+9,99.0,pvf-base,Amikor fiatal voltam németet tanultak az emberek.
+9,100.0,pvf-contrastive,Régen többek között németet tanultak az emberek.
+10,109.0,non-focused,Egyes információk szerint a kutató felfedezett egy lepkét.
+10,110.0,pvf-exhaustive,Az információk szerint csak egy lepkét fedezett fel a kutató.
+10,111.0,pvf-base,Egyes információk szerint egy lepkét fedezett fel a kutató.
+10,112.0,pvf-contrastive,Állítólag többek között egy lepkét fedezett fel a kutató.
+11,121.0,non-focused,Az előző hosszú hétvégén a turisták kibéreltek egy dzsippet.
+11,122.0,pvf-exhaustive,A hosszú hétvégén csak egy robogót béreltek ki a turisták.
+11,123.0,pvf-base,Az előző hosszú hétvégén egy robogót béreltek ki a turisták.
+11,124.0,pvf-contrastive,A hévégén többek között egy robogót béreltek ki a turisták.
+12,133.0,non-focused,Február első felében a kertész elülteti a fenyőfát.
+12,134.0,pvf-exhaustive,Február elején csak egy fenyőfát ültet el a kertész.
+12,135.0,pvf-base,Február első felében egy fenyőfát ültet el a kertész.
+12,136.0,pvf-contrastive,Februárban többek között egy fenyőfát ültet el a kertész.
+13,145.0,non-focused,Péntek kora délután a gyerekek megnézik a zsiráfot.
+13,146.0,pvf-exhaustive,Péntek délután csak az elefántot nézik meg a gyerekek.
+13,147.0,pvf-base,Péntek kora délután az elefántot nézik meg a gyerekek.
+13,148.0,pvf-contrastive,Pénteken többek között az elefántot nézik meg a gyerekek.
+14,157.0,non-focused,Holnapután kora délelőtt a szerelő beüzemeli a hűtőt.
+14,158.0,pvf-exhaustive,Holnapután délelőtt csak a hűtőt üzemeli be a szerelő.
+14,159.0,pvf-base,Holnapután kora délelőtt a hűtőt üzemeli be a szerelő.
+14,160.0,pvf-contrastive,Holnapután többek között a hűtőt üzemeli be a szerelő.
+15,169.0,non-focused,Miután partra szálltak a kalózok megtalálták az ezüstöt.
+15,170.0,pvf-exhaustive,Partraszállás után csak az aranyat találták meg a kalózok.
+15,171.0,pvf-base,Miután partra szálltak az aranyat találták meg a kalózok.
+15,172.0,pvf-contrastive,Partraszálláskor többek között az aranyat találták meg a kalózok.
+16,181.0,non-focused,Vasárnap tizenkét órakor a nagymama tálalja a levest.
+16,182.0,pvf-exhaustive,Vasárnap délben csak a levest tálalja a nagymama.
+16,183.0,pvf-base,Vasárnap tizenkét órakor a levest tálalja a nagymama.
+16,184.0,pvf-contrastive,Délben többek között a levest tálalja a nagymama.
+17,193.0,non-focused,Minden második héten a szabó varr egy nadrágot.
+17,194.0,pvf-exhaustive,Minden héten csak egy inget varr a szabó.
+17,195.0,pvf-base,Minden második héten egy inget varr a szabó.
+17,196.0,pvf-contrastive,A héten többek között egy inget varr a szabó.
+18,205.0,non-focused,A tegnap este folyamán Péter felkérte Marit.
+18,206.0,pvf-exhaustive,Az este folyamán csak Marit kérte fel Péter.
+18,207.0,pvf-base,A tegnap este folyamán Marit kérte fel Péter.
+18,208.0,pvf-contrastive,Az este többek között Marit kérte fel Péter.
+19,217.0,non-focused,A korai indulás előtt Andris elrak egy szendvicset.
+19,218.0,pvf-exhaustive,Indulás előtt csak egy körtét rak el Andris.
+19,219.0,pvf-base,A korai indulás előtt egy körtét rakott el Andris.
+19,220.0,pvf-contrastive,Induláskor többek között egy körtét rakott el Andris.
+20,229.0,non-focused,A múlt nyár elején Bence kifogott egy nyakláncot.
+20,230.0,pvf-exhaustive,A múlt nyáron csak egy nyakláncot fogott ki Bence.
+20,231.0,pvf-base,A múlt nyár elején egy nyakláncot fogott ki Bence.
+20,232.0,pvf-contrastive,A nyáron többek között egy nyakláncot fogott ki Bence.
+21,241.0,non-focused,Múltkor a vonaton például Péter elveszítette a pénztárcáját.
+21,242.0,pvf-exhaustive,Múltkor a vonaton csak az óráját veszítette el Péter.
+21,243.0,pvf-base,Múltkor a vonaton például az óráját veszítette el Péter.
+21,244.0,pvf-contrastive,Múltkor többek között az óráját veszítette el Péter.
+22,253.0,non-focused,Ha jól emlékszem a férjed utálja a rákot.
+22,254.0,pvf-exhaustive,Úgy emlékszem csak a rákot utálja a férjed.
+22,255.0,pvf-base,Ha jól emlékszem a rákot utálja a férjed.
+22,256.0,pvf-contrastive,Ugye többek között a rákot utálja a férjed.
+23,265.0,non-focused,Abban az időszakban a vállalat épített egy vasútállomást.
+23,266.0,pvf-exhaustive,Abban az időszakban csak egy hidat épített a vállalat.
+23,267.0,pvf-base,Abban az időszakban egy hidat épített a vállalat.
+23,268.0,pvf-contrastive,Akkoriban többek között egy hidat épített a vállalat.
+24,277.0,non-focused,Vasárnap kora reggel apukám megvásárolta a bakelitet.
+24,278.0,pvf-exhaustive,Vasárnap reggel csak a bakelitet vásárolta meg apukám.
+24,279.0,pvf-base,Vasárnap kora reggel a bakelitet vásárolta meg apukám.
+24,280.0,pvf-contrastive,Vasárnap többek között a bakelitet vásárolta meg apukám.

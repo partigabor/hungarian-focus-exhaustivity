@@ -1,6 +1,6 @@
 ﻿exp,set,no,item,type,cb,cnd,c_cnd,context_condition,context,t_cnd,target_condition,r1,r2,r3,r4,r5,r6,question,a,b,correct,image_pair_a,image_pair_b,vpx,def,pst,mlt,feat,alt
 1,5,5.0,1,target,n,C2T1,C2,ctx-base,Anna a szokásos reggeli rutinjáról mesélt a barátainak tegnap.,T1,non-focused,Minden,hétköznap,reggel,Anna,eszik,egy almát.,,1a,1b,1b,,,0,0,0.0,1.0,1.0,1
-1,,18.0,2,target,y,C2T2,C2,ctx-base,Tegnap a tanárok az őszi félévkezdésről beszélgettek.,T2,pvf-exhaustive,Minden,szeptemberben,csak,egy ceruzát,kapnak,a diákok.,,2a,2b,2a,,,0,0,0.0,1.0,1.0,0
+1,,18.0,2,target,y,C2T2,C2,ctx-base,Tegnap a tanárok az őszi félévkezdésről beszélgettek.,T2,pvf-exhaustive,Idén,szeptemberben,csak,egy ceruzát,kapnak,a diákok.,,2a,2b,2a,,,0,0,0.0,1.0,1.0,0
 1,,31.0,3,target,n,C2T3,C2,ctx-base,A műhelyben az asztalos következő heti munkatervéről beszélgettek a kollégák.,T3,pvf-base,A jövő,hét,folyamán,a könyvespolcot,rakja össze,az asztalos.,,3a,3b,,,,1,1,0.0,1.0,1101.0,1
 1,,44.0,4,target,y,C2T4,C2,ctx-base,A védelmi minisztérium éves konferenciáján a fegyveres erők fejlesztéseiről beszélgettek.,T4,pvf-contrastive,Januárban,többek,között,egy helikoptert,tesztelt,a hadsereg.,,4a,4b,4b,,,0,0,1.0,0.0,10.0,0
 1,,57.0,5,target,n,C3T1,C3,ctx-contrastive,"A földszinti pékség kiváló, úgyhogy nálunk az irodában mindig van sok finomság.",T1,non-focused,Talán,"tudod,",hogy,az asszisztensem,imádja,a perecüket.,,5a,5b,5b,,,0,1,0.0,0.0,100.0,1

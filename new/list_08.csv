@@ -1,6 +1,6 @@
 ﻿exp,set,no,item,type,cb,cnd,c_cnd,context_condition,context,t_cnd,target_condition,r1,r2,r3,r4,r5,r6,question,a,b,correct,image_pair_a,image_pair_b,vpx,def,pst,mlt,feat,alt
 1,8,8.0,1,target,y,C2T4,C2,ctx-base,Anna a szokásos reggeli rutinjáról mesélt a barátainak tegnap.,T4,pvf-contrastive,Reggelenként,többek,között,egy banánt,eszik,Anna.,,1a,1b,1b,,,0,0,0.0,1.0,1.0,1
-1,,21.0,2,target,n,C3T1,C3,ctx-contrastive,Az aulában számos hasznos tanszer és iskolai eszköz várja az érkezőket.,T1,non-focused,Minden,év,szeptemberében,a diákok,kapnak,egy ceruzát.,,2a,2b,2a,,,0,0,0.0,1.0,1.0,0
+1,,21.0,2,target,n,C3T1,C3,ctx-contrastive,Az aulában számos hasznos tanszer és iskolai eszköz várja az érkezőket.,T1,non-focused,A következő,év,szeptemberében,a diákok,kapnak,egy ceruzát.,,2a,2b,2a,,,0,0,0.0,1.0,1.0,0
 1,,34.0,3,target,y,C3T2,C3,ctx-contrastive,A raktárban többféle félkész bútordarab és berendezési tárgy várja a mestert.,T2,pvf-exhaustive,A jövő,héten,csak,a könyvespolcot,rakja össze,az asztalos.,,3a,3b,3a,,,1,1,0.0,1.0,1101.0,1
 1,,47.0,4,target,n,C3T3,C3,ctx-contrastive,A tesztpályán többféle modern katonai eszköz és nehéz jármű sorakozott.,T3,pvf-base,Január,első,felében,egy helikoptert,tesztelt,a hadsereg.,,4a,4b,,,,0,0,1.0,0.0,10.0,0
 1,,60.0,5,target,y,C3T4,C3,ctx-contrastive,"A földszinti pékség kiváló, úgyhogy nálunk az irodában mindig van sok finomság.",T4,pvf-contrastive,"Tudod,",többek,között,a fánkjukat,imádja,az asszisztensem.,,5a,5b,5b,,,0,1,0.0,0.0,100.0,1

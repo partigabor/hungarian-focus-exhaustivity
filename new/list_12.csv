@@ -7,7 +7,7 @@
 1,,65.0,6,target,n,C2T1,C2,ctx-base,Tegnap a zongoratanár a kertészkedésről beszélgetett a kollégáival.,T1,non-focused,Úgy,hallottam,hogy,a tanárnő,szereti,a tulipánt.,,6a,6b,6a,,,0,1,1.0,1.0,111.0,0
 1,,78.0,7,target,y,C2T2,C2,ctx-base,"A családi összejövetelt idén a kertben tartjuk, reméljük nem esik.",T2,pvf-exhaustive,Kiderült,hogy,csak,egy bort,hoztak,a rokonok.,,7a,7b,7a,,,0,0,1.0,1.0,11.0,1
 1,,91.0,8,target,n,C2T3,C2,ctx-base,A délelőtti megbeszélések végén a kollégák közösen ebédelni indultak.,T3,pvf-base,Minden,ebéd,után,egy kávét,iszik,Eszter.,,8a,8b,,,,0,0,0.0,0.0,0.0,0
-1,,104.0,9,target,y,C2T4,C2,ctx-base,Régen a tanulók komolyabban vették az iskolai nyelvtanulást.,T4,pvf-contrastive,Régen,többek,között,németet,tanultak,a tanulók.,,9a,9b,9b,,,0,1,1.0,0.0,110.0,1
+1,,104.0,9,target,y,C2T4,C2,ctx-base,Régen a tanulók komolyabban vették az iskolai nyelvtanulást.,T4,pvf-contrastive,Régen,többek,között,németet,tanultak,az emberek.,,9a,9b,9b,,,0,1,1.0,0.0,110.0,1
 1,,117.0,10,target,n,C3T1,C3,ctx-contrastive,Az expedíció ritka növények mellett új állatfajokat is talált.,T1,non-focused,Egyes,információk,szerint,a kutató,felfedezett,egy lepkét.,,10a,10b,10a,,,1,0,1.0,1.0,1011.0,0
 1,,130.0,11,target,y,C3T2,C3,ctx-contrastive,"A tengerpart mellett nyitottunk egy kölcsönzőt, autók, motorok és kerékpárok is vannak.",T2,pvf-exhaustive,A hosszú,hétvégén,csak,egy robogót,béreltek ki,a turisták.,,11a,11b,11a,,,1,0,1.0,0.0,1010.0,1
 1,,143.0,12,target,n,C3T3,C3,ctx-contrastive,Az előzetes tervek szerint itt örökzöldek és virágzó gyümölcsfák kaptak helyet.,T3,pvf-base,Február,első,felében,egy fenyőfát,ültet el,a kertész.,,12a,12b,,,,1,1,0.0,0.0,1100.0,0
