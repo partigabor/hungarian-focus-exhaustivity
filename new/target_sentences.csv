@@ -15,10 +15,10 @@
 4,38.0,pvf-exhaustive,Január elején csak egy helikoptert tesztelt a hadsereg.
 4,39.0,pvf-base,Január első felében egy helikoptert tesztelt a hadsereg.
 4,40.0,pvf-contrastive,Januárban többek között egy helikoptert tesztelt a hadsereg.
-5,49.0,non-focused,"Talán tudod, hogy az asszisztensem imádja a perecüket."
-5,50.0,pvf-exhaustive,"Tudod, hogy csak a fánkjukat imádja az asszisztensem."
-5,51.0,pvf-base,"Talán tudod, hogy a fánkjukat imádja az asszisztensem."
-5,52.0,pvf-contrastive,"Tudod, többek között a fánkjukat imádja az asszisztensem."
+5,49.0,non-focused,Talán tudod, hogy az asszisztensem imádja a perecüket.
+5,50.0,pvf-exhaustive,Tudod, hogy csak a fánkjukat imádja az asszisztensem.
+5,51.0,pvf-base,Talán tudod, hogy a fánkjukat imádja az asszisztensem.
+5,52.0,pvf-contrastive,Tudod, többek között a fánkjukat imádja az asszisztensem.
 6,61.0,non-focused,Úgy hallottam hogy a tanárnő szereti a tulipánt.
 6,62.0,pvf-exhaustive,Úgy hallottam csak a tulipánt szereti a tanárnő.
 6,63.0,pvf-base,Úgy hallottam hogy a tulipánt szereti a tanárnő.
@@ -26,7 +26,7 @@
 7,73.0,non-focused,Hamar kiderült hogy a rokonok hoztak egy sajtot.
 7,74.0,pvf-exhaustive,Kiderült hogy csak egy bort hoztak a rokonok.
 7,75.0,pvf-base,Hamar kiderült hogy egy bort hoztak a rokonok.
-7,76.0,pvf-contrastive,"Kiderült, többek között egy bort hoztak a rokonok."
+7,76.0,pvf-contrastive,Kiderült, többek között egy bort hoztak a rokonok.
 8,85.0,non-focused,Minden ebéd után Eszter iszik egy kávét.
 8,86.0,pvf-exhaustive,Ebéd után csak egy kávét iszik Eszter.
 8,87.0,pvf-base,Minden ebéd után egy kávét iszik Eszter.
