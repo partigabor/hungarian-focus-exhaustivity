@@ -2,7 +2,7 @@
 # From the repository root: Rscript new/choice_analysis.R
 # From new/:                 Rscript choice_analysis.R
 # Optional arguments: input CSV, then output report path.
-# (Reaction times are analysed separately in focused_rt_analysis.R.)
+# (Reaction times are analysed separately in rt_analysis.R.)
 
 # ---------------------------------------------------------------------------
 # 1. Packages

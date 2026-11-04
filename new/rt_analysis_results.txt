@@ -1,6 +1,6 @@
 Focused-target timing measures: linear mixed-effects models
 Generated: 2026-11-04 06:29:37 UTC
-Input: new/focused_rt_data.csv
+Input: new/rt_data.csv
 Response: log1p(timing measure in ms); modifier-object means are calculated before transformation.
 Whole-sentence time is the sum of r1-r6 and is only available for trials with all six regions logged.
 The logged pre-choice interval includes the 500 ms fixation and is not a choice-onset reaction time.

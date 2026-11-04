@@ -1,7 +1,7 @@
 # Mixed-effects analyses of focused-target reading times, whole-sentence reading
 # times and logged choice intervals.
-# From the repository root: Rscript new/focused_rt_analysis.R
-# From new/:                 Rscript focused_rt_analysis.R
+# From the repository root: Rscript new/rt_analysis.R
+# From new/:                 Rscript rt_analysis.R
 # Optional arguments: input CSV, then output report path.
 
 # ---------------------------------------------------------------------------
@@ -34,14 +34,14 @@ script_dir <- if (length(script_arg)) {
 }
 if (!dir.exists(script_dir)) stop("Cannot locate the new/ folder: ", script_dir)
 args <- commandArgs(trailingOnly = TRUE)
-if (length(args) > 2L) stop("Usage: Rscript focused_rt_analysis.R [input.csv] [report.txt]")
-input_path <- if (length(args) >= 1L) args[1] else file.path(script_dir, "focused_rt_data.csv")
+if (length(args) > 2L) stop("Usage: Rscript rt_analysis.R [input.csv] [report.txt]")
+input_path <- if (length(args) >= 1L) args[1] else file.path(script_dir, "rt_data.csv")
 if (!file.exists(input_path)) {
     stop("Input not found: ", input_path, ". Run the focused reading-time export cell in analysis.ipynb first.")
 }
 # By default the report is written next to the input CSV.
 report_path <- if (length(args) >= 2L) args[2] else
-    file.path(script_dir, "focused_rt_analysis_results.txt")
+    file.path(script_dir, "rt_analysis_results.txt")
 if (normalizePath(input_path) == normalizePath(report_path, mustWork = FALSE)) {
     stop("The report path must differ from the input CSV.")
 }
