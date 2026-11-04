@@ -1,0 +1,308 @@
+Choice data: mixed-effects logistic regressions
+Generated: 2026-11-04 06:38:10 UTC
+Input: C:/Users/parti/Projects/hungarian-focus-exhaustivity/new/choice_data.csv
+Random intercepts: submission and item. Estimates are log-odds; emmeans are also shown as probabilities.
+Pairwise comparisons use Holm adjustment within each reported family.
+
+========== Focused targets: P(choice = A) ==========
+Trials: 1620 ; submissions: 90 ; items: 24
+Counts of A (1) and B (0) by target and context:
+                                   0   1
+                                        
+pvf-exhaustive  ctx-exhaustive     1 179
+                ctx-base           5 175
+                ctx-contrastive    9 171
+pvf-base        ctx-exhaustive     4 176
+                ctx-base           6 174
+                ctx-contrastive   13 167
+pvf-contrastive ctx-exhaustive    54 126
+                ctx-base          63 117
+                ctx-contrastive   76 104
+
+--- Pooled target model ---
+Singular fit: FALSE
+Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: binomial  ( logit )
+Formula: choice_a ~ target_condition + (1 | session) + (1 | item)
+   Data: foc
+Control: ctrl
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    942.5     969.5    -466.3     932.5      1615 
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-14.6826   0.0625   0.1309   0.2735   2.2179 
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ session (Intercept) 2.0505   1.4319  
+ item    (Intercept) 0.3228   0.5681  
+Number of obs: 1620, groups:  session, 90; item, 24
+
+Fixed effects:
+                  Estimate Std. Error z value Pr(>|z|)    
+(Intercept)         3.1817     0.2636  12.068  < 2e-16 ***
+target_condition1   1.4060     0.2099   6.697 2.12e-11 ***
+target_condition2   0.9109     0.1838   4.955 7.21e-07 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+            (Intr) trgt_1
+trgt_cndtn1  0.289       
+trgt_cndtn2  0.132 -0.649
+Target probabilities and pairwise comparisons (Holm):
+$emmeans
+ target_condition  prob     SE  df asymp.LCL asymp.UCL
+ pvf-exhaustive   0.990 0.0038 Inf     0.979     0.995
+ pvf-base         0.984 0.0055 Inf     0.968     0.992
+ pvf-contrastive  0.704 0.0478 Inf     0.602     0.788
+
+Confidence level used: 0.95 
+Intervals are back-transformed from the logit scale 
+
+$contrasts
+ contrast                             odds.ratio     SE  df null z.ratio
+ (pvf-exhaustive) / (pvf-base)              1.64  0.587 Inf    1   1.384
+ (pvf-exhaustive) / (pvf-contrastive)      41.39 13.700 Inf    1  11.231
+ (pvf-base) / (pvf-contrastive)            25.23  7.090 Inf    1  11.480
+ p.value
+  0.1664
+  <.0001
+  <.0001
+
+P value adjustment: holm method for 3 tests 
+Tests are performed on the log odds ratio scale 
+
+
+--- Target by context model ---
+Singular fit: FALSE
+Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: binomial  ( logit )
+Formula: choice_a ~ target_condition * context_condition + (1 | session) +  
+    (1 | item)
+   Data: foc
+Control: ctrl
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    931.0     990.3    -454.5     909.0      1609 
+
+Scaled residuals: 
+     Min       1Q   Median       3Q      Max 
+-15.9023   0.0472   0.1180   0.2835   1.9571 
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ session (Intercept) 2.1801   1.4765  
+ item    (Intercept) 0.3618   0.6015  
+Number of obs: 1620, groups:  session, 90; item, 24
+
+Fixed effects:
+                                     Estimate Std. Error z value Pr(>|z|)    
+(Intercept)                           3.39445    0.29277  11.594  < 2e-16 ***
+target_condition1                     1.62650    0.28878   5.632 1.78e-08 ***
+target_condition2                     0.88248    0.21937   4.023 5.75e-05 ***
+context_condition1                    0.82443    0.27836   2.962  0.00306 ** 
+context_condition2                   -0.08793    0.20701  -0.425  0.67101    
+target_condition1:context_condition1  0.57845    0.49589   1.166  0.24341    
+target_condition2:context_condition1 -0.16523    0.35690  -0.463  0.64340    
+target_condition1:context_condition2 -0.29996    0.34682  -0.865  0.38710    
+target_condition2:context_condition2  0.22379    0.29051   0.770  0.44109    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+            (Intr) trgt_1 trgt_2 cntx_1 cntx_2 t_1:_1 t_2:_1 t_1:_2
+trgt_cndtn1  0.411                                                 
+trgt_cndtn2  0.001 -0.721                                          
+cntxt_cndt1  0.347  0.517 -0.236                                   
+cntxt_cndt2 -0.160 -0.307  0.197 -0.727                            
+trgt_cn1:_1  0.279  0.628 -0.451  0.674 -0.473                     
+trgt_cn2:_1 -0.151 -0.482  0.437 -0.251  0.146 -0.814              
+trgt_cn1:_2 -0.183 -0.360  0.231 -0.497  0.488 -0.764  0.638       
+trgt_cn2:_2  0.117  0.217 -0.134  0.138 -0.009  0.546 -0.695 -0.763
+Single term deletions
+
+Model:
+choice_a ~ target_condition * context_condition + (1 | session) + 
+    (1 | item)
+                                   npar    AIC    LRT Pr(Chi)
+<none>                                  930.96               
+target_condition:context_condition    4 926.72 3.7609  0.4393
+Targets compared within each context (Holm):
+$emmeans
+context_condition = ctx-exhaustive:
+ target_condition   prob      SE  df asymp.LCL asymp.UCL
+ pvf-exhaustive   0.9984 0.00173 Inf    0.9869    0.9998
+ pvf-base         0.9929 0.00421 Inf    0.9775    0.9978
+ pvf-contrastive  0.7853 0.04950 Inf    0.6728    0.8667
+
+context_condition = ctx-base:
+ target_condition   prob      SE  df asymp.LCL asymp.UCL
+ pvf-exhaustive   0.9904 0.00528 Inf    0.9720    0.9967
+ pvf-base         0.9880 0.00605 Inf    0.9680    0.9956
+ pvf-contrastive  0.7055 0.05880 Inf    0.5790    0.8067
+
+context_condition = ctx-contrastive:
+ target_condition   prob      SE  df asymp.LCL asymp.UCL
+ pvf-exhaustive   0.9821 0.00799 Inf    0.9575    0.9926
+ pvf-base         0.9702 0.01180 Inf    0.9362    0.9863
+ pvf-contrastive  0.6192 0.06590 Inf    0.4846    0.7376
+
+Confidence level used: 0.95 
+Intervals are back-transformed from the logit scale 
+
+$contrasts
+context_condition = ctx-exhaustive:
+ contrast                             odds.ratio      SE  df null z.ratio
+ (pvf-exhaustive) / (pvf-base)              4.43   5.110 Inf    1   1.290
+ (pvf-exhaustive) / (pvf-contrastive)     168.54 179.000 Inf    1   4.831
+ (pvf-base) / (pvf-contrastive)            38.07  21.900 Inf    1   6.328
+ p.value
+  0.1971
+  <.0001
+  <.0001
+
+context_condition = ctx-base:
+ contrast                             odds.ratio      SE  df null z.ratio
+ (pvf-exhaustive) / (pvf-base)              1.25   0.808 Inf    1   0.340
+ (pvf-exhaustive) / (pvf-contrastive)      42.92  23.300 Inf    1   6.926
+ (pvf-base) / (pvf-contrastive)            34.44  17.100 Inf    1   7.129
+ p.value
+  0.7341
+  <.0001
+  <.0001
+
+context_condition = ctx-contrastive:
+ contrast                             odds.ratio      SE  df null z.ratio
+ (pvf-exhaustive) / (pvf-base)              1.69   0.820 Inf    1   1.080
+ (pvf-exhaustive) / (pvf-contrastive)      33.78  15.000 Inf    1   7.942
+ (pvf-base) / (pvf-contrastive)            20.00   7.800 Inf    1   7.687
+ p.value
+  0.2803
+  <.0001
+  <.0001
+
+P value adjustment: holm method for 3 tests 
+Tests are performed on the log odds ratio scale 
+
+Contexts compared within each target (Holm):
+$emmeans
+target_condition = pvf-exhaustive:
+ context_condition   prob      SE  df asymp.LCL asymp.UCL
+ ctx-exhaustive    0.9984 0.00173 Inf    0.9869    0.9998
+ ctx-base          0.9904 0.00528 Inf    0.9720    0.9967
+ ctx-contrastive   0.9821 0.00799 Inf    0.9575    0.9926
+
+target_condition = pvf-base:
+ context_condition   prob      SE  df asymp.LCL asymp.UCL
+ ctx-exhaustive    0.9929 0.00421 Inf    0.9775    0.9978
+ ctx-base          0.9880 0.00605 Inf    0.9680    0.9956
+ ctx-contrastive   0.9702 0.01180 Inf    0.9362    0.9863
+
+target_condition = pvf-contrastive:
+ context_condition   prob      SE  df asymp.LCL asymp.UCL
+ ctx-exhaustive    0.7853 0.04950 Inf    0.6728    0.8667
+ ctx-base          0.7055 0.05880 Inf    0.5790    0.8067
+ ctx-contrastive   0.6192 0.06590 Inf    0.4846    0.7376
+
+Confidence level used: 0.95 
+Intervals are back-transformed from the logit scale 
+
+$contrasts
+target_condition = pvf-exhaustive:
+ contrast                             odds.ratio     SE  df null z.ratio
+ (ctx-exhaustive) / (ctx-base)              5.99  6.790 Inf    1   1.581
+ (ctx-exhaustive) / (ctx-contrastive)      11.22 12.300 Inf    1   2.214
+ (ctx-base) / (ctx-contrastive)             1.87  1.130 Inf    1   1.041
+ p.value
+  0.2276
+  0.0804
+  0.2981
+
+target_condition = pvf-base:
+ contrast                             odds.ratio     SE  df null z.ratio
+ (ctx-exhaustive) / (ctx-base)              1.69  1.150 Inf    1   0.767
+ (ctx-exhaustive) / (ctx-contrastive)       4.28  2.630 Inf    1   2.366
+ (ctx-base) / (ctx-contrastive)             2.54  1.370 Inf    1   1.724
+ p.value
+  0.4429
+  0.0540
+  0.1694
+
+target_condition = pvf-contrastive:
+ contrast                             odds.ratio     SE  df null z.ratio
+ (ctx-exhaustive) / (ctx-base)              1.53  0.425 Inf    1   1.520
+ (ctx-exhaustive) / (ctx-contrastive)       2.25  0.625 Inf    1   2.916
+ (ctx-base) / (ctx-contrastive)             1.47  0.397 Inf    1   1.441
+ p.value
+  0.2572
+  0.0106
+  0.2572
+
+P value adjustment: holm method for 3 tests 
+Tests are performed on the log odds ratio scale 
+
+
+========== Non-focused targets: P(correct choice) ==========
+Trials: 540 ; overall accuracy: 0.941
+Singular fit: FALSE
+Generalized linear mixed model fit by maximum likelihood (Laplace
+  Approximation) [glmerMod]
+ Family: binomial  ( logit )
+Formula: is_correct ~ context_condition + (1 | session) + (1 | item)
+   Data: nf
+Control: ctrl
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    232.0     253.4    -111.0     222.0       535 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.7081  0.0951  0.1447  0.2158  1.0965 
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ session (Intercept) 1.754    1.324   
+ item    (Intercept) 1.296    1.139   
+Number of obs: 540, groups:  session, 90; item, 24
+
+Fixed effects:
+                   Estimate Std. Error z value Pr(>|z|)    
+(Intercept)          3.9611     0.5899   6.715 1.88e-11 ***
+context_condition1   0.2194     0.3318   0.661    0.508    
+context_condition2   0.2429     0.3276   0.741    0.459    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+            (Intr) cntx_1
+cntxt_cndt1  0.000       
+cntxt_cndt2  0.077 -0.592
+Accuracy by context and pairwise comparisons (Holm):
+$emmeans
+ context_condition  prob     SE  df asymp.LCL asymp.UCL
+ ctx-exhaustive    0.985 0.0100 Inf     0.946     0.996
+ ctx-base          0.985 0.0101 Inf     0.945     0.996
+ ctx-contrastive   0.971 0.0182 Inf     0.905     0.991
+
+Confidence level used: 0.95 
+Intervals are back-transformed from the logit scale 
+
+$contrasts
+ contrast                             odds.ratio    SE  df null z.ratio p.value
+ (ctx-exhaustive) / (ctx-base)             0.977 0.575 Inf    1  -0.040  0.9682
+ (ctx-exhaustive) / (ctx-contrastive)      1.977 1.070 Inf    1   1.265  0.5532
+ (ctx-base) / (ctx-contrastive)            2.024 1.080 Inf    1   1.327  0.5532
+
+P value adjustment: holm method for 3 tests 
+Tests are performed on the log odds ratio scale 
+
+Odds ratios and 95% Wald confidence intervals:
+                    Estimate        OR      2.5 %     97.5 %
+(Intercept)        3.9610530 52.512594 16.5262764 166.859879
+context_condition1 0.2194288  1.245365  0.6498970   2.386431
+context_condition2 0.2428656  1.274897  0.6708214   2.422944

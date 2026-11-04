@@ -1,0 +1,691 @@
+Focused-target timing measures: linear mixed-effects models
+Generated: 2026-11-04 06:29:37 UTC
+Input: new/focused_rt_data.csv
+Response: log1p(timing measure in ms); modifier-object means are calculated before transformation.
+Whole-sentence time is the sum of r1-r6 and is only available for trials with all six regions logged.
+The logged pre-choice interval includes the 500 ms fixation and is not a choice-onset reaction time.
+Random intercepts: submission and item. Pooled and factorial analyses are separate.
+Pairwise Tukey adjustments apply within each reported comparison family, not across measures or models.
+Estimated effects and contrasts are on the log1p scale.
+
+
+========== object_r4_ms ==========
+Trials: 1620 ; missing measure: 0 ; submissions: 90 ; items: 24
+Target-by-context trial counts:
+                 
+                  ctx-exhaustive ctx-base ctx-contrastive
+  pvf-exhaustive             180      180             180
+  pvf-base                   180      180             180
+  pvf-contrastive            180      180             180
+
+--- Pooled target model ---
+Singular fit: FALSE
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's
+  method [lmerModLmerTest]
+Formula: response ~ target_condition + (1 | session) + (1 | item)
+   Data: model_df
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    943.3     975.7    -465.7     931.3      1614 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.1840 -0.6096 -0.1107  0.4888  8.0634 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ session  (Intercept) 0.105318 0.32453 
+ item     (Intercept) 0.004979 0.07056 
+ Residual             0.085420 0.29227 
+Number of obs: 1620, groups:  session, 90; item, 24
+
+Fixed effects:
+                    Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)        6.172e+00  3.783e-02  1.044e+02 163.146   <2e-16 ***
+target_condition1 -2.248e-02  1.061e-02  1.529e+03  -2.118   0.0343 *  
+target_condition2 -7.363e-03  1.046e-02  1.529e+03  -0.704   0.4815    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+            (Intr) trgt_1
+trgt_cndtn1 -0.002       
+trgt_cndtn2  0.003 -0.491
+Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: response
+                      Chisq Df Pr(>Chisq)    
+(Intercept)      26616.7643  1    < 2e-16 ***
+target_condition     8.4966  2    0.01429 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Target estimated marginal means and pairwise comparisons (Tukey):
+$emmeans
+ target_condition emmean     SE  df lower.CL upper.CL
+ pvf-exhaustive     6.15 0.0395 122     6.07     6.23
+ pvf-base           6.16 0.0395 122     6.09     6.24
+ pvf-contrastive    6.20 0.0395 122     6.12     6.28
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+$contrasts
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)         -0.0151 0.0182 1532  -0.829  0.6847
+ (pvf-exhaustive) - (pvf-contrastive)  -0.0523 0.0185 1526  -2.822  0.0134
+ (pvf-base) - (pvf-contrastive)        -0.0372 0.0183 1533  -2.038  0.1036
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+
+--- Target by context model ---
+Singular fit: FALSE
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's
+  method [lmerModLmerTest]
+Formula: response ~ target_condition * context_condition + (1 | session) +  
+    (1 | item)
+   Data: model_df
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    948.9    1013.6    -462.5     924.9      1608 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.2826 -0.6207 -0.1111  0.4943  8.1340 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ session  (Intercept) 0.105343 0.32457 
+ item     (Intercept) 0.005187 0.07202 
+ Residual             0.085018 0.29158 
+Number of obs: 1620, groups:  session, 90; item, 24
+
+Fixed effects:
+                                       Estimate Std. Error         df t value
+(Intercept)                           6.172e+00  3.794e-02  1.046e+02 162.653
+target_condition1                    -2.249e-02  1.059e-02  1.530e+03  -2.123
+target_condition2                    -7.325e-03  1.043e-02  1.529e+03  -0.702
+context_condition1                   -2.353e-02  1.044e-02  1.528e+03  -2.253
+context_condition2                    5.228e-03  1.044e-02  1.528e+03   0.501
+target_condition1:context_condition1 -7.858e-03  1.468e-02  1.523e+03  -0.535
+target_condition2:context_condition1  2.626e-03  1.463e-02  1.520e+03   0.180
+target_condition1:context_condition2 -2.437e-03  1.468e-02  1.523e+03  -0.166
+target_condition2:context_condition2 -3.903e-03  1.463e-02  1.520e+03  -0.267
+                                     Pr(>|t|)    
+(Intercept)                            <2e-16 ***
+target_condition1                      0.0339 *  
+target_condition2                      0.4828    
+context_condition1                     0.0244 *  
+context_condition2                     0.6167    
+target_condition1:context_condition1   0.5924    
+target_condition2:context_condition1   0.8576    
+target_condition1:context_condition2   0.8681    
+target_condition2:context_condition2   0.7896    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+            (Intr) trgt_1 trgt_2 cntx_1 cntx_2 t_1:_1 t_2:_1 t_1:_2
+trgt_cndtn1 -0.002                                                 
+trgt_cndtn2  0.003 -0.491                                          
+cntxt_cndt1  0.000  0.000  0.000                                   
+cntxt_cndt2  0.000  0.000  0.000 -0.500                            
+trgt_cn1:_1  0.000  0.000  0.000 -0.002 -0.007                     
+trgt_cn2:_1  0.000  0.000  0.000  0.005 -0.002 -0.499              
+trgt_cn1:_2  0.000  0.000  0.000  0.009 -0.002 -0.500  0.261       
+trgt_cn2:_2  0.000  0.000  0.000 -0.002  0.005  0.238 -0.500 -0.499
+Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: response
+                                        Chisq Df Pr(>Chisq)    
+(Intercept)                        26456.1495  1    < 2e-16 ***
+target_condition                       8.5161  2    0.01415 *  
+context_condition                      5.6006  2    0.06079 .  
+target_condition:context_condition     0.8294  4    0.93446    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Target estimated marginal means and pairwise comparisons within each context (Tukey):
+$emmeans
+context_condition = ctx-exhaustive:
+ target_condition emmean     SE  df lower.CL upper.CL
+ pvf-exhaustive     6.12 0.0435 178     6.03     6.20
+ pvf-base           6.14 0.0435 178     6.06     6.23
+ pvf-contrastive    6.18 0.0435 178     6.10     6.27
+
+context_condition = ctx-base:
+ target_condition emmean     SE  df lower.CL upper.CL
+ pvf-exhaustive     6.15 0.0435 178     6.07     6.24
+ pvf-base           6.17 0.0435 178     6.08     6.25
+ pvf-contrastive    6.21 0.0435 178     6.13     6.30
+
+context_condition = ctx-contrastive:
+ target_condition emmean     SE  df lower.CL upper.CL
+ pvf-exhaustive     6.18 0.0435 178     6.09     6.26
+ pvf-base           6.18 0.0435 178     6.10     6.27
+ pvf-contrastive    6.21 0.0435 178     6.12     6.29
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+$contrasts
+context_condition = ctx-exhaustive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)        -0.02564 0.0313 1533  -0.819  0.6911
+ (pvf-exhaustive) - (pvf-contrastive) -0.06538 0.0315 1538  -2.073  0.0959
+ (pvf-base) - (pvf-contrastive)       -0.03974 0.0313 1534  -1.269  0.4128
+
+context_condition = ctx-base:
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)        -0.01369 0.0313 1533  -0.438  0.8999
+ (pvf-exhaustive) - (pvf-contrastive) -0.06107 0.0315 1538  -1.936  0.1290
+ (pvf-base) - (pvf-contrastive)       -0.04738 0.0313 1534  -1.513  0.2849
+
+context_condition = ctx-contrastive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)        -0.00614 0.0313 1533  -0.196  0.9790
+ (pvf-exhaustive) - (pvf-contrastive) -0.03043 0.0315 1538  -0.965  0.5995
+ (pvf-base) - (pvf-contrastive)       -0.02429 0.0313 1534  -0.776  0.7180
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+Context estimated marginal means and pairwise comparisons within each target (Tukey):
+$emmeans
+target_condition = pvf-exhaustive:
+ context_condition emmean     SE  df lower.CL upper.CL
+ ctx-exhaustive      6.12 0.0435 178     6.03     6.20
+ ctx-base            6.15 0.0435 178     6.07     6.24
+ ctx-contrastive     6.18 0.0435 178     6.09     6.26
+
+target_condition = pvf-base:
+ context_condition emmean     SE  df lower.CL upper.CL
+ ctx-exhaustive      6.14 0.0435 178     6.06     6.23
+ ctx-base            6.17 0.0435 178     6.08     6.25
+ ctx-contrastive     6.18 0.0435 178     6.10     6.27
+
+target_condition = pvf-contrastive:
+ context_condition emmean     SE  df lower.CL upper.CL
+ ctx-exhaustive      6.18 0.0435 178     6.10     6.27
+ ctx-base            6.21 0.0435 178     6.13     6.30
+ ctx-contrastive     6.21 0.0435 178     6.12     6.29
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+$contrasts
+target_condition = pvf-exhaustive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (ctx-exhaustive) - (ctx-base)        -0.03418 0.0313 1532  -1.093  0.5186
+ (ctx-exhaustive) - (ctx-contrastive) -0.05999 0.0313 1532  -1.918  0.1338
+ (ctx-base) - (ctx-contrastive)       -0.02581 0.0313 1532  -0.825  0.6874
+
+target_condition = pvf-base:
+ contrast                             estimate     SE   df t.ratio p.value
+ (ctx-exhaustive) - (ctx-base)        -0.02223 0.0313 1533  -0.710  0.7575
+ (ctx-exhaustive) - (ctx-contrastive) -0.04048 0.0313 1533  -1.293  0.3992
+ (ctx-base) - (ctx-contrastive)       -0.01825 0.0313 1533  -0.583  0.8292
+
+target_condition = pvf-contrastive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (ctx-exhaustive) - (ctx-base)        -0.02987 0.0312 1531  -0.956  0.6050
+ (ctx-exhaustive) - (ctx-contrastive) -0.02503 0.0312 1531  -0.801  0.7025
+ (ctx-base) - (ctx-contrastive)        0.00484 0.0312 1531   0.155  0.9869
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+
+========== modifier_object_ms ==========
+Trials: 1620 ; missing measure: 0 ; submissions: 90 ; items: 24
+Target-by-context trial counts:
+                 
+                  ctx-exhaustive ctx-base ctx-contrastive
+  pvf-exhaustive             180      180             180
+  pvf-base                   180      180             180
+  pvf-contrastive            180      180             180
+
+--- Pooled target model ---
+Singular fit: FALSE
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's
+  method [lmerModLmerTest]
+Formula: response ~ target_condition + (1 | session) + (1 | item)
+   Data: model_df
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    562.6     595.0    -275.3     550.6      1614 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.7121 -0.5890 -0.1363  0.4910  8.8327 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ session  (Intercept) 0.089356 0.29893 
+ item     (Intercept) 0.002115 0.04599 
+ Residual             0.067731 0.26025 
+Number of obs: 1620, groups:  session, 90; item, 24
+
+Fixed effects:
+                    Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)        6.116e+00  3.351e-02  9.974e+01 182.479  < 2e-16 ***
+target_condition1 -3.863e-02  9.397e-03  1.509e+03  -4.111 4.16e-05 ***
+target_condition2  4.430e-02  9.282e-03  1.530e+03   4.773 1.99e-06 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+            (Intr) trgt_1
+trgt_cndtn1 -0.001       
+trgt_cndtn2  0.002 -0.493
+Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: response
+                     Chisq Df Pr(>Chisq)    
+(Intercept)      33298.419  1  < 2.2e-16 ***
+target_condition    26.865  2  1.467e-06 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Target estimated marginal means and pairwise comparisons (Tukey):
+$emmeans
+ target_condition emmean    SE  df lower.CL upper.CL
+ pvf-exhaustive     6.08 0.035 117     6.01     6.15
+ pvf-base           6.16 0.035 117     6.09     6.23
+ pvf-contrastive    6.11 0.035 117     6.04     6.18
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+$contrasts
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)         -0.0829 0.0162 1530  -5.127  <.0001
+ (pvf-exhaustive) - (pvf-contrastive)  -0.0330 0.0164 1492  -2.008  0.1106
+ (pvf-base) - (pvf-contrastive)         0.0500 0.0162 1527   3.086  0.0059
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+
+--- Target by context model ---
+Singular fit: FALSE
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's
+  method [lmerModLmerTest]
+Formula: response ~ target_condition * context_condition + (1 | session) +  
+    (1 | item)
+   Data: model_df
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    566.8     631.5    -271.4     542.8      1608 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-2.7708 -0.5829 -0.1433  0.4963  8.9175 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ session  (Intercept) 0.089378 0.29896 
+ item     (Intercept) 0.002251 0.04745 
+ Residual             0.067339 0.25950 
+Number of obs: 1620, groups:  session, 90; item, 24
+
+Fixed effects:
+                                       Estimate Std. Error         df t value
+(Intercept)                           6.116e+00  3.360e-02  1.002e+02 182.019
+target_condition1                    -3.860e-02  9.376e-03  1.513e+03  -4.117
+target_condition2                     4.432e-02  9.259e-03  1.530e+03   4.787
+context_condition1                   -2.437e-02  9.267e-03  1.530e+03  -2.630
+context_condition2                    8.434e-03  9.267e-03  1.530e+03   0.910
+target_condition1:context_condition1 -4.585e-03  1.304e-02  1.528e+03  -0.352
+target_condition2:context_condition1  2.994e-03  1.300e-02  1.524e+03   0.230
+target_condition1:context_condition2 -2.608e-03  1.304e-02  1.528e+03  -0.200
+target_condition2:context_condition2 -5.320e-03  1.300e-02  1.524e+03  -0.409
+                                     Pr(>|t|)    
+(Intercept)                           < 2e-16 ***
+target_condition1                    4.04e-05 ***
+target_condition2                    1.86e-06 ***
+context_condition1                    0.00863 ** 
+context_condition2                    0.36290    
+target_condition1:context_condition1  0.72512    
+target_condition2:context_condition1  0.81788    
+target_condition1:context_condition2  0.84144    
+target_condition2:context_condition2  0.68244    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+            (Intr) trgt_1 trgt_2 cntx_1 cntx_2 t_1:_1 t_2:_1 t_1:_2
+trgt_cndtn1 -0.001                                                 
+trgt_cndtn2  0.002 -0.493                                          
+cntxt_cndt1  0.000  0.000  0.000                                   
+cntxt_cndt2  0.000  0.000  0.000 -0.500                            
+trgt_cn1:_1  0.000  0.000  0.000 -0.002 -0.006                     
+trgt_cn2:_1  0.000  0.000  0.000  0.004 -0.002 -0.499              
+trgt_cn1:_2  0.000  0.000  0.000  0.008 -0.002 -0.500  0.259       
+trgt_cn2:_2  0.000  0.000  0.000 -0.002  0.004  0.240 -0.500 -0.499
+Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: response
+                                        Chisq Df Pr(>Chisq)    
+(Intercept)                        33130.7406  1  < 2.2e-16 ***
+target_condition                      27.0024  2  1.369e-06 ***
+context_condition                      7.1350  2    0.02823 *  
+target_condition:context_condition     0.7343  4    0.94703    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Target estimated marginal means and pairwise comparisons within each context (Tukey):
+$emmeans
+context_condition = ctx-exhaustive:
+ target_condition emmean     SE  df lower.CL upper.CL
+ pvf-exhaustive     6.05 0.0385 171     5.97     6.12
+ pvf-base           6.14 0.0386 171     6.06     6.21
+ pvf-contrastive    6.09 0.0386 171     6.01     6.16
+
+context_condition = ctx-base:
+ target_condition emmean     SE  df lower.CL upper.CL
+ pvf-exhaustive     6.08 0.0385 171     6.01     6.16
+ pvf-base           6.16 0.0386 171     6.09     6.24
+ pvf-contrastive    6.13 0.0386 171     6.05     6.20
+
+context_condition = ctx-contrastive:
+ target_condition emmean     SE  df lower.CL upper.CL
+ pvf-exhaustive     6.10 0.0385 171     6.02     6.18
+ pvf-base           6.18 0.0386 171     6.10     6.25
+ pvf-contrastive    6.12 0.0386 171     6.04     6.19
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+$contrasts
+context_condition = ctx-exhaustive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)         -0.0905 0.0278 1537  -3.256  0.0033
+ (pvf-exhaustive) - (pvf-contrastive)  -0.0391 0.0280 1537  -1.395  0.3435
+ (pvf-base) - (pvf-contrastive)         0.0514 0.0278 1538   1.850  0.1539
+
+context_condition = ctx-base:
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)         -0.0802 0.0278 1537  -2.885  0.0111
+ (pvf-exhaustive) - (pvf-contrastive)  -0.0434 0.0280 1537  -1.551  0.2674
+ (pvf-base) - (pvf-contrastive)         0.0368 0.0278 1538   1.323  0.3824
+
+context_condition = ctx-contrastive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)         -0.0781 0.0278 1537  -2.808  0.0140
+ (pvf-exhaustive) - (pvf-contrastive)  -0.0162 0.0280 1537  -0.578  0.8320
+ (pvf-base) - (pvf-contrastive)         0.0619 0.0278 1538   2.226  0.0673
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+Context estimated marginal means and pairwise comparisons within each target (Tukey):
+$emmeans
+target_condition = pvf-exhaustive:
+ context_condition emmean     SE  df lower.CL upper.CL
+ ctx-exhaustive      6.05 0.0385 171     5.97     6.12
+ ctx-base            6.08 0.0385 171     6.01     6.16
+ ctx-contrastive     6.10 0.0385 171     6.02     6.18
+
+target_condition = pvf-base:
+ context_condition emmean     SE  df lower.CL upper.CL
+ ctx-exhaustive      6.14 0.0386 171     6.06     6.21
+ ctx-base            6.16 0.0386 171     6.09     6.24
+ ctx-contrastive     6.18 0.0386 171     6.10     6.25
+
+target_condition = pvf-contrastive:
+ context_condition emmean     SE  df lower.CL upper.CL
+ ctx-exhaustive      6.09 0.0386 171     6.01     6.16
+ ctx-base            6.13 0.0386 171     6.05     6.20
+ ctx-contrastive     6.12 0.0386 171     6.04     6.19
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+$contrasts
+target_condition = pvf-exhaustive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (ctx-exhaustive) - (ctx-base)        -0.03478 0.0278 1537  -1.252  0.4228
+ (ctx-exhaustive) - (ctx-contrastive) -0.05209 0.0278 1537  -1.875  0.1464
+ (ctx-base) - (ctx-contrastive)       -0.01730 0.0278 1537  -0.623  0.8076
+
+target_condition = pvf-base:
+ contrast                             estimate     SE   df t.ratio p.value
+ (ctx-exhaustive) - (ctx-base)        -0.02449 0.0278 1538  -0.881  0.6525
+ (ctx-exhaustive) - (ctx-contrastive) -0.03964 0.0278 1538  -1.426  0.3279
+ (ctx-base) - (ctx-contrastive)       -0.01515 0.0278 1538  -0.545  0.8492
+
+target_condition = pvf-contrastive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (ctx-exhaustive) - (ctx-base)        -0.03914 0.0278 1536  -1.410  0.3361
+ (ctx-exhaustive) - (ctx-contrastive) -0.02920 0.0278 1536  -1.052  0.5444
+ (ctx-base) - (ctx-contrastive)        0.00994 0.0278 1536   0.358  0.9318
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+
+========== verb_r5_ms ==========
+Trials: 1620 ; missing measure: 0 ; submissions: 90 ; items: 24
+Target-by-context trial counts:
+                 
+                  ctx-exhaustive ctx-base ctx-contrastive
+  pvf-exhaustive             180      180             180
+  pvf-base                   180      180             180
+  pvf-contrastive            180      180             180
+
+--- Pooled target model ---
+Singular fit: FALSE
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's
+  method [lmerModLmerTest]
+Formula: response ~ target_condition + (1 | session) + (1 | item)
+   Data: model_df
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    949.7     982.1    -468.9     937.7      1614 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-8.4489 -0.5857 -0.0887  0.4575  8.6434 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ session  (Intercept) 0.092097 0.30347 
+ item     (Intercept) 0.007254 0.08517 
+ Residual             0.086026 0.29330 
+Number of obs: 1620, groups:  session, 90; item, 24
+
+Fixed effects:
+                    Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)          6.24112    0.03714  103.41834 168.044  < 2e-16 ***
+target_condition1   -0.03110    0.01068 1531.60702  -2.912  0.00364 ** 
+target_condition2    0.01362    0.01051 1526.08355   1.296  0.19511    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+            (Intr) trgt_1
+trgt_cndtn1 -0.002       
+trgt_cndtn2  0.003 -0.490
+Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: response
+                      Chisq Df Pr(>Chisq)    
+(Intercept)      28238.8460  1    < 2e-16 ***
+target_condition     8.5054  2    0.01423 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Target estimated marginal means and pairwise comparisons (Tukey):
+$emmeans
+ target_condition emmean     SE  df lower.CL upper.CL
+ pvf-exhaustive     6.21 0.0388 122     6.13     6.29
+ pvf-base           6.25 0.0388 122     6.18     6.33
+ pvf-contrastive    6.26 0.0388 122     6.18     6.34
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+$contrasts
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)        -0.04472 0.0183 1530  -2.442  0.0391
+ (pvf-exhaustive) - (pvf-contrastive) -0.04857 0.0187 1533  -2.604  0.0252
+ (pvf-base) - (pvf-contrastive)       -0.00385 0.0184 1532  -0.210  0.9760
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+
+--- Target by context model ---
+Singular fit: FALSE
+Linear mixed model fit by maximum likelihood . t-tests use Satterthwaite's
+  method [lmerModLmerTest]
+Formula: response ~ target_condition * context_condition + (1 | session) +  
+    (1 | item)
+   Data: model_df
+
+      AIC       BIC    logLik -2*log(L)  df.resid 
+    952.5    1017.2    -464.2     928.5      1608 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-8.5397 -0.5884 -0.0776  0.4589  8.5752 
+
+Random effects:
+ Groups   Name        Variance Std.Dev.
+ session  (Intercept) 0.092137 0.30354 
+ item     (Intercept) 0.007557 0.08693 
+ Residual             0.085455 0.29233 
+Number of obs: 1620, groups:  session, 90; item, 24
+
+Fixed effects:
+                                       Estimate Std. Error         df t value
+(Intercept)                           6.241e+00  3.731e-02  1.030e+02 167.275
+target_condition1                    -3.107e-02  1.064e-02  1.532e+03  -2.919
+target_condition2                     1.364e-02  1.048e-02  1.526e+03   1.303
+context_condition1                   -2.432e-02  1.048e-02  1.524e+03  -2.320
+context_condition2                    1.072e-02  1.048e-02  1.524e+03   1.022
+target_condition1:context_condition1 -4.337e-03  1.473e-02  1.519e+03  -0.294
+target_condition2:context_condition1 -1.535e-02  1.468e-02  1.517e+03  -1.046
+target_condition1:context_condition2 -5.530e-03  1.473e-02  1.519e+03  -0.376
+target_condition2:context_condition2 -2.598e-03  1.468e-02  1.517e+03  -0.177
+                                     Pr(>|t|)    
+(Intercept)                           < 2e-16 ***
+target_condition1                     0.00356 ** 
+target_condition2                     0.19293    
+context_condition1                    0.02049 *  
+context_condition2                    0.30680    
+target_condition1:context_condition1  0.76844    
+target_condition2:context_condition1  0.29581    
+target_condition1:context_condition2  0.70732    
+target_condition2:context_condition2  0.85952    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Correlation of Fixed Effects:
+            (Intr) trgt_1 trgt_2 cntx_1 cntx_2 t_1:_1 t_2:_1 t_1:_2
+trgt_cndtn1 -0.002                                                 
+trgt_cndtn2  0.003 -0.490                                          
+cntxt_cndt1  0.000  0.000  0.000                                   
+cntxt_cndt2  0.000  0.000  0.000 -0.500                            
+trgt_cn1:_1  0.000  0.000  0.000 -0.002 -0.008                     
+trgt_cn2:_1  0.000  0.000  0.000  0.005 -0.003 -0.499              
+trgt_cn1:_2  0.000  0.000  0.000  0.010 -0.002 -0.500  0.261       
+trgt_cn2:_2  0.000  0.000  0.000 -0.003  0.005  0.237 -0.500 -0.499
+Analysis of Deviance Table (Type III Wald chisquare tests)
+
+Response: response
+                                        Chisq Df Pr(>Chisq)    
+(Intercept)                        27980.9250  1    < 2e-16 ***
+target_condition                       8.5420  2    0.01397 *  
+context_condition                      5.4059  2    0.06701 .  
+target_condition:context_condition     3.9680  4    0.41035    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+Target estimated marginal means and pairwise comparisons within each context (Tukey):
+$emmeans
+context_condition = ctx-exhaustive:
+ target_condition emmean    SE  df lower.CL upper.CL
+ pvf-exhaustive     6.18 0.043 178     6.10     6.27
+ pvf-base           6.22 0.043 178     6.13     6.30
+ pvf-contrastive    6.25 0.043 178     6.17     6.34
+
+context_condition = ctx-base:
+ target_condition emmean    SE  df lower.CL upper.CL
+ pvf-exhaustive     6.22 0.043 178     6.13     6.30
+ pvf-base           6.26 0.043 178     6.18     6.35
+ pvf-contrastive    6.28 0.043 178     6.19     6.36
+
+context_condition = ctx-contrastive:
+ target_condition emmean    SE  df lower.CL upper.CL
+ pvf-exhaustive     6.23 0.043 178     6.15     6.32
+ pvf-base           6.29 0.043 178     6.20     6.37
+ pvf-contrastive    6.24 0.043 178     6.16     6.33
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+$contrasts
+context_condition = ctx-exhaustive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)         -0.0337 0.0314 1530  -1.073  0.5309
+ (pvf-exhaustive) - (pvf-contrastive)  -0.0725 0.0317 1535  -2.290  0.0575
+ (pvf-base) - (pvf-contrastive)        -0.0388 0.0314 1531  -1.235  0.4325
+
+context_condition = ctx-base:
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)         -0.0476 0.0314 1530  -1.517  0.2831
+ (pvf-exhaustive) - (pvf-contrastive)  -0.0622 0.0317 1535  -1.962  0.1220
+ (pvf-base) - (pvf-contrastive)        -0.0145 0.0314 1531  -0.462  0.8892
+
+context_condition = ctx-contrastive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (pvf-exhaustive) - (pvf-base)         -0.0528 0.0314 1530  -1.681  0.2128
+ (pvf-exhaustive) - (pvf-contrastive)  -0.0108 0.0317 1535  -0.342  0.9377
+ (pvf-base) - (pvf-contrastive)         0.0420 0.0314 1531   1.336  0.3754
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
+Context estimated marginal means and pairwise comparisons within each target (Tukey):
+$emmeans
+target_condition = pvf-exhaustive:
+ context_condition emmean    SE  df lower.CL upper.CL
+ ctx-exhaustive      6.18 0.043 178     6.10     6.27
+ ctx-base            6.22 0.043 178     6.13     6.30
+ ctx-contrastive     6.23 0.043 178     6.15     6.32
+
+target_condition = pvf-base:
+ context_condition emmean    SE  df lower.CL upper.CL
+ ctx-exhaustive      6.22 0.043 178     6.13     6.30
+ ctx-base            6.26 0.043 178     6.18     6.35
+ ctx-contrastive     6.29 0.043 178     6.20     6.37
+
+target_condition = pvf-contrastive:
+ context_condition emmean    SE  df lower.CL upper.CL
+ ctx-exhaustive      6.25 0.043 178     6.17     6.34
+ ctx-base            6.28 0.043 178     6.19     6.36
+ ctx-contrastive     6.24 0.043 178     6.16     6.33
+
+Degrees-of-freedom method: kenward-roger 
+Confidence level used: 0.95 
+
+$contrasts
+target_condition = pvf-exhaustive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (ctx-exhaustive) - (ctx-base)        -0.03384 0.0314 1528  -1.078  0.5276
+ (ctx-exhaustive) - (ctx-contrastive) -0.05212 0.0314 1528  -1.661  0.2206
+ (ctx-base) - (ctx-contrastive)       -0.01828 0.0314 1528  -0.583  0.8295
+
+target_condition = pvf-base:
+ contrast                             estimate     SE   df t.ratio p.value
+ (ctx-exhaustive) - (ctx-base)        -0.04778 0.0314 1530  -1.521  0.2813
+ (ctx-exhaustive) - (ctx-contrastive) -0.07121 0.0314 1530  -2.267  0.0609
+ (ctx-base) - (ctx-contrastive)       -0.02343 0.0314 1530  -0.746  0.7363
+
+target_condition = pvf-contrastive:
+ contrast                             estimate     SE   df t.ratio p.value
+ (ctx-exhaustive) - (ctx-base)        -0.02348 0.0314 1527  -0.749  0.7344
+ (ctx-exhaustive) - (ctx-contrastive)  0.00958 0.0314 1527   0.306  0.9498
+ (ctx-base) - (ctx-contrastive)        0.03306 0.0314 1527   1.054  0.5427
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 3 estimates 
+
